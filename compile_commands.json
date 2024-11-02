@@ -1,0 +1,14 @@
+[
+{
+  "directory": "C:/Users/marrc/bul/cpp-project/ludo",
+  "command": "C:\\ProgramData\\chocolatey\\bin\\g++.exe  @CMakeFiles/PawnGame.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\PawnGame.dir\\src\\GameLoop.cpp.obj -c C:\\Users\\marrc\\bul\\cpp-project\\ludo\\src\\GameLoop.cpp",
+  "file": "C:/Users/marrc/bul/cpp-project/ludo/src/GameLoop.cpp",
+  "output": "CMakeFiles/PawnGame.dir/src/GameLoop.cpp.obj"
+},
+{
+  "directory": "C:/Users/marrc/bul/cpp-project/ludo",
+  "command": "C:\\ProgramData\\chocolatey\\bin\\g++.exe  @CMakeFiles/PawnGame.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\PawnGame.dir\\src\\StartTurnEvent.cpp.obj -c C:\\Users\\marrc\\bul\\cpp-project\\ludo\\src\\StartTurnEvent.cpp",
+  "file": "C:/Users/marrc/bul/cpp-project/ludo/src/StartTurnEvent.cpp",
+  "output": "CMakeFiles/PawnGame.dir/src/StartTurnEvent.cpp.obj"
+}
+]
