@@ -1,3 +1,0 @@
-C:/Users/marrc/bul/cpp-project/ludo/CMakeFiles/PawnGame.dir
-C:/Users/marrc/bul/cpp-project/ludo/CMakeFiles/edit_cache.dir
-C:/Users/marrc/bul/cpp-project/ludo/CMakeFiles/rebuild_cache.dir

@@ -10,7 +10,6 @@ PlayerTurnHandler::PlayerTurnHandler(EventLoop& loop, int totalPlayers)
   : EventHandler("PlayerTurnHandler"), eventLoop(loop), totalPlayers(totalPlayers) {}
 
 
-
 void PlayerTurnHandler::handleEvent(const std::shared_ptr<Event>& event) {
     auto turnEvent = std::dynamic_pointer_cast<PlayerTurnEvent>(event);
     if (turnEvent) {
