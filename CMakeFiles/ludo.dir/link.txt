@@ -1,3 +1,0 @@
-"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\ludo.dir/objects.a
-C:\ProgramData\chocolatey\bin\ar.exe qc CMakeFiles\ludo.dir/objects.a @CMakeFiles\ludo.dir\objects1.rsp
-C:\ProgramData\chocolatey\bin\g++.exe -Wl,--whole-archive CMakeFiles\ludo.dir/objects.a -Wl,--no-whole-archive -o ludo.exe -Wl,--out-implib,libludo.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\ludo.dir\linkLibs.rsp

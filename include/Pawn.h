@@ -1,14 +1,23 @@
+
+
 #ifndef PAWN_H
 #define PAWN_H
 
+#include "Coordinates.h"
 class Pawn {
+
 public:
-  Pawn();
-  void move(int toSquareID);
-  int getSquare();
+  const Coordinates& getCoordinates() const {return coordinates;}
+  int getId() const {return id;}
+  int getTileId() {return tileId;}
+  int getPlayerId() const {return playerId;}
 
 private:
-  int square_id;
+
+  int id;
+  int playerId;
+  Coordinates coordinates;
+  int tileId;
 };
 
-#endif
+#endif // !PAWN_H
