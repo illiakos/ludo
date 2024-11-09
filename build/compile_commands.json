@@ -1,0 +1,50 @@
+[
+{
+  "directory": "C:/Users/marrc/bul/cpp-project/ludo/build",
+  "command": "g++  @CMakeFiles/PawnGame.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\PawnGame.dir\\src\\Board.cpp.obj -c C:\\Users\\marrc\\bul\\cpp-project\\ludo\\src\\Board.cpp",
+  "file": "C:/Users/marrc/bul/cpp-project/ludo/src/Board.cpp",
+  "output": "CMakeFiles/PawnGame.dir/src/Board.cpp.obj"
+},
+{
+  "directory": "C:/Users/marrc/bul/cpp-project/ludo/build",
+  "command": "g++  @CMakeFiles/PawnGame.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\PawnGame.dir\\src\\EventDispatcher.cpp.obj -c C:\\Users\\marrc\\bul\\cpp-project\\ludo\\src\\EventDispatcher.cpp",
+  "file": "C:/Users/marrc/bul/cpp-project/ludo/src/EventDispatcher.cpp",
+  "output": "CMakeFiles/PawnGame.dir/src/EventDispatcher.cpp.obj"
+},
+{
+  "directory": "C:/Users/marrc/bul/cpp-project/ludo/build",
+  "command": "g++  @CMakeFiles/PawnGame.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\PawnGame.dir\\src\\EventLoop.cpp.obj -c C:\\Users\\marrc\\bul\\cpp-project\\ludo\\src\\EventLoop.cpp",
+  "file": "C:/Users/marrc/bul/cpp-project/ludo/src/EventLoop.cpp",
+  "output": "CMakeFiles/PawnGame.dir/src/EventLoop.cpp.obj"
+},
+{
+  "directory": "C:/Users/marrc/bul/cpp-project/ludo/build",
+  "command": "g++  @CMakeFiles/PawnGame.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\PawnGame.dir\\src\\MovePawnHandler.cpp.obj -c C:\\Users\\marrc\\bul\\cpp-project\\ludo\\src\\MovePawnHandler.cpp",
+  "file": "C:/Users/marrc/bul/cpp-project/ludo/src/MovePawnHandler.cpp",
+  "output": "CMakeFiles/PawnGame.dir/src/MovePawnHandler.cpp.obj"
+},
+{
+  "directory": "C:/Users/marrc/bul/cpp-project/ludo/build",
+  "command": "g++  @CMakeFiles/PawnGame.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\PawnGame.dir\\src\\PlayerTurnHandler.cpp.obj -c C:\\Users\\marrc\\bul\\cpp-project\\ludo\\src\\PlayerTurnHandler.cpp",
+  "file": "C:/Users/marrc/bul/cpp-project/ludo/src/PlayerTurnHandler.cpp",
+  "output": "CMakeFiles/PawnGame.dir/src/PlayerTurnHandler.cpp.obj"
+},
+{
+  "directory": "C:/Users/marrc/bul/cpp-project/ludo/build",
+  "command": "g++  @CMakeFiles/PawnGame.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\PawnGame.dir\\src\\RollDiceHandler.cpp.obj -c C:\\Users\\marrc\\bul\\cpp-project\\ludo\\src\\RollDiceHandler.cpp",
+  "file": "C:/Users/marrc/bul/cpp-project/ludo/src/RollDiceHandler.cpp",
+  "output": "CMakeFiles/PawnGame.dir/src/RollDiceHandler.cpp.obj"
+},
+{
+  "directory": "C:/Users/marrc/bul/cpp-project/ludo/build",
+  "command": "g++  @CMakeFiles/PawnGame.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\PawnGame.dir\\src\\StopGameHandler.cpp.obj -c C:\\Users\\marrc\\bul\\cpp-project\\ludo\\src\\StopGameHandler.cpp",
+  "file": "C:/Users/marrc/bul/cpp-project/ludo/src/StopGameHandler.cpp",
+  "output": "CMakeFiles/PawnGame.dir/src/StopGameHandler.cpp.obj"
+},
+{
+  "directory": "C:/Users/marrc/bul/cpp-project/ludo/build",
+  "command": "g++  @CMakeFiles/PawnGame.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\PawnGame.dir\\src\\main.cpp.obj -c C:\\Users\\marrc\\bul\\cpp-project\\ludo\\src\\main.cpp",
+  "file": "C:/Users/marrc/bul/cpp-project/ludo/src/main.cpp",
+  "output": "CMakeFiles/PawnGame.dir/src/main.cpp.obj"
+}
+]
