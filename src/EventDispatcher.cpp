@@ -1,6 +1,7 @@
 #include "EventDispatcher.h"
 #include "Event.h"
 #include "EventHandler.h"
+#include <algorithm>
 
 void EventDispatcher::subscribe(const std::string& eventType, const std::shared_ptr<EventHandler>& handler) {
     handlers[eventType].push_back(handler);
@@ -12,7 +13,7 @@ void EventDispatcher::unsubscribe(const std::string& eventType, const std::strin
         auto& handlerList = it->second;
         handlerList.erase(std::remove_if(handlerList.begin(), handlerList.end(),
                                          [&handlerName](const std::shared_ptr<EventHandler>& handler) {
-                                             return handler->getHandlerName() == handlerName;
+                                         return handler->getName() == handlerName;
                                          }),
                           handlerList.end());
     }

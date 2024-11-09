@@ -200,30 +200,6 @@ src/EventLoop.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\PawnGame.dir\build.make CMakeFiles/PawnGame.dir/src/EventLoop.cpp.s
 .PHONY : src/EventLoop.cpp.s
 
-src/Game.obj: src/Game.cpp.obj
-.PHONY : src/Game.obj
-
-# target to build an object file
-src/Game.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\PawnGame.dir\build.make CMakeFiles/PawnGame.dir/src/Game.cpp.obj
-.PHONY : src/Game.cpp.obj
-
-src/Game.i: src/Game.cpp.i
-.PHONY : src/Game.i
-
-# target to preprocess a source file
-src/Game.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\PawnGame.dir\build.make CMakeFiles/PawnGame.dir/src/Game.cpp.i
-.PHONY : src/Game.cpp.i
-
-src/Game.s: src/Game.cpp.s
-.PHONY : src/Game.s
-
-# target to generate assembly for a file
-src/Game.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\PawnGame.dir\build.make CMakeFiles/PawnGame.dir/src/Game.cpp.s
-.PHONY : src/Game.cpp.s
-
 src/MovePawnHandler.obj: src/MovePawnHandler.cpp.obj
 .PHONY : src/MovePawnHandler.obj
 
@@ -320,6 +296,30 @@ src/StopGameHandler.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\PawnGame.dir\build.make CMakeFiles/PawnGame.dir/src/StopGameHandler.cpp.s
 .PHONY : src/StopGameHandler.cpp.s
 
+src/main.obj: src/main.cpp.obj
+.PHONY : src/main.obj
+
+# target to build an object file
+src/main.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PawnGame.dir\build.make CMakeFiles/PawnGame.dir/src/main.cpp.obj
+.PHONY : src/main.cpp.obj
+
+src/main.i: src/main.cpp.i
+.PHONY : src/main.i
+
+# target to preprocess a source file
+src/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PawnGame.dir\build.make CMakeFiles/PawnGame.dir/src/main.cpp.i
+.PHONY : src/main.cpp.i
+
+src/main.s: src/main.cpp.s
+.PHONY : src/main.s
+
+# target to generate assembly for a file
+src/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PawnGame.dir\build.make CMakeFiles/PawnGame.dir/src/main.cpp.s
+.PHONY : src/main.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -338,9 +338,6 @@ help:
 	@echo ... src/EventLoop.obj
 	@echo ... src/EventLoop.i
 	@echo ... src/EventLoop.s
-	@echo ... src/Game.obj
-	@echo ... src/Game.i
-	@echo ... src/Game.s
 	@echo ... src/MovePawnHandler.obj
 	@echo ... src/MovePawnHandler.i
 	@echo ... src/MovePawnHandler.s
@@ -353,6 +350,9 @@ help:
 	@echo ... src/StopGameHandler.obj
 	@echo ... src/StopGameHandler.i
 	@echo ... src/StopGameHandler.s
+	@echo ... src/main.obj
+	@echo ... src/main.i
+	@echo ... src/main.s
 .PHONY : help
 
 

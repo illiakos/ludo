@@ -19,12 +19,6 @@
 },
 {
   "directory": "C:/Users/marrc/bul/cpp-project/ludo/build",
-  "command": "g++  @CMakeFiles/PawnGame.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\PawnGame.dir\\src\\Game.cpp.obj -c C:\\Users\\marrc\\bul\\cpp-project\\ludo\\src\\Game.cpp",
-  "file": "C:/Users/marrc/bul/cpp-project/ludo/src/Game.cpp",
-  "output": "CMakeFiles/PawnGame.dir/src/Game.cpp.obj"
-},
-{
-  "directory": "C:/Users/marrc/bul/cpp-project/ludo/build",
   "command": "g++  @CMakeFiles/PawnGame.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\PawnGame.dir\\src\\MovePawnHandler.cpp.obj -c C:\\Users\\marrc\\bul\\cpp-project\\ludo\\src\\MovePawnHandler.cpp",
   "file": "C:/Users/marrc/bul/cpp-project/ludo/src/MovePawnHandler.cpp",
   "output": "CMakeFiles/PawnGame.dir/src/MovePawnHandler.cpp.obj"
@@ -46,5 +40,11 @@
   "command": "g++  @CMakeFiles/PawnGame.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\PawnGame.dir\\src\\StopGameHandler.cpp.obj -c C:\\Users\\marrc\\bul\\cpp-project\\ludo\\src\\StopGameHandler.cpp",
   "file": "C:/Users/marrc/bul/cpp-project/ludo/src/StopGameHandler.cpp",
   "output": "CMakeFiles/PawnGame.dir/src/StopGameHandler.cpp.obj"
+},
+{
+  "directory": "C:/Users/marrc/bul/cpp-project/ludo/build",
+  "command": "g++  @CMakeFiles/PawnGame.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\PawnGame.dir\\src\\main.cpp.obj -c C:\\Users\\marrc\\bul\\cpp-project\\ludo\\src\\main.cpp",
+  "file": "C:/Users/marrc/bul/cpp-project/ludo/src/main.cpp",
+  "output": "CMakeFiles/PawnGame.dir/src/main.cpp.obj"
 }
 ]
