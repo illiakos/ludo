@@ -16,6 +16,8 @@ public:
 
   int playerId;
 
+  void execute() override {};
+
 private:
   bool turnCompleted;
 

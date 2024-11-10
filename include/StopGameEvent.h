@@ -11,5 +11,6 @@ public:
     std::string getType() const override { return "StopGameEvent"; }
 
     bool isCompleted() const override { return true; }
+    void execute() override {};
 };
 #endif // !STOP_GAME_EVENT_H

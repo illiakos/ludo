@@ -8,6 +8,7 @@
 class RollDiceHandler : public EventHandler {
 public:
   void handleEvent(const std::shared_ptr<Event>& event) override;
+  RollDiceHandler() : EventHandler("RollDice") {};
 };
 
 #endif // !ROLL_DICE_HANDLER_H
