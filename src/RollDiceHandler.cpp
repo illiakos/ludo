@@ -1,35 +1,22 @@
-
-
 #include "RollDiceHandler.h"
 #include "RollDiceEvent.h"
+#include "WaitForChoosePawnEvent.h"
 #include <chrono>
 #include <iostream>
 #include <memory>
 #include <thread>
+void RollDiceHandler::handleEvent(const std::shared_ptr<Event>& event) {
+    auto rollEvent = std::dynamic_pointer_cast<RollDiceEvent>(event);
+    if (rollEvent) {
+        std::cout << "Player " << rollEvent->playerId << " rolls the dice...\n";
 
-void RollDiceHandler::handleEvent(const std::shared_ptr<Event> &event) {
-  auto rollEvent = std::dynamic_pointer_cast<RollDiceEvent>(event);
-  // Seed the random number generator
-  std::srand(static_cast<unsigned int>(std::time(0)));
+        // Generate a random number between 1 and 6
+        std::srand(static_cast<unsigned int>(std::time(0)));
+        int rollResult = std::rand() % 6 + 1;
 
-  // Generate a random number between 1 and 6
-  int randomNumber = std::rand() % 6 + 1;
+        std::cout << "Player " << rollEvent->playerId << " rolled a " << rollResult << "!\n";
 
-  if (rollEvent) {
-    
-    std::cout << "Player " << rollEvent->playerId << " rolled the " << randomNumber <<
-        " !\n";
-    std::this_thread::sleep_for(std::chrono::seconds(5));
-  }
+        // Enqueue WaitForChoosePawnEvent
+        eventLoop.enqueueEvent(std::make_shared<WaitForChoosePawnEvent>(rollEvent->playerId, rollResult));
+    }
 }
-
-/*class RollDiceHandler : public EventHandler {*/
-/*public:*/
-/*    void handleEvent(const std::shared_ptr<Event>& event) override {*/
-/*        auto rollEvent = std::dynamic_pointer_cast<RollDiceEvent>(event);*/
-/*        if (rollEvent) {*/
-/*            std::cout << "Player " << rollEvent->playerId << " rolled the
- * dice!\n";*/
-/*        }*/
-/*    }*/
-/*};*/

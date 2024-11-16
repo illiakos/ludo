@@ -193,8 +193,26 @@ CMakeFiles/PawnGame.dir/src/main.cpp.obj: \
  C:/Users/marrc/bul/cpp-project/ludo/include/PlayerTurnEvent.h \
  C:/Users/marrc/bul/cpp-project/ludo/include/PlayerTurnHandler.h \
  C:/Users/marrc/bul/cpp-project/ludo/include/EventLoop.h \
+ C:/Users/marrc/bul/cpp-project/ludo/include/TurnManager.h \
+ C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/functional \
+ C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/std_function.h \
+ C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/unordered_map \
+ C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/hashtable.h \
+ C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/hashtable_policy.h \
+ C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/enable_special_members.h \
+ C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/unordered_map.h \
+ C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/array \
+ C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/compare \
+ C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/stl_algo.h \
+ C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/algorithmfwd.h \
+ C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/stl_heap.h \
+ C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/uniform_int_dist.h \
  C:/Users/marrc/bul/cpp-project/ludo/include/RollDiceHandler.h \
+ C:/Users/marrc/bul/cpp-project/ludo/include/StopGameEvent.h \
  C:/Users/marrc/bul/cpp-project/ludo/include/StopGameHandler.h \
  C:/Users/marrc/bul/cpp-project/ludo/include/Team.h \
  C:/Users/marrc/bul/cpp-project/ludo/include/Color.h \
- C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/iostream
+ C:/Users/marrc/bul/cpp-project/ludo/include/TurnManager.h \
+ C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/iostream \
+ C:\Users\marrc\bul\cpp-project\ludo\src\TurnManager.cpp \
+ C:/Users/marrc/bul/cpp-project/ludo/include/RollDiceEvent.h

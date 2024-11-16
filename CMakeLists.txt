@@ -8,7 +8,7 @@ set(CMAKE_CXX_COMPILER g++)
 
 # Generate compile_commands.json for clangd
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
-
+set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -static-libgcc -static-libstdc++")
 # More explicit include directory addition
 include_directories(${CMAKE_SOURCE_DIR}/include)
 
