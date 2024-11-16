@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\marrc\bul\cpp-project\ludo\build\CMakeFiles\2335068b2a06201a03dfdf9d40d4d158\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{C59FD323-1238-35CA-B3E0-31653DBD8D5F}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

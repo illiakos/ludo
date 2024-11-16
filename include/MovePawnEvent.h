@@ -12,6 +12,7 @@ public:
   explicit MovePawnEvent(int playerId, int pawnId, int stepsCount)
       : playerId(playerId), pawnId(pawnId), stepsCount(stepsCount) {}
   std::string getType() const override { return "MovePawnEvent"; }
+
 };
 
 #endif // !MOVE_PAWN_EVENT_H

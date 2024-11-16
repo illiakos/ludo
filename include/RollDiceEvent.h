@@ -11,6 +11,8 @@ public:
   explicit RollDiceEvent(int playerId) : Event(true), playerId(playerId) {}
   std::string getType() const {return "RollDiceEvent";}
 
+  void execute() {};
+
 };
 
 #endif // !ROLL_DICE_EVENT_H

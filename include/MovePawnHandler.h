@@ -8,6 +8,7 @@
 class MovePawnHandler : public EventHandler {
 public:
   void handleEvent(const std::shared_ptr<Event>& event);
+  MovePawnHandler() : EventHandler("MovePawn") {}
 };
 
 #endif // !
