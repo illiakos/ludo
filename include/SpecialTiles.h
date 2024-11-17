@@ -27,17 +27,18 @@ private:
 
 
 
-class PrefinishTile : public Tile {
+class PrefinishingTile : public Tile {
 public:
-    PrefinishTile(int x, int y, int id, int position, Color& color, Size size)
-        : Tile(x, y, id, position, color, size) {}
+    PrefinishingTile(int x, int y, int id, int position, int nextPosition, Color& color, Size size)
+      : Tile(x, y, id, position, color, size), nextPosition(nextPosition) {}
+    
+    PrefinishingTile(int x, int y, int z, int id, int position, int nextPosition, Color& color, Size size)
+      : Tile(x, y, z, id, position, color, size), nextPosition(nextPosition) {}
 
-    PrefinishTile(int x, int y, int z, int id, int position, Color& color, Size size)
-        : Tile(x, y, z, id, position, color, size) {}
+    int getNextPosition() const { return nextPosition; }
 
-    int getFirstFinishingTilePosition() const { return firstFinishingTilePosition; }
-
-    int firstFinishingTilePosition;
+private:
+    int nextPosition; // Position of the next tile in the prefinishing path
 };
 
 class SafeTile : public Tile {
