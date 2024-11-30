@@ -1,3 +1,4 @@
+#include "Board.h"
 #include "Color.h"
 #include "EventDispatcher.h"
 #include "EventLoop.h"
@@ -14,6 +15,7 @@
 #include "TurnManager.h"
 #include <iostream>
 #include <memory>
+#include <ostream>
 
 int main() {
   // Create the event dispatcher
@@ -21,6 +23,7 @@ int main() {
 
   // Create the event loop and pass the dispatcher to it
   EventLoop eventLoop(dispatcher);
+  Board board;
 
   // Create default colors
   Color red("#E4080A");
@@ -33,6 +36,8 @@ int main() {
   Team teamYellow(yellow, 2);
   Team teamBlue(blue, 3);
   Team teamGreen(green, 4);
+
+  std::cout << "aboba" << std::endl;
 
   // Create default players
   Player redPlayer(1, 1);
@@ -48,14 +53,15 @@ int main() {
   auto rollDiceHandler =
       std::make_shared<RollDiceHandler>(turnManager, eventLoop);
   auto movePawnHandler =
-      std::make_shared<MovePawnHandler>(pawnManager, eventLoop);
+      std::make_shared<MovePawnHandler>(board,pawnManager);
   auto stopGameHandler = std::make_shared<StopGameHandler>();
   auto playerTurnHandler =
       std::make_shared<PlayerTurnHandler>(eventLoop, 4, turnManager);
 
   for (int playerId = 1; playerId <= 4; ++playerId) {
     for (int pawnId = 1; pawnId <= 4; ++pawnId) {
-      pawnManager.addPawn(playerId, pawnId, 0); // All pawns start at tile ID 0
+      // TODO: Replace the magical number 9 with actualy tile id. Each base has 4 tiles, so some of those tiles should be assigned to each pawn
+      pawnManager.addPawn(pawnId, 9); // All pawns start at tile ID 0
     }
   }
   // Subscribe handlers to specific events

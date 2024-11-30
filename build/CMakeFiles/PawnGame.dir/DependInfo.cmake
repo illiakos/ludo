@@ -12,9 +12,12 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/Users/marrc/bul/cpp-project/ludo/src/EventDispatcher.cpp" "CMakeFiles/PawnGame.dir/src/EventDispatcher.cpp.obj" "gcc" "CMakeFiles/PawnGame.dir/src/EventDispatcher.cpp.obj.d"
   "C:/Users/marrc/bul/cpp-project/ludo/src/EventLoop.cpp" "CMakeFiles/PawnGame.dir/src/EventLoop.cpp.obj" "gcc" "CMakeFiles/PawnGame.dir/src/EventLoop.cpp.obj.d"
   "C:/Users/marrc/bul/cpp-project/ludo/src/MovePawnHandler.cpp" "CMakeFiles/PawnGame.dir/src/MovePawnHandler.cpp.obj" "gcc" "CMakeFiles/PawnGame.dir/src/MovePawnHandler.cpp.obj.d"
+  "C:/Users/marrc/bul/cpp-project/ludo/src/PawnManager.cpp" "CMakeFiles/PawnGame.dir/src/PawnManager.cpp.obj" "gcc" "CMakeFiles/PawnGame.dir/src/PawnManager.cpp.obj.d"
   "C:/Users/marrc/bul/cpp-project/ludo/src/PlayerTurnHandler.cpp" "CMakeFiles/PawnGame.dir/src/PlayerTurnHandler.cpp.obj" "gcc" "CMakeFiles/PawnGame.dir/src/PlayerTurnHandler.cpp.obj.d"
   "C:/Users/marrc/bul/cpp-project/ludo/src/RollDiceHandler.cpp" "CMakeFiles/PawnGame.dir/src/RollDiceHandler.cpp.obj" "gcc" "CMakeFiles/PawnGame.dir/src/RollDiceHandler.cpp.obj.d"
   "C:/Users/marrc/bul/cpp-project/ludo/src/StopGameHandler.cpp" "CMakeFiles/PawnGame.dir/src/StopGameHandler.cpp.obj" "gcc" "CMakeFiles/PawnGame.dir/src/StopGameHandler.cpp.obj.d"
+  "C:/Users/marrc/bul/cpp-project/ludo/src/TurnManager.cpp" "CMakeFiles/PawnGame.dir/src/TurnManager.cpp.obj" "gcc" "CMakeFiles/PawnGame.dir/src/TurnManager.cpp.obj.d"
+  "C:/Users/marrc/bul/cpp-project/ludo/src/WaitForChoosePawnEvent.cpp" "CMakeFiles/PawnGame.dir/src/WaitForChoosePawnEvent.cpp.obj" "gcc" "CMakeFiles/PawnGame.dir/src/WaitForChoosePawnEvent.cpp.obj.d"
   "C:/Users/marrc/bul/cpp-project/ludo/src/main.cpp" "CMakeFiles/PawnGame.dir/src/main.cpp.obj" "gcc" "CMakeFiles/PawnGame.dir/src/main.cpp.obj.d"
   )
 

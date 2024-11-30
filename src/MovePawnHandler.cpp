@@ -5,34 +5,35 @@
 #include <iostream>
 #include <memory>
 
-MovePawnHandler::MovePawnHandler(Board& board, PawnManager& pawnManager)
-    : EventHandler("MovePawnHandler"), board(board), pawnManager(pawnManager) {}
+/*MovePawnHandler::MovePawnHandler(Board& board, PawnManager& pawnManager)*/
+/*    : EventHandler("MovePawnHandler"), board(board), pawnManager(pawnManager) {}*/
 
 void MovePawnHandler::handleEvent(const std::shared_ptr<Event>& event) {
     auto moveEvent = std::dynamic_pointer_cast<MovePawnEvent>(event);
     if (moveEvent) {
-        Pawn& pawn = pawnManager.getPawn(moveEvent->getPawnId());
-        int steps = moveEvent->getSteps();
+        auto pawn = pawnManager.getPawn(moveEvent->getPawnId());
+        int steps = moveEvent->stepsCount;
 
+        
         // Check if pawn is already on prefinishing tiles
-        const Tile* currentTile = board.getTileByPosition(pawn.getTileId());
+        const Tile* currentTile = board.getTileByPosition(pawn->getTileId());
         auto preFinishTile = dynamic_cast<const PrefinishingTile*>(currentTile);
         if (preFinishTile) {
-            handlePrefinishingTile(pawn, steps);
+            handlePrefinishingTile(*pawn, steps);
             return;
         }
 
         // Handle regular movement
-        moveRegularTiles(pawn, steps);
+        moveRegularTiles(*pawn, steps);
 
         // Check the type of the new tile and handle it
-        const Tile* newTile = board.getTileByPosition(pawn.getTileId());
+        const Tile* newTile = board.getTileByPosition(pawn->getTileId());
         if (dynamic_cast<const SafeTile*>(newTile) || dynamic_cast<const StartingTile*>(newTile)) {
-            handleSafeTile(pawn);
+            handleSafeTile(*pawn);
         } else if (dynamic_cast<const PrefinishingTile*>(newTile)) {
-            handlePrefinishingTile(pawn, steps);
+            handlePrefinishingTile(*pawn, steps);
         } else if (dynamic_cast<const FinishingTile*>(newTile)) {
-            handleFinishingTile(pawn);
+            handleFinishingTile(*pawn);
         }
     }
 }
@@ -59,15 +60,20 @@ void MovePawnHandler::moveRegularTiles(Pawn& pawn, int steps) {
 
         // Check for eating pawns
         if (pawnManager.hasPawnAtTile(currentTileId)) {
-            Pawn& otherPawn = pawnManager.getPawnAtTile(currentTileId);
-            if (otherPawn.getPlayerId() != pawn.getPlayerId()) {
-                std::cout << "Pawn " << pawn.getId() << " eats Pawn " << otherPawn.getId() << "\n";
-                otherPawn.returnToBase();
+            auto otherPawn = pawnManager.getPawnAtTileId(currentTileId);
+            if (otherPawn->getPlayerId() != pawn.getPlayerId()) {
+                std::cout << "Pawn " << pawn.getId() << " eats Pawn " << otherPawn->getId() << "\n";
+                returnPawnToBase(otherPawn->getTileId());
             }
         }
     }
 
     pawn.setTileId(currentTileId);
+}
+
+
+void MovePawnHandler::returnPawnToBase(int pawnId) {
+  
 }
 
 void MovePawnHandler::handleSafeTile(Pawn& pawn) {

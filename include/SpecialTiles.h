@@ -36,9 +36,13 @@ public:
       : Tile(x, y, z, id, position, color, size), nextPosition(nextPosition) {}
 
     int getNextPosition() const { return nextPosition; }
-
+    void setFirstFinishingTilePosition(int pos) {firstFinishingTilePosition = pos;}
+    int getFirstFinishingTilePosition() const {return firstFinishingTilePosition;};
+    int getTeamId() const {return teamId;}
 private:
+    int teamId;
     int nextPosition; // Position of the next tile in the prefinishing path
+    int firstFinishingTilePosition;
 };
 
 class SafeTile : public Tile {

@@ -4,7 +4,7 @@
 #include <string>
 class Event {
 public:
-  virtual void execute() = 0;
+  /*virtual void execute() = 0;*/
   virtual ~Event() = default;
   virtual std::string getType() const = 0;
   explicit Event(bool blocking = true): isBlocking(blocking) {}

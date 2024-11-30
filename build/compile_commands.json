@@ -25,6 +25,12 @@
 },
 {
   "directory": "C:/Users/marrc/bul/cpp-project/ludo/build",
+  "command": "g++  @CMakeFiles/PawnGame.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\PawnGame.dir\\src\\PawnManager.cpp.obj -c C:\\Users\\marrc\\bul\\cpp-project\\ludo\\src\\PawnManager.cpp",
+  "file": "C:/Users/marrc/bul/cpp-project/ludo/src/PawnManager.cpp",
+  "output": "CMakeFiles/PawnGame.dir/src/PawnManager.cpp.obj"
+},
+{
+  "directory": "C:/Users/marrc/bul/cpp-project/ludo/build",
   "command": "g++  @CMakeFiles/PawnGame.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\PawnGame.dir\\src\\PlayerTurnHandler.cpp.obj -c C:\\Users\\marrc\\bul\\cpp-project\\ludo\\src\\PlayerTurnHandler.cpp",
   "file": "C:/Users/marrc/bul/cpp-project/ludo/src/PlayerTurnHandler.cpp",
   "output": "CMakeFiles/PawnGame.dir/src/PlayerTurnHandler.cpp.obj"
@@ -40,6 +46,18 @@
   "command": "g++  @CMakeFiles/PawnGame.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\PawnGame.dir\\src\\StopGameHandler.cpp.obj -c C:\\Users\\marrc\\bul\\cpp-project\\ludo\\src\\StopGameHandler.cpp",
   "file": "C:/Users/marrc/bul/cpp-project/ludo/src/StopGameHandler.cpp",
   "output": "CMakeFiles/PawnGame.dir/src/StopGameHandler.cpp.obj"
+},
+{
+  "directory": "C:/Users/marrc/bul/cpp-project/ludo/build",
+  "command": "g++  @CMakeFiles/PawnGame.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\PawnGame.dir\\src\\TurnManager.cpp.obj -c C:\\Users\\marrc\\bul\\cpp-project\\ludo\\src\\TurnManager.cpp",
+  "file": "C:/Users/marrc/bul/cpp-project/ludo/src/TurnManager.cpp",
+  "output": "CMakeFiles/PawnGame.dir/src/TurnManager.cpp.obj"
+},
+{
+  "directory": "C:/Users/marrc/bul/cpp-project/ludo/build",
+  "command": "g++  @CMakeFiles/PawnGame.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\PawnGame.dir\\src\\WaitForChoosePawnEvent.cpp.obj -c C:\\Users\\marrc\\bul\\cpp-project\\ludo\\src\\WaitForChoosePawnEvent.cpp",
+  "file": "C:/Users/marrc/bul/cpp-project/ludo/src/WaitForChoosePawnEvent.cpp",
+  "output": "CMakeFiles/PawnGame.dir/src/WaitForChoosePawnEvent.cpp.obj"
 },
 {
   "directory": "C:/Users/marrc/bul/cpp-project/ludo/build",

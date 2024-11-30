@@ -224,6 +224,30 @@ src/MovePawnHandler.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\PawnGame.dir\build.make CMakeFiles/PawnGame.dir/src/MovePawnHandler.cpp.s
 .PHONY : src/MovePawnHandler.cpp.s
 
+src/PawnManager.obj: src/PawnManager.cpp.obj
+.PHONY : src/PawnManager.obj
+
+# target to build an object file
+src/PawnManager.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PawnGame.dir\build.make CMakeFiles/PawnGame.dir/src/PawnManager.cpp.obj
+.PHONY : src/PawnManager.cpp.obj
+
+src/PawnManager.i: src/PawnManager.cpp.i
+.PHONY : src/PawnManager.i
+
+# target to preprocess a source file
+src/PawnManager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PawnGame.dir\build.make CMakeFiles/PawnGame.dir/src/PawnManager.cpp.i
+.PHONY : src/PawnManager.cpp.i
+
+src/PawnManager.s: src/PawnManager.cpp.s
+.PHONY : src/PawnManager.s
+
+# target to generate assembly for a file
+src/PawnManager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PawnGame.dir\build.make CMakeFiles/PawnGame.dir/src/PawnManager.cpp.s
+.PHONY : src/PawnManager.cpp.s
+
 src/PlayerTurnHandler.obj: src/PlayerTurnHandler.cpp.obj
 .PHONY : src/PlayerTurnHandler.obj
 
@@ -296,6 +320,54 @@ src/StopGameHandler.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\PawnGame.dir\build.make CMakeFiles/PawnGame.dir/src/StopGameHandler.cpp.s
 .PHONY : src/StopGameHandler.cpp.s
 
+src/TurnManager.obj: src/TurnManager.cpp.obj
+.PHONY : src/TurnManager.obj
+
+# target to build an object file
+src/TurnManager.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PawnGame.dir\build.make CMakeFiles/PawnGame.dir/src/TurnManager.cpp.obj
+.PHONY : src/TurnManager.cpp.obj
+
+src/TurnManager.i: src/TurnManager.cpp.i
+.PHONY : src/TurnManager.i
+
+# target to preprocess a source file
+src/TurnManager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PawnGame.dir\build.make CMakeFiles/PawnGame.dir/src/TurnManager.cpp.i
+.PHONY : src/TurnManager.cpp.i
+
+src/TurnManager.s: src/TurnManager.cpp.s
+.PHONY : src/TurnManager.s
+
+# target to generate assembly for a file
+src/TurnManager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PawnGame.dir\build.make CMakeFiles/PawnGame.dir/src/TurnManager.cpp.s
+.PHONY : src/TurnManager.cpp.s
+
+src/WaitForChoosePawnEvent.obj: src/WaitForChoosePawnEvent.cpp.obj
+.PHONY : src/WaitForChoosePawnEvent.obj
+
+# target to build an object file
+src/WaitForChoosePawnEvent.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PawnGame.dir\build.make CMakeFiles/PawnGame.dir/src/WaitForChoosePawnEvent.cpp.obj
+.PHONY : src/WaitForChoosePawnEvent.cpp.obj
+
+src/WaitForChoosePawnEvent.i: src/WaitForChoosePawnEvent.cpp.i
+.PHONY : src/WaitForChoosePawnEvent.i
+
+# target to preprocess a source file
+src/WaitForChoosePawnEvent.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PawnGame.dir\build.make CMakeFiles/PawnGame.dir/src/WaitForChoosePawnEvent.cpp.i
+.PHONY : src/WaitForChoosePawnEvent.cpp.i
+
+src/WaitForChoosePawnEvent.s: src/WaitForChoosePawnEvent.cpp.s
+.PHONY : src/WaitForChoosePawnEvent.s
+
+# target to generate assembly for a file
+src/WaitForChoosePawnEvent.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PawnGame.dir\build.make CMakeFiles/PawnGame.dir/src/WaitForChoosePawnEvent.cpp.s
+.PHONY : src/WaitForChoosePawnEvent.cpp.s
+
 src/main.obj: src/main.cpp.obj
 .PHONY : src/main.obj
 
@@ -341,6 +413,9 @@ help:
 	@echo ... src/MovePawnHandler.obj
 	@echo ... src/MovePawnHandler.i
 	@echo ... src/MovePawnHandler.s
+	@echo ... src/PawnManager.obj
+	@echo ... src/PawnManager.i
+	@echo ... src/PawnManager.s
 	@echo ... src/PlayerTurnHandler.obj
 	@echo ... src/PlayerTurnHandler.i
 	@echo ... src/PlayerTurnHandler.s
@@ -350,6 +425,12 @@ help:
 	@echo ... src/StopGameHandler.obj
 	@echo ... src/StopGameHandler.i
 	@echo ... src/StopGameHandler.s
+	@echo ... src/TurnManager.obj
+	@echo ... src/TurnManager.i
+	@echo ... src/TurnManager.s
+	@echo ... src/WaitForChoosePawnEvent.obj
+	@echo ... src/WaitForChoosePawnEvent.i
+	@echo ... src/WaitForChoosePawnEvent.s
 	@echo ... src/main.obj
 	@echo ... src/main.i
 	@echo ... src/main.s

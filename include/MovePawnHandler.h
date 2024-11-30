@@ -9,9 +9,12 @@
 
 class MovePawnHandler : public EventHandler {
 public:
-    MovePawnHandler(Board& board, PawnManager& pawnManager);
+    MovePawnHandler(Board& board, PawnManager& pawnManager) : board(board), pawnManager(pawnManager), EventHandler("MovePawnHandler") {};
 
     void handleEvent(const std::shared_ptr<Event>& event) override;
+
+protected:
+    void returnPawnToBase(int pawnId);
 
 private:
     Board& board;

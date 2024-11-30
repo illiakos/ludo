@@ -1,41 +1,56 @@
 #include "PawnManager.h"
+#include "Coordinates.h"
 #include <iostream>
 
-void PawnManager::addPawn(int playerId, int pawnId, int startingTileId) {
-    if (pawns[playerId].find(pawnId) == pawns[playerId].end()) {
-        auto pawn = std::make_shared<Pawn>();
-        pawn->id = pawnId;
-        pawn->playerId = playerId;
-        pawn->tileId = startingTileId;
-        pawns[playerId][pawnId] = pawn;
-        std::cout << "Added Pawn " << pawnId << " for Player " << playerId
-                  << " at tile ID " << startingTileId << ".\n";
-    }
-}
-
-void PawnManager::movePawn(int playerId, int pawnId, int newTileId) {
-    auto pawn = getPawn(playerId, pawnId);
-    if (pawn) {
-        pawn->tileId = newTileId;
-        std::cout << "Moved Pawn " << pawnId << " for Player " << playerId
-                  << " to tile ID " << newTileId << ".\n";
+void PawnManager::addPawn(int pawnId, int startingTileId) {
+    if (pawns.find(pawnId) == pawns.end()) {
+        // TODO: create some mechanism to get coordinates by tile id
+        auto coords = Coordinates(0,0,0); 
+        auto pawn = std::make_shared<Pawn>(pawnId, startingTileId, coords);
+        pawns[pawnId] = pawn;
+        std::cout << "Added Pawn " << pawnId << " at tile ID " << startingTileId << ".\n";
     } else {
-        std::cerr << "Pawn " << pawnId << " for Player " << playerId << " not found!\n";
+        std::cerr << "Pawn " << pawnId << " already exists!\n";
     }
 }
 
-const std::shared_ptr<Pawn> PawnManager::getPawn(int playerId, int pawnId) const {
-    auto playerIt = pawns.find(playerId);
-    if (playerIt != pawns.end()) {
-        auto pawnIt = playerIt->second.find(pawnId);
-        if (pawnIt != playerIt->second.end()) {
-            return pawnIt->second;
-        }
+void PawnManager::movePawn(int pawnId, int newTileId) {
+    auto pawn = getPawn(pawnId);
+    if (pawn) {
+        pawn->setTileId(newTileId);
+        std::cout << "Moved Pawn " << pawnId << " to tile ID " << newTileId << ".\n";
+    } else {
+        std::cerr << "Pawn " << pawnId << " not found!\n";
+    }
+}
+
+std::shared_ptr<Pawn> PawnManager::getPawn(int pawnId) const {
+    auto pawnIt = pawns.find(pawnId);
+    if (pawnIt != pawns.end()) {
+        return pawnIt->second;
     }
     return nullptr;
 }
 
-int PawnManager::getPawnTileId(int playerId, int pawnId) const {
-    auto pawn = getPawn(playerId, pawnId);
-    return pawn ? pawn->tileId : -1; // Return -1 if the pawn is not found
+int PawnManager::getPawnTileId(int pawnId) const {
+    auto pawn = getPawn(pawnId);
+    return pawn ? pawn->getTileId() : -1; // Return -1 if the pawn is not found
+}
+
+std::shared_ptr<Pawn> PawnManager::getPawnAtTileId(int tileId) const {
+    for (const auto& [pawnId, pawn] : pawns) {
+        if (pawn->getTileId() == tileId) {
+            return pawn;
+        }
+    }
+    return nullptr; // Return nullptr if no pawn exists at the specified tile
+}
+
+bool PawnManager::hasPawnAtTile(int tileId) const {
+    for (const auto& [pawnId, pawn] : pawns) {
+        if (pawn->getTileId() == tileId) {
+            return true;
+        }
+    }
+    return false;
 }
