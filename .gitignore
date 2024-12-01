@@ -1,7 +1,24 @@
-# .clang-format
-# cmake_install.cmake
-# CMakeCache.txt
-# CmakeLists.txt
-# compile_commands.json
-# Makefile
-# CmakeFiles
+# Ignore build directory
+build/
+
+# Ignore CMake-generated files
+CMakeFiles/
+CMakeCache.txt
+*.cmake
+
+# Ignore compiled object files
+*.o
+*.obj
+
+# Ignore executables and libraries
+*.exe
+*.dll
+*.so
+*.dylib
+*.lib
+*.a
+
+# Ignore IDE and editor files
+.vscode/
+.idea/
+*.swp

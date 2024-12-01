@@ -11,7 +11,6 @@
 #include "StopGameEvent.h"
 #include "StopGameHandler.h"
 #include "Team.h"
-#include "TurnManager.cpp"
 #include "TurnManager.h"
 #include <iostream>
 #include <memory>

@@ -133,7 +133,7 @@ board.addSafeTile(5, 5, 2, 10, safeColor, tileSize); // Example tile addition
 
 3. Configure and build the project:
    ```bash
-   cmake ..
+   cmake .. -G "MinGW Makefiles" -DCMAKE_C_COMPILER=gcc -DCMAKE_CXX_COMPILER=g++
    cmake --build .
    ```
 
