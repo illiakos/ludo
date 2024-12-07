@@ -15,6 +15,7 @@
 #include <iostream>
 #include <memory>
 #include <ostream>
+#include <GLFW/glfw3.h>
 
 int main() {
   // Create the event dispatcher
