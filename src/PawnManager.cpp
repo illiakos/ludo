@@ -1,5 +1,5 @@
-#include "PawnManager.h"
-#include "Coordinates.h"
+#include "PawnManager.hpp"
+#include "Coordinates.hpp"
 #include <iostream>
 
 void PawnManager::addPawn(int pawnId, int startingTileId) {

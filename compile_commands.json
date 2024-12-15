@@ -19,6 +19,12 @@
 },
 {
   "directory": "C:/Users/marrc/bul/cpp-project/alt/ludo/build",
+  "command": "C:\\ProgramData\\chocolatey\\bin\\g++.exe  @CMakeFiles/PawnGame.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\PawnGame.dir\\src\\MapDrawer.cpp.obj -c C:\\Users\\marrc\\bul\\cpp-project\\alt\\ludo\\src\\MapDrawer.cpp",
+  "file": "C:/Users/marrc/bul/cpp-project/alt/ludo/src/MapDrawer.cpp",
+  "output": "CMakeFiles/PawnGame.dir/src/MapDrawer.cpp.obj"
+},
+{
+  "directory": "C:/Users/marrc/bul/cpp-project/alt/ludo/build",
   "command": "C:\\ProgramData\\chocolatey\\bin\\g++.exe  @CMakeFiles/PawnGame.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\PawnGame.dir\\src\\MovePawnHandler.cpp.obj -c C:\\Users\\marrc\\bul\\cpp-project\\alt\\ludo\\src\\MovePawnHandler.cpp",
   "file": "C:/Users/marrc/bul/cpp-project/alt/ludo/src/MovePawnHandler.cpp",
   "output": "CMakeFiles/PawnGame.dir/src/MovePawnHandler.cpp.obj"

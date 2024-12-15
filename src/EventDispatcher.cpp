@@ -1,6 +1,6 @@
-#include "EventDispatcher.h"
-#include "Event.h"
-#include "EventHandler.h"
+#include "EventDispatcher.hpp"
+#include "Event.hpp"
+#include "EventHandler.hpp"
 #include <algorithm>
 
 void EventDispatcher::subscribe(const std::string& eventType, const std::shared_ptr<EventHandler>& handler) {

@@ -1,7 +1,7 @@
-#include "MovePawnHandler.h"
-#include "MovePawnEvent.h"
-#include "PawnManager.h"
-#include "SpecialTiles.h"
+#include "MovePawnHandler.hpp"
+#include "MovePawnEvent.hpp"
+#include "PawnManager.hpp"
+#include "SpecialTiles.hpp"
 #include <iostream>
 #include <memory>
 

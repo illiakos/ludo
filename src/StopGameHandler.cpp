@@ -1,5 +1,5 @@
 #include "StopGameHandler.h"
-#include "StopGameEvent.h"
+#include "StopGameEvent.hpp"
 #include <iostream>
 #include <memory>
 

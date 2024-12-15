@@ -1,200 +1,200 @@
 [
 {
-  "directory": "C:/Users/User/ludo/build",
-  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles/PawnGame.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\PawnGame.dir\\src\\Board.cpp.obj -c C:\\Users\\User\\ludo\\src\\Board.cpp",
-  "file": "C:/Users/User/ludo/src/Board.cpp",
+  "directory": "C:/Users/marrc/bul/cpp-project/alt/ludo/build",
+  "command": "C:\\ProgramData\\chocolatey\\bin\\g++.exe  @CMakeFiles/PawnGame.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\PawnGame.dir\\src\\Board.cpp.obj -c C:\\Users\\marrc\\bul\\cpp-project\\alt\\ludo\\src\\Board.cpp",
+  "file": "C:/Users/marrc/bul/cpp-project/alt/ludo/src/Board.cpp",
   "output": "CMakeFiles/PawnGame.dir/src/Board.cpp.obj"
 },
 {
-  "directory": "C:/Users/User/ludo/build",
-  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles/PawnGame.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\PawnGame.dir\\src\\EventDispatcher.cpp.obj -c C:\\Users\\User\\ludo\\src\\EventDispatcher.cpp",
-  "file": "C:/Users/User/ludo/src/EventDispatcher.cpp",
+  "directory": "C:/Users/marrc/bul/cpp-project/alt/ludo/build",
+  "command": "C:\\ProgramData\\chocolatey\\bin\\g++.exe  @CMakeFiles/PawnGame.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\PawnGame.dir\\src\\EventDispatcher.cpp.obj -c C:\\Users\\marrc\\bul\\cpp-project\\alt\\ludo\\src\\EventDispatcher.cpp",
+  "file": "C:/Users/marrc/bul/cpp-project/alt/ludo/src/EventDispatcher.cpp",
   "output": "CMakeFiles/PawnGame.dir/src/EventDispatcher.cpp.obj"
 },
 {
-  "directory": "C:/Users/User/ludo/build",
-  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles/PawnGame.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\PawnGame.dir\\src\\EventLoop.cpp.obj -c C:\\Users\\User\\ludo\\src\\EventLoop.cpp",
-  "file": "C:/Users/User/ludo/src/EventLoop.cpp",
+  "directory": "C:/Users/marrc/bul/cpp-project/alt/ludo/build",
+  "command": "C:\\ProgramData\\chocolatey\\bin\\g++.exe  @CMakeFiles/PawnGame.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\PawnGame.dir\\src\\EventLoop.cpp.obj -c C:\\Users\\marrc\\bul\\cpp-project\\alt\\ludo\\src\\EventLoop.cpp",
+  "file": "C:/Users/marrc/bul/cpp-project/alt/ludo/src/EventLoop.cpp",
   "output": "CMakeFiles/PawnGame.dir/src/EventLoop.cpp.obj"
 },
 {
-  "directory": "C:/Users/User/ludo/build",
-  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles/PawnGame.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\PawnGame.dir\\src\\MapDrawer.cpp.obj -c C:\\Users\\User\\ludo\\src\\MapDrawer.cpp",
-  "file": "C:/Users/User/ludo/src/MapDrawer.cpp",
+  "directory": "C:/Users/marrc/bul/cpp-project/alt/ludo/build",
+  "command": "C:\\ProgramData\\chocolatey\\bin\\g++.exe  @CMakeFiles/PawnGame.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\PawnGame.dir\\src\\MapDrawer.cpp.obj -c C:\\Users\\marrc\\bul\\cpp-project\\alt\\ludo\\src\\MapDrawer.cpp",
+  "file": "C:/Users/marrc/bul/cpp-project/alt/ludo/src/MapDrawer.cpp",
   "output": "CMakeFiles/PawnGame.dir/src/MapDrawer.cpp.obj"
 },
 {
-  "directory": "C:/Users/User/ludo/build",
-  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles/PawnGame.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\PawnGame.dir\\src\\MovePawnHandler.cpp.obj -c C:\\Users\\User\\ludo\\src\\MovePawnHandler.cpp",
-  "file": "C:/Users/User/ludo/src/MovePawnHandler.cpp",
+  "directory": "C:/Users/marrc/bul/cpp-project/alt/ludo/build",
+  "command": "C:\\ProgramData\\chocolatey\\bin\\g++.exe  @CMakeFiles/PawnGame.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\PawnGame.dir\\src\\MovePawnHandler.cpp.obj -c C:\\Users\\marrc\\bul\\cpp-project\\alt\\ludo\\src\\MovePawnHandler.cpp",
+  "file": "C:/Users/marrc/bul/cpp-project/alt/ludo/src/MovePawnHandler.cpp",
   "output": "CMakeFiles/PawnGame.dir/src/MovePawnHandler.cpp.obj"
 },
 {
-  "directory": "C:/Users/User/ludo/build",
-  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles/PawnGame.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\PawnGame.dir\\src\\PawnManager.cpp.obj -c C:\\Users\\User\\ludo\\src\\PawnManager.cpp",
-  "file": "C:/Users/User/ludo/src/PawnManager.cpp",
+  "directory": "C:/Users/marrc/bul/cpp-project/alt/ludo/build",
+  "command": "C:\\ProgramData\\chocolatey\\bin\\g++.exe  @CMakeFiles/PawnGame.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\PawnGame.dir\\src\\PawnManager.cpp.obj -c C:\\Users\\marrc\\bul\\cpp-project\\alt\\ludo\\src\\PawnManager.cpp",
+  "file": "C:/Users/marrc/bul/cpp-project/alt/ludo/src/PawnManager.cpp",
   "output": "CMakeFiles/PawnGame.dir/src/PawnManager.cpp.obj"
 },
 {
-  "directory": "C:/Users/User/ludo/build",
-  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles/PawnGame.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\PawnGame.dir\\src\\PlayerTurnHandler.cpp.obj -c C:\\Users\\User\\ludo\\src\\PlayerTurnHandler.cpp",
-  "file": "C:/Users/User/ludo/src/PlayerTurnHandler.cpp",
+  "directory": "C:/Users/marrc/bul/cpp-project/alt/ludo/build",
+  "command": "C:\\ProgramData\\chocolatey\\bin\\g++.exe  @CMakeFiles/PawnGame.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\PawnGame.dir\\src\\PlayerTurnHandler.cpp.obj -c C:\\Users\\marrc\\bul\\cpp-project\\alt\\ludo\\src\\PlayerTurnHandler.cpp",
+  "file": "C:/Users/marrc/bul/cpp-project/alt/ludo/src/PlayerTurnHandler.cpp",
   "output": "CMakeFiles/PawnGame.dir/src/PlayerTurnHandler.cpp.obj"
 },
 {
-  "directory": "C:/Users/User/ludo/build",
-  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles/PawnGame.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\PawnGame.dir\\src\\RollDiceHandler.cpp.obj -c C:\\Users\\User\\ludo\\src\\RollDiceHandler.cpp",
-  "file": "C:/Users/User/ludo/src/RollDiceHandler.cpp",
+  "directory": "C:/Users/marrc/bul/cpp-project/alt/ludo/build",
+  "command": "C:\\ProgramData\\chocolatey\\bin\\g++.exe  @CMakeFiles/PawnGame.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\PawnGame.dir\\src\\RollDiceHandler.cpp.obj -c C:\\Users\\marrc\\bul\\cpp-project\\alt\\ludo\\src\\RollDiceHandler.cpp",
+  "file": "C:/Users/marrc/bul/cpp-project/alt/ludo/src/RollDiceHandler.cpp",
   "output": "CMakeFiles/PawnGame.dir/src/RollDiceHandler.cpp.obj"
 },
 {
-  "directory": "C:/Users/User/ludo/build",
-  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles/PawnGame.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\PawnGame.dir\\src\\StopGameHandler.cpp.obj -c C:\\Users\\User\\ludo\\src\\StopGameHandler.cpp",
-  "file": "C:/Users/User/ludo/src/StopGameHandler.cpp",
+  "directory": "C:/Users/marrc/bul/cpp-project/alt/ludo/build",
+  "command": "C:\\ProgramData\\chocolatey\\bin\\g++.exe  @CMakeFiles/PawnGame.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\PawnGame.dir\\src\\StopGameHandler.cpp.obj -c C:\\Users\\marrc\\bul\\cpp-project\\alt\\ludo\\src\\StopGameHandler.cpp",
+  "file": "C:/Users/marrc/bul/cpp-project/alt/ludo/src/StopGameHandler.cpp",
   "output": "CMakeFiles/PawnGame.dir/src/StopGameHandler.cpp.obj"
 },
 {
-  "directory": "C:/Users/User/ludo/build",
-  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles/PawnGame.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\PawnGame.dir\\src\\TurnManager.cpp.obj -c C:\\Users\\User\\ludo\\src\\TurnManager.cpp",
-  "file": "C:/Users/User/ludo/src/TurnManager.cpp",
+  "directory": "C:/Users/marrc/bul/cpp-project/alt/ludo/build",
+  "command": "C:\\ProgramData\\chocolatey\\bin\\g++.exe  @CMakeFiles/PawnGame.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\PawnGame.dir\\src\\TurnManager.cpp.obj -c C:\\Users\\marrc\\bul\\cpp-project\\alt\\ludo\\src\\TurnManager.cpp",
+  "file": "C:/Users/marrc/bul/cpp-project/alt/ludo/src/TurnManager.cpp",
   "output": "CMakeFiles/PawnGame.dir/src/TurnManager.cpp.obj"
 },
 {
-  "directory": "C:/Users/User/ludo/build",
-  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles/PawnGame.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\PawnGame.dir\\src\\WaitForChoosePawnEvent.cpp.obj -c C:\\Users\\User\\ludo\\src\\WaitForChoosePawnEvent.cpp",
-  "file": "C:/Users/User/ludo/src/WaitForChoosePawnEvent.cpp",
+  "directory": "C:/Users/marrc/bul/cpp-project/alt/ludo/build",
+  "command": "C:\\ProgramData\\chocolatey\\bin\\g++.exe  @CMakeFiles/PawnGame.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\PawnGame.dir\\src\\WaitForChoosePawnEvent.cpp.obj -c C:\\Users\\marrc\\bul\\cpp-project\\alt\\ludo\\src\\WaitForChoosePawnEvent.cpp",
+  "file": "C:/Users/marrc/bul/cpp-project/alt/ludo/src/WaitForChoosePawnEvent.cpp",
   "output": "CMakeFiles/PawnGame.dir/src/WaitForChoosePawnEvent.cpp.obj"
 },
 {
-  "directory": "C:/Users/User/ludo/build",
-  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles/PawnGame.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\PawnGame.dir\\src\\main.cpp.obj -c C:\\Users\\User\\ludo\\src\\main.cpp",
-  "file": "C:/Users/User/ludo/src/main.cpp",
+  "directory": "C:/Users/marrc/bul/cpp-project/alt/ludo/build",
+  "command": "C:\\ProgramData\\chocolatey\\bin\\g++.exe  @CMakeFiles/PawnGame.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\PawnGame.dir\\src\\main.cpp.obj -c C:\\Users\\marrc\\bul\\cpp-project\\alt\\ludo\\src\\main.cpp",
+  "file": "C:/Users/marrc/bul/cpp-project/alt/ludo/src/main.cpp",
   "output": "CMakeFiles/PawnGame.dir/src/main.cpp.obj"
 },
 {
-  "directory": "C:/Users/User/ludo/build/glfw/src",
-  "command": "C:\\msys64\\ucrt64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -std=c99 -Wall -o CMakeFiles\\glfw.dir\\context.c.obj -c C:\\Users\\User\\ludo\\glfw\\src\\context.c",
-  "file": "C:/Users/User/ludo/glfw/src/context.c",
+  "directory": "C:/Users/marrc/bul/cpp-project/alt/ludo/build/glfw/src",
+  "command": "C:\\ProgramData\\chocolatey\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -std=c99 -Wall -o CMakeFiles\\glfw.dir\\context.c.obj -c C:\\Users\\marrc\\bul\\cpp-project\\alt\\ludo\\glfw\\src\\context.c",
+  "file": "C:/Users/marrc/bul/cpp-project/alt/ludo/glfw/src/context.c",
   "output": "glfw/src/CMakeFiles/glfw.dir/context.c.obj"
 },
 {
-  "directory": "C:/Users/User/ludo/build/glfw/src",
-  "command": "C:\\msys64\\ucrt64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -std=c99 -Wall -o CMakeFiles\\glfw.dir\\init.c.obj -c C:\\Users\\User\\ludo\\glfw\\src\\init.c",
-  "file": "C:/Users/User/ludo/glfw/src/init.c",
+  "directory": "C:/Users/marrc/bul/cpp-project/alt/ludo/build/glfw/src",
+  "command": "C:\\ProgramData\\chocolatey\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -std=c99 -Wall -o CMakeFiles\\glfw.dir\\init.c.obj -c C:\\Users\\marrc\\bul\\cpp-project\\alt\\ludo\\glfw\\src\\init.c",
+  "file": "C:/Users/marrc/bul/cpp-project/alt/ludo/glfw/src/init.c",
   "output": "glfw/src/CMakeFiles/glfw.dir/init.c.obj"
 },
 {
-  "directory": "C:/Users/User/ludo/build/glfw/src",
-  "command": "C:\\msys64\\ucrt64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -std=c99 -Wall -o CMakeFiles\\glfw.dir\\input.c.obj -c C:\\Users\\User\\ludo\\glfw\\src\\input.c",
-  "file": "C:/Users/User/ludo/glfw/src/input.c",
+  "directory": "C:/Users/marrc/bul/cpp-project/alt/ludo/build/glfw/src",
+  "command": "C:\\ProgramData\\chocolatey\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -std=c99 -Wall -o CMakeFiles\\glfw.dir\\input.c.obj -c C:\\Users\\marrc\\bul\\cpp-project\\alt\\ludo\\glfw\\src\\input.c",
+  "file": "C:/Users/marrc/bul/cpp-project/alt/ludo/glfw/src/input.c",
   "output": "glfw/src/CMakeFiles/glfw.dir/input.c.obj"
 },
 {
-  "directory": "C:/Users/User/ludo/build/glfw/src",
-  "command": "C:\\msys64\\ucrt64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -std=c99 -Wall -o CMakeFiles\\glfw.dir\\monitor.c.obj -c C:\\Users\\User\\ludo\\glfw\\src\\monitor.c",
-  "file": "C:/Users/User/ludo/glfw/src/monitor.c",
+  "directory": "C:/Users/marrc/bul/cpp-project/alt/ludo/build/glfw/src",
+  "command": "C:\\ProgramData\\chocolatey\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -std=c99 -Wall -o CMakeFiles\\glfw.dir\\monitor.c.obj -c C:\\Users\\marrc\\bul\\cpp-project\\alt\\ludo\\glfw\\src\\monitor.c",
+  "file": "C:/Users/marrc/bul/cpp-project/alt/ludo/glfw/src/monitor.c",
   "output": "glfw/src/CMakeFiles/glfw.dir/monitor.c.obj"
 },
 {
-  "directory": "C:/Users/User/ludo/build/glfw/src",
-  "command": "C:\\msys64\\ucrt64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -std=c99 -Wall -o CMakeFiles\\glfw.dir\\platform.c.obj -c C:\\Users\\User\\ludo\\glfw\\src\\platform.c",
-  "file": "C:/Users/User/ludo/glfw/src/platform.c",
+  "directory": "C:/Users/marrc/bul/cpp-project/alt/ludo/build/glfw/src",
+  "command": "C:\\ProgramData\\chocolatey\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -std=c99 -Wall -o CMakeFiles\\glfw.dir\\platform.c.obj -c C:\\Users\\marrc\\bul\\cpp-project\\alt\\ludo\\glfw\\src\\platform.c",
+  "file": "C:/Users/marrc/bul/cpp-project/alt/ludo/glfw/src/platform.c",
   "output": "glfw/src/CMakeFiles/glfw.dir/platform.c.obj"
 },
 {
-  "directory": "C:/Users/User/ludo/build/glfw/src",
-  "command": "C:\\msys64\\ucrt64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -std=c99 -Wall -o CMakeFiles\\glfw.dir\\vulkan.c.obj -c C:\\Users\\User\\ludo\\glfw\\src\\vulkan.c",
-  "file": "C:/Users/User/ludo/glfw/src/vulkan.c",
+  "directory": "C:/Users/marrc/bul/cpp-project/alt/ludo/build/glfw/src",
+  "command": "C:\\ProgramData\\chocolatey\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -std=c99 -Wall -o CMakeFiles\\glfw.dir\\vulkan.c.obj -c C:\\Users\\marrc\\bul\\cpp-project\\alt\\ludo\\glfw\\src\\vulkan.c",
+  "file": "C:/Users/marrc/bul/cpp-project/alt/ludo/glfw/src/vulkan.c",
   "output": "glfw/src/CMakeFiles/glfw.dir/vulkan.c.obj"
 },
 {
-  "directory": "C:/Users/User/ludo/build/glfw/src",
-  "command": "C:\\msys64\\ucrt64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -std=c99 -Wall -o CMakeFiles\\glfw.dir\\window.c.obj -c C:\\Users\\User\\ludo\\glfw\\src\\window.c",
-  "file": "C:/Users/User/ludo/glfw/src/window.c",
+  "directory": "C:/Users/marrc/bul/cpp-project/alt/ludo/build/glfw/src",
+  "command": "C:\\ProgramData\\chocolatey\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -std=c99 -Wall -o CMakeFiles\\glfw.dir\\window.c.obj -c C:\\Users\\marrc\\bul\\cpp-project\\alt\\ludo\\glfw\\src\\window.c",
+  "file": "C:/Users/marrc/bul/cpp-project/alt/ludo/glfw/src/window.c",
   "output": "glfw/src/CMakeFiles/glfw.dir/window.c.obj"
 },
 {
-  "directory": "C:/Users/User/ludo/build/glfw/src",
-  "command": "C:\\msys64\\ucrt64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -std=c99 -Wall -o CMakeFiles\\glfw.dir\\egl_context.c.obj -c C:\\Users\\User\\ludo\\glfw\\src\\egl_context.c",
-  "file": "C:/Users/User/ludo/glfw/src/egl_context.c",
+  "directory": "C:/Users/marrc/bul/cpp-project/alt/ludo/build/glfw/src",
+  "command": "C:\\ProgramData\\chocolatey\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -std=c99 -Wall -o CMakeFiles\\glfw.dir\\egl_context.c.obj -c C:\\Users\\marrc\\bul\\cpp-project\\alt\\ludo\\glfw\\src\\egl_context.c",
+  "file": "C:/Users/marrc/bul/cpp-project/alt/ludo/glfw/src/egl_context.c",
   "output": "glfw/src/CMakeFiles/glfw.dir/egl_context.c.obj"
 },
 {
-  "directory": "C:/Users/User/ludo/build/glfw/src",
-  "command": "C:\\msys64\\ucrt64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -std=c99 -Wall -o CMakeFiles\\glfw.dir\\osmesa_context.c.obj -c C:\\Users\\User\\ludo\\glfw\\src\\osmesa_context.c",
-  "file": "C:/Users/User/ludo/glfw/src/osmesa_context.c",
+  "directory": "C:/Users/marrc/bul/cpp-project/alt/ludo/build/glfw/src",
+  "command": "C:\\ProgramData\\chocolatey\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -std=c99 -Wall -o CMakeFiles\\glfw.dir\\osmesa_context.c.obj -c C:\\Users\\marrc\\bul\\cpp-project\\alt\\ludo\\glfw\\src\\osmesa_context.c",
+  "file": "C:/Users/marrc/bul/cpp-project/alt/ludo/glfw/src/osmesa_context.c",
   "output": "glfw/src/CMakeFiles/glfw.dir/osmesa_context.c.obj"
 },
 {
-  "directory": "C:/Users/User/ludo/build/glfw/src",
-  "command": "C:\\msys64\\ucrt64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -std=c99 -Wall -o CMakeFiles\\glfw.dir\\null_init.c.obj -c C:\\Users\\User\\ludo\\glfw\\src\\null_init.c",
-  "file": "C:/Users/User/ludo/glfw/src/null_init.c",
+  "directory": "C:/Users/marrc/bul/cpp-project/alt/ludo/build/glfw/src",
+  "command": "C:\\ProgramData\\chocolatey\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -std=c99 -Wall -o CMakeFiles\\glfw.dir\\null_init.c.obj -c C:\\Users\\marrc\\bul\\cpp-project\\alt\\ludo\\glfw\\src\\null_init.c",
+  "file": "C:/Users/marrc/bul/cpp-project/alt/ludo/glfw/src/null_init.c",
   "output": "glfw/src/CMakeFiles/glfw.dir/null_init.c.obj"
 },
 {
-  "directory": "C:/Users/User/ludo/build/glfw/src",
-  "command": "C:\\msys64\\ucrt64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -std=c99 -Wall -o CMakeFiles\\glfw.dir\\null_monitor.c.obj -c C:\\Users\\User\\ludo\\glfw\\src\\null_monitor.c",
-  "file": "C:/Users/User/ludo/glfw/src/null_monitor.c",
+  "directory": "C:/Users/marrc/bul/cpp-project/alt/ludo/build/glfw/src",
+  "command": "C:\\ProgramData\\chocolatey\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -std=c99 -Wall -o CMakeFiles\\glfw.dir\\null_monitor.c.obj -c C:\\Users\\marrc\\bul\\cpp-project\\alt\\ludo\\glfw\\src\\null_monitor.c",
+  "file": "C:/Users/marrc/bul/cpp-project/alt/ludo/glfw/src/null_monitor.c",
   "output": "glfw/src/CMakeFiles/glfw.dir/null_monitor.c.obj"
 },
 {
-  "directory": "C:/Users/User/ludo/build/glfw/src",
-  "command": "C:\\msys64\\ucrt64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -std=c99 -Wall -o CMakeFiles\\glfw.dir\\null_window.c.obj -c C:\\Users\\User\\ludo\\glfw\\src\\null_window.c",
-  "file": "C:/Users/User/ludo/glfw/src/null_window.c",
+  "directory": "C:/Users/marrc/bul/cpp-project/alt/ludo/build/glfw/src",
+  "command": "C:\\ProgramData\\chocolatey\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -std=c99 -Wall -o CMakeFiles\\glfw.dir\\null_window.c.obj -c C:\\Users\\marrc\\bul\\cpp-project\\alt\\ludo\\glfw\\src\\null_window.c",
+  "file": "C:/Users/marrc/bul/cpp-project/alt/ludo/glfw/src/null_window.c",
   "output": "glfw/src/CMakeFiles/glfw.dir/null_window.c.obj"
 },
 {
-  "directory": "C:/Users/User/ludo/build/glfw/src",
-  "command": "C:\\msys64\\ucrt64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -std=c99 -Wall -o CMakeFiles\\glfw.dir\\null_joystick.c.obj -c C:\\Users\\User\\ludo\\glfw\\src\\null_joystick.c",
-  "file": "C:/Users/User/ludo/glfw/src/null_joystick.c",
+  "directory": "C:/Users/marrc/bul/cpp-project/alt/ludo/build/glfw/src",
+  "command": "C:\\ProgramData\\chocolatey\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -std=c99 -Wall -o CMakeFiles\\glfw.dir\\null_joystick.c.obj -c C:\\Users\\marrc\\bul\\cpp-project\\alt\\ludo\\glfw\\src\\null_joystick.c",
+  "file": "C:/Users/marrc/bul/cpp-project/alt/ludo/glfw/src/null_joystick.c",
   "output": "glfw/src/CMakeFiles/glfw.dir/null_joystick.c.obj"
 },
 {
-  "directory": "C:/Users/User/ludo/build/glfw/src",
-  "command": "C:\\msys64\\ucrt64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -std=c99 -Wall -o CMakeFiles\\glfw.dir\\win32_module.c.obj -c C:\\Users\\User\\ludo\\glfw\\src\\win32_module.c",
-  "file": "C:/Users/User/ludo/glfw/src/win32_module.c",
+  "directory": "C:/Users/marrc/bul/cpp-project/alt/ludo/build/glfw/src",
+  "command": "C:\\ProgramData\\chocolatey\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -std=c99 -Wall -o CMakeFiles\\glfw.dir\\win32_module.c.obj -c C:\\Users\\marrc\\bul\\cpp-project\\alt\\ludo\\glfw\\src\\win32_module.c",
+  "file": "C:/Users/marrc/bul/cpp-project/alt/ludo/glfw/src/win32_module.c",
   "output": "glfw/src/CMakeFiles/glfw.dir/win32_module.c.obj"
 },
 {
-  "directory": "C:/Users/User/ludo/build/glfw/src",
-  "command": "C:\\msys64\\ucrt64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -std=c99 -Wall -o CMakeFiles\\glfw.dir\\win32_time.c.obj -c C:\\Users\\User\\ludo\\glfw\\src\\win32_time.c",
-  "file": "C:/Users/User/ludo/glfw/src/win32_time.c",
+  "directory": "C:/Users/marrc/bul/cpp-project/alt/ludo/build/glfw/src",
+  "command": "C:\\ProgramData\\chocolatey\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -std=c99 -Wall -o CMakeFiles\\glfw.dir\\win32_time.c.obj -c C:\\Users\\marrc\\bul\\cpp-project\\alt\\ludo\\glfw\\src\\win32_time.c",
+  "file": "C:/Users/marrc/bul/cpp-project/alt/ludo/glfw/src/win32_time.c",
   "output": "glfw/src/CMakeFiles/glfw.dir/win32_time.c.obj"
 },
 {
-  "directory": "C:/Users/User/ludo/build/glfw/src",
-  "command": "C:\\msys64\\ucrt64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -std=c99 -Wall -o CMakeFiles\\glfw.dir\\win32_thread.c.obj -c C:\\Users\\User\\ludo\\glfw\\src\\win32_thread.c",
-  "file": "C:/Users/User/ludo/glfw/src/win32_thread.c",
+  "directory": "C:/Users/marrc/bul/cpp-project/alt/ludo/build/glfw/src",
+  "command": "C:\\ProgramData\\chocolatey\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -std=c99 -Wall -o CMakeFiles\\glfw.dir\\win32_thread.c.obj -c C:\\Users\\marrc\\bul\\cpp-project\\alt\\ludo\\glfw\\src\\win32_thread.c",
+  "file": "C:/Users/marrc/bul/cpp-project/alt/ludo/glfw/src/win32_thread.c",
   "output": "glfw/src/CMakeFiles/glfw.dir/win32_thread.c.obj"
 },
 {
-  "directory": "C:/Users/User/ludo/build/glfw/src",
-  "command": "C:\\msys64\\ucrt64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -std=c99 -Wall -o CMakeFiles\\glfw.dir\\win32_init.c.obj -c C:\\Users\\User\\ludo\\glfw\\src\\win32_init.c",
-  "file": "C:/Users/User/ludo/glfw/src/win32_init.c",
+  "directory": "C:/Users/marrc/bul/cpp-project/alt/ludo/build/glfw/src",
+  "command": "C:\\ProgramData\\chocolatey\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -std=c99 -Wall -o CMakeFiles\\glfw.dir\\win32_init.c.obj -c C:\\Users\\marrc\\bul\\cpp-project\\alt\\ludo\\glfw\\src\\win32_init.c",
+  "file": "C:/Users/marrc/bul/cpp-project/alt/ludo/glfw/src/win32_init.c",
   "output": "glfw/src/CMakeFiles/glfw.dir/win32_init.c.obj"
 },
 {
-  "directory": "C:/Users/User/ludo/build/glfw/src",
-  "command": "C:\\msys64\\ucrt64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -std=c99 -Wall -o CMakeFiles\\glfw.dir\\win32_joystick.c.obj -c C:\\Users\\User\\ludo\\glfw\\src\\win32_joystick.c",
-  "file": "C:/Users/User/ludo/glfw/src/win32_joystick.c",
+  "directory": "C:/Users/marrc/bul/cpp-project/alt/ludo/build/glfw/src",
+  "command": "C:\\ProgramData\\chocolatey\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -std=c99 -Wall -o CMakeFiles\\glfw.dir\\win32_joystick.c.obj -c C:\\Users\\marrc\\bul\\cpp-project\\alt\\ludo\\glfw\\src\\win32_joystick.c",
+  "file": "C:/Users/marrc/bul/cpp-project/alt/ludo/glfw/src/win32_joystick.c",
   "output": "glfw/src/CMakeFiles/glfw.dir/win32_joystick.c.obj"
 },
 {
-  "directory": "C:/Users/User/ludo/build/glfw/src",
-  "command": "C:\\msys64\\ucrt64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -std=c99 -Wall -o CMakeFiles\\glfw.dir\\win32_monitor.c.obj -c C:\\Users\\User\\ludo\\glfw\\src\\win32_monitor.c",
-  "file": "C:/Users/User/ludo/glfw/src/win32_monitor.c",
+  "directory": "C:/Users/marrc/bul/cpp-project/alt/ludo/build/glfw/src",
+  "command": "C:\\ProgramData\\chocolatey\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -std=c99 -Wall -o CMakeFiles\\glfw.dir\\win32_monitor.c.obj -c C:\\Users\\marrc\\bul\\cpp-project\\alt\\ludo\\glfw\\src\\win32_monitor.c",
+  "file": "C:/Users/marrc/bul/cpp-project/alt/ludo/glfw/src/win32_monitor.c",
   "output": "glfw/src/CMakeFiles/glfw.dir/win32_monitor.c.obj"
 },
 {
-  "directory": "C:/Users/User/ludo/build/glfw/src",
-  "command": "C:\\msys64\\ucrt64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -std=c99 -Wall -o CMakeFiles\\glfw.dir\\win32_window.c.obj -c C:\\Users\\User\\ludo\\glfw\\src\\win32_window.c",
-  "file": "C:/Users/User/ludo/glfw/src/win32_window.c",
+  "directory": "C:/Users/marrc/bul/cpp-project/alt/ludo/build/glfw/src",
+  "command": "C:\\ProgramData\\chocolatey\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -std=c99 -Wall -o CMakeFiles\\glfw.dir\\win32_window.c.obj -c C:\\Users\\marrc\\bul\\cpp-project\\alt\\ludo\\glfw\\src\\win32_window.c",
+  "file": "C:/Users/marrc/bul/cpp-project/alt/ludo/glfw/src/win32_window.c",
   "output": "glfw/src/CMakeFiles/glfw.dir/win32_window.c.obj"
 },
 {
-  "directory": "C:/Users/User/ludo/build/glfw/src",
-  "command": "C:\\msys64\\ucrt64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -std=c99 -Wall -o CMakeFiles\\glfw.dir\\wgl_context.c.obj -c C:\\Users\\User\\ludo\\glfw\\src\\wgl_context.c",
-  "file": "C:/Users/User/ludo/glfw/src/wgl_context.c",
+  "directory": "C:/Users/marrc/bul/cpp-project/alt/ludo/build/glfw/src",
+  "command": "C:\\ProgramData\\chocolatey\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -std=c99 -Wall -o CMakeFiles\\glfw.dir\\wgl_context.c.obj -c C:\\Users\\marrc\\bul\\cpp-project\\alt\\ludo\\glfw\\src\\wgl_context.c",
+  "file": "C:/Users/marrc/bul/cpp-project/alt/ludo/glfw/src/wgl_context.c",
   "output": "glfw/src/CMakeFiles/glfw.dir/wgl_context.c.obj"
 }
 ]

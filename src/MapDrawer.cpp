@@ -1,8 +1,11 @@
-#include "MapDrawer.h"
-#include "Color.h"
+#include "MapDrawer.hpp"
+#include "Color.hpp"
 #include <GLFW/glfw3.h>
 #include <iostream>
 #include <cmath>
+#include <memory>
+#include "Renderable.hpp"
+#include "WindowManager.hpp"
 
 using namespace std;
 
@@ -13,17 +16,33 @@ Color red = Color(0.996f, 0.180f, 0.090f);
 Color green = Color(0.29f, 0.729f, 0.29f);
 Color yellow = Color(1.0f, 0.784f, 0.208f);
 
-// Returns the size of `cellNumber` cells in OpenGL coordinates
+const double PI = 3.141592653589793;
+
+void MapDrawer::addRenderable(std::shared_ptr<Renderable> r) {
+  renderableItems.push_back(r);
+}
+
+MapDrawer &MapDrawer::getInstance() {
+    static MapDrawer instance; // Single instance
+    return instance;
+}
+
 float MapDrawer::getSizeOfCells(float cellsNumber)
 {
-    // Conversion factor from pixels to OpenGL coordinates
-    float conversionFactor = 2.0f / windowSize;
+    auto cellSizeOpenGL = getCellSize();
+    return cellSizeOpenGL * cellsNumber;
+}
 
-    // Calculate cell size in pixels and OpenGL coordinates
+// Returns the size of a single cell
+float MapDrawer::getCellSize() {
+
+    auto windowSize = WindowManager::getInstance().getWindowSize().first;
+
+    float conversionFactor = 2.0f / windowSize;
+  
     float cellSizePixels = static_cast<float>(windowSize) / mapSize; // ~47.0588 pixels
     float cellSizeOpenGL = cellSizePixels * conversionFactor;        // ~0.117647 OpenGL units
-
-    return cellSizeOpenGL * cellsNumber;
+    return cellSizeOpenGL;
 }
 
 // Returns the OpenGL coordinate for a specific cell index
@@ -83,7 +102,7 @@ void MapDrawer::drawCircle(float cx, float cy, float radius, const Color &color,
     // Draw the circle by approximating it with triangles
     for (int i = 0; i <= segments; i++)
     {
-        float angle = 2.0f * M_PI * i / segments; // Angle in radians
+        float angle = 2.0f * PI * i / segments; // Angle in radians
         float x = radius * cos(angle);
         float y = radius * sin(angle);
         glVertex2f(cx + x + halfCellSize, cy + y + halfCellSize);
@@ -192,7 +211,7 @@ void MapDrawer::drawMiddle()
 
 void MapDrawer::drawLudoBoard()
 {
-
+    
     drawCells();
 
     drawMiddle();

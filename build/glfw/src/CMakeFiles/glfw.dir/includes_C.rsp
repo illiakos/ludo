@@ -1,1 +1,1 @@
--IC:/Users/User/ludo/include -IC:/Users/User/ludo/libs/stb -I"C:/Users/User/ludo/libs/ft2133/freetype-2.13.3/include" -IC:/Users/User/ludo/glfw/include -IC:/Users/User/ludo/glfw/src -IC:/Users/User/ludo/build/glfw/src
+-I"C:/Users/marrc/bul/cpp-project/alt/ludo/include" -I"C:/Users/marrc/bul/cpp-project/alt/ludo/libs/stb" -I"C:/Users/marrc/bul/cpp-project/alt/ludo/libs/ft2133/freetype-2.13.3/include" -I"C:/Users/marrc/bul/cpp-project/alt/ludo/glfw/include" -I"C:/Users/marrc/bul/cpp-project/alt/ludo/glfw/src" -I"C:/Users/marrc/bul/cpp-project/alt/ludo/build/glfw/src"

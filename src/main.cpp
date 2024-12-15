@@ -1,17 +1,17 @@
-#include "Board.h"
-#include "Color.h"
-#include "EventDispatcher.h"
-#include "EventLoop.h"
-#include "MovePawnEvent.h"
-#include "MovePawnHandler.h"
-#include "Player.h"
-#include "PlayerTurnEvent.h"
-#include "PlayerTurnHandler.h"
-#include "RollDiceHandler.h"
-#include "StopGameEvent.h"
-#include "StopGameHandler.h"
-#include "Team.h"
-#include "TurnManager.h"
+#include "Board.hpp"
+#include "Color.hpp"
+#include "EventDispatcher.hpp"
+#include "EventLoop.hpp"
+#include "MovePawnEvent.hpp"
+#include "MovePawnHandler.hpp"
+#include "Player.hpp"
+#include "PlayerTurnEvent.hpp"
+#include "PlayerTurnHandler.hpp"
+#include "RollDiceHandler.hpp"
+#include "StopGameEvent.hpp"
+#include "StopGameHandler.hpp"
+#include "Team.hpp"
+#include "TurnManager.hpp"
 #include <GLFW/glfw3.h>
 #include <ft2build.h>
 #include <iostream>
@@ -20,7 +20,7 @@
 #include FT_FREETYPE_H
 #define STB_IMAGE_IMPLEMENTATION
 #include "stb_image.h"
-#include "MapDrawer.h"
+#include "MapDrawer.hpp"
 
 void testGLFW() {
   if (!glfwInit()) {
@@ -98,11 +98,12 @@ int main() {
 
   std::cout << "All libraries tested successfully!" << std::endl;
 
-  MapDrawer mapDrawer = MapDrawer(800, 15);
+  MapDrawer mapDrawer = MapDrawer::getInstance();
+    /*(800, 15);*/
 
   mapDrawer.drawMap();
 
-  return 0;
+  /*return 0;*/
   // Create the event dispatcher
   EventDispatcher dispatcher;
 
@@ -150,21 +151,19 @@ int main() {
     }
   }
   // Subscribe handlers to specific events
-  dispatcher.subscribe("RollDiceEvent", rollDiceHandler);
-  dispatcher.subscribe("MovePawnEvent", movePawnHandler);
-  dispatcher.subscribe("StopGameEvent", stopGameHandler);
-  dispatcher.subscribe("PlayerTurnEvent", playerTurnHandler);
+  /*dispatcher.subscribe("RollDiceEvent", rollDiceHandler);*/
+  /*dispatcher.subscribe("MovePawnEvent", movePawnHandler);*/
+  /*dispatcher.subscribe("StopGameEvent", stopGameHandler);*/
+  /*dispatcher.subscribe("PlayerTurnEvent", playerTurnHandler);*/
 
   // Start the first player's turn using TurnManager
-  turnManager.startTurn(1, [&eventLoop]() {
-    std::cout << "All turns finished. Enqueueing StopGameEvent...\n";
-    eventLoop.enqueueEvent(std::make_shared<StopGameEvent>());
-  });
+  /*turnManager.startTurn(1, [&eventLoop]() {*/
+  /*  std::cout << "All turns finished. Enqueueing StopGameEvent...\n";*/
+  /*  eventLoop.enqueueEvent(std::make_shared<StopGameEvent>());*/
+  /*});*/
 
   // Process all events in the loop
-  std::cout << "Starting game loop...\n";
   eventLoop.processEvents();
-  std::cout << "Game loop ended.\n";
 
   return 0;
 }

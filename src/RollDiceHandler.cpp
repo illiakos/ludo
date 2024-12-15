@@ -1,6 +1,6 @@
-#include "RollDiceHandler.h"
-#include "RollDiceEvent.h"
-#include "WaitForChoosePawnEvent.h"
+#include "RollDiceHandler.hpp"
+#include "RollDiceEvent.hpp"
+#include "WaitForChoosePawnEvent.hpp"
 #include <chrono>
 #include <iostream>
 #include <memory>

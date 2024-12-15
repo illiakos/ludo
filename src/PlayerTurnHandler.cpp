@@ -1,9 +1,9 @@
-#include "PlayerTurnHandler.h"
-#include "EndTurnEvent.h"
-#include "EventLoop.h"
-#include "PlayerTurnEvent.h"
-#include "RollDiceEvent.h"
-#include "TurnManager.h"
+#include "PlayerTurnHandler.hpp"
+#include "EndTurnEvent.hpp"
+#include "EventLoop.hpp"
+#include "PlayerTurnEvent.hpp"
+#include "RollDiceEvent.hpp"
+#include "TurnManager.hpp"
 #include <iostream>
 #include <memory>
 

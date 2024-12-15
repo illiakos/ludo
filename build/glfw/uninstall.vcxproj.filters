@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\marrc\bul\cpp-project\alt\ludo\build\CMakeFiles\27f67766127f5bc29911ad4d575cfb02\uninstall.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\marrc\bul\cpp-project\alt\ludo\glfw\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Users\marrc\bul\cpp-project\alt\ludo\build\glfw\CMakeFiles\uninstall" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{C93937A8-3A87-344E-A7B2-8652C51FBCB7}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
