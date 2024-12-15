@@ -20,6 +20,7 @@
 #include FT_FREETYPE_H
 #define STB_IMAGE_IMPLEMENTATION
 #include "stb_image.h"
+#include "MapDrawer.h"
 
 void testGLFW() {
   if (!glfwInit()) {
@@ -53,7 +54,7 @@ void testFreeType() {
 
   // Load a font file (use any TTF file you have)
   FT_Face face;
-  if (FT_New_Face(ft, "path/to/your/font.ttf", 0, &face)) {
+  if (FT_New_Face(ft, "../src/assets/fonts/OpenSans-Regular.ttf", 0, &face)) {
     std::cerr << "Failed to load font!" << std::endl;
     FT_Done_FreeType(ft);
     exit(EXIT_FAILURE);
@@ -71,7 +72,7 @@ void testFreeType() {
 void testStbImage() {
   int width, height, channels;
   unsigned char *data =
-      stbi_load("path/to/your/image.png", &width, &height, &channels, 0);
+      stbi_load("../src/assets/images/test.jpg", &width, &height, &channels, 0);
   if (!data) {
     std::cerr << "Failed to load image with stb_image!" << std::endl;
     exit(EXIT_FAILURE);
@@ -96,6 +97,11 @@ int main() {
   testStbImage();
 
   std::cout << "All libraries tested successfully!" << std::endl;
+
+  MapDrawer mapDrawer = MapDrawer(800, 15);
+
+  mapDrawer.drawMap();
+
   return 0;
   // Create the event dispatcher
   EventDispatcher dispatcher;

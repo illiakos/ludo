@@ -11,6 +11,9 @@ public:
     // Constructor from RGB values
     Color(int r, int g, int b) : red(r), green(g), blue(b) {}
 
+    // Constructor from float RGB values
+    Color(float r, float g, float b) : redf(r), greenf(g), bluef(b) {}
+
     // Constructor from hex string (e.g., "#FF5733" or "FF5733")
     Color(const std::string& hexCode) {
         if (hexCode[0] == '#') {
@@ -25,6 +28,10 @@ public:
     int getGreen() const { return green; }
     int getBlue() const { return blue; }
 
+    float getRedf() const { return redf; }
+    float getGreenf() const { return greenf; }
+    float getBluef() const { return bluef; }
+
     // Convert RGB to hex string
     std::string toHex() const {
         std::stringstream ss;
@@ -36,6 +43,7 @@ public:
 
 private:
     int red, green, blue;
+    float redf, greenf, bluef;
 
     // Convert a hex string (e.g., "FF5733") to RGB values
     void fromHex(const std::string& hex) {

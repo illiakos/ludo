@@ -5,6 +5,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/PawnGame.dir/src/EventDispatcher.cpp.obj.d"
   "CMakeFiles/PawnGame.dir/src/EventLoop.cpp.obj"
   "CMakeFiles/PawnGame.dir/src/EventLoop.cpp.obj.d"
+  "CMakeFiles/PawnGame.dir/src/MapDrawer.cpp.obj"
+  "CMakeFiles/PawnGame.dir/src/MapDrawer.cpp.obj.d"
   "CMakeFiles/PawnGame.dir/src/MovePawnHandler.cpp.obj"
   "CMakeFiles/PawnGame.dir/src/MovePawnHandler.cpp.obj.d"
   "CMakeFiles/PawnGame.dir/src/PawnManager.cpp.obj"
