@@ -1,6 +1,6 @@
-#include "EventLoop.h"
-#include "Event.h"
-#include "EventDispatcher.h"
+#include "EventLoop.hpp"
+#include "Event.hpp"
+#include "EventDispatcher.hpp"
 #include <iostream>
 #include <memory>
 #include <ostream>

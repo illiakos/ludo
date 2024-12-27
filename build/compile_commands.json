@@ -1,6 +1,12 @@
 [
 {
   "directory": "C:/Users/marrc/bul/cpp-project/alt/ludo/build",
+  "command": "C:\\ProgramData\\chocolatey\\bin\\g++.exe  @CMakeFiles/PawnGame.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\PawnGame.dir\\src\\Base.cpp.obj -c C:\\Users\\marrc\\bul\\cpp-project\\alt\\ludo\\src\\Base.cpp",
+  "file": "C:/Users/marrc/bul/cpp-project/alt/ludo/src/Base.cpp",
+  "output": "CMakeFiles/PawnGame.dir/src/Base.cpp.obj"
+},
+{
+  "directory": "C:/Users/marrc/bul/cpp-project/alt/ludo/build",
   "command": "C:\\ProgramData\\chocolatey\\bin\\g++.exe  @CMakeFiles/PawnGame.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\PawnGame.dir\\src\\Board.cpp.obj -c C:\\Users\\marrc\\bul\\cpp-project\\alt\\ludo\\src\\Board.cpp",
   "file": "C:/Users/marrc/bul/cpp-project/alt/ludo/src/Board.cpp",
   "output": "CMakeFiles/PawnGame.dir/src/Board.cpp.obj"
@@ -19,6 +25,12 @@
 },
 {
   "directory": "C:/Users/marrc/bul/cpp-project/alt/ludo/build",
+  "command": "C:\\ProgramData\\chocolatey\\bin\\g++.exe  @CMakeFiles/PawnGame.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\PawnGame.dir\\src\\MapBuilder.cpp.obj -c C:\\Users\\marrc\\bul\\cpp-project\\alt\\ludo\\src\\MapBuilder.cpp",
+  "file": "C:/Users/marrc/bul/cpp-project/alt/ludo/src/MapBuilder.cpp",
+  "output": "CMakeFiles/PawnGame.dir/src/MapBuilder.cpp.obj"
+},
+{
+  "directory": "C:/Users/marrc/bul/cpp-project/alt/ludo/build",
   "command": "C:\\ProgramData\\chocolatey\\bin\\g++.exe  @CMakeFiles/PawnGame.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\PawnGame.dir\\src\\MapDrawer.cpp.obj -c C:\\Users\\marrc\\bul\\cpp-project\\alt\\ludo\\src\\MapDrawer.cpp",
   "file": "C:/Users/marrc/bul/cpp-project/alt/ludo/src/MapDrawer.cpp",
   "output": "CMakeFiles/PawnGame.dir/src/MapDrawer.cpp.obj"
@@ -28,6 +40,12 @@
   "command": "C:\\ProgramData\\chocolatey\\bin\\g++.exe  @CMakeFiles/PawnGame.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\PawnGame.dir\\src\\MovePawnHandler.cpp.obj -c C:\\Users\\marrc\\bul\\cpp-project\\alt\\ludo\\src\\MovePawnHandler.cpp",
   "file": "C:/Users/marrc/bul/cpp-project/alt/ludo/src/MovePawnHandler.cpp",
   "output": "CMakeFiles/PawnGame.dir/src/MovePawnHandler.cpp.obj"
+},
+{
+  "directory": "C:/Users/marrc/bul/cpp-project/alt/ludo/build",
+  "command": "C:\\ProgramData\\chocolatey\\bin\\g++.exe  @CMakeFiles/PawnGame.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\PawnGame.dir\\src\\Pawn.cpp.obj -c C:\\Users\\marrc\\bul\\cpp-project\\alt\\ludo\\src\\Pawn.cpp",
+  "file": "C:/Users/marrc/bul/cpp-project/alt/ludo/src/Pawn.cpp",
+  "output": "CMakeFiles/PawnGame.dir/src/Pawn.cpp.obj"
 },
 {
   "directory": "C:/Users/marrc/bul/cpp-project/alt/ludo/build",
@@ -49,9 +67,27 @@
 },
 {
   "directory": "C:/Users/marrc/bul/cpp-project/alt/ludo/build",
+  "command": "C:\\ProgramData\\chocolatey\\bin\\g++.exe  @CMakeFiles/PawnGame.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\PawnGame.dir\\src\\SpecialTiles.cpp.obj -c C:\\Users\\marrc\\bul\\cpp-project\\alt\\ludo\\src\\SpecialTiles.cpp",
+  "file": "C:/Users/marrc/bul/cpp-project/alt/ludo/src/SpecialTiles.cpp",
+  "output": "CMakeFiles/PawnGame.dir/src/SpecialTiles.cpp.obj"
+},
+{
+  "directory": "C:/Users/marrc/bul/cpp-project/alt/ludo/build",
   "command": "C:\\ProgramData\\chocolatey\\bin\\g++.exe  @CMakeFiles/PawnGame.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\PawnGame.dir\\src\\StopGameHandler.cpp.obj -c C:\\Users\\marrc\\bul\\cpp-project\\alt\\ludo\\src\\StopGameHandler.cpp",
   "file": "C:/Users/marrc/bul/cpp-project/alt/ludo/src/StopGameHandler.cpp",
   "output": "CMakeFiles/PawnGame.dir/src/StopGameHandler.cpp.obj"
+},
+{
+  "directory": "C:/Users/marrc/bul/cpp-project/alt/ludo/build",
+  "command": "C:\\ProgramData\\chocolatey\\bin\\g++.exe  @CMakeFiles/PawnGame.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\PawnGame.dir\\src\\Tile.cpp.obj -c C:\\Users\\marrc\\bul\\cpp-project\\alt\\ludo\\src\\Tile.cpp",
+  "file": "C:/Users/marrc/bul/cpp-project/alt/ludo/src/Tile.cpp",
+  "output": "CMakeFiles/PawnGame.dir/src/Tile.cpp.obj"
+},
+{
+  "directory": "C:/Users/marrc/bul/cpp-project/alt/ludo/build",
+  "command": "C:\\ProgramData\\chocolatey\\bin\\g++.exe  @CMakeFiles/PawnGame.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\PawnGame.dir\\src\\TileManager.cpp.obj -c C:\\Users\\marrc\\bul\\cpp-project\\alt\\ludo\\src\\TileManager.cpp",
+  "file": "C:/Users/marrc/bul/cpp-project/alt/ludo/src/TileManager.cpp",
+  "output": "CMakeFiles/PawnGame.dir/src/TileManager.cpp.obj"
 },
 {
   "directory": "C:/Users/marrc/bul/cpp-project/alt/ludo/build",
@@ -64,6 +100,12 @@
   "command": "C:\\ProgramData\\chocolatey\\bin\\g++.exe  @CMakeFiles/PawnGame.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\PawnGame.dir\\src\\WaitForChoosePawnEvent.cpp.obj -c C:\\Users\\marrc\\bul\\cpp-project\\alt\\ludo\\src\\WaitForChoosePawnEvent.cpp",
   "file": "C:/Users/marrc/bul/cpp-project/alt/ludo/src/WaitForChoosePawnEvent.cpp",
   "output": "CMakeFiles/PawnGame.dir/src/WaitForChoosePawnEvent.cpp.obj"
+},
+{
+  "directory": "C:/Users/marrc/bul/cpp-project/alt/ludo/build",
+  "command": "C:\\ProgramData\\chocolatey\\bin\\g++.exe  @CMakeFiles/PawnGame.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\PawnGame.dir\\src\\WindowManager.cpp.obj -c C:\\Users\\marrc\\bul\\cpp-project\\alt\\ludo\\src\\WindowManager.cpp",
+  "file": "C:/Users/marrc/bul/cpp-project/alt/ludo/src/WindowManager.cpp",
+  "output": "CMakeFiles/PawnGame.dir/src/WindowManager.cpp.obj"
 },
 {
   "directory": "C:/Users/marrc/bul/cpp-project/alt/ludo/build",

@@ -1,8 +1,8 @@
 CMakeFiles/PawnGame.dir/src/PlayerTurnHandler.cpp.obj: \
  C:\Users\marrc\bul\cpp-project\alt\ludo\src\PlayerTurnHandler.cpp \
- C:/Users/marrc/bul/cpp-project/alt/ludo/include/PlayerTurnHandler.h \
- C:/Users/marrc/bul/cpp-project/alt/ludo/include/EventHandler.h \
- C:/Users/marrc/bul/cpp-project/alt/ludo/include/Event.h \
+ C:/Users/marrc/bul/cpp-project/alt/ludo/include/PlayerTurnHandler.hpp \
+ C:/Users/marrc/bul/cpp-project/alt/ludo/include/EventHandler.hpp \
+ C:/Users/marrc/bul/cpp-project/alt/ludo/include/Event.hpp \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/string \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/x86_64-w64-mingw32/bits/c++config.h \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/x86_64-w64-mingw32/bits/os_defines.h \
@@ -138,11 +138,11 @@ CMakeFiles/PawnGame.dir/src/PlayerTurnHandler.cpp.obj: \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/backward/auto_ptr.h \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/pstl/glue_memory_defs.h \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/pstl/execution_defs.h \
- C:/Users/marrc/bul/cpp-project/alt/ludo/include/EventLoop.h \
+ C:/Users/marrc/bul/cpp-project/alt/ludo/include/EventLoop.hpp \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/list \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/stl_list.h \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/list.tcc \
- C:/Users/marrc/bul/cpp-project/alt/ludo/include/TurnManager.h \
+ C:/Users/marrc/bul/cpp-project/alt/ludo/include/TurnManager.hpp \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/functional \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/std_function.h \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/unordered_map \
@@ -162,11 +162,11 @@ CMakeFiles/PawnGame.dir/src/PlayerTurnHandler.cpp.obj: \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/algorithmfwd.h \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/stl_heap.h \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/uniform_int_dist.h \
- C:/Users/marrc/bul/cpp-project/alt/ludo/include/EndTurnEvent.h \
- C:/Users/marrc/bul/cpp-project/alt/ludo/include/EventLoop.h \
- C:/Users/marrc/bul/cpp-project/alt/ludo/include/PlayerTurnEvent.h \
- C:/Users/marrc/bul/cpp-project/alt/ludo/include/RollDiceEvent.h \
- C:/Users/marrc/bul/cpp-project/alt/ludo/include/TurnManager.h \
+ C:/Users/marrc/bul/cpp-project/alt/ludo/include/EndTurnEvent.hpp \
+ C:/Users/marrc/bul/cpp-project/alt/ludo/include/EventLoop.hpp \
+ C:/Users/marrc/bul/cpp-project/alt/ludo/include/PlayerTurnEvent.hpp \
+ C:/Users/marrc/bul/cpp-project/alt/ludo/include/RollDiceEvent.hpp \
+ C:/Users/marrc/bul/cpp-project/alt/ludo/include/TurnManager.hpp \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/iostream \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/ostream \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/ios \

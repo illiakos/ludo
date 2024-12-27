@@ -1,7 +1,7 @@
 CMakeFiles/PawnGame.dir/src/WaitForChoosePawnEvent.cpp.obj: \
  C:\Users\marrc\bul\cpp-project\alt\ludo\src\WaitForChoosePawnEvent.cpp \
- C:/Users/marrc/bul/cpp-project/alt/ludo/include/WaitForChoosePawnEvent.h \
- C:/Users/marrc/bul/cpp-project/alt/ludo/include/Event.h \
+ C:/Users/marrc/bul/cpp-project/alt/ludo/include/WaitForChoosePawnEvent.hpp \
+ C:/Users/marrc/bul/cpp-project/alt/ludo/include/Event.hpp \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/string \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/x86_64-w64-mingw32/bits/c++config.h \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/x86_64-w64-mingw32/bits/os_defines.h \
@@ -95,9 +95,9 @@ CMakeFiles/PawnGame.dir/src/WaitForChoosePawnEvent.cpp.obj: \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/cerrno \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/charconv.h \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/basic_string.tcc \
- C:/Users/marrc/bul/cpp-project/alt/ludo/include/MovePawnEvent.h \
- C:/Users/marrc/bul/cpp-project/alt/ludo/include/WaitForChoosePawnHandler.h \
- C:/Users/marrc/bul/cpp-project/alt/ludo/include/EventHandler.h \
+ C:/Users/marrc/bul/cpp-project/alt/ludo/include/MovePawnEvent.hpp \
+ C:/Users/marrc/bul/cpp-project/alt/ludo/include/WaitForChoosePawnHandler.hpp \
+ C:/Users/marrc/bul/cpp-project/alt/ludo/include/EventHandler.hpp \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/memory \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/stl_uninitialized.h \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/stl_tempbuf.h \
@@ -140,8 +140,8 @@ CMakeFiles/PawnGame.dir/src/WaitForChoosePawnEvent.cpp.obj: \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/backward/auto_ptr.h \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/pstl/glue_memory_defs.h \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/pstl/execution_defs.h \
- C:/Users/marrc/bul/cpp-project/alt/ludo/include/TurnManager.h \
- C:/Users/marrc/bul/cpp-project/alt/ludo/include/EventLoop.h \
+ C:/Users/marrc/bul/cpp-project/alt/ludo/include/TurnManager.hpp \
+ C:/Users/marrc/bul/cpp-project/alt/ludo/include/EventLoop.hpp \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/list \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/stl_list.h \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/list.tcc \

@@ -1,5 +1,5 @@
-#include "TurnManager.h"
-#include "RollDiceEvent.h"
+#include "TurnManager.hpp"
+#include "RollDiceEvent.hpp"
 #include <iostream>
 
 TurnManager::TurnManager(EventLoop &loop)

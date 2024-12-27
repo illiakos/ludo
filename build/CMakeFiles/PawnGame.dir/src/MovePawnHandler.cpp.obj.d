@@ -1,8 +1,8 @@
 CMakeFiles/PawnGame.dir/src/MovePawnHandler.cpp.obj: \
  C:\Users\marrc\bul\cpp-project\alt\ludo\src\MovePawnHandler.cpp \
- C:/Users/marrc/bul/cpp-project/alt/ludo/include/MovePawnHandler.h \
- C:/Users/marrc/bul/cpp-project/alt/ludo/include/EventHandler.h \
- C:/Users/marrc/bul/cpp-project/alt/ludo/include/Event.h \
+ C:/Users/marrc/bul/cpp-project/alt/ludo/include/MovePawnHandler.hpp \
+ C:/Users/marrc/bul/cpp-project/alt/ludo/include/EventHandler.hpp \
+ C:/Users/marrc/bul/cpp-project/alt/ludo/include/Event.hpp \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/string \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/x86_64-w64-mingw32/bits/c++config.h \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/x86_64-w64-mingw32/bits/os_defines.h \
@@ -138,13 +138,8 @@ CMakeFiles/PawnGame.dir/src/MovePawnHandler.cpp.obj: \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/backward/auto_ptr.h \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/pstl/glue_memory_defs.h \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/pstl/execution_defs.h \
- C:/Users/marrc/bul/cpp-project/alt/ludo/include/Board.h \
- C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/vector \
- C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/stl_vector.h \
- C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/stl_bvector.h \
- C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/vector.tcc \
- C:/Users/marrc/bul/cpp-project/alt/ludo/include/Tile.h \
- C:/Users/marrc/bul/cpp-project/alt/ludo/include/Color.h \
+ C:/Users/marrc/bul/cpp-project/alt/ludo/include/Board.hpp \
+ C:/Users/marrc/bul/cpp-project/alt/ludo/include/Color.hpp \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/sstream \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/istream \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/ios \
@@ -179,10 +174,16 @@ CMakeFiles/PawnGame.dir/src/MovePawnHandler.cpp.obj: \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/locale_facets_nonio.tcc \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/locale_conv.h \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/quoted_string.h \
- C:/Users/marrc/bul/cpp-project/alt/ludo/include/Coordinates.h \
- C:/Users/marrc/bul/cpp-project/alt/ludo/include/Size.h \
- C:/Users/marrc/bul/cpp-project/alt/ludo/include/PawnManager.h \
- C:/Users/marrc/bul/cpp-project/alt/ludo/include/Pawn.h \
+ C:/Users/marrc/bul/cpp-project/alt/ludo/include/Dimensions.hpp \
+ C:/Users/marrc/bul/cpp-project/alt/ludo/include/Tile.hpp \
+ C:/Users/marrc/bul/cpp-project/alt/ludo/include/Renderable.hpp \
+ C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/vector \
+ C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/stl_vector.h \
+ C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/stl_bvector.h \
+ C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/vector.tcc \
+ C:/Users/marrc/bul/cpp-project/alt/ludo/include/PawnManager.hpp \
+ C:/Users/marrc/bul/cpp-project/alt/ludo/include/MapDrawer.hpp \
+ C:/Users/marrc/bul/cpp-project/alt/ludo/include/Pawn.hpp \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/unordered_map \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/hashtable.h \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/hashtable_policy.h \
@@ -190,8 +191,8 @@ CMakeFiles/PawnGame.dir/src/MovePawnHandler.cpp.obj: \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/node_handle.h \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/unordered_map.h \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/erase_if.h \
- C:/Users/marrc/bul/cpp-project/alt/ludo/include/MovePawnEvent.h \
- C:/Users/marrc/bul/cpp-project/alt/ludo/include/MovePawnEvent.h \
- C:/Users/marrc/bul/cpp-project/alt/ludo/include/PawnManager.h \
- C:/Users/marrc/bul/cpp-project/alt/ludo/include/SpecialTiles.h \
+ C:/Users/marrc/bul/cpp-project/alt/ludo/include/MovePawnEvent.hpp \
+ C:/Users/marrc/bul/cpp-project/alt/ludo/include/MovePawnEvent.hpp \
+ C:/Users/marrc/bul/cpp-project/alt/ludo/include/PawnManager.hpp \
+ C:/Users/marrc/bul/cpp-project/alt/ludo/include/SpecialTiles.hpp \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/iostream

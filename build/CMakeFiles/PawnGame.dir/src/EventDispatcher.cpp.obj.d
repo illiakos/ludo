@@ -1,6 +1,6 @@
 CMakeFiles/PawnGame.dir/src/EventDispatcher.cpp.obj: \
  C:\Users\marrc\bul\cpp-project\alt\ludo\src\EventDispatcher.cpp \
- C:/Users/marrc/bul/cpp-project/alt/ludo/include/EventDispatcher.h \
+ C:/Users/marrc/bul/cpp-project/alt/ludo/include/EventDispatcher.hpp \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/map \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/stl_tree.h \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/stl_algobase.h \
@@ -146,9 +146,9 @@ CMakeFiles/PawnGame.dir/src/EventDispatcher.cpp.obj: \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/stl_vector.h \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/stl_bvector.h \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/vector.tcc \
- C:/Users/marrc/bul/cpp-project/alt/ludo/include/Event.h \
- C:/Users/marrc/bul/cpp-project/alt/ludo/include/EventHandler.h \
- C:/Users/marrc/bul/cpp-project/alt/ludo/include/Event.h \
+ C:/Users/marrc/bul/cpp-project/alt/ludo/include/Event.hpp \
+ C:/Users/marrc/bul/cpp-project/alt/ludo/include/EventHandler.hpp \
+ C:/Users/marrc/bul/cpp-project/alt/ludo/include/Event.hpp \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/algorithm \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/stl_algo.h \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/algorithmfwd.h \

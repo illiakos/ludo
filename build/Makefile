@@ -212,6 +212,30 @@ update_mappings/fast:
 	$(MAKE) $(MAKESILENT) -f glfw\src\CMakeFiles\update_mappings.dir\build.make glfw/src/CMakeFiles/update_mappings.dir/build
 .PHONY : update_mappings/fast
 
+src/Base.obj: src/Base.cpp.obj
+.PHONY : src/Base.obj
+
+# target to build an object file
+src/Base.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PawnGame.dir\build.make CMakeFiles/PawnGame.dir/src/Base.cpp.obj
+.PHONY : src/Base.cpp.obj
+
+src/Base.i: src/Base.cpp.i
+.PHONY : src/Base.i
+
+# target to preprocess a source file
+src/Base.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PawnGame.dir\build.make CMakeFiles/PawnGame.dir/src/Base.cpp.i
+.PHONY : src/Base.cpp.i
+
+src/Base.s: src/Base.cpp.s
+.PHONY : src/Base.s
+
+# target to generate assembly for a file
+src/Base.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PawnGame.dir\build.make CMakeFiles/PawnGame.dir/src/Base.cpp.s
+.PHONY : src/Base.cpp.s
+
 src/Board.obj: src/Board.cpp.obj
 .PHONY : src/Board.obj
 
@@ -284,6 +308,30 @@ src/EventLoop.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\PawnGame.dir\build.make CMakeFiles/PawnGame.dir/src/EventLoop.cpp.s
 .PHONY : src/EventLoop.cpp.s
 
+src/MapBuilder.obj: src/MapBuilder.cpp.obj
+.PHONY : src/MapBuilder.obj
+
+# target to build an object file
+src/MapBuilder.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PawnGame.dir\build.make CMakeFiles/PawnGame.dir/src/MapBuilder.cpp.obj
+.PHONY : src/MapBuilder.cpp.obj
+
+src/MapBuilder.i: src/MapBuilder.cpp.i
+.PHONY : src/MapBuilder.i
+
+# target to preprocess a source file
+src/MapBuilder.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PawnGame.dir\build.make CMakeFiles/PawnGame.dir/src/MapBuilder.cpp.i
+.PHONY : src/MapBuilder.cpp.i
+
+src/MapBuilder.s: src/MapBuilder.cpp.s
+.PHONY : src/MapBuilder.s
+
+# target to generate assembly for a file
+src/MapBuilder.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PawnGame.dir\build.make CMakeFiles/PawnGame.dir/src/MapBuilder.cpp.s
+.PHONY : src/MapBuilder.cpp.s
+
 src/MapDrawer.obj: src/MapDrawer.cpp.obj
 .PHONY : src/MapDrawer.obj
 
@@ -331,6 +379,30 @@ src/MovePawnHandler.s: src/MovePawnHandler.cpp.s
 src/MovePawnHandler.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\PawnGame.dir\build.make CMakeFiles/PawnGame.dir/src/MovePawnHandler.cpp.s
 .PHONY : src/MovePawnHandler.cpp.s
+
+src/Pawn.obj: src/Pawn.cpp.obj
+.PHONY : src/Pawn.obj
+
+# target to build an object file
+src/Pawn.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PawnGame.dir\build.make CMakeFiles/PawnGame.dir/src/Pawn.cpp.obj
+.PHONY : src/Pawn.cpp.obj
+
+src/Pawn.i: src/Pawn.cpp.i
+.PHONY : src/Pawn.i
+
+# target to preprocess a source file
+src/Pawn.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PawnGame.dir\build.make CMakeFiles/PawnGame.dir/src/Pawn.cpp.i
+.PHONY : src/Pawn.cpp.i
+
+src/Pawn.s: src/Pawn.cpp.s
+.PHONY : src/Pawn.s
+
+# target to generate assembly for a file
+src/Pawn.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PawnGame.dir\build.make CMakeFiles/PawnGame.dir/src/Pawn.cpp.s
+.PHONY : src/Pawn.cpp.s
 
 src/PawnManager.obj: src/PawnManager.cpp.obj
 .PHONY : src/PawnManager.obj
@@ -404,6 +476,30 @@ src/RollDiceHandler.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\PawnGame.dir\build.make CMakeFiles/PawnGame.dir/src/RollDiceHandler.cpp.s
 .PHONY : src/RollDiceHandler.cpp.s
 
+src/SpecialTiles.obj: src/SpecialTiles.cpp.obj
+.PHONY : src/SpecialTiles.obj
+
+# target to build an object file
+src/SpecialTiles.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PawnGame.dir\build.make CMakeFiles/PawnGame.dir/src/SpecialTiles.cpp.obj
+.PHONY : src/SpecialTiles.cpp.obj
+
+src/SpecialTiles.i: src/SpecialTiles.cpp.i
+.PHONY : src/SpecialTiles.i
+
+# target to preprocess a source file
+src/SpecialTiles.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PawnGame.dir\build.make CMakeFiles/PawnGame.dir/src/SpecialTiles.cpp.i
+.PHONY : src/SpecialTiles.cpp.i
+
+src/SpecialTiles.s: src/SpecialTiles.cpp.s
+.PHONY : src/SpecialTiles.s
+
+# target to generate assembly for a file
+src/SpecialTiles.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PawnGame.dir\build.make CMakeFiles/PawnGame.dir/src/SpecialTiles.cpp.s
+.PHONY : src/SpecialTiles.cpp.s
+
 src/StopGameHandler.obj: src/StopGameHandler.cpp.obj
 .PHONY : src/StopGameHandler.obj
 
@@ -427,6 +523,54 @@ src/StopGameHandler.s: src/StopGameHandler.cpp.s
 src/StopGameHandler.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\PawnGame.dir\build.make CMakeFiles/PawnGame.dir/src/StopGameHandler.cpp.s
 .PHONY : src/StopGameHandler.cpp.s
+
+src/Tile.obj: src/Tile.cpp.obj
+.PHONY : src/Tile.obj
+
+# target to build an object file
+src/Tile.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PawnGame.dir\build.make CMakeFiles/PawnGame.dir/src/Tile.cpp.obj
+.PHONY : src/Tile.cpp.obj
+
+src/Tile.i: src/Tile.cpp.i
+.PHONY : src/Tile.i
+
+# target to preprocess a source file
+src/Tile.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PawnGame.dir\build.make CMakeFiles/PawnGame.dir/src/Tile.cpp.i
+.PHONY : src/Tile.cpp.i
+
+src/Tile.s: src/Tile.cpp.s
+.PHONY : src/Tile.s
+
+# target to generate assembly for a file
+src/Tile.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PawnGame.dir\build.make CMakeFiles/PawnGame.dir/src/Tile.cpp.s
+.PHONY : src/Tile.cpp.s
+
+src/TileManager.obj: src/TileManager.cpp.obj
+.PHONY : src/TileManager.obj
+
+# target to build an object file
+src/TileManager.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PawnGame.dir\build.make CMakeFiles/PawnGame.dir/src/TileManager.cpp.obj
+.PHONY : src/TileManager.cpp.obj
+
+src/TileManager.i: src/TileManager.cpp.i
+.PHONY : src/TileManager.i
+
+# target to preprocess a source file
+src/TileManager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PawnGame.dir\build.make CMakeFiles/PawnGame.dir/src/TileManager.cpp.i
+.PHONY : src/TileManager.cpp.i
+
+src/TileManager.s: src/TileManager.cpp.s
+.PHONY : src/TileManager.s
+
+# target to generate assembly for a file
+src/TileManager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PawnGame.dir\build.make CMakeFiles/PawnGame.dir/src/TileManager.cpp.s
+.PHONY : src/TileManager.cpp.s
 
 src/TurnManager.obj: src/TurnManager.cpp.obj
 .PHONY : src/TurnManager.obj
@@ -476,6 +620,30 @@ src/WaitForChoosePawnEvent.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\PawnGame.dir\build.make CMakeFiles/PawnGame.dir/src/WaitForChoosePawnEvent.cpp.s
 .PHONY : src/WaitForChoosePawnEvent.cpp.s
 
+src/WindowManager.obj: src/WindowManager.cpp.obj
+.PHONY : src/WindowManager.obj
+
+# target to build an object file
+src/WindowManager.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PawnGame.dir\build.make CMakeFiles/PawnGame.dir/src/WindowManager.cpp.obj
+.PHONY : src/WindowManager.cpp.obj
+
+src/WindowManager.i: src/WindowManager.cpp.i
+.PHONY : src/WindowManager.i
+
+# target to preprocess a source file
+src/WindowManager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PawnGame.dir\build.make CMakeFiles/PawnGame.dir/src/WindowManager.cpp.i
+.PHONY : src/WindowManager.cpp.i
+
+src/WindowManager.s: src/WindowManager.cpp.s
+.PHONY : src/WindowManager.s
+
+# target to generate assembly for a file
+src/WindowManager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PawnGame.dir\build.make CMakeFiles/PawnGame.dir/src/WindowManager.cpp.s
+.PHONY : src/WindowManager.cpp.s
+
 src/main.obj: src/main.cpp.obj
 .PHONY : src/main.obj
 
@@ -516,6 +684,9 @@ help:
 	@echo ... update_mappings
 	@echo ... PawnGame
 	@echo ... glfw
+	@echo ... src/Base.obj
+	@echo ... src/Base.i
+	@echo ... src/Base.s
 	@echo ... src/Board.obj
 	@echo ... src/Board.i
 	@echo ... src/Board.s
@@ -525,12 +696,18 @@ help:
 	@echo ... src/EventLoop.obj
 	@echo ... src/EventLoop.i
 	@echo ... src/EventLoop.s
+	@echo ... src/MapBuilder.obj
+	@echo ... src/MapBuilder.i
+	@echo ... src/MapBuilder.s
 	@echo ... src/MapDrawer.obj
 	@echo ... src/MapDrawer.i
 	@echo ... src/MapDrawer.s
 	@echo ... src/MovePawnHandler.obj
 	@echo ... src/MovePawnHandler.i
 	@echo ... src/MovePawnHandler.s
+	@echo ... src/Pawn.obj
+	@echo ... src/Pawn.i
+	@echo ... src/Pawn.s
 	@echo ... src/PawnManager.obj
 	@echo ... src/PawnManager.i
 	@echo ... src/PawnManager.s
@@ -540,15 +717,27 @@ help:
 	@echo ... src/RollDiceHandler.obj
 	@echo ... src/RollDiceHandler.i
 	@echo ... src/RollDiceHandler.s
+	@echo ... src/SpecialTiles.obj
+	@echo ... src/SpecialTiles.i
+	@echo ... src/SpecialTiles.s
 	@echo ... src/StopGameHandler.obj
 	@echo ... src/StopGameHandler.i
 	@echo ... src/StopGameHandler.s
+	@echo ... src/Tile.obj
+	@echo ... src/Tile.i
+	@echo ... src/Tile.s
+	@echo ... src/TileManager.obj
+	@echo ... src/TileManager.i
+	@echo ... src/TileManager.s
 	@echo ... src/TurnManager.obj
 	@echo ... src/TurnManager.i
 	@echo ... src/TurnManager.s
 	@echo ... src/WaitForChoosePawnEvent.obj
 	@echo ... src/WaitForChoosePawnEvent.i
 	@echo ... src/WaitForChoosePawnEvent.s
+	@echo ... src/WindowManager.obj
+	@echo ... src/WindowManager.i
+	@echo ... src/WindowManager.s
 	@echo ... src/main.obj
 	@echo ... src/main.i
 	@echo ... src/main.s

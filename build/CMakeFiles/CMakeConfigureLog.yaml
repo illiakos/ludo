@@ -61,8 +61,8 @@ events:
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "C:/Users/marrc/bul/cpp-project/alt/ludo/build/CMakeFiles/CMakeScratch/TryCompile-qvqmuv"
-      binary: "C:/Users/marrc/bul/cpp-project/alt/ludo/build/CMakeFiles/CMakeScratch/TryCompile-qvqmuv"
+      source: "C:/Users/marrc/bul/cpp-project/alt/ludo/build/CMakeFiles/CMakeScratch/TryCompile-a20aqy"
+      binary: "C:/Users/marrc/bul/cpp-project/alt/ludo/build/CMakeFiles/CMakeScratch/TryCompile-a20aqy"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -71,13 +71,13 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/marrc/bul/cpp-project/alt/ludo/build/CMakeFiles/CMakeScratch/TryCompile-qvqmuv'
+        Change Dir: 'C:/Users/marrc/bul/cpp-project/alt/ludo/build/CMakeFiles/CMakeScratch/TryCompile-a20aqy'
         
-        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/ProgramData/chocolatey/bin/mingw32-make.exe -f Makefile cmTC_2cf47/fast
-        C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/mingw32-make  -f CMakeFiles\\cmTC_2cf47.dir\\build.make CMakeFiles/cmTC_2cf47.dir/build
-        mingw32-make[1]: Entering directory 'C:/Users/marrc/bul/cpp-project/alt/ludo/build/CMakeFiles/CMakeScratch/TryCompile-qvqmuv'
-        Building C object CMakeFiles/cmTC_2cf47.dir/CMakeCCompilerABI.c.obj
-        C:\\ProgramData\\chocolatey\\bin\\gcc.exe   -v -o CMakeFiles\\cmTC_2cf47.dir\\CMakeCCompilerABI.c.obj -c "C:\\Program Files\\CMake\\share\\cmake-3.30\\Modules\\CMakeCCompilerABI.c"
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/ProgramData/chocolatey/bin/mingw32-make.exe -f Makefile cmTC_71701/fast
+        C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/mingw32-make  -f CMakeFiles\\cmTC_71701.dir\\build.make CMakeFiles/cmTC_71701.dir/build
+        mingw32-make[1]: Entering directory 'C:/Users/marrc/bul/cpp-project/alt/ludo/build/CMakeFiles/CMakeScratch/TryCompile-a20aqy'
+        Building C object CMakeFiles/cmTC_71701.dir/CMakeCCompilerABI.c.obj
+        C:\\ProgramData\\chocolatey\\bin\\gcc.exe   -v -o CMakeFiles\\cmTC_71701.dir\\CMakeCCompilerABI.c.obj -c "C:\\Program Files\\CMake\\share\\cmake-3.30\\Modules\\CMakeCCompilerABI.c"
         Using built-in specs.
         COLLECT_GCC=C:\\ProgramData\\chocolatey\\lib\\mingw\\tools\\install\\mingw64\\bin\\gcc.exe
         Target: x86_64-w64-mingw32
@@ -85,8 +85,8 @@ events:
         Thread model: posix
         Supported LTO compression algorithms: zlib
         gcc version 12.2.0 (x86_64-posix-seh-rev2, Built by MinGW-W64 project) 
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_2cf47.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=core2' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_2cf47.dir\\'
-         C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/12.2.0/cc1.exe -quiet -v -iprefix C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/ -D_REENTRANT C:\\Program Files\\CMake\\share\\cmake-3.30\\Modules\\CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles\\cmTC_2cf47.dir\\ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=core2 -march=nocona -version -o C:\\Users\\marrc\\AppData\\Local\\Temp\\ccSUVrm8.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_71701.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=core2' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_71701.dir\\'
+         C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/12.2.0/cc1.exe -quiet -v -iprefix C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/ -D_REENTRANT C:\\Program Files\\CMake\\share\\cmake-3.30\\Modules\\CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles\\cmTC_71701.dir\\ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=core2 -march=nocona -version -o C:\\Users\\marrc\\AppData\\Local\\Temp\\ccs70HTd.s
         GNU C17 (x86_64-posix-seh-rev2, Built by MinGW-W64 project) version 12.2.0 (x86_64-w64-mingw32)
         	compiled by GNU C version 12.2.0, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version isl-0.25-GMP
         
@@ -107,17 +107,17 @@ events:
         
         GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
         Compiler executable checksum: 478043e7641a06f81a19c4bb15a44291
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_2cf47.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=core2' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_2cf47.dir\\'
-         C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles\\cmTC_2cf47.dir\\CMakeCCompilerABI.c.obj C:\\Users\\marrc\\AppData\\Local\\Temp\\ccSUVrm8.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_71701.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=core2' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_71701.dir\\'
+         C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles\\cmTC_71701.dir\\CMakeCCompilerABI.c.obj C:\\Users\\marrc\\AppData\\Local\\Temp\\ccs70HTd.s
         GNU assembler version 2.39 (x86_64-w64-mingw32) using BFD version (GNU Binutils) 2.39
         COMPILER_PATH=C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/12.2.0/;C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../libexec/gcc/;C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../x86_64-w64-mingw32/bin/
         LIBRARY_PATH=C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/;C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/;C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../x86_64-w64-mingw32/lib/../lib/;C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../lib/;C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../x86_64-w64-mingw32/lib/;C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_2cf47.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=core2' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_2cf47.dir\\CMakeCCompilerABI.c.'
-        Linking C executable cmTC_2cf47.exe
-        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_2cf47.dir\\link.txt --verbose=1
-        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_2cf47.dir/objects.a
-        C:\\ProgramData\\chocolatey\\bin\\ar.exe qc CMakeFiles\\cmTC_2cf47.dir/objects.a @CMakeFiles\\cmTC_2cf47.dir\\objects1.rsp
-        C:\\ProgramData\\chocolatey\\bin\\gcc.exe  -v -Wl,-v -Wl,--whole-archive CMakeFiles\\cmTC_2cf47.dir/objects.a -Wl,--no-whole-archive -o cmTC_2cf47.exe -Wl,--out-implib,libcmTC_2cf47.dll.a -Wl,--major-image-version,0,--minor-image-version,0
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_71701.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=core2' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_71701.dir\\CMakeCCompilerABI.c.'
+        Linking C executable cmTC_71701.exe
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_71701.dir\\link.txt --verbose=1
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_71701.dir/objects.a
+        C:\\ProgramData\\chocolatey\\bin\\ar.exe qc CMakeFiles\\cmTC_71701.dir/objects.a @CMakeFiles\\cmTC_71701.dir\\objects1.rsp
+        C:\\ProgramData\\chocolatey\\bin\\gcc.exe  -v -Wl,-v -Wl,--whole-archive CMakeFiles\\cmTC_71701.dir/objects.a -Wl,--no-whole-archive -o cmTC_71701.exe -Wl,--out-implib,libcmTC_71701.dll.a -Wl,--major-image-version,0,--minor-image-version,0
         Using built-in specs.
         COLLECT_GCC=C:\\ProgramData\\chocolatey\\lib\\mingw\\tools\\install\\mingw64\\bin\\gcc.exe
         COLLECT_LTO_WRAPPER=C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/12.2.0/lto-wrapper.exe
@@ -128,13 +128,13 @@ events:
         gcc version 12.2.0 (x86_64-posix-seh-rev2, Built by MinGW-W64 project) 
         COMPILER_PATH=C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/12.2.0/;C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../libexec/gcc/;C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../x86_64-w64-mingw32/bin/
         LIBRARY_PATH=C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/;C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/;C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../x86_64-w64-mingw32/lib/../lib/;C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../lib/;C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../x86_64-w64-mingw32/lib/;C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_2cf47.exe' '-mtune=core2' '-march=nocona' '-dumpdir' 'cmTC_2cf47.'
-         C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/12.2.0/collect2.exe -plugin C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/12.2.0/liblto_plugin.dll -plugin-opt=C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/12.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\marrc\\AppData\\Local\\Temp\\ccf8L64h.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-liconv -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 --sysroot=C:/mingw-builds/ucrt64-seh-posix/x86_64-1220-posix-seh-ucrt-rt_v10-rev2/mingw64 -m i386pep -Bdynamic -o cmTC_2cf47.exe C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/crtbegin.o -LC:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0 -LC:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc -LC:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../lib -LC:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../x86_64-w64-mingw32/lib -LC:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../.. -v --whole-archive CMakeFiles\\cmTC_2cf47.dir/objects.a --no-whole-archive --out-implib libcmTC_2cf47.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/crtend.o
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_71701.exe' '-mtune=core2' '-march=nocona' '-dumpdir' 'cmTC_71701.'
+         C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/12.2.0/collect2.exe -plugin C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/12.2.0/liblto_plugin.dll -plugin-opt=C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/12.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\marrc\\AppData\\Local\\Temp\\ccItTFxz.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-liconv -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 --sysroot=C:/mingw-builds/ucrt64-seh-posix/x86_64-1220-posix-seh-ucrt-rt_v10-rev2/mingw64 -m i386pep -Bdynamic -o cmTC_71701.exe C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/crtbegin.o -LC:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0 -LC:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc -LC:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../lib -LC:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../x86_64-w64-mingw32/lib -LC:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../.. -v --whole-archive CMakeFiles\\cmTC_71701.dir/objects.a --no-whole-archive --out-implib libcmTC_71701.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/crtend.o
         collect2 version 12.2.0
-        C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe -plugin C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/12.2.0/liblto_plugin.dll -plugin-opt=C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/12.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\marrc\\AppData\\Local\\Temp\\ccf8L64h.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-liconv -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 --sysroot=C:/mingw-builds/ucrt64-seh-posix/x86_64-1220-posix-seh-ucrt-rt_v10-rev2/mingw64 -m i386pep -Bdynamic -o cmTC_2cf47.exe C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/crtbegin.o -LC:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0 -LC:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc -LC:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../lib -LC:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../x86_64-w64-mingw32/lib -LC:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../.. -v --whole-archive CMakeFiles\\cmTC_2cf47.dir/objects.a --no-whole-archive --out-implib libcmTC_2cf47.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/crtend.o
+        C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe -plugin C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/12.2.0/liblto_plugin.dll -plugin-opt=C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/12.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\marrc\\AppData\\Local\\Temp\\ccItTFxz.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-liconv -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 --sysroot=C:/mingw-builds/ucrt64-seh-posix/x86_64-1220-posix-seh-ucrt-rt_v10-rev2/mingw64 -m i386pep -Bdynamic -o cmTC_71701.exe C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/crtbegin.o -LC:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0 -LC:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc -LC:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../lib -LC:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../x86_64-w64-mingw32/lib -LC:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../.. -v --whole-archive CMakeFiles\\cmTC_71701.dir/objects.a --no-whole-archive --out-implib libcmTC_71701.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/crtend.o
         GNU ld (GNU Binutils) 2.39
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_2cf47.exe' '-mtune=core2' '-march=nocona' '-dumpdir' 'cmTC_2cf47.'
-        mingw32-make[1]: Leaving directory 'C:/Users/marrc/bul/cpp-project/alt/ludo/build/CMakeFiles/CMakeScratch/TryCompile-qvqmuv'
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_71701.exe' '-mtune=core2' '-march=nocona' '-dumpdir' 'cmTC_71701.'
+        mingw32-make[1]: Leaving directory 'C:/Users/marrc/bul/cpp-project/alt/ludo/build/CMakeFiles/CMakeScratch/TryCompile-a20aqy'
         
       exitCode: 0
   -
@@ -167,13 +167,13 @@ events:
       Parsed C implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?))("|,| |$)]
-        ignore line: [Change Dir: 'C:/Users/marrc/bul/cpp-project/alt/ludo/build/CMakeFiles/CMakeScratch/TryCompile-qvqmuv']
+        ignore line: [Change Dir: 'C:/Users/marrc/bul/cpp-project/alt/ludo/build/CMakeFiles/CMakeScratch/TryCompile-a20aqy']
         ignore line: []
-        ignore line: [Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/ProgramData/chocolatey/bin/mingw32-make.exe -f Makefile cmTC_2cf47/fast]
-        ignore line: [C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/mingw32-make  -f CMakeFiles\\cmTC_2cf47.dir\\build.make CMakeFiles/cmTC_2cf47.dir/build]
-        ignore line: [mingw32-make[1]: Entering directory 'C:/Users/marrc/bul/cpp-project/alt/ludo/build/CMakeFiles/CMakeScratch/TryCompile-qvqmuv']
-        ignore line: [Building C object CMakeFiles/cmTC_2cf47.dir/CMakeCCompilerABI.c.obj]
-        ignore line: [C:\\ProgramData\\chocolatey\\bin\\gcc.exe   -v -o CMakeFiles\\cmTC_2cf47.dir\\CMakeCCompilerABI.c.obj -c "C:\\Program Files\\CMake\\share\\cmake-3.30\\Modules\\CMakeCCompilerABI.c"]
+        ignore line: [Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/ProgramData/chocolatey/bin/mingw32-make.exe -f Makefile cmTC_71701/fast]
+        ignore line: [C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/mingw32-make  -f CMakeFiles\\cmTC_71701.dir\\build.make CMakeFiles/cmTC_71701.dir/build]
+        ignore line: [mingw32-make[1]: Entering directory 'C:/Users/marrc/bul/cpp-project/alt/ludo/build/CMakeFiles/CMakeScratch/TryCompile-a20aqy']
+        ignore line: [Building C object CMakeFiles/cmTC_71701.dir/CMakeCCompilerABI.c.obj]
+        ignore line: [C:\\ProgramData\\chocolatey\\bin\\gcc.exe   -v -o CMakeFiles\\cmTC_71701.dir\\CMakeCCompilerABI.c.obj -c "C:\\Program Files\\CMake\\share\\cmake-3.30\\Modules\\CMakeCCompilerABI.c"]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=C:\\ProgramData\\chocolatey\\lib\\mingw\\tools\\install\\mingw64\\bin\\gcc.exe]
         ignore line: [Target: x86_64-w64-mingw32]
@@ -181,8 +181,8 @@ events:
         ignore line: [Thread model: posix]
         ignore line: [Supported LTO compression algorithms: zlib]
         ignore line: [gcc version 12.2.0 (x86_64-posix-seh-rev2  Built by MinGW-W64 project) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_2cf47.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=core2' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_2cf47.dir\\']
-        ignore line: [ C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/12.2.0/cc1.exe -quiet -v -iprefix C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/ -D_REENTRANT C:\\Program Files\\CMake\\share\\cmake-3.30\\Modules\\CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles\\cmTC_2cf47.dir\\ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=core2 -march=nocona -version -o C:\\Users\\marrc\\AppData\\Local\\Temp\\ccSUVrm8.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_71701.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=core2' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_71701.dir\\']
+        ignore line: [ C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/12.2.0/cc1.exe -quiet -v -iprefix C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/ -D_REENTRANT C:\\Program Files\\CMake\\share\\cmake-3.30\\Modules\\CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles\\cmTC_71701.dir\\ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=core2 -march=nocona -version -o C:\\Users\\marrc\\AppData\\Local\\Temp\\ccs70HTd.s]
         ignore line: [GNU C17 (x86_64-posix-seh-rev2  Built by MinGW-W64 project) version 12.2.0 (x86_64-w64-mingw32)]
         ignore line: [	compiled by GNU C version 12.2.0  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.1  isl version isl-0.25-GMP]
         ignore line: []
@@ -203,8 +203,8 @@ events:
         ignore line: []
         ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
         ignore line: [Compiler executable checksum: 478043e7641a06f81a19c4bb15a44291]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_2cf47.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=core2' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_2cf47.dir\\']
-        ignore line: [ C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles\\cmTC_2cf47.dir\\CMakeCCompilerABI.c.obj C:\\Users\\marrc\\AppData\\Local\\Temp\\ccSUVrm8.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_71701.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=core2' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_71701.dir\\']
+        ignore line: [ C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles\\cmTC_71701.dir\\CMakeCCompilerABI.c.obj C:\\Users\\marrc\\AppData\\Local\\Temp\\ccs70HTd.s]
         ignore line: [GNU assembler version 2.39 (x86_64-w64-mingw32) using BFD version (GNU Binutils) 2.39]
         ignore line: [COMPILER_PATH=C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/12.2.0/]
         ignore line: [C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../libexec/gcc/]
@@ -215,12 +215,12 @@ events:
         ignore line: [C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../lib/]
         ignore line: [C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../x86_64-w64-mingw32/lib/]
         ignore line: [C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_2cf47.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=core2' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_2cf47.dir\\CMakeCCompilerABI.c.']
-        ignore line: [Linking C executable cmTC_2cf47.exe]
-        ignore line: ["C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_2cf47.dir\\link.txt --verbose=1]
-        ignore line: ["C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_2cf47.dir/objects.a]
-        ignore line: [C:\\ProgramData\\chocolatey\\bin\\ar.exe qc CMakeFiles\\cmTC_2cf47.dir/objects.a @CMakeFiles\\cmTC_2cf47.dir\\objects1.rsp]
-        ignore line: [C:\\ProgramData\\chocolatey\\bin\\gcc.exe  -v -Wl -v -Wl --whole-archive CMakeFiles\\cmTC_2cf47.dir/objects.a -Wl --no-whole-archive -o cmTC_2cf47.exe -Wl --out-implib libcmTC_2cf47.dll.a -Wl --major-image-version 0 --minor-image-version 0]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_71701.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=core2' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_71701.dir\\CMakeCCompilerABI.c.']
+        ignore line: [Linking C executable cmTC_71701.exe]
+        ignore line: ["C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_71701.dir\\link.txt --verbose=1]
+        ignore line: ["C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_71701.dir/objects.a]
+        ignore line: [C:\\ProgramData\\chocolatey\\bin\\ar.exe qc CMakeFiles\\cmTC_71701.dir/objects.a @CMakeFiles\\cmTC_71701.dir\\objects1.rsp]
+        ignore line: [C:\\ProgramData\\chocolatey\\bin\\gcc.exe  -v -Wl -v -Wl --whole-archive CMakeFiles\\cmTC_71701.dir/objects.a -Wl --no-whole-archive -o cmTC_71701.exe -Wl --out-implib libcmTC_71701.dll.a -Wl --major-image-version 0 --minor-image-version 0]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=C:\\ProgramData\\chocolatey\\lib\\mingw\\tools\\install\\mingw64\\bin\\gcc.exe]
         ignore line: [COLLECT_LTO_WRAPPER=C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/12.2.0/lto-wrapper.exe]
@@ -238,13 +238,13 @@ events:
         ignore line: [C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../lib/]
         ignore line: [C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../x86_64-w64-mingw32/lib/]
         ignore line: [C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_2cf47.exe' '-mtune=core2' '-march=nocona' '-dumpdir' 'cmTC_2cf47.']
-        link line: [ C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/12.2.0/collect2.exe -plugin C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/12.2.0/liblto_plugin.dll -plugin-opt=C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/12.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\marrc\\AppData\\Local\\Temp\\ccf8L64h.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-liconv -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 --sysroot=C:/mingw-builds/ucrt64-seh-posix/x86_64-1220-posix-seh-ucrt-rt_v10-rev2/mingw64 -m i386pep -Bdynamic -o cmTC_2cf47.exe C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/crtbegin.o -LC:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0 -LC:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc -LC:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../lib -LC:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../x86_64-w64-mingw32/lib -LC:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../.. -v --whole-archive CMakeFiles\\cmTC_2cf47.dir/objects.a --no-whole-archive --out-implib libcmTC_2cf47.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/crtend.o]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_71701.exe' '-mtune=core2' '-march=nocona' '-dumpdir' 'cmTC_71701.']
+        link line: [ C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/12.2.0/collect2.exe -plugin C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/12.2.0/liblto_plugin.dll -plugin-opt=C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/12.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\marrc\\AppData\\Local\\Temp\\ccItTFxz.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-liconv -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 --sysroot=C:/mingw-builds/ucrt64-seh-posix/x86_64-1220-posix-seh-ucrt-rt_v10-rev2/mingw64 -m i386pep -Bdynamic -o cmTC_71701.exe C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/crtbegin.o -LC:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0 -LC:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc -LC:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../lib -LC:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../x86_64-w64-mingw32/lib -LC:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../.. -v --whole-archive CMakeFiles\\cmTC_71701.dir/objects.a --no-whole-archive --out-implib libcmTC_71701.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/crtend.o]
           arg [C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/12.2.0/collect2.exe] ==> ignore
           arg [-plugin] ==> ignore
           arg [C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/12.2.0/liblto_plugin.dll] ==> ignore
           arg [-plugin-opt=C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/12.2.0/lto-wrapper.exe] ==> ignore
-          arg [-plugin-opt=-fresolution=C:\\Users\\marrc\\AppData\\Local\\Temp\\ccf8L64h.res] ==> ignore
+          arg [-plugin-opt=-fresolution=C:\\Users\\marrc\\AppData\\Local\\Temp\\ccItTFxz.res] ==> ignore
           arg [-plugin-opt=-pass-through=-lmingw32] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc_eh] ==> ignore
@@ -270,7 +270,7 @@ events:
           arg [i386pep] ==> ignore
           arg [-Bdynamic] ==> search dynamic
           arg [-o] ==> ignore
-          arg [cmTC_2cf47.exe] ==> ignore
+          arg [cmTC_71701.exe] ==> ignore
           arg [C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o] ==> obj [C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o]
           arg [C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/crtbegin.o] ==> obj [C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/crtbegin.o]
           arg [-LC:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0] ==> dir [C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0]
@@ -281,10 +281,10 @@ events:
           arg [-LC:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../..] ==> dir [C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../..]
           arg [-v] ==> ignore
           arg [--whole-archive] ==> ignore
-          arg [CMakeFiles\\cmTC_2cf47.dir/objects.a] ==> ignore
+          arg [CMakeFiles\\cmTC_71701.dir/objects.a] ==> ignore
           arg [--no-whole-archive] ==> ignore
           arg [--out-implib] ==> ignore
-          arg [libcmTC_2cf47.dll.a] ==> ignore
+          arg [libcmTC_71701.dll.a] ==> ignore
           arg [--major-image-version] ==> ignore
           arg [0] ==> ignore
           arg [--minor-image-version] ==> ignore
@@ -369,8 +369,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "C:/Users/marrc/bul/cpp-project/alt/ludo/build/CMakeFiles/CMakeScratch/TryCompile-7b04q4"
-      binary: "C:/Users/marrc/bul/cpp-project/alt/ludo/build/CMakeFiles/CMakeScratch/TryCompile-7b04q4"
+      source: "C:/Users/marrc/bul/cpp-project/alt/ludo/build/CMakeFiles/CMakeScratch/TryCompile-rxh9n2"
+      binary: "C:/Users/marrc/bul/cpp-project/alt/ludo/build/CMakeFiles/CMakeScratch/TryCompile-rxh9n2"
     cmakeVariables:
       CMAKE_CXX_FLAGS: ""
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -380,13 +380,13 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/marrc/bul/cpp-project/alt/ludo/build/CMakeFiles/CMakeScratch/TryCompile-7b04q4'
+        Change Dir: 'C:/Users/marrc/bul/cpp-project/alt/ludo/build/CMakeFiles/CMakeScratch/TryCompile-rxh9n2'
         
-        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/ProgramData/chocolatey/bin/mingw32-make.exe -f Makefile cmTC_fc0e6/fast
-        C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/mingw32-make  -f CMakeFiles\\cmTC_fc0e6.dir\\build.make CMakeFiles/cmTC_fc0e6.dir/build
-        mingw32-make[1]: Entering directory 'C:/Users/marrc/bul/cpp-project/alt/ludo/build/CMakeFiles/CMakeScratch/TryCompile-7b04q4'
-        Building CXX object CMakeFiles/cmTC_fc0e6.dir/CMakeCXXCompilerABI.cpp.obj
-        C:\\ProgramData\\chocolatey\\bin\\g++.exe   -v -o CMakeFiles\\cmTC_fc0e6.dir\\CMakeCXXCompilerABI.cpp.obj -c "C:\\Program Files\\CMake\\share\\cmake-3.30\\Modules\\CMakeCXXCompilerABI.cpp"
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/ProgramData/chocolatey/bin/mingw32-make.exe -f Makefile cmTC_a9804/fast
+        C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/mingw32-make  -f CMakeFiles\\cmTC_a9804.dir\\build.make CMakeFiles/cmTC_a9804.dir/build
+        mingw32-make[1]: Entering directory 'C:/Users/marrc/bul/cpp-project/alt/ludo/build/CMakeFiles/CMakeScratch/TryCompile-rxh9n2'
+        Building CXX object CMakeFiles/cmTC_a9804.dir/CMakeCXXCompilerABI.cpp.obj
+        C:\\ProgramData\\chocolatey\\bin\\g++.exe   -v -o CMakeFiles\\cmTC_a9804.dir\\CMakeCXXCompilerABI.cpp.obj -c "C:\\Program Files\\CMake\\share\\cmake-3.30\\Modules\\CMakeCXXCompilerABI.cpp"
         Using built-in specs.
         COLLECT_GCC=C:\\ProgramData\\chocolatey\\lib\\mingw\\tools\\install\\mingw64\\bin\\g++.exe
         Target: x86_64-w64-mingw32
@@ -394,8 +394,8 @@ events:
         Thread model: posix
         Supported LTO compression algorithms: zlib
         gcc version 12.2.0 (x86_64-posix-seh-rev2, Built by MinGW-W64 project) 
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_fc0e6.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=core2' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_fc0e6.dir\\'
-         C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/12.2.0/cc1plus.exe -quiet -v -iprefix C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/ -D_REENTRANT C:\\Program Files\\CMake\\share\\cmake-3.30\\Modules\\CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles\\cmTC_fc0e6.dir\\ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=core2 -march=nocona -version -o C:\\Users\\marrc\\AppData\\Local\\Temp\\ccXe2Vg0.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_a9804.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=core2' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_a9804.dir\\'
+         C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/12.2.0/cc1plus.exe -quiet -v -iprefix C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/ -D_REENTRANT C:\\Program Files\\CMake\\share\\cmake-3.30\\Modules\\CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles\\cmTC_a9804.dir\\ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=core2 -march=nocona -version -o C:\\Users\\marrc\\AppData\\Local\\Temp\\cc8yNmwg.s
         GNU C++17 (x86_64-posix-seh-rev2, Built by MinGW-W64 project) version 12.2.0 (x86_64-w64-mingw32)
         	compiled by GNU C version 12.2.0, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version isl-0.25-GMP
         
@@ -422,17 +422,17 @@ events:
         
         GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
         Compiler executable checksum: bd871182343e24686b6070b103904810
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_fc0e6.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=core2' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_fc0e6.dir\\'
-         C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles\\cmTC_fc0e6.dir\\CMakeCXXCompilerABI.cpp.obj C:\\Users\\marrc\\AppData\\Local\\Temp\\ccXe2Vg0.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_a9804.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=core2' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_a9804.dir\\'
+         C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles\\cmTC_a9804.dir\\CMakeCXXCompilerABI.cpp.obj C:\\Users\\marrc\\AppData\\Local\\Temp\\cc8yNmwg.s
         GNU assembler version 2.39 (x86_64-w64-mingw32) using BFD version (GNU Binutils) 2.39
         COMPILER_PATH=C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/12.2.0/;C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../libexec/gcc/;C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../x86_64-w64-mingw32/bin/
         LIBRARY_PATH=C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/;C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/;C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../x86_64-w64-mingw32/lib/../lib/;C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../lib/;C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../x86_64-w64-mingw32/lib/;C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_fc0e6.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=core2' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_fc0e6.dir\\CMakeCXXCompilerABI.cpp.'
-        Linking CXX executable cmTC_fc0e6.exe
-        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_fc0e6.dir\\link.txt --verbose=1
-        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_fc0e6.dir/objects.a
-        C:\\ProgramData\\chocolatey\\bin\\ar.exe qc CMakeFiles\\cmTC_fc0e6.dir/objects.a @CMakeFiles\\cmTC_fc0e6.dir\\objects1.rsp
-        C:\\ProgramData\\chocolatey\\bin\\g++.exe  -v -Wl,-v -Wl,--whole-archive CMakeFiles\\cmTC_fc0e6.dir/objects.a -Wl,--no-whole-archive -o cmTC_fc0e6.exe -Wl,--out-implib,libcmTC_fc0e6.dll.a -Wl,--major-image-version,0,--minor-image-version,0
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_a9804.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=core2' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_a9804.dir\\CMakeCXXCompilerABI.cpp.'
+        Linking CXX executable cmTC_a9804.exe
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_a9804.dir\\link.txt --verbose=1
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_a9804.dir/objects.a
+        C:\\ProgramData\\chocolatey\\bin\\ar.exe qc CMakeFiles\\cmTC_a9804.dir/objects.a @CMakeFiles\\cmTC_a9804.dir\\objects1.rsp
+        C:\\ProgramData\\chocolatey\\bin\\g++.exe  -v -Wl,-v -Wl,--whole-archive CMakeFiles\\cmTC_a9804.dir/objects.a -Wl,--no-whole-archive -o cmTC_a9804.exe -Wl,--out-implib,libcmTC_a9804.dll.a -Wl,--major-image-version,0,--minor-image-version,0
         Using built-in specs.
         COLLECT_GCC=C:\\ProgramData\\chocolatey\\lib\\mingw\\tools\\install\\mingw64\\bin\\g++.exe
         COLLECT_LTO_WRAPPER=C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/12.2.0/lto-wrapper.exe
@@ -443,13 +443,13 @@ events:
         gcc version 12.2.0 (x86_64-posix-seh-rev2, Built by MinGW-W64 project) 
         COMPILER_PATH=C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/12.2.0/;C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../libexec/gcc/;C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../x86_64-w64-mingw32/bin/
         LIBRARY_PATH=C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/;C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/;C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../x86_64-w64-mingw32/lib/../lib/;C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../lib/;C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../x86_64-w64-mingw32/lib/;C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_fc0e6.exe' '-shared-libgcc' '-mtune=core2' '-march=nocona' '-dumpdir' 'cmTC_fc0e6.'
-         C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/12.2.0/collect2.exe -plugin C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/12.2.0/liblto_plugin.dll -plugin-opt=C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/12.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\marrc\\AppData\\Local\\Temp\\ccDw01Wh.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-liconv -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 --sysroot=C:/mingw-builds/ucrt64-seh-posix/x86_64-1220-posix-seh-ucrt-rt_v10-rev2/mingw64 -m i386pep -Bdynamic -o cmTC_fc0e6.exe C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/crtbegin.o -LC:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0 -LC:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc -LC:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../lib -LC:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../x86_64-w64-mingw32/lib -LC:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../.. -v --whole-archive CMakeFiles\\cmTC_fc0e6.dir/objects.a --no-whole-archive --out-implib libcmTC_fc0e6.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/crtend.o
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_a9804.exe' '-shared-libgcc' '-mtune=core2' '-march=nocona' '-dumpdir' 'cmTC_a9804.'
+         C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/12.2.0/collect2.exe -plugin C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/12.2.0/liblto_plugin.dll -plugin-opt=C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/12.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\marrc\\AppData\\Local\\Temp\\ccXiNmDm.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-liconv -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 --sysroot=C:/mingw-builds/ucrt64-seh-posix/x86_64-1220-posix-seh-ucrt-rt_v10-rev2/mingw64 -m i386pep -Bdynamic -o cmTC_a9804.exe C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/crtbegin.o -LC:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0 -LC:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc -LC:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../lib -LC:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../x86_64-w64-mingw32/lib -LC:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../.. -v --whole-archive CMakeFiles\\cmTC_a9804.dir/objects.a --no-whole-archive --out-implib libcmTC_a9804.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/crtend.o
         collect2 version 12.2.0
-        C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe -plugin C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/12.2.0/liblto_plugin.dll -plugin-opt=C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/12.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\marrc\\AppData\\Local\\Temp\\ccDw01Wh.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-liconv -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 --sysroot=C:/mingw-builds/ucrt64-seh-posix/x86_64-1220-posix-seh-ucrt-rt_v10-rev2/mingw64 -m i386pep -Bdynamic -o cmTC_fc0e6.exe C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/crtbegin.o -LC:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0 -LC:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc -LC:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../lib -LC:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../x86_64-w64-mingw32/lib -LC:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../.. -v --whole-archive CMakeFiles\\cmTC_fc0e6.dir/objects.a --no-whole-archive --out-implib libcmTC_fc0e6.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/crtend.o
+        C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe -plugin C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/12.2.0/liblto_plugin.dll -plugin-opt=C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/12.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\marrc\\AppData\\Local\\Temp\\ccXiNmDm.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-liconv -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 --sysroot=C:/mingw-builds/ucrt64-seh-posix/x86_64-1220-posix-seh-ucrt-rt_v10-rev2/mingw64 -m i386pep -Bdynamic -o cmTC_a9804.exe C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/crtbegin.o -LC:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0 -LC:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc -LC:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../lib -LC:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../x86_64-w64-mingw32/lib -LC:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../.. -v --whole-archive CMakeFiles\\cmTC_a9804.dir/objects.a --no-whole-archive --out-implib libcmTC_a9804.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/crtend.o
         GNU ld (GNU Binutils) 2.39
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_fc0e6.exe' '-shared-libgcc' '-mtune=core2' '-march=nocona' '-dumpdir' 'cmTC_fc0e6.'
-        mingw32-make[1]: Leaving directory 'C:/Users/marrc/bul/cpp-project/alt/ludo/build/CMakeFiles/CMakeScratch/TryCompile-7b04q4'
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_a9804.exe' '-shared-libgcc' '-mtune=core2' '-march=nocona' '-dumpdir' 'cmTC_a9804.'
+        mingw32-make[1]: Leaving directory 'C:/Users/marrc/bul/cpp-project/alt/ludo/build/CMakeFiles/CMakeScratch/TryCompile-rxh9n2'
         
       exitCode: 0
   -
@@ -488,13 +488,13 @@ events:
       Parsed CXX implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?))("|,| |$)]
-        ignore line: [Change Dir: 'C:/Users/marrc/bul/cpp-project/alt/ludo/build/CMakeFiles/CMakeScratch/TryCompile-7b04q4']
+        ignore line: [Change Dir: 'C:/Users/marrc/bul/cpp-project/alt/ludo/build/CMakeFiles/CMakeScratch/TryCompile-rxh9n2']
         ignore line: []
-        ignore line: [Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/ProgramData/chocolatey/bin/mingw32-make.exe -f Makefile cmTC_fc0e6/fast]
-        ignore line: [C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/mingw32-make  -f CMakeFiles\\cmTC_fc0e6.dir\\build.make CMakeFiles/cmTC_fc0e6.dir/build]
-        ignore line: [mingw32-make[1]: Entering directory 'C:/Users/marrc/bul/cpp-project/alt/ludo/build/CMakeFiles/CMakeScratch/TryCompile-7b04q4']
-        ignore line: [Building CXX object CMakeFiles/cmTC_fc0e6.dir/CMakeCXXCompilerABI.cpp.obj]
-        ignore line: [C:\\ProgramData\\chocolatey\\bin\\g++.exe   -v -o CMakeFiles\\cmTC_fc0e6.dir\\CMakeCXXCompilerABI.cpp.obj -c "C:\\Program Files\\CMake\\share\\cmake-3.30\\Modules\\CMakeCXXCompilerABI.cpp"]
+        ignore line: [Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/ProgramData/chocolatey/bin/mingw32-make.exe -f Makefile cmTC_a9804/fast]
+        ignore line: [C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/mingw32-make  -f CMakeFiles\\cmTC_a9804.dir\\build.make CMakeFiles/cmTC_a9804.dir/build]
+        ignore line: [mingw32-make[1]: Entering directory 'C:/Users/marrc/bul/cpp-project/alt/ludo/build/CMakeFiles/CMakeScratch/TryCompile-rxh9n2']
+        ignore line: [Building CXX object CMakeFiles/cmTC_a9804.dir/CMakeCXXCompilerABI.cpp.obj]
+        ignore line: [C:\\ProgramData\\chocolatey\\bin\\g++.exe   -v -o CMakeFiles\\cmTC_a9804.dir\\CMakeCXXCompilerABI.cpp.obj -c "C:\\Program Files\\CMake\\share\\cmake-3.30\\Modules\\CMakeCXXCompilerABI.cpp"]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=C:\\ProgramData\\chocolatey\\lib\\mingw\\tools\\install\\mingw64\\bin\\g++.exe]
         ignore line: [Target: x86_64-w64-mingw32]
@@ -502,8 +502,8 @@ events:
         ignore line: [Thread model: posix]
         ignore line: [Supported LTO compression algorithms: zlib]
         ignore line: [gcc version 12.2.0 (x86_64-posix-seh-rev2  Built by MinGW-W64 project) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_fc0e6.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=core2' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_fc0e6.dir\\']
-        ignore line: [ C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/12.2.0/cc1plus.exe -quiet -v -iprefix C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/ -D_REENTRANT C:\\Program Files\\CMake\\share\\cmake-3.30\\Modules\\CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles\\cmTC_fc0e6.dir\\ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=core2 -march=nocona -version -o C:\\Users\\marrc\\AppData\\Local\\Temp\\ccXe2Vg0.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_a9804.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=core2' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_a9804.dir\\']
+        ignore line: [ C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/12.2.0/cc1plus.exe -quiet -v -iprefix C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/ -D_REENTRANT C:\\Program Files\\CMake\\share\\cmake-3.30\\Modules\\CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles\\cmTC_a9804.dir\\ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=core2 -march=nocona -version -o C:\\Users\\marrc\\AppData\\Local\\Temp\\cc8yNmwg.s]
         ignore line: [GNU C++17 (x86_64-posix-seh-rev2  Built by MinGW-W64 project) version 12.2.0 (x86_64-w64-mingw32)]
         ignore line: [	compiled by GNU C version 12.2.0  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.1  isl version isl-0.25-GMP]
         ignore line: []
@@ -530,8 +530,8 @@ events:
         ignore line: []
         ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
         ignore line: [Compiler executable checksum: bd871182343e24686b6070b103904810]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_fc0e6.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=core2' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_fc0e6.dir\\']
-        ignore line: [ C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles\\cmTC_fc0e6.dir\\CMakeCXXCompilerABI.cpp.obj C:\\Users\\marrc\\AppData\\Local\\Temp\\ccXe2Vg0.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_a9804.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=core2' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_a9804.dir\\']
+        ignore line: [ C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles\\cmTC_a9804.dir\\CMakeCXXCompilerABI.cpp.obj C:\\Users\\marrc\\AppData\\Local\\Temp\\cc8yNmwg.s]
         ignore line: [GNU assembler version 2.39 (x86_64-w64-mingw32) using BFD version (GNU Binutils) 2.39]
         ignore line: [COMPILER_PATH=C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/12.2.0/]
         ignore line: [C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../libexec/gcc/]
@@ -542,12 +542,12 @@ events:
         ignore line: [C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../lib/]
         ignore line: [C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../x86_64-w64-mingw32/lib/]
         ignore line: [C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_fc0e6.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=core2' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_fc0e6.dir\\CMakeCXXCompilerABI.cpp.']
-        ignore line: [Linking CXX executable cmTC_fc0e6.exe]
-        ignore line: ["C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_fc0e6.dir\\link.txt --verbose=1]
-        ignore line: ["C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_fc0e6.dir/objects.a]
-        ignore line: [C:\\ProgramData\\chocolatey\\bin\\ar.exe qc CMakeFiles\\cmTC_fc0e6.dir/objects.a @CMakeFiles\\cmTC_fc0e6.dir\\objects1.rsp]
-        ignore line: [C:\\ProgramData\\chocolatey\\bin\\g++.exe  -v -Wl -v -Wl --whole-archive CMakeFiles\\cmTC_fc0e6.dir/objects.a -Wl --no-whole-archive -o cmTC_fc0e6.exe -Wl --out-implib libcmTC_fc0e6.dll.a -Wl --major-image-version 0 --minor-image-version 0]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_a9804.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=core2' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_a9804.dir\\CMakeCXXCompilerABI.cpp.']
+        ignore line: [Linking CXX executable cmTC_a9804.exe]
+        ignore line: ["C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_a9804.dir\\link.txt --verbose=1]
+        ignore line: ["C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_a9804.dir/objects.a]
+        ignore line: [C:\\ProgramData\\chocolatey\\bin\\ar.exe qc CMakeFiles\\cmTC_a9804.dir/objects.a @CMakeFiles\\cmTC_a9804.dir\\objects1.rsp]
+        ignore line: [C:\\ProgramData\\chocolatey\\bin\\g++.exe  -v -Wl -v -Wl --whole-archive CMakeFiles\\cmTC_a9804.dir/objects.a -Wl --no-whole-archive -o cmTC_a9804.exe -Wl --out-implib libcmTC_a9804.dll.a -Wl --major-image-version 0 --minor-image-version 0]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=C:\\ProgramData\\chocolatey\\lib\\mingw\\tools\\install\\mingw64\\bin\\g++.exe]
         ignore line: [COLLECT_LTO_WRAPPER=C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/12.2.0/lto-wrapper.exe]
@@ -565,13 +565,13 @@ events:
         ignore line: [C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../lib/]
         ignore line: [C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../x86_64-w64-mingw32/lib/]
         ignore line: [C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_fc0e6.exe' '-shared-libgcc' '-mtune=core2' '-march=nocona' '-dumpdir' 'cmTC_fc0e6.']
-        link line: [ C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/12.2.0/collect2.exe -plugin C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/12.2.0/liblto_plugin.dll -plugin-opt=C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/12.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\marrc\\AppData\\Local\\Temp\\ccDw01Wh.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-liconv -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 --sysroot=C:/mingw-builds/ucrt64-seh-posix/x86_64-1220-posix-seh-ucrt-rt_v10-rev2/mingw64 -m i386pep -Bdynamic -o cmTC_fc0e6.exe C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/crtbegin.o -LC:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0 -LC:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc -LC:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../lib -LC:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../x86_64-w64-mingw32/lib -LC:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../.. -v --whole-archive CMakeFiles\\cmTC_fc0e6.dir/objects.a --no-whole-archive --out-implib libcmTC_fc0e6.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/crtend.o]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_a9804.exe' '-shared-libgcc' '-mtune=core2' '-march=nocona' '-dumpdir' 'cmTC_a9804.']
+        link line: [ C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/12.2.0/collect2.exe -plugin C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/12.2.0/liblto_plugin.dll -plugin-opt=C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/12.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\marrc\\AppData\\Local\\Temp\\ccXiNmDm.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-liconv -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 --sysroot=C:/mingw-builds/ucrt64-seh-posix/x86_64-1220-posix-seh-ucrt-rt_v10-rev2/mingw64 -m i386pep -Bdynamic -o cmTC_a9804.exe C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/crtbegin.o -LC:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0 -LC:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc -LC:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../lib -LC:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../x86_64-w64-mingw32/lib -LC:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../.. -v --whole-archive CMakeFiles\\cmTC_a9804.dir/objects.a --no-whole-archive --out-implib libcmTC_a9804.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/crtend.o]
           arg [C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/12.2.0/collect2.exe] ==> ignore
           arg [-plugin] ==> ignore
           arg [C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/12.2.0/liblto_plugin.dll] ==> ignore
           arg [-plugin-opt=C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../libexec/gcc/x86_64-w64-mingw32/12.2.0/lto-wrapper.exe] ==> ignore
-          arg [-plugin-opt=-fresolution=C:\\Users\\marrc\\AppData\\Local\\Temp\\ccDw01Wh.res] ==> ignore
+          arg [-plugin-opt=-fresolution=C:\\Users\\marrc\\AppData\\Local\\Temp\\ccXiNmDm.res] ==> ignore
           arg [-plugin-opt=-pass-through=-lmingw32] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
@@ -597,7 +597,7 @@ events:
           arg [i386pep] ==> ignore
           arg [-Bdynamic] ==> search dynamic
           arg [-o] ==> ignore
-          arg [cmTC_fc0e6.exe] ==> ignore
+          arg [cmTC_a9804.exe] ==> ignore
           arg [C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o] ==> obj [C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o]
           arg [C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/crtbegin.o] ==> obj [C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/crtbegin.o]
           arg [-LC:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0] ==> dir [C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0]
@@ -608,10 +608,10 @@ events:
           arg [-LC:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../..] ==> dir [C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/12.2.0/../../..]
           arg [-v] ==> ignore
           arg [--whole-archive] ==> ignore
-          arg [CMakeFiles\\cmTC_fc0e6.dir/objects.a] ==> ignore
+          arg [CMakeFiles\\cmTC_a9804.dir/objects.a] ==> ignore
           arg [--no-whole-archive] ==> ignore
           arg [--out-implib] ==> ignore
-          arg [libcmTC_fc0e6.dll.a] ==> ignore
+          arg [libcmTC_a9804.dll.a] ==> ignore
           arg [--major-image-version] ==> ignore
           arg [0] ==> ignore
           arg [--minor-image-version] ==> ignore
@@ -697,8 +697,8 @@ events:
     checks:
       - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
     directories:
-      source: "C:/Users/marrc/bul/cpp-project/alt/ludo/build/CMakeFiles/CMakeScratch/TryCompile-ccrpml"
-      binary: "C:/Users/marrc/bul/cpp-project/alt/ludo/build/CMakeFiles/CMakeScratch/TryCompile-ccrpml"
+      source: "C:/Users/marrc/bul/cpp-project/alt/ludo/build/CMakeFiles/CMakeScratch/TryCompile-e5lxvu"
+      binary: "C:/Users/marrc/bul/cpp-project/alt/ludo/build/CMakeFiles/CMakeScratch/TryCompile-e5lxvu"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -708,19 +708,19 @@ events:
       variable: "CMAKE_HAVE_LIBC_PTHREAD"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/marrc/bul/cpp-project/alt/ludo/build/CMakeFiles/CMakeScratch/TryCompile-ccrpml'
+        Change Dir: 'C:/Users/marrc/bul/cpp-project/alt/ludo/build/CMakeFiles/CMakeScratch/TryCompile-e5lxvu'
         
-        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/ProgramData/chocolatey/bin/mingw32-make.exe -f Makefile cmTC_f1bda/fast
-        C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/mingw32-make  -f CMakeFiles\\cmTC_f1bda.dir\\build.make CMakeFiles/cmTC_f1bda.dir/build
-        mingw32-make[1]: Entering directory 'C:/Users/marrc/bul/cpp-project/alt/ludo/build/CMakeFiles/CMakeScratch/TryCompile-ccrpml'
-        Building C object CMakeFiles/cmTC_f1bda.dir/src.c.obj
-        C:\\ProgramData\\chocolatey\\bin\\gcc.exe -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles\\cmTC_f1bda.dir\\src.c.obj -c C:\\Users\\marrc\\bul\\cpp-project\\alt\\ludo\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ccrpml\\src.c
-        Linking C executable cmTC_f1bda.exe
-        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_f1bda.dir\\link.txt --verbose=1
-        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_f1bda.dir/objects.a
-        C:\\ProgramData\\chocolatey\\bin\\ar.exe qc CMakeFiles\\cmTC_f1bda.dir/objects.a @CMakeFiles\\cmTC_f1bda.dir\\objects1.rsp
-        C:\\ProgramData\\chocolatey\\bin\\gcc.exe  -static-libgcc -static-libstdc++  -Wl,--whole-archive CMakeFiles\\cmTC_f1bda.dir/objects.a -Wl,--no-whole-archive -o cmTC_f1bda.exe -Wl,--out-implib,libcmTC_f1bda.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_f1bda.dir\\linkLibs.rsp
-        mingw32-make[1]: Leaving directory 'C:/Users/marrc/bul/cpp-project/alt/ludo/build/CMakeFiles/CMakeScratch/TryCompile-ccrpml'
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/ProgramData/chocolatey/bin/mingw32-make.exe -f Makefile cmTC_f5a55/fast
+        C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/mingw32-make  -f CMakeFiles\\cmTC_f5a55.dir\\build.make CMakeFiles/cmTC_f5a55.dir/build
+        mingw32-make[1]: Entering directory 'C:/Users/marrc/bul/cpp-project/alt/ludo/build/CMakeFiles/CMakeScratch/TryCompile-e5lxvu'
+        Building C object CMakeFiles/cmTC_f5a55.dir/src.c.obj
+        C:\\ProgramData\\chocolatey\\bin\\gcc.exe -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles\\cmTC_f5a55.dir\\src.c.obj -c C:\\Users\\marrc\\bul\\cpp-project\\alt\\ludo\\build\\CMakeFiles\\CMakeScratch\\TryCompile-e5lxvu\\src.c
+        Linking C executable cmTC_f5a55.exe
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_f5a55.dir\\link.txt --verbose=1
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_f5a55.dir/objects.a
+        C:\\ProgramData\\chocolatey\\bin\\ar.exe qc CMakeFiles\\cmTC_f5a55.dir/objects.a @CMakeFiles\\cmTC_f5a55.dir\\objects1.rsp
+        C:\\ProgramData\\chocolatey\\bin\\gcc.exe  -static-libgcc -static-libstdc++  -Wl,--whole-archive CMakeFiles\\cmTC_f5a55.dir/objects.a -Wl,--no-whole-archive -o cmTC_f5a55.exe -Wl,--out-implib,libcmTC_f5a55.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_f5a55.dir\\linkLibs.rsp
+        mingw32-make[1]: Leaving directory 'C:/Users/marrc/bul/cpp-project/alt/ludo/build/CMakeFiles/CMakeScratch/TryCompile-e5lxvu'
         
       exitCode: 0
   -
@@ -731,8 +731,8 @@ events:
     checks:
       - "Looking for dinput.h"
     directories:
-      source: "C:/Users/marrc/bul/cpp-project/alt/ludo/build/CMakeFiles/CMakeScratch/TryCompile-8gdyij"
-      binary: "C:/Users/marrc/bul/cpp-project/alt/ludo/build/CMakeFiles/CMakeScratch/TryCompile-8gdyij"
+      source: "C:/Users/marrc/bul/cpp-project/alt/ludo/build/CMakeFiles/CMakeScratch/TryCompile-8gcudu"
+      binary: "C:/Users/marrc/bul/cpp-project/alt/ludo/build/CMakeFiles/CMakeScratch/TryCompile-8gcudu"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -742,19 +742,19 @@ events:
       variable: "DINPUT_H_FOUND"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/marrc/bul/cpp-project/alt/ludo/build/CMakeFiles/CMakeScratch/TryCompile-8gdyij'
+        Change Dir: 'C:/Users/marrc/bul/cpp-project/alt/ludo/build/CMakeFiles/CMakeScratch/TryCompile-8gcudu'
         
-        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/ProgramData/chocolatey/bin/mingw32-make.exe -f Makefile cmTC_d96c8/fast
-        C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/mingw32-make  -f CMakeFiles\\cmTC_d96c8.dir\\build.make CMakeFiles/cmTC_d96c8.dir/build
-        mingw32-make[1]: Entering directory 'C:/Users/marrc/bul/cpp-project/alt/ludo/build/CMakeFiles/CMakeScratch/TryCompile-8gdyij'
-        Building C object CMakeFiles/cmTC_d96c8.dir/CheckIncludeFile.c.obj
-        C:\\ProgramData\\chocolatey\\bin\\gcc.exe    -o CMakeFiles\\cmTC_d96c8.dir\\CheckIncludeFile.c.obj -c C:\\Users\\marrc\\bul\\cpp-project\\alt\\ludo\\build\\CMakeFiles\\CMakeScratch\\TryCompile-8gdyij\\CheckIncludeFile.c
-        Linking C executable cmTC_d96c8.exe
-        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_d96c8.dir\\link.txt --verbose=1
-        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_d96c8.dir/objects.a
-        C:\\ProgramData\\chocolatey\\bin\\ar.exe qc CMakeFiles\\cmTC_d96c8.dir/objects.a @CMakeFiles\\cmTC_d96c8.dir\\objects1.rsp
-        C:\\ProgramData\\chocolatey\\bin\\gcc.exe  -static-libgcc -static-libstdc++  -Wl,--whole-archive CMakeFiles\\cmTC_d96c8.dir/objects.a -Wl,--no-whole-archive -o cmTC_d96c8.exe -Wl,--out-implib,libcmTC_d96c8.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_d96c8.dir\\linkLibs.rsp
-        mingw32-make[1]: Leaving directory 'C:/Users/marrc/bul/cpp-project/alt/ludo/build/CMakeFiles/CMakeScratch/TryCompile-8gdyij'
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/ProgramData/chocolatey/bin/mingw32-make.exe -f Makefile cmTC_3bd07/fast
+        C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/mingw32-make  -f CMakeFiles\\cmTC_3bd07.dir\\build.make CMakeFiles/cmTC_3bd07.dir/build
+        mingw32-make[1]: Entering directory 'C:/Users/marrc/bul/cpp-project/alt/ludo/build/CMakeFiles/CMakeScratch/TryCompile-8gcudu'
+        Building C object CMakeFiles/cmTC_3bd07.dir/CheckIncludeFile.c.obj
+        C:\\ProgramData\\chocolatey\\bin\\gcc.exe    -o CMakeFiles\\cmTC_3bd07.dir\\CheckIncludeFile.c.obj -c C:\\Users\\marrc\\bul\\cpp-project\\alt\\ludo\\build\\CMakeFiles\\CMakeScratch\\TryCompile-8gcudu\\CheckIncludeFile.c
+        Linking C executable cmTC_3bd07.exe
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_3bd07.dir\\link.txt --verbose=1
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_3bd07.dir/objects.a
+        C:\\ProgramData\\chocolatey\\bin\\ar.exe qc CMakeFiles\\cmTC_3bd07.dir/objects.a @CMakeFiles\\cmTC_3bd07.dir\\objects1.rsp
+        C:\\ProgramData\\chocolatey\\bin\\gcc.exe  -static-libgcc -static-libstdc++  -Wl,--whole-archive CMakeFiles\\cmTC_3bd07.dir/objects.a -Wl,--no-whole-archive -o cmTC_3bd07.exe -Wl,--out-implib,libcmTC_3bd07.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_3bd07.dir\\linkLibs.rsp
+        mingw32-make[1]: Leaving directory 'C:/Users/marrc/bul/cpp-project/alt/ludo/build/CMakeFiles/CMakeScratch/TryCompile-8gcudu'
         
       exitCode: 0
   -
@@ -765,8 +765,8 @@ events:
     checks:
       - "Looking for xinput.h"
     directories:
-      source: "C:/Users/marrc/bul/cpp-project/alt/ludo/build/CMakeFiles/CMakeScratch/TryCompile-fnzuvu"
-      binary: "C:/Users/marrc/bul/cpp-project/alt/ludo/build/CMakeFiles/CMakeScratch/TryCompile-fnzuvu"
+      source: "C:/Users/marrc/bul/cpp-project/alt/ludo/build/CMakeFiles/CMakeScratch/TryCompile-tpflnd"
+      binary: "C:/Users/marrc/bul/cpp-project/alt/ludo/build/CMakeFiles/CMakeScratch/TryCompile-tpflnd"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -776,492 +776,19 @@ events:
       variable: "XINPUT_H_FOUND"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/marrc/bul/cpp-project/alt/ludo/build/CMakeFiles/CMakeScratch/TryCompile-fnzuvu'
+        Change Dir: 'C:/Users/marrc/bul/cpp-project/alt/ludo/build/CMakeFiles/CMakeScratch/TryCompile-tpflnd'
         
-        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/ProgramData/chocolatey/bin/mingw32-make.exe -f Makefile cmTC_094e2/fast
-        C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/mingw32-make  -f CMakeFiles\\cmTC_094e2.dir\\build.make CMakeFiles/cmTC_094e2.dir/build
-        mingw32-make[1]: Entering directory 'C:/Users/marrc/bul/cpp-project/alt/ludo/build/CMakeFiles/CMakeScratch/TryCompile-fnzuvu'
-        Building C object CMakeFiles/cmTC_094e2.dir/CheckIncludeFile.c.obj
-        C:\\ProgramData\\chocolatey\\bin\\gcc.exe    -o CMakeFiles\\cmTC_094e2.dir\\CheckIncludeFile.c.obj -c C:\\Users\\marrc\\bul\\cpp-project\\alt\\ludo\\build\\CMakeFiles\\CMakeScratch\\TryCompile-fnzuvu\\CheckIncludeFile.c
-        Linking C executable cmTC_094e2.exe
-        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_094e2.dir\\link.txt --verbose=1
-        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_094e2.dir/objects.a
-        C:\\ProgramData\\chocolatey\\bin\\ar.exe qc CMakeFiles\\cmTC_094e2.dir/objects.a @CMakeFiles\\cmTC_094e2.dir\\objects1.rsp
-        C:\\ProgramData\\chocolatey\\bin\\gcc.exe  -static-libgcc -static-libstdc++  -Wl,--whole-archive CMakeFiles\\cmTC_094e2.dir/objects.a -Wl,--no-whole-archive -o cmTC_094e2.exe -Wl,--out-implib,libcmTC_094e2.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_094e2.dir\\linkLibs.rsp
-        mingw32-make[1]: Leaving directory 'C:/Users/marrc/bul/cpp-project/alt/ludo/build/CMakeFiles/CMakeScratch/TryCompile-fnzuvu'
-        
-      exitCode: 0
-...
-
----
-events:
-  -
-    kind: "message-v1"
-    backtrace:
-      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeDetermineSystem.cmake:205 (message)"
-      - "CMakeLists.txt:2 (project)"
-    message: |
-      The system is: Windows - 10.0.19045 - AMD64
-  -
-    kind: "message-v1"
-    backtrace:
-      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
-      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
-      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
-      - "CMakeLists.txt:2 (project)"
-    message: |
-      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
-      Compiler:  
-      Build flags: 
-      Id flags:  
-      
-      The output was:
-      0
-      Microsoft (R) Build Engine version 16.11.2+f32259642 for .NET Framework
-      Copyright (C) Microsoft Corporation. All rights reserved.
-      
-      Build started 15.12.2024 17:36:19.
-      Project "C:\\Users\\marrc\\bul\\cpp-project\\alt\\ludo\\build\\CMakeFiles\\3.30.4\\CompilerIdC\\CompilerIdC.vcxproj" on node 1 (default targets).
-      PrepareForBuild:
-        Creating directory "Debug\\".
-        Creating directory "Debug\\CompilerIdC.tlog\\".
-      InitializeBuildStatus:
-        Creating "Debug\\CompilerIdC.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
-      ClCompile:
-        C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\BuildTools\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\CL.exe /c /nologo /W0 /WX- /diagnostics:column /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\\\" /Fd"Debug\\vc142.pdb" /external:W0 /Gd /TC /FC /errorReport:queue CMakeCCompilerId.c
-        CMakeCCompilerId.c
-      Link:
-        C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\BuildTools\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdC.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdC.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdC.lib" /MACHINE:X64 Debug\\CMakeCCompilerId.obj
-        CompilerIdC.vcxproj -> C:\\Users\\marrc\\bul\\cpp-project\\alt\\ludo\\build\\CMakeFiles\\3.30.4\\CompilerIdC\\CompilerIdC.exe
-      PostBuildEvent:
-        for %%i in (cl.exe) do @echo CMAKE_C_COMPILER=%%~$PATH:i
-        :VCEnd
-        CMAKE_C_COMPILER=C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\BuildTools\\VC\\Tools\\MSVC\\14.29.30133\\bin\\Hostx64\\x64\\cl.exe
-      FinalizeBuildStatus:
-        Deleting file "Debug\\CompilerIdC.tlog\\unsuccessfulbuild".
-        Touching "Debug\\CompilerIdC.tlog\\CompilerIdC.lastbuildstate".
-      Done Building Project "C:\\Users\\marrc\\bul\\cpp-project\\alt\\ludo\\build\\CMakeFiles\\3.30.4\\CompilerIdC\\CompilerIdC.vcxproj" (default targets).
-      
-      Build succeeded.
-          0 Warning(s)
-          0 Error(s)
-      
-      Time Elapsed 00:00:00.95
-      
-      
-      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
-      
-      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.vcxproj"
-      
-      The C compiler identification is MSVC, found in:
-        C:/Users/marrc/bul/cpp-project/alt/ludo/build/CMakeFiles/3.30.4/CompilerIdC/CompilerIdC.exe
-      
-  -
-    kind: "message-v1"
-    backtrace:
-      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
-      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
-      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
-      - "CMakeLists.txt:2 (project)"
-    message: |
-      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
-      Compiler:  
-      Build flags: 
-      Id flags:  
-      
-      The output was:
-      0
-      Microsoft (R) Build Engine version 16.11.2+f32259642 for .NET Framework
-      Copyright (C) Microsoft Corporation. All rights reserved.
-      
-      Build started 15.12.2024 17:36:20.
-      Project "C:\\Users\\marrc\\bul\\cpp-project\\alt\\ludo\\build\\CMakeFiles\\3.30.4\\CompilerIdCXX\\CompilerIdCXX.vcxproj" on node 1 (default targets).
-      PrepareForBuild:
-        Creating directory "Debug\\".
-        Creating directory "Debug\\CompilerIdCXX.tlog\\".
-      InitializeBuildStatus:
-        Creating "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
-      ClCompile:
-        C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\BuildTools\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\CL.exe /c /nologo /W0 /WX- /diagnostics:column /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\\\" /Fd"Debug\\vc142.pdb" /external:W0 /Gd /TP /FC /errorReport:queue CMakeCXXCompilerId.cpp
-        CMakeCXXCompilerId.cpp
-      Link:
-        C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\BuildTools\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdCXX.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdCXX.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdCXX.lib" /MACHINE:X64 Debug\\CMakeCXXCompilerId.obj
-        CompilerIdCXX.vcxproj -> C:\\Users\\marrc\\bul\\cpp-project\\alt\\ludo\\build\\CMakeFiles\\3.30.4\\CompilerIdCXX\\CompilerIdCXX.exe
-      PostBuildEvent:
-        for %%i in (cl.exe) do @echo CMAKE_CXX_COMPILER=%%~$PATH:i
-        :VCEnd
-        CMAKE_CXX_COMPILER=C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\BuildTools\\VC\\Tools\\MSVC\\14.29.30133\\bin\\Hostx64\\x64\\cl.exe
-      FinalizeBuildStatus:
-        Deleting file "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild".
-        Touching "Debug\\CompilerIdCXX.tlog\\CompilerIdCXX.lastbuildstate".
-      Done Building Project "C:\\Users\\marrc\\bul\\cpp-project\\alt\\ludo\\build\\CMakeFiles\\3.30.4\\CompilerIdCXX\\CompilerIdCXX.vcxproj" (default targets).
-      
-      Build succeeded.
-          0 Warning(s)
-          0 Error(s)
-      
-      Time Elapsed 00:00:00.66
-      
-      
-      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
-      
-      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.vcxproj"
-      
-      The CXX compiler identification is MSVC, found in:
-        C:/Users/marrc/bul/cpp-project/alt/ludo/build/CMakeFiles/3.30.4/CompilerIdCXX/CompilerIdCXX.exe
-      
-  -
-    kind: "try_compile-v1"
-    backtrace:
-      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerABI.cmake:74 (try_compile)"
-      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:2 (project)"
-    checks:
-      - "Detecting C compiler ABI info"
-    directories:
-      source: "C:/Users/marrc/bul/cpp-project/alt/ludo/build/CMakeFiles/CMakeScratch/TryCompile-3979gk"
-      binary: "C:/Users/marrc/bul/cpp-project/alt/ludo/build/CMakeFiles/CMakeScratch/TryCompile-3979gk"
-    cmakeVariables:
-      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
-      CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
-      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
-    buildResult:
-      variable: "CMAKE_C_ABI_COMPILED"
-      cached: true
-      stdout: |
-        Change Dir: 'C:/Users/marrc/bul/cpp-project/alt/ludo/build/CMakeFiles/CMakeScratch/TryCompile-3979gk'
-        
-        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2019/BuildTools/MSBuild/Current/Bin/MSBuild.exe" cmTC_89433.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:n
-        Microsoft (R) Build Engine version 16.11.2+f32259642 for .NET Framework
-        Copyright (C) Microsoft Corporation. All rights reserved.
-        
-        Build started 15.12.2024 17:36:21.
-        Project "C:\\Users\\marrc\\bul\\cpp-project\\alt\\ludo\\build\\CMakeFiles\\CMakeScratch\\TryCompile-3979gk\\cmTC_89433.vcxproj" on node 1 (default targets).
-        PrepareForBuild:
-          Creating directory "cmTC_89433.dir\\Debug\\".
-          Creating directory "C:\\Users\\marrc\\bul\\cpp-project\\alt\\ludo\\build\\CMakeFiles\\CMakeScratch\\TryCompile-3979gk\\Debug\\".
-          Creating directory "cmTC_89433.dir\\Debug\\cmTC_89433.tlog\\".
-        InitializeBuildStatus:
-          Creating "cmTC_89433.dir\\Debug\\cmTC_89433.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
-        ClCompile:
-          C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\BuildTools\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_89433.dir\\Debug\\\\" /Fd"cmTC_89433.dir\\Debug\\vc142.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.30\\Modules\\CMakeCCompilerABI.c"
-          Оптимизирующий компилятор Microsoft (R) C/C++ версии 19.29.30146 для x64
-          (C) Корпорация Майкрософт (Microsoft Corporation).  Все права защищены.
-          CMakeCCompilerABI.c
-          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_89433.dir\\Debug\\\\" /Fd"cmTC_89433.dir\\Debug\\vc142.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.30\\Modules\\CMakeCCompilerABI.c"
-        Link:
-          C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\BuildTools\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\marrc\\bul\\cpp-project\\alt\\ludo\\build\\CMakeFiles\\CMakeScratch\\TryCompile-3979gk\\Debug\\cmTC_89433.exe" /INCREMENTAL /ILK:"cmTC_89433.dir\\Debug\\cmTC_89433.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/marrc/bul/cpp-project/alt/ludo/build/CMakeFiles/CMakeScratch/TryCompile-3979gk/Debug/cmTC_89433.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/marrc/bul/cpp-project/alt/ludo/build/CMakeFiles/CMakeScratch/TryCompile-3979gk/Debug/cmTC_89433.lib" /MACHINE:X64  /machine:x64 cmTC_89433.dir\\Debug\\CMakeCCompilerABI.obj
-          cmTC_89433.vcxproj -> C:\\Users\\marrc\\bul\\cpp-project\\alt\\ludo\\build\\CMakeFiles\\CMakeScratch\\TryCompile-3979gk\\Debug\\cmTC_89433.exe
-        FinalizeBuildStatus:
-          Deleting file "cmTC_89433.dir\\Debug\\cmTC_89433.tlog\\unsuccessfulbuild".
-          Touching "cmTC_89433.dir\\Debug\\cmTC_89433.tlog\\cmTC_89433.lastbuildstate".
-        Done Building Project "C:\\Users\\marrc\\bul\\cpp-project\\alt\\ludo\\build\\CMakeFiles\\CMakeScratch\\TryCompile-3979gk\\cmTC_89433.vcxproj" (default targets).
-        
-        Build succeeded.
-            0 Warning(s)
-            0 Error(s)
-        
-        Time Elapsed 00:00:00.57
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/ProgramData/chocolatey/bin/mingw32-make.exe -f Makefile cmTC_df05d/fast
+        C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/bin/mingw32-make  -f CMakeFiles\\cmTC_df05d.dir\\build.make CMakeFiles/cmTC_df05d.dir/build
+        mingw32-make[1]: Entering directory 'C:/Users/marrc/bul/cpp-project/alt/ludo/build/CMakeFiles/CMakeScratch/TryCompile-tpflnd'
+        Building C object CMakeFiles/cmTC_df05d.dir/CheckIncludeFile.c.obj
+        C:\\ProgramData\\chocolatey\\bin\\gcc.exe    -o CMakeFiles\\cmTC_df05d.dir\\CheckIncludeFile.c.obj -c C:\\Users\\marrc\\bul\\cpp-project\\alt\\ludo\\build\\CMakeFiles\\CMakeScratch\\TryCompile-tpflnd\\CheckIncludeFile.c
+        Linking C executable cmTC_df05d.exe
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_df05d.dir\\link.txt --verbose=1
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_df05d.dir/objects.a
+        C:\\ProgramData\\chocolatey\\bin\\ar.exe qc CMakeFiles\\cmTC_df05d.dir/objects.a @CMakeFiles\\cmTC_df05d.dir\\objects1.rsp
+        C:\\ProgramData\\chocolatey\\bin\\gcc.exe  -static-libgcc -static-libstdc++  -Wl,--whole-archive CMakeFiles\\cmTC_df05d.dir/objects.a -Wl,--no-whole-archive -o cmTC_df05d.exe -Wl,--out-implib,libcmTC_df05d.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_df05d.dir\\linkLibs.rsp
+        mingw32-make[1]: Leaving directory 'C:/Users/marrc/bul/cpp-project/alt/ludo/build/CMakeFiles/CMakeScratch/TryCompile-tpflnd'
         
       exitCode: 0
-  -
-    kind: "message-v1"
-    backtrace:
-      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerABI.cmake:218 (message)"
-      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:2 (project)"
-    message: |
-      Parsed C implicit link information:
-        link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|link\\.exe|lld-link(\\.exe)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
-        linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?|link\\.exe|lld-link(\\.exe)?))("|,| |$)]
-        linker tool for 'C': C:/Program Files (x86)/Microsoft Visual Studio/2019/BuildTools/VC/Tools/MSVC/14.29.30133/bin/HostX64/x64/link.exe
-        implicit libs: []
-        implicit objs: []
-        implicit dirs: []
-        implicit fwks: []
-      
-      
-  -
-    kind: "message-v1"
-    backtrace:
-      - "C:/Program Files/CMake/share/cmake-3.30/Modules/Internal/CMakeDetermineLinkerId.cmake:40 (message)"
-      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerABI.cmake:255 (cmake_determine_linker_id)"
-      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:2 (project)"
-    message: |
-      Running the C compiler's linker: "C:/Program Files (x86)/Microsoft Visual Studio/2019/BuildTools/VC/Tools/MSVC/14.29.30133/bin/HostX64/x64/link.exe" "-v"
-      Microsoft (R) Incremental Linker Version 14.29.30146.0
-      Copyright (C) Microsoft Corporation.  All rights reserved.
-  -
-    kind: "try_compile-v1"
-    backtrace:
-      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerABI.cmake:74 (try_compile)"
-      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:2 (project)"
-    checks:
-      - "Detecting CXX compiler ABI info"
-    directories:
-      source: "C:/Users/marrc/bul/cpp-project/alt/ludo/build/CMakeFiles/CMakeScratch/TryCompile-5fw3sx"
-      binary: "C:/Users/marrc/bul/cpp-project/alt/ludo/build/CMakeFiles/CMakeScratch/TryCompile-5fw3sx"
-    cmakeVariables:
-      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
-      CMAKE_CXX_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
-      CMAKE_CXX_SCAN_FOR_MODULES: "OFF"
-      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
-    buildResult:
-      variable: "CMAKE_CXX_ABI_COMPILED"
-      cached: true
-      stdout: |
-        Change Dir: 'C:/Users/marrc/bul/cpp-project/alt/ludo/build/CMakeFiles/CMakeScratch/TryCompile-5fw3sx'
-        
-        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2019/BuildTools/MSBuild/Current/Bin/MSBuild.exe" cmTC_761cc.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:n
-        Microsoft (R) Build Engine version 16.11.2+f32259642 for .NET Framework
-        Copyright (C) Microsoft Corporation. All rights reserved.
-        
-        Build started 15.12.2024 17:36:22.
-        Project "C:\\Users\\marrc\\bul\\cpp-project\\alt\\ludo\\build\\CMakeFiles\\CMakeScratch\\TryCompile-5fw3sx\\cmTC_761cc.vcxproj" on node 1 (default targets).
-        PrepareForBuild:
-          Creating directory "cmTC_761cc.dir\\Debug\\".
-          Creating directory "C:\\Users\\marrc\\bul\\cpp-project\\alt\\ludo\\build\\CMakeFiles\\CMakeScratch\\TryCompile-5fw3sx\\Debug\\".
-          Creating directory "cmTC_761cc.dir\\Debug\\cmTC_761cc.tlog\\".
-        InitializeBuildStatus:
-          Creating "cmTC_761cc.dir\\Debug\\cmTC_761cc.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
-        ClCompile:
-          C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\BuildTools\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_761cc.dir\\Debug\\\\" /Fd"cmTC_761cc.dir\\Debug\\vc142.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.30\\Modules\\CMakeCXXCompilerABI.cpp"
-          Оптимизирующий компилятор Microsoft (R) C/C++ версии 19.29.30146 для x64
-          (C) Корпорация Майкрософт (Microsoft Corporation).  Все права защищены.
-          CMakeCXXCompilerABI.cpp
-          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_761cc.dir\\Debug\\\\" /Fd"cmTC_761cc.dir\\Debug\\vc142.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.30\\Modules\\CMakeCXXCompilerABI.cpp"
-        Link:
-          C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\BuildTools\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\marrc\\bul\\cpp-project\\alt\\ludo\\build\\CMakeFiles\\CMakeScratch\\TryCompile-5fw3sx\\Debug\\cmTC_761cc.exe" /INCREMENTAL /ILK:"cmTC_761cc.dir\\Debug\\cmTC_761cc.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/marrc/bul/cpp-project/alt/ludo/build/CMakeFiles/CMakeScratch/TryCompile-5fw3sx/Debug/cmTC_761cc.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/marrc/bul/cpp-project/alt/ludo/build/CMakeFiles/CMakeScratch/TryCompile-5fw3sx/Debug/cmTC_761cc.lib" /MACHINE:X64  /machine:x64 cmTC_761cc.dir\\Debug\\CMakeCXXCompilerABI.obj
-          cmTC_761cc.vcxproj -> C:\\Users\\marrc\\bul\\cpp-project\\alt\\ludo\\build\\CMakeFiles\\CMakeScratch\\TryCompile-5fw3sx\\Debug\\cmTC_761cc.exe
-        FinalizeBuildStatus:
-          Deleting file "cmTC_761cc.dir\\Debug\\cmTC_761cc.tlog\\unsuccessfulbuild".
-          Touching "cmTC_761cc.dir\\Debug\\cmTC_761cc.tlog\\cmTC_761cc.lastbuildstate".
-        Done Building Project "C:\\Users\\marrc\\bul\\cpp-project\\alt\\ludo\\build\\CMakeFiles\\CMakeScratch\\TryCompile-5fw3sx\\cmTC_761cc.vcxproj" (default targets).
-        
-        Build succeeded.
-            0 Warning(s)
-            0 Error(s)
-        
-        Time Elapsed 00:00:00.59
-        
-      exitCode: 0
-  -
-    kind: "message-v1"
-    backtrace:
-      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerABI.cmake:218 (message)"
-      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:2 (project)"
-    message: |
-      Parsed CXX implicit link information:
-        link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|link\\.exe|lld-link(\\.exe)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
-        linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?|link\\.exe|lld-link(\\.exe)?))("|,| |$)]
-        linker tool for 'CXX': C:/Program Files (x86)/Microsoft Visual Studio/2019/BuildTools/VC/Tools/MSVC/14.29.30133/bin/HostX64/x64/link.exe
-        implicit libs: []
-        implicit objs: []
-        implicit dirs: []
-        implicit fwks: []
-      
-      
-  -
-    kind: "message-v1"
-    backtrace:
-      - "C:/Program Files/CMake/share/cmake-3.30/Modules/Internal/CMakeDetermineLinkerId.cmake:40 (message)"
-      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeDetermineCompilerABI.cmake:255 (cmake_determine_linker_id)"
-      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:2 (project)"
-    message: |
-      Running the CXX compiler's linker: "C:/Program Files (x86)/Microsoft Visual Studio/2019/BuildTools/VC/Tools/MSVC/14.29.30133/bin/HostX64/x64/link.exe" "-v"
-      Microsoft (R) Incremental Linker Version 14.29.30146.0
-      Copyright (C) Microsoft Corporation.  All rights reserved.
-  -
-    kind: "try_compile-v1"
-    backtrace:
-      - "C:/Program Files/CMake/share/cmake-3.30/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
-      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
-      - "C:/Program Files/CMake/share/cmake-3.30/Modules/FindThreads.cmake:97 (CHECK_C_SOURCE_COMPILES)"
-      - "C:/Program Files/CMake/share/cmake-3.30/Modules/FindThreads.cmake:163 (_threads_check_libc)"
-      - "glfw/CMakeLists.txt:60 (find_package)"
-    checks:
-      - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
-    directories:
-      source: "C:/Users/marrc/bul/cpp-project/alt/ludo/build/CMakeFiles/CMakeScratch/TryCompile-n10bt1"
-      binary: "C:/Users/marrc/bul/cpp-project/alt/ludo/build/CMakeFiles/CMakeScratch/TryCompile-n10bt1"
-    cmakeVariables:
-      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
-      CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
-      CMAKE_EXE_LINKER_FLAGS: "/machine:x64 -static-libgcc -static-libstdc++"
-      CMAKE_MODULE_PATH: "C:/Users/marrc/bul/cpp-project/alt/ludo/glfw/CMake/modules"
-    buildResult:
-      variable: "CMAKE_HAVE_LIBC_PTHREAD"
-      cached: true
-      stdout: |
-        Change Dir: 'C:/Users/marrc/bul/cpp-project/alt/ludo/build/CMakeFiles/CMakeScratch/TryCompile-n10bt1'
-        
-        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2019/BuildTools/MSBuild/Current/Bin/MSBuild.exe" cmTC_e418f.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:n
-        Microsoft (R) Build Engine version 16.11.2+f32259642 for .NET Framework
-        Copyright (C) Microsoft Corporation. All rights reserved.
-        
-        Build started 15.12.2024 17:36:23.
-        Project "C:\\Users\\marrc\\bul\\cpp-project\\alt\\ludo\\build\\CMakeFiles\\CMakeScratch\\TryCompile-n10bt1\\cmTC_e418f.vcxproj" on node 1 (default targets).
-        PrepareForBuild:
-          Creating directory "cmTC_e418f.dir\\Debug\\".
-          Creating directory "C:\\Users\\marrc\\bul\\cpp-project\\alt\\ludo\\build\\CMakeFiles\\CMakeScratch\\TryCompile-n10bt1\\Debug\\".
-          Creating directory "cmTC_e418f.dir\\Debug\\cmTC_e418f.tlog\\".
-        InitializeBuildStatus:
-          Creating "cmTC_e418f.dir\\Debug\\cmTC_e418f.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
-        ClCompile:
-          C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\BuildTools\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CMAKE_HAVE_LIBC_PTHREAD /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_e418f.dir\\Debug\\\\" /Fd"cmTC_e418f.dir\\Debug\\vc142.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\marrc\\bul\\cpp-project\\alt\\ludo\\build\\CMakeFiles\\CMakeScratch\\TryCompile-n10bt1\\src.c"
-          Оптимизирующий компилятор Microsoft (R) C/C++ версии 19.29.30146 для x64
-          (C) Корпорация Майкрософт (Microsoft Corporation).  Все права защищены.
-          src.c
-          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CMAKE_HAVE_LIBC_PTHREAD /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_e418f.dir\\Debug\\\\" /Fd"cmTC_e418f.dir\\Debug\\vc142.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\marrc\\bul\\cpp-project\\alt\\ludo\\build\\CMakeFiles\\CMakeScratch\\TryCompile-n10bt1\\src.c"
-        C:\\Users\\marrc\\bul\\cpp-project\\alt\\ludo\\build\\CMakeFiles\\CMakeScratch\\TryCompile-n10bt1\\src.c(1,10): fatal error C1083: Не удается открыть файл включение: pthread.h: No such file or directory, [C:\\Users\\marrc\\bul\\cpp-project\\alt\\ludo\\build\\CMakeFiles\\CMakeScratch\\TryCompile-n10bt1\\cmTC_e418f.vcxproj]
-        Done Building Project "C:\\Users\\marrc\\bul\\cpp-project\\alt\\ludo\\build\\CMakeFiles\\CMakeScratch\\TryCompile-n10bt1\\cmTC_e418f.vcxproj" (default targets) -- FAILED.
-        
-        Build FAILED.
-        
-        "C:\\Users\\marrc\\bul\\cpp-project\\alt\\ludo\\build\\CMakeFiles\\CMakeScratch\\TryCompile-n10bt1\\cmTC_e418f.vcxproj" (default target) (1) ->
-        (ClCompile target) -> 
-          C:\\Users\\marrc\\bul\\cpp-project\\alt\\ludo\\build\\CMakeFiles\\CMakeScratch\\TryCompile-n10bt1\\src.c(1,10): fatal error C1083: Не удается открыть файл включение: pthread.h: No such file or directory, [C:\\Users\\marrc\\bul\\cpp-project\\alt\\ludo\\build\\CMakeFiles\\CMakeScratch\\TryCompile-n10bt1\\cmTC_e418f.vcxproj]
-        
-            0 Warning(s)
-            1 Error(s)
-        
-        Time Elapsed 00:00:00.39
-        
-      exitCode: 1
-  -
-    kind: "try_compile-v1"
-    backtrace:
-      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CheckLibraryExists.cmake:69 (try_compile)"
-      - "C:/Program Files/CMake/share/cmake-3.30/Modules/FindThreads.cmake:112 (CHECK_LIBRARY_EXISTS)"
-      - "C:/Program Files/CMake/share/cmake-3.30/Modules/FindThreads.cmake:175 (_threads_check_lib)"
-      - "glfw/CMakeLists.txt:60 (find_package)"
-    checks:
-      - "Looking for pthread_create in pthreads"
-    directories:
-      source: "C:/Users/marrc/bul/cpp-project/alt/ludo/build/CMakeFiles/CMakeScratch/TryCompile-4thphn"
-      binary: "C:/Users/marrc/bul/cpp-project/alt/ludo/build/CMakeFiles/CMakeScratch/TryCompile-4thphn"
-    cmakeVariables:
-      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
-      CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
-      CMAKE_EXE_LINKER_FLAGS: "/machine:x64 -static-libgcc -static-libstdc++"
-      CMAKE_MODULE_PATH: "C:/Users/marrc/bul/cpp-project/alt/ludo/glfw/CMake/modules"
-    buildResult:
-      variable: "CMAKE_HAVE_PTHREADS_CREATE"
-      cached: true
-      stdout: |
-        Change Dir: 'C:/Users/marrc/bul/cpp-project/alt/ludo/build/CMakeFiles/CMakeScratch/TryCompile-4thphn'
-        
-        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2019/BuildTools/MSBuild/Current/Bin/MSBuild.exe" cmTC_9cbc6.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:n
-        Microsoft (R) Build Engine version 16.11.2+f32259642 for .NET Framework
-        Copyright (C) Microsoft Corporation. All rights reserved.
-        
-        Build started 15.12.2024 17:36:24.
-        Project "C:\\Users\\marrc\\bul\\cpp-project\\alt\\ludo\\build\\CMakeFiles\\CMakeScratch\\TryCompile-4thphn\\cmTC_9cbc6.vcxproj" on node 1 (default targets).
-        PrepareForBuild:
-          Creating directory "cmTC_9cbc6.dir\\Debug\\".
-          Creating directory "C:\\Users\\marrc\\bul\\cpp-project\\alt\\ludo\\build\\CMakeFiles\\CMakeScratch\\TryCompile-4thphn\\Debug\\".
-          Creating directory "cmTC_9cbc6.dir\\Debug\\cmTC_9cbc6.tlog\\".
-        InitializeBuildStatus:
-          Creating "cmTC_9cbc6.dir\\Debug\\cmTC_9cbc6.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
-        ClCompile:
-          C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\BuildTools\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_9cbc6.dir\\Debug\\\\" /Fd"cmTC_9cbc6.dir\\Debug\\vc142.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\marrc\\bul\\cpp-project\\alt\\ludo\\build\\CMakeFiles\\CMakeScratch\\TryCompile-4thphn\\CheckFunctionExists.c"
-          Оптимизирующий компилятор Microsoft (R) C/C++ версии 19.29.30146 для x64
-          (C) Корпорация Майкрософт (Microsoft Corporation).  Все права защищены.
-          CheckFunctionExists.c
-          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_9cbc6.dir\\Debug\\\\" /Fd"cmTC_9cbc6.dir\\Debug\\vc142.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\marrc\\bul\\cpp-project\\alt\\ludo\\build\\CMakeFiles\\CMakeScratch\\TryCompile-4thphn\\CheckFunctionExists.c"
-        Link:
-          C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\BuildTools\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\marrc\\bul\\cpp-project\\alt\\ludo\\build\\CMakeFiles\\CMakeScratch\\TryCompile-4thphn\\Debug\\cmTC_9cbc6.exe" /INCREMENTAL /ILK:"cmTC_9cbc6.dir\\Debug\\cmTC_9cbc6.ilk" /NOLOGO pthreads.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/marrc/bul/cpp-project/alt/ludo/build/CMakeFiles/CMakeScratch/TryCompile-4thphn/Debug/cmTC_9cbc6.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/marrc/bul/cpp-project/alt/ludo/build/CMakeFiles/CMakeScratch/TryCompile-4thphn/Debug/cmTC_9cbc6.lib" /MACHINE:X64  /machine:x64 -static-libgcc -static-libstdc++ cmTC_9cbc6.dir\\Debug\\CheckFunctionExists.obj
-        LINK : warning LNK4044: нераспознанный параметр "/static-libgcc"; игнорируется [C:\\Users\\marrc\\bul\\cpp-project\\alt\\ludo\\build\\CMakeFiles\\CMakeScratch\\TryCompile-4thphn\\cmTC_9cbc6.vcxproj]
-        LINK : warning LNK4044: нераспознанный параметр "/static-libstdc++"; игнорируется [C:\\Users\\marrc\\bul\\cpp-project\\alt\\ludo\\build\\CMakeFiles\\CMakeScratch\\TryCompile-4thphn\\cmTC_9cbc6.vcxproj]
-        LINK : fatal error LNK1104: не удается открыть файл "pthreads.lib" [C:\\Users\\marrc\\bul\\cpp-project\\alt\\ludo\\build\\CMakeFiles\\CMakeScratch\\TryCompile-4thphn\\cmTC_9cbc6.vcxproj]
-        Done Building Project "C:\\Users\\marrc\\bul\\cpp-project\\alt\\ludo\\build\\CMakeFiles\\CMakeScratch\\TryCompile-4thphn\\cmTC_9cbc6.vcxproj" (default targets) -- FAILED.
-        
-        Build FAILED.
-        
-        "C:\\Users\\marrc\\bul\\cpp-project\\alt\\ludo\\build\\CMakeFiles\\CMakeScratch\\TryCompile-4thphn\\cmTC_9cbc6.vcxproj" (default target) (1) ->
-        (Link target) -> 
-          LINK : warning LNK4044: нераспознанный параметр "/static-libgcc"; игнорируется [C:\\Users\\marrc\\bul\\cpp-project\\alt\\ludo\\build\\CMakeFiles\\CMakeScratch\\TryCompile-4thphn\\cmTC_9cbc6.vcxproj]
-          LINK : warning LNK4044: нераспознанный параметр "/static-libstdc++"; игнорируется [C:\\Users\\marrc\\bul\\cpp-project\\alt\\ludo\\build\\CMakeFiles\\CMakeScratch\\TryCompile-4thphn\\cmTC_9cbc6.vcxproj]
-        
-        
-        "C:\\Users\\marrc\\bul\\cpp-project\\alt\\ludo\\build\\CMakeFiles\\CMakeScratch\\TryCompile-4thphn\\cmTC_9cbc6.vcxproj" (default target) (1) ->
-        (Link target) -> 
-          LINK : fatal error LNK1104: не удается открыть файл "pthreads.lib" [C:\\Users\\marrc\\bul\\cpp-project\\alt\\ludo\\build\\CMakeFiles\\CMakeScratch\\TryCompile-4thphn\\cmTC_9cbc6.vcxproj]
-        
-            2 Warning(s)
-            1 Error(s)
-        
-        Time Elapsed 00:00:00.48
-        
-      exitCode: 1
-  -
-    kind: "try_compile-v1"
-    backtrace:
-      - "C:/Program Files/CMake/share/cmake-3.30/Modules/CheckLibraryExists.cmake:69 (try_compile)"
-      - "C:/Program Files/CMake/share/cmake-3.30/Modules/FindThreads.cmake:112 (CHECK_LIBRARY_EXISTS)"
-      - "C:/Program Files/CMake/share/cmake-3.30/Modules/FindThreads.cmake:176 (_threads_check_lib)"
-      - "glfw/CMakeLists.txt:60 (find_package)"
-    checks:
-      - "Looking for pthread_create in pthread"
-    directories:
-      source: "C:/Users/marrc/bul/cpp-project/alt/ludo/build/CMakeFiles/CMakeScratch/TryCompile-8km08j"
-      binary: "C:/Users/marrc/bul/cpp-project/alt/ludo/build/CMakeFiles/CMakeScratch/TryCompile-8km08j"
-    cmakeVariables:
-      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
-      CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
-      CMAKE_EXE_LINKER_FLAGS: "/machine:x64 -static-libgcc -static-libstdc++"
-      CMAKE_MODULE_PATH: "C:/Users/marrc/bul/cpp-project/alt/ludo/glfw/CMake/modules"
-    buildResult:
-      variable: "CMAKE_HAVE_PTHREAD_CREATE"
-      cached: true
-      stdout: |
-        Change Dir: 'C:/Users/marrc/bul/cpp-project/alt/ludo/build/CMakeFiles/CMakeScratch/TryCompile-8km08j'
-        
-        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2019/BuildTools/MSBuild/Current/Bin/MSBuild.exe" cmTC_0a928.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:n
-        Microsoft (R) Build Engine version 16.11.2+f32259642 for .NET Framework
-        Copyright (C) Microsoft Corporation. All rights reserved.
-        
-        Build started 15.12.2024 17:36:24.
-        Project "C:\\Users\\marrc\\bul\\cpp-project\\alt\\ludo\\build\\CMakeFiles\\CMakeScratch\\TryCompile-8km08j\\cmTC_0a928.vcxproj" on node 1 (default targets).
-        PrepareForBuild:
-          Creating directory "cmTC_0a928.dir\\Debug\\".
-          Creating directory "C:\\Users\\marrc\\bul\\cpp-project\\alt\\ludo\\build\\CMakeFiles\\CMakeScratch\\TryCompile-8km08j\\Debug\\".
-          Creating directory "cmTC_0a928.dir\\Debug\\cmTC_0a928.tlog\\".
-        InitializeBuildStatus:
-          Creating "cmTC_0a928.dir\\Debug\\cmTC_0a928.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
-        ClCompile:
-          C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\BuildTools\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_0a928.dir\\Debug\\\\" /Fd"cmTC_0a928.dir\\Debug\\vc142.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\marrc\\bul\\cpp-project\\alt\\ludo\\build\\CMakeFiles\\CMakeScratch\\TryCompile-8km08j\\CheckFunctionExists.c"
-          Оптимизирующий компилятор Microsoft (R) C/C++ версии 19.29.30146 для x64
-          (C) Корпорация Майкрософт (Microsoft Corporation).  Все права защищены.
-          CheckFunctionExists.c
-          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_0a928.dir\\Debug\\\\" /Fd"cmTC_0a928.dir\\Debug\\vc142.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\marrc\\bul\\cpp-project\\alt\\ludo\\build\\CMakeFiles\\CMakeScratch\\TryCompile-8km08j\\CheckFunctionExists.c"
-        Link:
-          C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\BuildTools\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\marrc\\bul\\cpp-project\\alt\\ludo\\build\\CMakeFiles\\CMakeScratch\\TryCompile-8km08j\\Debug\\cmTC_0a928.exe" /INCREMENTAL /ILK:"cmTC_0a928.dir\\Debug\\cmTC_0a928.ilk" /NOLOGO pthread.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/marrc/bul/cpp-project/alt/ludo/build/CMakeFiles/CMakeScratch/TryCompile-8km08j/Debug/cmTC_0a928.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/marrc/bul/cpp-project/alt/ludo/build/CMakeFiles/CMakeScratch/TryCompile-8km08j/Debug/cmTC_0a928.lib" /MACHINE:X64  /machine:x64 -static-libgcc -static-libstdc++ cmTC_0a928.dir\\Debug\\CheckFunctionExists.obj
-        LINK : warning LNK4044: нераспознанный параметр "/static-libgcc"; игнорируется [C:\\Users\\marrc\\bul\\cpp-project\\alt\\ludo\\build\\CMakeFiles\\CMakeScratch\\TryCompile-8km08j\\cmTC_0a928.vcxproj]
-        LINK : warning LNK4044: нераспознанный параметр "/static-libstdc++"; игнорируется [C:\\Users\\marrc\\bul\\cpp-project\\alt\\ludo\\build\\CMakeFiles\\CMakeScratch\\TryCompile-8km08j\\cmTC_0a928.vcxproj]
-        LINK : fatal error LNK1104: не удается открыть файл "pthread.lib" [C:\\Users\\marrc\\bul\\cpp-project\\alt\\ludo\\build\\CMakeFiles\\CMakeScratch\\TryCompile-8km08j\\cmTC_0a928.vcxproj]
-        Done Building Project "C:\\Users\\marrc\\bul\\cpp-project\\alt\\ludo\\build\\CMakeFiles\\CMakeScratch\\TryCompile-8km08j\\cmTC_0a928.vcxproj" (default targets) -- FAILED.
-        
-        Build FAILED.
-        
-        "C:\\Users\\marrc\\bul\\cpp-project\\alt\\ludo\\build\\CMakeFiles\\CMakeScratch\\TryCompile-8km08j\\cmTC_0a928.vcxproj" (default target) (1) ->
-        (Link target) -> 
-          LINK : warning LNK4044: нераспознанный параметр "/static-libgcc"; игнорируется [C:\\Users\\marrc\\bul\\cpp-project\\alt\\ludo\\build\\CMakeFiles\\CMakeScratch\\TryCompile-8km08j\\cmTC_0a928.vcxproj]
-          LINK : warning LNK4044: нераспознанный параметр "/static-libstdc++"; игнорируется [C:\\Users\\marrc\\bul\\cpp-project\\alt\\ludo\\build\\CMakeFiles\\CMakeScratch\\TryCompile-8km08j\\cmTC_0a928.vcxproj]
-        
-        
-        "C:\\Users\\marrc\\bul\\cpp-project\\alt\\ludo\\build\\CMakeFiles\\CMakeScratch\\TryCompile-8km08j\\cmTC_0a928.vcxproj" (default target) (1) ->
-        (Link target) -> 
-          LINK : fatal error LNK1104: не удается открыть файл "pthread.lib" [C:\\Users\\marrc\\bul\\cpp-project\\alt\\ludo\\build\\CMakeFiles\\CMakeScratch\\TryCompile-8km08j\\cmTC_0a928.vcxproj]
-        
-            2 Warning(s)
-            1 Error(s)
-        
-        Time Elapsed 00:00:00.47
-        
-      exitCode: 1
 ...

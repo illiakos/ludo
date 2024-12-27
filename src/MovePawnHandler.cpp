@@ -43,7 +43,7 @@ void MovePawnHandler::moveRegularTiles(Pawn& pawn, int steps) {
 
     for (int i = 0; i < steps; i++) {
         currentTileId++;
-        const Tile* tile = board.getTileByPosition(currentTileId);
+        Tile* tile = board.getTileByPosition(currentTileId);
 
         if (tile == nullptr) {
             std::cerr << "Error: Tile not found at position " << currentTileId << "\n";
@@ -51,7 +51,7 @@ void MovePawnHandler::moveRegularTiles(Pawn& pawn, int steps) {
         }
 
         // Check if pawn moves to prefinishing tile
-        if (auto preFinishTile = dynamic_cast<const PrefinishingTile*>(tile)) {
+        if (auto preFinishTile = dynamic_cast<PrefinishingTile*>(tile)) {
             if (preFinishTile->getTeamId() == pawn.getPlayerId()) {
                 pawn.setTileId(preFinishTile->getFirstFinishingTilePosition());
                 return;

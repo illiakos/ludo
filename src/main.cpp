@@ -1,3 +1,4 @@
+#include "Base.hpp"
 #include "Board.hpp"
 #include "Color.hpp"
 #include "EventDispatcher.hpp"
@@ -11,6 +12,7 @@
 #include "StopGameEvent.hpp"
 #include "StopGameHandler.hpp"
 #include "Team.hpp"
+#include "TeamManager.hpp"
 #include "TurnManager.hpp"
 #include <GLFW/glfw3.h>
 #include <ft2build.h>
@@ -99,9 +101,11 @@ int main() {
   std::cout << "All libraries tested successfully!" << std::endl;
 
   MapDrawer mapDrawer = MapDrawer::getInstance();
+
     /*(800, 15);*/
 
   mapDrawer.drawMap();
+
 
   /*return 0;*/
   // Create the event dispatcher
@@ -122,6 +126,13 @@ int main() {
   Team teamYellow(yellow, 2);
   Team teamBlue(blue, 3);
   Team teamGreen(green, 4);
+  TeamManager teamManager = TeamManager();
+  teamManager.addTeam(teamRed);
+  teamManager.addTeam(teamGreen);
+  teamManager.addTeam(teamYellow);
+  teamManager.addTeam(teamBlue);
+
+  Base redBase();
 
   std::cout << "aboba" << std::endl;
 
@@ -142,14 +153,20 @@ int main() {
   auto stopGameHandler = std::make_shared<StopGameHandler>();
   auto playerTurnHandler =
       std::make_shared<PlayerTurnHandler>(eventLoop, 4, turnManager);
-
+  
+  int idCounter = 0;
   for (int playerId = 1; playerId <= 4; ++playerId) {
     for (int pawnId = 1; pawnId <= 4; ++pawnId) {
       // TODO: Replace the magical number 9 with actualy tile id. Each base has
       // 4 tiles, so some of those tiles should be assigned to each pawn
-      pawnManager.addPawn(pawnId, 9); // All pawns start at tile ID 0
+      auto pawn = Pawn(idCounter, 0,Dimensions(0,0,1,1), teamManager.getTeamById(playerId).color);
+      pawnManager.addPawn(pawn); // All pawns start at tile ID 0
+      idCounter++;
     }
   }
+
+  
+
   // Subscribe handlers to specific events
   /*dispatcher.subscribe("RollDiceEvent", rollDiceHandler);*/
   /*dispatcher.subscribe("MovePawnEvent", movePawnHandler);*/

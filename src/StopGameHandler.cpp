@@ -1,4 +1,4 @@
-#include "StopGameHandler.h"
+#include "StopGameHandler.hpp"
 #include "StopGameEvent.hpp"
 #include <iostream>
 #include <memory>

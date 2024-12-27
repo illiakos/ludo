@@ -1,7 +1,7 @@
 CMakeFiles/PawnGame.dir/src/TurnManager.cpp.obj: \
  C:\Users\marrc\bul\cpp-project\alt\ludo\src\TurnManager.cpp \
- C:/Users/marrc/bul/cpp-project/alt/ludo/include/TurnManager.h \
- C:/Users/marrc/bul/cpp-project/alt/ludo/include/EventLoop.h \
+ C:/Users/marrc/bul/cpp-project/alt/ludo/include/TurnManager.hpp \
+ C:/Users/marrc/bul/cpp-project/alt/ludo/include/EventLoop.hpp \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/list \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/stl_algobase.h \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/x86_64-w64-mingw32/bits/c++config.h \
@@ -138,8 +138,8 @@ CMakeFiles/PawnGame.dir/src/TurnManager.cpp.obj: \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/x86_64-w64-mingw32/include/malloc.h \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/mm_malloc.h \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/std_abs.h \
- C:/Users/marrc/bul/cpp-project/alt/ludo/include/RollDiceEvent.h \
- C:/Users/marrc/bul/cpp-project/alt/ludo/include/Event.h \
+ C:/Users/marrc/bul/cpp-project/alt/ludo/include/RollDiceEvent.hpp \
+ C:/Users/marrc/bul/cpp-project/alt/ludo/include/Event.hpp \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/string \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/char_traits.h \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/cstdint \

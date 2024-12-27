@@ -1,14 +1,17 @@
 #include "PawnManager.hpp"
 #include "Coordinates.hpp"
+#include "Dimensions.hpp"
 #include <iostream>
+#include <memory>
 
-void PawnManager::addPawn(int pawnId, int startingTileId) {
-    if (pawns.find(pawnId) == pawns.end()) {
-        // TODO: create some mechanism to get coordinates by tile id
-        auto coords = Coordinates(0,0,0); 
-        auto pawn = std::make_shared<Pawn>(pawnId, startingTileId, coords);
-        pawns[pawnId] = pawn;
-        std::cout << "Added Pawn " << pawnId << " at tile ID " << startingTileId << ".\n";
+void PawnManager::addPawn(Pawn& pawn) {
+
+    auto pawnId = pawn.getId();
+    if (pawns.find(pawn.getId()) == pawns.end()) {
+        auto pawnPtr = std::make_shared<Pawn>(pawn);
+        pawns[pawnId] = pawnPtr;
+        std::cout << "Added Pawn " << pawnId << " at tile x: " << pawn.getDimensions().x << "; y: " << pawn.getDimensions().y << ".\n";
+        pawn.renderSelf();
     } else {
         std::cerr << "Pawn " << pawnId << " already exists!\n";
     }

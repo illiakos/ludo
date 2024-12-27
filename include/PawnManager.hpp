@@ -1,13 +1,14 @@
 #ifndef PAWN_MANAGER_H
 #define PAWN_MANAGER_H
 
+#include "MapDrawer.hpp"
 #include "Pawn.hpp"
 #include <memory>
 #include <unordered_map>
 
 class PawnManager {
 public:
-  void addPawn(int pawnId, int startingTileId);
+  void addPawn(Pawn &pawn);
   void movePawn(int pawnId, int newTileId);
 
   // Methods updated to work with pawnId only

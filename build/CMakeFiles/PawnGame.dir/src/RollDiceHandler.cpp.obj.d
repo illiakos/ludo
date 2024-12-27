@@ -1,8 +1,8 @@
 CMakeFiles/PawnGame.dir/src/RollDiceHandler.cpp.obj: \
  C:\Users\marrc\bul\cpp-project\alt\ludo\src\RollDiceHandler.cpp \
- C:/Users/marrc/bul/cpp-project/alt/ludo/include/RollDiceHandler.h \
- C:/Users/marrc/bul/cpp-project/alt/ludo/include/EventHandler.h \
- C:/Users/marrc/bul/cpp-project/alt/ludo/include/Event.h \
+ C:/Users/marrc/bul/cpp-project/alt/ludo/include/RollDiceHandler.hpp \
+ C:/Users/marrc/bul/cpp-project/alt/ludo/include/EventHandler.hpp \
+ C:/Users/marrc/bul/cpp-project/alt/ludo/include/Event.hpp \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/string \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/x86_64-w64-mingw32/bits/c++config.h \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/x86_64-w64-mingw32/bits/os_defines.h \
@@ -138,12 +138,12 @@ CMakeFiles/PawnGame.dir/src/RollDiceHandler.cpp.obj: \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/backward/auto_ptr.h \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/pstl/glue_memory_defs.h \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/pstl/execution_defs.h \
- C:/Users/marrc/bul/cpp-project/alt/ludo/include/EventLoop.h \
+ C:/Users/marrc/bul/cpp-project/alt/ludo/include/EventLoop.hpp \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/list \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/stl_list.h \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/list.tcc \
- C:/Users/marrc/bul/cpp-project/alt/ludo/include/RollDiceEvent.h \
- C:/Users/marrc/bul/cpp-project/alt/ludo/include/WaitForChoosePawnEvent.h \
+ C:/Users/marrc/bul/cpp-project/alt/ludo/include/RollDiceEvent.hpp \
+ C:/Users/marrc/bul/cpp-project/alt/ludo/include/WaitForChoosePawnEvent.hpp \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/chrono \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/chrono.h \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/ratio \

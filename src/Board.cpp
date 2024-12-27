@@ -37,7 +37,7 @@ void Board::addFinishingTile(Dimensions d, int id, int position,
 }
 
 // Get tile by position
-const Tile *Board::getTileByPosition(int position) const {
+Tile *Board::getTileByPosition(int position) {
   for (const auto &tile : tiles) {
     if (tile->getPosition() == position) {
       return tile.get();
