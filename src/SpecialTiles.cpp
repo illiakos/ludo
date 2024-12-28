@@ -21,9 +21,22 @@ int PrefinishingTile::getTeamId() {
   return teamId;
 }
 
-
-
 void SafeTile::renderSelf() const {
   auto drawer = MapDrawer::getInstance();
+}
+
+StartingTile::~StartingTile() {
+
+}
+
+FinishingTile::~FinishingTile() {
+
+}
+
+PrefinishingTile::~PrefinishingTile() {
+
+}
+
+SafeTile::~SafeTile() {
   
 }

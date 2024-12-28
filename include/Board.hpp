@@ -13,7 +13,7 @@ public:
 
   // Access a tile by its position
   Tile *getTileByPosition(int position);
-
+  ~Board();
 protected:
   // Add tiles of different types
   void addRegularTile(Dimensions d, int id, int position, Color &color);

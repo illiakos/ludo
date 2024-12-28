@@ -197,4 +197,5 @@ CMakeFiles/PawnGame.dir/src/MapDrawer.cpp.obj: \
  C:/Users/User/ludo/include/Renderable.hpp \
  C:/Users/User/ludo/include/WindowManager.hpp \
  C:/msys64/ucrt64/include/c++/13.1.0/utility \
- C:/msys64/ucrt64/include/c++/13.1.0/bits/stl_relops.h
+ C:/msys64/ucrt64/include/c++/13.1.0/bits/stl_relops.h \
+ C:/Users/User/ludo/include/ColorConstants.hpp

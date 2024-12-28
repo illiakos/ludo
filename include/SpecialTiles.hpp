@@ -9,6 +9,7 @@ public:
         : Tile(dimensions, id, position, color) {};
 
     void renderSelf() const override;
+    ~StartingTile();
 };
 
 class FinishingTile : public Tile {
@@ -18,6 +19,7 @@ public:
 
     bool getIsFinish();
     void renderSelf() const override;
+    ~FinishingTile();
 
 private:
     bool isFinish;
@@ -35,6 +37,7 @@ public:
     int getFirstFinishingTilePosition();
     int getTeamId();
     void renderSelf() const override;
+    ~PrefinishingTile();
 private:
     int teamId;
     int nextPosition; // Position of the next tile in the prefinishing path
@@ -46,6 +49,7 @@ public:
     SafeTile(Dimensions d, int id, int position, Color& color)
         : Tile(d, id, position, color) {};
     void renderSelf() const override;
+    ~SafeTile();
 };
 
 #endif // !SPECIAL_TILES_H

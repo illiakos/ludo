@@ -13,6 +13,12 @@
 },
 {
   "directory": "C:/Users/User/ludo/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles/PawnGame.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\PawnGame.dir\\src\\ColorConstants.cpp.obj -c C:\\Users\\User\\ludo\\src\\ColorConstants.cpp",
+  "file": "C:/Users/User/ludo/src/ColorConstants.cpp",
+  "output": "CMakeFiles/PawnGame.dir/src/ColorConstants.cpp.obj"
+},
+{
+  "directory": "C:/Users/User/ludo/build",
   "command": "C:\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles/PawnGame.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\PawnGame.dir\\src\\EventDispatcher.cpp.obj -c C:\\Users\\User\\ludo\\src\\EventDispatcher.cpp",
   "file": "C:/Users/User/ludo/src/EventDispatcher.cpp",
   "output": "CMakeFiles/PawnGame.dir/src/EventDispatcher.cpp.obj"
@@ -58,6 +64,12 @@
   "command": "C:\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles/PawnGame.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\PawnGame.dir\\src\\PlayerTurnHandler.cpp.obj -c C:\\Users\\User\\ludo\\src\\PlayerTurnHandler.cpp",
   "file": "C:/Users/User/ludo/src/PlayerTurnHandler.cpp",
   "output": "CMakeFiles/PawnGame.dir/src/PlayerTurnHandler.cpp.obj"
+},
+{
+  "directory": "C:/Users/User/ludo/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles/PawnGame.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\PawnGame.dir\\src\\Renderable.cpp.obj -c C:\\Users\\User\\ludo\\src\\Renderable.cpp",
+  "file": "C:/Users/User/ludo/src/Renderable.cpp",
+  "output": "CMakeFiles/PawnGame.dir/src/Renderable.cpp.obj"
 },
 {
   "directory": "C:/Users/User/ludo/build",

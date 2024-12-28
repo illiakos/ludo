@@ -62,3 +62,7 @@ void Board::printBoard() const {
               << coords.y << "), Position: " << tile->getPosition() << "\n";
   }
 }
+
+Board::~Board() {
+  
+}

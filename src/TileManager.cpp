@@ -1,11 +1,12 @@
 #include "TileManager.hpp"
 #include "Renderable.hpp"
+#include "MapDrawer.hpp"
 #include <iostream>
 #include <memory>
 #include <ostream>
 
 TileManager& TileManager::getInstance() {
-  static TileManager instance;
+  static TileManager instance(MapDrawer::getInstance());
   return instance;
 }
 

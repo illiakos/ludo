@@ -11,6 +11,7 @@ class Base : public Renderable {
 public:
   Base(Dimensions dimensions, Color color, int teamId, int startingTileId ) : dimensions(dimensions), color(color), teamId(teamId), startingTileId(startingTileId) {};
   void renderSelf() const override;
+  ~Base();
 private:
   std::vector<Tile*> slots;
   Dimensions dimensions;

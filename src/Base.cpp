@@ -6,3 +6,7 @@ void Base::renderSelf() const {
   drawer.drawBase(dimensions.x, dimensions.y, color);
   return;
 }
+
+Base::~Base() {
+  
+}

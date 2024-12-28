@@ -46,7 +46,7 @@ private:
 
   std::vector<std::shared_ptr<Renderable>> renderableItems;
 
-  int windowSize;
+  int windowSize = 800;
   int mapSize;
 };
 

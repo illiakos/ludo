@@ -2,9 +2,8 @@
 #include "MapDrawer.hpp"
 #include <GLFW/glfw3.h>
 #include <string>
+#include "ColorConstants.hpp"
 
-Color gray = Color(0.9f, 0.9f, 0.9f);
-Color white = Color(1.0f, 1.0f, 1.0f);
 void Tile::renderSelf() const {
   auto drawer = MapDrawer::getInstance();
   const float cellSize = drawer.getCellSize();
@@ -25,4 +24,16 @@ std::string Tile::toString() {
       << ", Height: " << dimensions.dy << ", Depth: " << dimensions.dz << ")]";
 
   return oss.str();
+}
+
+Dimensions Tile::getDimensions() {
+    return dimensions;
+}
+
+int Tile::getPosition() const {
+    return position;
+}
+
+int Tile::getId() const {
+    return id;
 }

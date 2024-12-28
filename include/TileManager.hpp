@@ -18,6 +18,7 @@ public:
 
 private:
   RenderableContainer renderContainer;
+  TileManager(RenderableContainer& renderContainer) : renderContainer(renderContainer) {};
   TileManager() = default;
   std::vector<std::shared_ptr<Tile>> tiles;
 };

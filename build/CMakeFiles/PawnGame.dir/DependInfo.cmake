@@ -10,6 +10,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/Users/User/ludo/src/Base.cpp" "CMakeFiles/PawnGame.dir/src/Base.cpp.obj" "gcc" "CMakeFiles/PawnGame.dir/src/Base.cpp.obj.d"
   "C:/Users/User/ludo/src/Board.cpp" "CMakeFiles/PawnGame.dir/src/Board.cpp.obj" "gcc" "CMakeFiles/PawnGame.dir/src/Board.cpp.obj.d"
+  "C:/Users/User/ludo/src/ColorConstants.cpp" "CMakeFiles/PawnGame.dir/src/ColorConstants.cpp.obj" "gcc" "CMakeFiles/PawnGame.dir/src/ColorConstants.cpp.obj.d"
   "C:/Users/User/ludo/src/EventDispatcher.cpp" "CMakeFiles/PawnGame.dir/src/EventDispatcher.cpp.obj" "gcc" "CMakeFiles/PawnGame.dir/src/EventDispatcher.cpp.obj.d"
   "C:/Users/User/ludo/src/EventLoop.cpp" "CMakeFiles/PawnGame.dir/src/EventLoop.cpp.obj" "gcc" "CMakeFiles/PawnGame.dir/src/EventLoop.cpp.obj.d"
   "C:/Users/User/ludo/src/MapBuilder.cpp" "CMakeFiles/PawnGame.dir/src/MapBuilder.cpp.obj" "gcc" "CMakeFiles/PawnGame.dir/src/MapBuilder.cpp.obj.d"
@@ -18,6 +19,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/Users/User/ludo/src/Pawn.cpp" "CMakeFiles/PawnGame.dir/src/Pawn.cpp.obj" "gcc" "CMakeFiles/PawnGame.dir/src/Pawn.cpp.obj.d"
   "C:/Users/User/ludo/src/PawnManager.cpp" "CMakeFiles/PawnGame.dir/src/PawnManager.cpp.obj" "gcc" "CMakeFiles/PawnGame.dir/src/PawnManager.cpp.obj.d"
   "C:/Users/User/ludo/src/PlayerTurnHandler.cpp" "CMakeFiles/PawnGame.dir/src/PlayerTurnHandler.cpp.obj" "gcc" "CMakeFiles/PawnGame.dir/src/PlayerTurnHandler.cpp.obj.d"
+  "C:/Users/User/ludo/src/Renderable.cpp" "CMakeFiles/PawnGame.dir/src/Renderable.cpp.obj" "gcc" "CMakeFiles/PawnGame.dir/src/Renderable.cpp.obj.d"
   "C:/Users/User/ludo/src/RollDiceHandler.cpp" "CMakeFiles/PawnGame.dir/src/RollDiceHandler.cpp.obj" "gcc" "CMakeFiles/PawnGame.dir/src/RollDiceHandler.cpp.obj.d"
   "C:/Users/User/ludo/src/SpecialTiles.cpp" "CMakeFiles/PawnGame.dir/src/SpecialTiles.cpp.obj" "gcc" "CMakeFiles/PawnGame.dir/src/SpecialTiles.cpp.obj.d"
   "C:/Users/User/ludo/src/StopGameHandler.cpp" "CMakeFiles/PawnGame.dir/src/StopGameHandler.cpp.obj" "gcc" "CMakeFiles/PawnGame.dir/src/StopGameHandler.cpp.obj.d"
