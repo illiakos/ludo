@@ -104,7 +104,7 @@ int main() {
 
     /*(800, 15);*/
 
-  mapDrawer.drawMap();
+  // mapDrawer.drawMap();
 
 
   /*return 0;*/
@@ -132,7 +132,10 @@ int main() {
   teamManager.addTeam(teamYellow);
   teamManager.addTeam(teamBlue);
 
-  Base redBase();
+  Dimensions dimensions(0, 0, 6, 6);
+
+  Base redBase(dimensions, red, 1, 10);
+  redBase.renderSelf();
 
   std::cout << "aboba" << std::endl;
 

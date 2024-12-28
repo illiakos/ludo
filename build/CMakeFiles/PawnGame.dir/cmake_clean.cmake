@@ -25,6 +25,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/PawnGame.dir/src/SpecialTiles.cpp.obj.d"
   "CMakeFiles/PawnGame.dir/src/StopGameHandler.cpp.obj"
   "CMakeFiles/PawnGame.dir/src/StopGameHandler.cpp.obj.d"
+  "CMakeFiles/PawnGame.dir/src/TeamManager.cpp.obj"
+  "CMakeFiles/PawnGame.dir/src/TeamManager.cpp.obj.d"
   "CMakeFiles/PawnGame.dir/src/Tile.cpp.obj"
   "CMakeFiles/PawnGame.dir/src/Tile.cpp.obj.d"
   "CMakeFiles/PawnGame.dir/src/TileManager.cpp.obj"
