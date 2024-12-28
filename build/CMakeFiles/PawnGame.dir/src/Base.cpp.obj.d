@@ -174,4 +174,5 @@ CMakeFiles/PawnGame.dir/src/Base.cpp.obj: C:\Users\User\ludo\src\Base.cpp \
  C:/msys64/ucrt64/include/c++/13.1.0/bits/stl_vector.h \
  C:/msys64/ucrt64/include/c++/13.1.0/bits/stl_bvector.h \
  C:/msys64/ucrt64/include/c++/13.1.0/bits/vector.tcc \
- C:/Users/User/ludo/include/MapDrawer.hpp
+ C:/Users/User/ludo/include/MapDrawer.hpp \
+ C:/msys64/ucrt64/include/c++/13.1.0/iostream

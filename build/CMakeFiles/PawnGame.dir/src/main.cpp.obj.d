@@ -267,4 +267,11 @@ CMakeFiles/PawnGame.dir/src/main.cpp.obj: C:\Users\User\ludo\src\main.cpp \
  C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/emmintrin.h \
  C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/xmmintrin.h \
  C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/mmintrin.h \
- C:/Users/User/ludo/include/MapDrawer.hpp
+ C:/Users/User/ludo/include/MapDrawer.hpp \
+ C:/msys64/ucrt64/include/c++/13.1.0/thread \
+ C:/msys64/ucrt64/include/c++/13.1.0/bits/std_thread.h \
+ C:/msys64/ucrt64/include/c++/13.1.0/bits/this_thread_sleep.h \
+ C:/msys64/ucrt64/include/c++/13.1.0/bits/chrono.h \
+ C:/msys64/ucrt64/include/c++/13.1.0/ratio \
+ C:/msys64/ucrt64/include/c++/13.1.0/cstdint \
+ C:/msys64/ucrt64/include/c++/13.1.0/bits/parse_numbers.h

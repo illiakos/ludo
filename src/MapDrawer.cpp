@@ -122,6 +122,7 @@ void MapDrawer::drawTriangle(float x1, float y1, float x2, float y2, float x3, f
 
 void MapDrawer::drawBase(float x, float y, const Color &color)
 {
+    cout << "CALLLLLLING DRAW BASE METHE" << endl;
     // Draw colored bg
     drawRectangle(getCellPosition(x), getCellPosition(y), getSizeOfCells(6), getSizeOfCells(6), color); // Blue color
 
@@ -215,13 +216,13 @@ void MapDrawer::drawLudoBoard()
 
     drawMiddle();
 
-    drawBase(0, 0, blue); // Blue
+    // drawBase(0, 0, blue); // Blue
 
-    drawBase(0, 9, red); // Red
+    // //drawBase(0, 9, red); // Red
 
-    drawBase(9, 9, green); // Green
+    // drawBase(9, 9, green); // Green
 
-    drawBase(9, 0, yellow); // Yellow
+    // drawBase(9, 0, yellow); // Yellow
 
     drawRoads();
 
@@ -258,4 +259,11 @@ void MapDrawer::drawMap()
     // Clean up and exit
     glfwDestroyWindow(window);
     glfwTerminate();
+}
+
+void MapDrawer::log() {
+    cout << "MapDrawer Information:\n";
+    cout << "Window Size: " << windowSize << "\n";
+    cout << "Map Size: " << mapSize << "\n";
+    cout << "Renderable Items Count: " << renderableItems.size() << "\n";
 }

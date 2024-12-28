@@ -23,7 +23,7 @@ public:
         return position < other.position;
     }
     virtual ~Tile() = default;
-    void renderSelf() const override;
+    virtual void renderSelf() const override;
     std::string toString();
 
 

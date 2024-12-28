@@ -40,13 +40,14 @@ public:
   void drawMiddle();
   void drawPawn();
   void addRenderable(std::shared_ptr<Renderable> r) override;
+  void log();
 private:
   MapDrawer() = default;
   MapDrawer(int windowSize, int mapSize);
 
   std::vector<std::shared_ptr<Renderable>> renderableItems;
 
-  int windowSize = 800;
+  int windowSize;
   int mapSize;
 };
 

@@ -23,6 +23,7 @@
 #define STB_IMAGE_IMPLEMENTATION
 #include "stb_image.h"
 #include "MapDrawer.hpp"
+#include <thread>
 
 void testGLFW() {
   if (!glfwInit()) {
@@ -104,6 +105,12 @@ int main() {
 
     /*(800, 15);*/
 
+  // Launch drawMap in a separate thread
+  std::thread backgroundThread(&MapDrawer::drawMap, &mapDrawer);
+  std::this_thread::sleep_for(std::chrono::seconds(5));
+  // Detach the thread to allow it to run independently
+  backgroundThread.detach();
+    
   // mapDrawer.drawMap();
 
 
@@ -116,10 +123,15 @@ int main() {
   Board board;
 
   // Create default colors
-  Color red("#E4080A");
-  Color yellow("#FFDE59");
-  Color blue("#0342C8");
-  Color green("#7DDA58");
+  // Color red("#E4080A");
+  // Color yellow("#FFDE59");
+  // Color blue("#0342C8");
+  // Color green("#7DDA58");
+
+  Color blue = Color(0.004f, 0.725f, 0.945f);
+  Color red = Color(0.996f, 0.180f, 0.090f);
+  Color green = Color(0.29f, 0.729f, 0.29f);
+  Color yellow = Color(1.0f, 0.784f, 0.208f);
 
   // Create default teams
   Team teamRed(red, 1);
@@ -132,12 +144,14 @@ int main() {
   teamManager.addTeam(teamYellow);
   teamManager.addTeam(teamBlue);
 
-  Dimensions dimensions(0, 0, 6, 6);
-
-  Base redBase(dimensions, red, 1, 10);
-  redBase.renderSelf();
+  Dimensions dimensions(0, 9, 6, 6);
 
   std::cout << "aboba" << std::endl;
+
+  //Base redBase(dimensions, red, 1, 10);
+  Base redBase(dimensions, red, 1, 10);
+  redBase.skibidi();
+  redBase.renderSelf();
 
   // Create default players
   Player redPlayer(1, 1);
@@ -184,6 +198,10 @@ int main() {
 
   // Process all events in the loop
   eventLoop.processEvents();
+
+  while (true) {
+
+  }
 
   return 0;
 }
