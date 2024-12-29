@@ -127,6 +127,41 @@ void MapDrawer::drawTriangle(float x1, float y1, float x2, float y2, float x3, f
     glEnd();                                                         // End drawing
 }
 
+void MapDrawer::drawStar(float cx, float cy, float outerRadius, float innerRadius, int numPoints, const Color color)
+{
+    if (numPoints < 5) {
+        std::cerr << "Star must have at least 5 points.\n";
+        return;
+    }
+
+    glColor3f(color.getRedf(), color.getGreenf(), color.getBluef()); // Set color
+    glBegin(GL_TRIANGLE_FAN);                                       // Use a triangle fan for the star
+
+    float angleStep = M_PI / numPoints; // Step between outer and inner points (half angle between star points)
+    float angle = -M_PI_2;              // Start angle (-90 degrees to orient the star upwards)
+
+    // Draw the center of the star
+    glVertex2f(cx, cy);
+
+    for (int i = 0; i <= numPoints * 2; i++)
+    {
+        // Alternate between outer and inner radii
+        float radius = (i % 2 == 0) ? outerRadius : innerRadius;
+
+        // Calculate the vertex coordinates
+        float x = cx + radius * cos(angle);
+        float y = cy + radius * sin(angle);
+
+        glVertex2f(x, y);
+
+        // Increment the angle
+        angle += angleStep;
+    }
+
+    glEnd(); // End drawing
+}
+
+
 void MapDrawer::drawBase(float x, float y, const Color &color)
 {
     cout << "CALLLLLLING DRAW BASE METHE" << endl;

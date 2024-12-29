@@ -100,19 +100,155 @@ void initializeTiles() {
 
   TileManager &tileManager = TileManager::getInstance();
   MapDrawer &mapDrawer = MapDrawer::getInstance();
-  /**/
-  /**/
-  /*// Starting tiles for each team (corrected positions)*/
+
+  // Walkable tiles (updated based on new coordinates)
+  int position = 2;
+  for (int x = 2; x <= 5; x++) {
+    auto walkableTile = std::make_shared<Tile>(Dimensions(x, 8, 1, 1), position, position, Color(0.8f, 0.8f, 0.8f));
+    tileManager.addTile(walkableTile);
+    mapDrawer.addRenderable(walkableTile);
+    position++;
+  }
+
+  for (int y = 9; y <= 15; y++) {
+    // Skip safe tile
+    if (y == 12) {
+      position++;
+      continue;
+    }
+    auto walkableTile = std::make_shared<Tile>(Dimensions(6, y, 1, 1), position, position, Color(0.8f, 0.8f, 0.8f));
+    tileManager.addTile(walkableTile);
+    mapDrawer.addRenderable(walkableTile);
+    position++;
+  }
+
+  position++; // Skip green transition position
+  auto walkableTile = std::make_shared<Tile>(Dimensions(8, 14, 1, 1), position, position, Color(0.8f, 0.8f, 0.8f));
+  tileManager.addTile(walkableTile);
+  mapDrawer.addRenderable(walkableTile);
+  position++;
+  position++; // Skip green start position
+
+  for (int y = 12; y >= 9; y--) { 
+    auto walkableTile = std::make_shared<Tile>(Dimensions(8, y, 1, 1), position, position, Color(0.8f, 0.8f, 0.8f));
+    tileManager.addTile(walkableTile);
+    mapDrawer.addRenderable(walkableTile);
+    position++;
+  }
+
+  for (int x = 9; x <= 14; x++) {
+    // Skip safe tile
+    if (x == 12) {
+      position++;
+      continue;
+    }
+    auto walkableTile = std::make_shared<Tile>(Dimensions(x, 8, 1, 1), position, position, Color(0.8f, 0.8f, 0.8f));
+    tileManager.addTile(walkableTile);
+    mapDrawer.addRenderable(walkableTile);
+    position++;
+  }
+
+  position++; // Skip yellow transition position
+  walkableTile = std::make_shared<Tile>(Dimensions(14, 6, 1, 1), position, position, Color(0.8f, 0.8f, 0.8f));
+  tileManager.addTile(walkableTile);
+  mapDrawer.addRenderable(walkableTile);
+  position++;
+  position++; // Skip yellow transition position
+
+  for (int x = 12; x >= 9; x--) {
+    auto walkableTile = std::make_shared<Tile>(Dimensions(x, 6, 1, 1), position, position, Color(0.8f, 0.8f, 0.8f));
+    tileManager.addTile(walkableTile);
+    mapDrawer.addRenderable(walkableTile);
+    position++;
+  }
+
+  for (int y = 5; y >= 0; y--) {
+    // Skip safe tile
+    if (y == 2) {
+      position++;
+      continue;
+    }
+    auto walkableTile = std::make_shared<Tile>(Dimensions(8, y, 1, 1), position, position, Color(0.8f, 0.8f, 0.8f));
+    tileManager.addTile(walkableTile);
+    mapDrawer.addRenderable(walkableTile);
+    position++;
+  }
+
+  position++; // Skip blue transition position
+  walkableTile = std::make_shared<Tile>(Dimensions(6, 0, 1, 1), position, position, Color(0.8f, 0.8f, 0.8f));
+  tileManager.addTile(walkableTile);
+  mapDrawer.addRenderable(walkableTile);
+  position++;
+  position++; // Skip blue transition position
+
+  for (int y = 2; y <= 5; y++) { 
+    auto walkableTile = std::make_shared<Tile>(Dimensions(6, y, 1, 1), position, position, Color(0.8f, 0.8f, 0.8f));
+    tileManager.addTile(walkableTile);
+    mapDrawer.addRenderable(walkableTile);
+    position++;
+  }
+
+  for (int x = 5; x >= 0; x--) {
+    // Skip safe tile
+    if (x == 2) {
+      position++;
+      continue;
+    }
+    auto walkableTile = std::make_shared<Tile>(Dimensions(x, 6, 1, 1), position, position, Color(0.8f, 0.8f, 0.8f));
+    tileManager.addTile(walkableTile);
+    mapDrawer.addRenderable(walkableTile);
+    position++;
+  }
+
+  position++; // Skip red transition position
+  walkableTile = std::make_shared<Tile>(Dimensions(0, 8, 1, 1), position, position, Color(0.8f, 0.8f, 0.8f));
+  tileManager.addTile(walkableTile);
+  mapDrawer.addRenderable(walkableTile);
+ 
+  
+  // Safe tiles
+  auto redSafe = std::make_shared<SafeTile>(Dimensions(6, 12, 1, 1), 51, 51, red);
+  auto blueSafe = std::make_shared<SafeTile>(Dimensions(2, 6, 1, 1), 52, 52, blue);
+  auto greenSafe = std::make_shared<SafeTile>(Dimensions(12, 8, 1, 1), 53, 53, green);
+  auto yellowSafe = std::make_shared<SafeTile>(Dimensions(8, 2, 1, 1), 54, 54, yellow);
+
+  tileManager.addTile(redSafe);
+  tileManager.addTile(blueSafe);
+  tileManager.addTile(greenSafe);
+  tileManager.addTile(yellowSafe);
+
+  mapDrawer.addRenderable(redSafe);
+  mapDrawer.addRenderable(blueSafe);
+  mapDrawer.addRenderable(greenSafe);
+  mapDrawer.addRenderable(yellowSafe);
+
+  // Transition tiles
+  auto redTransition = std::make_shared<TransitionTile>(Dimensions(0, 7, 1, 1), 51, 51, 1, 1, Color(0.8f, 0.8f, 0.8f));
+  auto blueTransition = std::make_shared<TransitionTile>(Dimensions(7, 0, 1, 1), 38, 38, 2, 2, Color(0.8f, 0.8f, 0.8f));
+  auto greenTransition = std::make_shared<TransitionTile>(Dimensions(7, 14, 1, 1), 11, 11, 3, 3, Color(0.8f, 0.8f, 0.8f));
+  auto yellowTransition = std::make_shared<TransitionTile>(Dimensions(14, 7, 1, 1), 25, 25, 4, 4, Color(0.8f, 0.8f, 0.8f));
+
+  tileManager.addTile(redTransition);
+  tileManager.addTile(blueTransition);
+  tileManager.addTile(greenTransition);
+  tileManager.addTile(yellowTransition);
+
+  mapDrawer.addRenderable(redTransition);
+  mapDrawer.addRenderable(blueTransition);
+  mapDrawer.addRenderable(greenTransition);
+  mapDrawer.addRenderable(yellowTransition);
+
+  // Starting tiles for each team (corrected positions)
   auto redStart =
       std::make_shared<StartingTile>(Dimensions(1, 8, 1, 1), 1, 1, red, 1);
   auto blueStart =
-      std::make_shared<StartingTile>(Dimensions(6, 1, 1, 1), 2, 2, blue,3);
+      std::make_shared<StartingTile>(Dimensions(6, 1, 1, 1), 13, 13, blue,3);
   auto greenStart =
-      std::make_shared<StartingTile>(Dimensions(8, 13, 1, 1), 3, 3, green,4);
+      std::make_shared<StartingTile>(Dimensions(8, 13, 1, 1), 40, 40, green,4);
   auto yellowStart =
-      std::make_shared<StartingTile>(Dimensions(13, 6, 1, 1), 4, 4, yellow,2);
-  /**/
-  /*// Adding starting tiles to the manager and rendering*/
+      std::make_shared<StartingTile>(Dimensions(13, 6, 1, 1), 27, 27, yellow,2);
+
+  // Adding starting tiles to the manager and rendering
   tileManager.addTile(redStart);
   tileManager.addTile(blueStart);
   tileManager.addTile(greenStart);
@@ -123,85 +259,24 @@ void initializeTiles() {
   mapDrawer.addRenderable(greenStart);
   mapDrawer.addRenderable(yellowStart);
 
-  // Walkable tiles (updated based on new coordinates)
-  /*int position = 1;*/
-  /*for (int x = 1; x <= 6; x++) {*/
-  /*  auto walkableTile = std::make_shared<Tile>(*/
-  /*      Dimensions(x, 9, 1, 1), position, position, Color(0.8f, 0.8f, 0.8f));*/
-  /*  tileManager.addTile(walkableTile);*/
-  /*  mapDrawer.addRenderable(walkableTile);*/
-  /*  position++;*/
-  /*}*/
-  /**/
-  /*for (int y = 8; y >= 6; y--) {*/
-  /*  auto walkableTile = std::make_shared<Tile>(*/
-  /*      Dimensions(6, y, 1, 1), position, position, Color(0.8f, 0.8f, 0.8f));*/
-  /*  tileManager.addTile(walkableTile);*/
-  /*  mapDrawer.addRenderable(walkableTile);*/
-  /*  position++;*/
-  /*}*/
-  /**/
-  /*// Safe tiles*/
-  /*auto redSafe =*/
-  /*    std::make_shared<SafeTile>(Dimensions(1, 9, 1, 1), 51, 51, red);*/
-  /*auto blueSafe =*/
-  /*    std::make_shared<SafeTile>(Dimensions(9, 1, 1, 1), 52, 52, blue);*/
-  /*auto greenSafe =*/
-  /*    std::make_shared<SafeTile>(Dimensions(1, 0, 1, 1), 53, 53, green);*/
-  /*auto yellowSafe =*/
-  /*    std::make_shared<SafeTile>(Dimensions(9, 8, 1, 1), 54, 54, yellow);*/
-  /**/
-  /*tileManager.addTile(redSafe);*/
-  /*tileManager.addTile(blueSafe);*/
-  /*tileManager.addTile(greenSafe);*/
-  /*tileManager.addTile(yellowSafe);*/
-  /**/
-  /*mapDrawer.addRenderable(redSafe);*/
-  /*mapDrawer.addRenderable(blueSafe);*/
-  /*mapDrawer.addRenderable(greenSafe);*/
-  /*mapDrawer.addRenderable(yellowSafe);*/
-  /**/
-  /*// Transition tiles*/
-  /*auto redTransition = std::make_shared<TransitionTile>(Dimensions(5, 9, 1, 1),*/
-  /*                                                      101, 101, 1, 1, red);*/
-  /*auto blueTransition = std::make_shared<TransitionTile>(Dimensions(9, 5, 1, 1),*/
-  /*                                                       102, 102, 2, 2, blue);*/
-  /*auto greenTransition = std::make_shared<TransitionTile>(*/
-  /*    Dimensions(5, 0, 1, 1), 103, 103, 3, 3, green);*/
-  /*auto yellowTransition = std::make_shared<TransitionTile>(*/
-  /*    Dimensions(0, 5, 1, 1), 104, 104, 4, 4, yellow);*/
-  /**/
-  /*tileManager.addTile(redTransition);*/
-  /*tileManager.addTile(blueTransition);*/
-  /*tileManager.addTile(greenTransition);*/
-  /*tileManager.addTile(yellowTransition);*/
-  /**/
-  /*mapDrawer.addRenderable(redTransition);*/
-  /*mapDrawer.addRenderable(blueTransition);*/
-  /*mapDrawer.addRenderable(greenTransition);*/
-  /*mapDrawer.addRenderable(yellowTransition);*/
-  /**/
-  /*// Finishing tiles*/
-  /*for (int i = 1; i <= 5; i++) {*/
-  /*  auto redFinish = std::make_shared<FinishingTile>(Dimensions(0, 9 - i, 1, 1),*/
-  /*                                                   200 + i, i, red, i == 5);*/
-  /*  auto blueFinish = std::make_shared<FinishingTile>(*/
-  /*      Dimensions(9 - i, 0, 1, 1), 300 + i, i, blue, i == 5);*/
-  /*  auto greenFinish = std::make_shared<FinishingTile>(*/
-  /*      Dimensions(9, i, 1, 1), 400 + i, i, green, i == 5);*/
-  /*  auto yellowFinish = std::make_shared<FinishingTile>(*/
-  /*      Dimensions(i, 9, 1, 1), 500 + i, i, yellow, i == 5);*/
-  /**/
-  /*  tileManager.addTile(redFinish);*/
-  /*  tileManager.addTile(blueFinish);*/
-  /*  tileManager.addTile(greenFinish);*/
-  /*  tileManager.addTile(yellowFinish);*/
-  /**/
-  /*  mapDrawer.addRenderable(redFinish);*/
-  /*  mapDrawer.addRenderable(blueFinish);*/
-  /*  mapDrawer.addRenderable(greenFinish);*/
-  /*  mapDrawer.addRenderable(yellowFinish);*/
-  /*}*/
+  // Finishing tiles
+  for (int i = 1; i <= 5; i++) {
+      // ALARM Я ТУТ НЕ РУХАВ ПОЗИШИН, ЛИШИВ ЯК Є!
+      auto redFinish = std::make_shared<FinishingTile>(Dimensions(i, 7, 1, 1), 200 + i, i, red, i == 5);
+      auto blueFinish = std::make_shared<FinishingTile>(Dimensions(7, i, 1, 1), 300 + i, i, blue, i == 5);
+      auto greenFinish = std::make_shared<FinishingTile>(Dimensions(7, 14 - i, 1, 1), 400 + i, i, green, i == 5);
+      auto yellowFinish = std::make_shared<FinishingTile>(Dimensions(14 - i, 7, 1, 1), 500 + i, i, yellow, i == 5);
+
+      tileManager.addTile(redFinish);
+      tileManager.addTile(blueFinish);
+      tileManager.addTile(greenFinish);
+      tileManager.addTile(yellowFinish);
+
+      mapDrawer.addRenderable(redFinish);
+      mapDrawer.addRenderable(blueFinish);
+      mapDrawer.addRenderable(greenFinish);
+      mapDrawer.addRenderable(yellowFinish);
+  }
 }
 
 int main() {

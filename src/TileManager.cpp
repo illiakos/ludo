@@ -12,7 +12,7 @@ TileManager &TileManager::getInstance() {
 
 void TileManager::addTile(std::shared_ptr<Tile> tile) {
   tiles[tile->getId()] = tile;
-  renderContainer.addRenderable(tile); // Add to the render container
+
 }
 
 std::shared_ptr<Tile> TileManager::findTileById(int id) const {

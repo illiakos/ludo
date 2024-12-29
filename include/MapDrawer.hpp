@@ -35,6 +35,7 @@ public:
                     const Color &color);
   void drawCircle(float cx, float cy, float radius, const Color &color,
                   int segments);
+  void drawStar(float cx, float cy, float outerRadius, float innerRadius, int numPoints, const Color color);
   void drawLudoBoard();
   void drawRoads();
   void drawCells();

@@ -57,7 +57,7 @@ public:
 
 class TransitionTile : public Tile {
 public:
-    TransitionTile(Dimensions dimensions, int id, int position, int teamId, int finishingTileStartPosition, Color& color)
+    TransitionTile(Dimensions dimensions, int id, int position, int teamId, int finishingTileStartPosition, Color color)
         : Tile(dimensions, id, position, color, TileContext::Walkable),
           teamId(teamId), finishingTileStartPosition(finishingTileStartPosition) {}
 

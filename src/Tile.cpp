@@ -8,7 +8,7 @@ void Tile::renderSelf() const {
   auto& drawer = MapDrawer::getInstance();
   const float cellSize = drawer.getCellSize();
   /*drawer.drawCells();*/
-  drawer.drawRectangle(dimensions.x, dimensions.y, cellSize, cellSize, white,
+  drawer.drawRectangle(drawer.getCellPosition(dimensions.x), drawer.getCellPosition(dimensions.y), cellSize, cellSize, white,
                        FILLED_WITH_STROKE, gray, 2.0);
 
   return;
