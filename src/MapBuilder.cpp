@@ -2,7 +2,7 @@
 #include "MapDrawer.hpp"
 
 void MapBuilder::buildDefault() {
-  auto drawer = MapDrawer::getInstance();
+  auto& drawer = MapDrawer::getInstance();
 
   // draw cells
 

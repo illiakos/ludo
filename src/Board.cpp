@@ -16,8 +16,8 @@ void Board::addSafeTile(Dimensions d, int id, int position, Color &color) {
 }
 
 // Add starting tile
-void Board::addStartingTile(Dimensions d, int id, int position, Color &color) {
-  tiles.push_back(std::make_unique<StartingTile>(d, id, position, color));
+void Board::addStartingTile(Dimensions d, int id, int position, Color &color, int teamId = 1) {
+  tiles.push_back(std::make_unique<StartingTile>(d, id, position, color, teamId));
 }
 
 // Add prefinishing tile

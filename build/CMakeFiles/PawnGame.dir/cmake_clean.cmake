@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/PawnGame.dir/src/Base.cpp.obj"
   "CMakeFiles/PawnGame.dir/src/Base.cpp.obj.d"
+  "CMakeFiles/PawnGame.dir/src/BaseManager.cpp.obj"
+  "CMakeFiles/PawnGame.dir/src/BaseManager.cpp.obj.d"
   "CMakeFiles/PawnGame.dir/src/Board.cpp.obj"
   "CMakeFiles/PawnGame.dir/src/Board.cpp.obj.d"
   "CMakeFiles/PawnGame.dir/src/ColorConstants.cpp.obj"

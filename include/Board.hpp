@@ -17,7 +17,7 @@ public:
 protected:
   // Add tiles of different types
   void addRegularTile(Dimensions d, int id, int position, Color &color);
-  void addStartingTile(Dimensions d, int id, int position, Color &color);
+  void addStartingTile(Dimensions d, int id, int position, Color &color, int teamId);
   void addSafeTile(Dimensions d, int id, int position, Color &color);
   void addPrefinishingTile(Dimensions d, int id, int position,
                            int firstFinishingTilePosition, Color &color);

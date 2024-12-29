@@ -3,13 +3,16 @@
 
 #include "Dimensions.hpp"
 #include "Tile.hpp"
+#include "TileContext.hpp"
 class StartingTile : public Tile {
 public:
-    StartingTile(Dimensions dimensions, int id, int position, Color& color)
-        : Tile(dimensions, id, position, color) {};
+    StartingTile(Dimensions dimensions, int id, int position, Color& color, int teamId)
+        : Tile(dimensions, id, position, color), teamId(teamId) {};
 
     void renderSelf() const override;
     ~StartingTile();
+private:
+  int teamId;
 };
 
 class FinishingTile : public Tile {
@@ -50,6 +53,21 @@ public:
         : Tile(d, id, position, color) {};
     void renderSelf() const override;
     ~SafeTile();
+};
+
+class TransitionTile : public Tile {
+public:
+    TransitionTile(Dimensions dimensions, int id, int position, int teamId, int finishingTileStartPosition, Color& color)
+        : Tile(dimensions, id, position, color, TileContext::Walkable),
+          teamId(teamId), finishingTileStartPosition(finishingTileStartPosition) {}
+
+    int getTeamId() const { return teamId; }
+    int getFinishingTileStartPosition() const { return finishingTileStartPosition; }
+    ~TransitionTile();
+    void renderSelf() const override;
+private:
+    int teamId;
+    int finishingTileStartPosition; // Position in Finishing context to start
 };
 
 #endif // !SPECIAL_TILES_H

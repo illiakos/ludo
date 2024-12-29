@@ -8,7 +8,7 @@
 
 class PawnManager {
 public:
-  void addPawn(Pawn &pawn);
+  void addPawn(const std::shared_ptr<Pawn> &pawn);
   void movePawn(int pawnId, int newTileId);
 
   // Methods updated to work with pawnId only

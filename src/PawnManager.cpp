@@ -4,14 +4,12 @@
 #include <iostream>
 #include <memory>
 
-void PawnManager::addPawn(Pawn& pawn) {
-
-    auto pawnId = pawn.getId();
-    if (pawns.find(pawn.getId()) == pawns.end()) {
-        auto pawnPtr = std::make_shared<Pawn>(pawn);
-        pawns[pawnId] = pawnPtr;
-        std::cout << "Added Pawn " << pawnId << " at tile x: " << pawn.getDimensions().x << "; y: " << pawn.getDimensions().y << ".\n";
-        pawn.renderSelf();
+void PawnManager::addPawn(const std::shared_ptr<Pawn>& pawn) {
+    auto pawnId = pawn->getId(); // Access ID through the shared pointer
+    if (pawns.find(pawnId) == pawns.end()) {
+        pawns[pawnId] = pawn; // Directly assign the shared pointer
+        std::cout << "Added Pawn " << pawnId << " at tile x: " << pawn->getDimensions().x
+                  << "; y: " << pawn->getDimensions().y << ".\n";
     } else {
         std::cerr << "Pawn " << pawnId << " already exists!\n";
     }

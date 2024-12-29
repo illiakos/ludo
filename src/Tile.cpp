@@ -5,7 +5,7 @@
 #include "ColorConstants.hpp"
 
 void Tile::renderSelf() const {
-  auto drawer = MapDrawer::getInstance();
+  auto& drawer = MapDrawer::getInstance();
   const float cellSize = drawer.getCellSize();
   /*drawer.drawCells();*/
   drawer.drawRectangle(dimensions.x, dimensions.y, cellSize, cellSize, white,
@@ -36,4 +36,22 @@ int Tile::getPosition() const {
 
 int Tile::getId() const {
     return id;
+}
+
+TileContext Tile::getContext() {
+  return context;
+}
+
+// Helper to convert context to string
+std::string Tile::contextToString(TileContext context) const {
+    switch (context) {
+        case TileContext::Base:
+            return "Base";
+        case TileContext::Walkable:
+            return "Walkable";
+        case TileContext::Finishing:
+            return "Finishing";
+        default:
+            return "Unknown";
+    }
 }

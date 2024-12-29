@@ -1,4 +1,5 @@
 #include "Base.hpp"
+#include "BaseManager.hpp"
 #include "Board.hpp"
 #include "Color.hpp"
 #include "EventDispatcher.hpp"
@@ -9,10 +10,13 @@
 #include "PlayerTurnEvent.hpp"
 #include "PlayerTurnHandler.hpp"
 #include "RollDiceHandler.hpp"
+#include "SpecialTiles.hpp"
 #include "StopGameEvent.hpp"
 #include "StopGameHandler.hpp"
 #include "Team.hpp"
 #include "TeamManager.hpp"
+#include "TileContext.hpp"
+#include "TileManager.hpp"
 #include "TurnManager.hpp"
 #include <GLFW/glfw3.h>
 #include <ft2build.h>
@@ -21,8 +25,8 @@
 #include <ostream>
 #include FT_FREETYPE_H
 #define STB_IMAGE_IMPLEMENTATION
-#include "stb_image.h"
 #include "MapDrawer.hpp"
+#include "stb_image.h"
 #include <thread>
 
 void testGLFW() {
@@ -87,6 +91,119 @@ void testStbImage() {
   stbi_image_free(data);
 }
 
+void initializeTiles() {
+
+  Color blue = Color(0.004f, 0.725f, 0.945f);
+  Color red = Color(0.996f, 0.180f, 0.090f);
+  Color green = Color(0.29f, 0.729f, 0.29f);
+  Color yellow = Color(1.0f, 0.784f, 0.208f);
+
+  TileManager &tileManager = TileManager::getInstance();
+  MapDrawer &mapDrawer = MapDrawer::getInstance();
+  /**/
+  /**/
+  /*// Starting tiles for each team (corrected positions)*/
+  auto redStart =
+      std::make_shared<StartingTile>(Dimensions(1, 8, 1, 1), 1, 1, red, 1);
+  auto blueStart =
+      std::make_shared<StartingTile>(Dimensions(6, 1, 1, 1), 2, 2, blue,3);
+  auto greenStart =
+      std::make_shared<StartingTile>(Dimensions(8, 13, 1, 1), 3, 3, green,4);
+  auto yellowStart =
+      std::make_shared<StartingTile>(Dimensions(13, 6, 1, 1), 4, 4, yellow,2);
+  /**/
+  /*// Adding starting tiles to the manager and rendering*/
+  tileManager.addTile(redStart);
+  tileManager.addTile(blueStart);
+  tileManager.addTile(greenStart);
+  tileManager.addTile(yellowStart);
+
+  mapDrawer.addRenderable(redStart);
+  mapDrawer.addRenderable(blueStart);
+  mapDrawer.addRenderable(greenStart);
+  mapDrawer.addRenderable(yellowStart);
+
+  // Walkable tiles (updated based on new coordinates)
+  /*int position = 1;*/
+  /*for (int x = 1; x <= 6; x++) {*/
+  /*  auto walkableTile = std::make_shared<Tile>(*/
+  /*      Dimensions(x, 9, 1, 1), position, position, Color(0.8f, 0.8f, 0.8f));*/
+  /*  tileManager.addTile(walkableTile);*/
+  /*  mapDrawer.addRenderable(walkableTile);*/
+  /*  position++;*/
+  /*}*/
+  /**/
+  /*for (int y = 8; y >= 6; y--) {*/
+  /*  auto walkableTile = std::make_shared<Tile>(*/
+  /*      Dimensions(6, y, 1, 1), position, position, Color(0.8f, 0.8f, 0.8f));*/
+  /*  tileManager.addTile(walkableTile);*/
+  /*  mapDrawer.addRenderable(walkableTile);*/
+  /*  position++;*/
+  /*}*/
+  /**/
+  /*// Safe tiles*/
+  /*auto redSafe =*/
+  /*    std::make_shared<SafeTile>(Dimensions(1, 9, 1, 1), 51, 51, red);*/
+  /*auto blueSafe =*/
+  /*    std::make_shared<SafeTile>(Dimensions(9, 1, 1, 1), 52, 52, blue);*/
+  /*auto greenSafe =*/
+  /*    std::make_shared<SafeTile>(Dimensions(1, 0, 1, 1), 53, 53, green);*/
+  /*auto yellowSafe =*/
+  /*    std::make_shared<SafeTile>(Dimensions(9, 8, 1, 1), 54, 54, yellow);*/
+  /**/
+  /*tileManager.addTile(redSafe);*/
+  /*tileManager.addTile(blueSafe);*/
+  /*tileManager.addTile(greenSafe);*/
+  /*tileManager.addTile(yellowSafe);*/
+  /**/
+  /*mapDrawer.addRenderable(redSafe);*/
+  /*mapDrawer.addRenderable(blueSafe);*/
+  /*mapDrawer.addRenderable(greenSafe);*/
+  /*mapDrawer.addRenderable(yellowSafe);*/
+  /**/
+  /*// Transition tiles*/
+  /*auto redTransition = std::make_shared<TransitionTile>(Dimensions(5, 9, 1, 1),*/
+  /*                                                      101, 101, 1, 1, red);*/
+  /*auto blueTransition = std::make_shared<TransitionTile>(Dimensions(9, 5, 1, 1),*/
+  /*                                                       102, 102, 2, 2, blue);*/
+  /*auto greenTransition = std::make_shared<TransitionTile>(*/
+  /*    Dimensions(5, 0, 1, 1), 103, 103, 3, 3, green);*/
+  /*auto yellowTransition = std::make_shared<TransitionTile>(*/
+  /*    Dimensions(0, 5, 1, 1), 104, 104, 4, 4, yellow);*/
+  /**/
+  /*tileManager.addTile(redTransition);*/
+  /*tileManager.addTile(blueTransition);*/
+  /*tileManager.addTile(greenTransition);*/
+  /*tileManager.addTile(yellowTransition);*/
+  /**/
+  /*mapDrawer.addRenderable(redTransition);*/
+  /*mapDrawer.addRenderable(blueTransition);*/
+  /*mapDrawer.addRenderable(greenTransition);*/
+  /*mapDrawer.addRenderable(yellowTransition);*/
+  /**/
+  /*// Finishing tiles*/
+  /*for (int i = 1; i <= 5; i++) {*/
+  /*  auto redFinish = std::make_shared<FinishingTile>(Dimensions(0, 9 - i, 1, 1),*/
+  /*                                                   200 + i, i, red, i == 5);*/
+  /*  auto blueFinish = std::make_shared<FinishingTile>(*/
+  /*      Dimensions(9 - i, 0, 1, 1), 300 + i, i, blue, i == 5);*/
+  /*  auto greenFinish = std::make_shared<FinishingTile>(*/
+  /*      Dimensions(9, i, 1, 1), 400 + i, i, green, i == 5);*/
+  /*  auto yellowFinish = std::make_shared<FinishingTile>(*/
+  /*      Dimensions(i, 9, 1, 1), 500 + i, i, yellow, i == 5);*/
+  /**/
+  /*  tileManager.addTile(redFinish);*/
+  /*  tileManager.addTile(blueFinish);*/
+  /*  tileManager.addTile(greenFinish);*/
+  /*  tileManager.addTile(yellowFinish);*/
+  /**/
+  /*  mapDrawer.addRenderable(redFinish);*/
+  /*  mapDrawer.addRenderable(blueFinish);*/
+  /*  mapDrawer.addRenderable(greenFinish);*/
+  /*  mapDrawer.addRenderable(yellowFinish);*/
+  /*}*/
+}
+
 int main() {
   std::cout << "Testing libraries..." << std::endl;
 
@@ -101,18 +218,24 @@ int main() {
 
   std::cout << "All libraries tested successfully!" << std::endl;
 
-  MapDrawer mapDrawer = MapDrawer::getInstance();
+  auto &mapDrawer = MapDrawer::getInstance();
 
-    /*(800, 15);*/
+  /*(800, 15);*/
 
+  Color blue = Color(0.004f, 0.725f, 0.945f);
+  Color red = Color(0.996f, 0.180f, 0.090f);
+  Color green = Color(0.29f, 0.729f, 0.29f);
+  Color yellow = Color(1.0f, 0.784f, 0.208f);
   // Launch drawMap in a separate thread
   std::thread backgroundThread(&MapDrawer::drawMap, &mapDrawer);
-  std::this_thread::sleep_for(std::chrono::seconds(5));
-  // Detach the thread to allow it to run independently
-  backgroundThread.detach();
-    
-  // mapDrawer.drawMap();
 
+  std::this_thread::sleep_for(std::chrono::seconds(1));
+  // Detach the thread to allow it to run independently
+  /*backgroundThread.detach();*/
+  /*mapDrawer.enqueueRenderTask([&]() { mapDrawer.drawBase(9, 9, green); });*/
+  // Draw something one time
+  /*mapDrawer.drawBase(9, 9, green); // Green*/
+  // mapDrawer.drawMap();
 
   /*return 0;*/
   // Create the event dispatcher
@@ -128,17 +251,12 @@ int main() {
   // Color blue("#0342C8");
   // Color green("#7DDA58");
 
-  Color blue = Color(0.004f, 0.725f, 0.945f);
-  Color red = Color(0.996f, 0.180f, 0.090f);
-  Color green = Color(0.29f, 0.729f, 0.29f);
-  Color yellow = Color(1.0f, 0.784f, 0.208f);
-
   // Create default teams
   Team teamRed(red, 1);
   Team teamYellow(yellow, 2);
   Team teamBlue(blue, 3);
   Team teamGreen(green, 4);
-  TeamManager teamManager = TeamManager();
+  auto &teamManager = TeamManager::getInstance();
   teamManager.addTeam(teamRed);
   teamManager.addTeam(teamGreen);
   teamManager.addTeam(teamYellow);
@@ -148,10 +266,28 @@ int main() {
 
   std::cout << "aboba" << std::endl;
 
-  //Base redBase(dimensions, red, 1, 10);
-  Base redBase(dimensions, red, 1, 10);
-  redBase.skibidi();
-  redBase.renderSelf();
+  // Base redBase(dimensions, red, 1, 10);
+  //
+  auto &baseManager = BaseManager::getInstance();
+  auto redBase = std::make_shared<Base>(Dimensions(0, 9, 6, 6), red, 1, 10);
+  mapDrawer.addRenderable(redBase);
+  baseManager.addBase(1, redBase);
+
+  auto blueBase = std::make_shared<Base>(Dimensions(0, 0, 6, 6), blue, 3, 20);
+  mapDrawer.addRenderable(blueBase);
+  baseManager.addBase(blueBase->getTeamId(), blueBase);
+
+  auto greenBase = std::make_shared<Base>(Dimensions(9, 9, 6, 6), green, 4, 30);
+  mapDrawer.addRenderable(greenBase);
+  baseManager.addBase(greenBase->getTeamId(), greenBase);
+
+  auto yellowBase =
+      std::make_shared<Base>(Dimensions(9, 0, 6, 6), yellow, 2, 40);
+  mapDrawer.addRenderable(yellowBase);
+
+  baseManager.addBase(yellowBase->getTeamId(), yellowBase);
+  /*redBase.skibidi();*/
+  /*redBase.renderSelf();*/
 
   // Create default players
   Player redPlayer(1, 1);
@@ -170,19 +306,30 @@ int main() {
   auto stopGameHandler = std::make_shared<StopGameHandler>();
   auto playerTurnHandler =
       std::make_shared<PlayerTurnHandler>(eventLoop, 4, turnManager);
-  
-  int idCounter = 0;
-  for (int playerId = 1; playerId <= 4; ++playerId) {
-    for (int pawnId = 1; pawnId <= 4; ++pawnId) {
-      // TODO: Replace the magical number 9 with actualy tile id. Each base has
-      // 4 tiles, so some of those tiles should be assigned to each pawn
-      auto pawn = Pawn(idCounter, 0,Dimensions(0,0,1,1), teamManager.getTeamById(playerId).color);
-      pawnManager.addPawn(pawn); // All pawns start at tile ID 0
-      idCounter++;
-    }
-  }
 
-  
+  auto randomAssPawn =
+      std::make_shared<Pawn>(10, 1, 1,
+                             Dimensions(0, 9, mapDrawer.getSizeOfCells(0.45),
+                                        mapDrawer.getSizeOfCells(0.45)),
+                             red);
+  pawnManager.addPawn(randomAssPawn);
+  randomAssPawn->setContext(TileContext::Base);
+  mapDrawer.addRenderable(randomAssPawn);
+
+  initializeTiles();
+
+  /*int idCounter = 0;*/
+  /*for (int playerId = 1; playerId <= 4; ++playerId) {*/
+  /*  for (int pawnId = 1; pawnId <= 4; ++pawnId) {*/
+  /*    // TODO: Replace the magical number 9 with actualy tile id. Each base
+   * has*/
+  /*    // 4 tiles, so some of those tiles should be assigned to each pawn*/
+  /*    auto pawn = Pawn(idCounter, 0, Dimensions(0, 0, 1, 1),*/
+  /*                     teamManager.getTeamById(playerId).color);*/
+  /*    pawnManager.addPawn(pawn); // All pawns start at tile ID 0*/
+  /*    idCounter++;*/
+  /*  }*/
+  /*}*/
 
   // Subscribe handlers to specific events
   /*dispatcher.subscribe("RollDiceEvent", rollDiceHandler);*/
@@ -200,8 +347,7 @@ int main() {
   eventLoop.processEvents();
 
   while (true) {
-
   }
-
+  /*eventLoop.enqueueEvent(std::make_shared<MovePawnEvent>(1, 10, 6))*/
   return 0;
 }

@@ -7,6 +7,8 @@
 #include "Renderable.hpp"
 #include "WindowManager.hpp"
 #include "ColorConstants.hpp"
+#include <ostream>
+#include <thread>
 
 using namespace std;
 
@@ -17,9 +19,9 @@ Color yellow = Color(1.0f, 0.784f, 0.208f);
 
 const double PI = 3.141592653589793;
 
-void MapDrawer::addRenderable(std::shared_ptr<Renderable> r) {
-  renderableItems.push_back(r);
-}
+/*void MapDrawer::addRenderable(std::shared_ptr<Renderable> r) {*/
+/*  renderableItems.push_back(r);*/
+/*}*/
 
 MapDrawer &MapDrawer::getInstance() {
     static MapDrawer instance(800, 15); // Single instance
@@ -63,6 +65,7 @@ void MapDrawer::drawRectangle(
     const Color &strokeColor, float borderWidth)
 {
 
+    std::cout << "finished rendering yobani rectangle" << std::endl;
     if (mode == FILLED || mode == FILLED_WITH_STROKE)
     {
         // Draw filled rectangle
@@ -75,6 +78,7 @@ void MapDrawer::drawRectangle(
         glEnd();
     }
 
+    std::cout << "finished rendering yobani rectangle" << std::endl;
     if (mode == STROKED || mode == FILLED_WITH_STROKE)
     {
         // Draw rectangle border (stroke)
@@ -91,6 +95,8 @@ void MapDrawer::drawRectangle(
 
 void MapDrawer::drawCircle(float cx, float cy, float radius, const Color &color, int segments = 1000)
 {
+
+    cout << "Sigma 1" << endl;
     glColor3f(color.getRedf(), color.getGreenf(), color.getBluef()); // Set color
     glBegin(GL_TRIANGLE_FAN);                                        // Begin drawing a filled circle
 
@@ -107,6 +113,7 @@ void MapDrawer::drawCircle(float cx, float cy, float radius, const Color &color,
         glVertex2f(cx + x + halfCellSize, cy + y + halfCellSize);
     }
 
+    cout << "Sigma 3" << endl;
     glEnd(); // End drawing
 }
 
@@ -128,10 +135,10 @@ void MapDrawer::drawBase(float x, float y, const Color &color)
 
     // Draw white part
     drawRectangle(getCellPosition(x + 1), getCellPosition(y + 1), getSizeOfCells(4), getSizeOfCells(4), white); // White color
-    drawCircle(getCellPosition(x + 1.5), getCellPosition(y + 1.5), getSizeOfCells(0.45), color);
-    drawCircle(getCellPosition(x + 3.5), getCellPosition(y + 1.5), getSizeOfCells(0.45), color);
-    drawCircle(getCellPosition(x + 3.5), getCellPosition(y + 3.5), getSizeOfCells(0.45), color);
-    drawCircle(getCellPosition(x + 1.5), getCellPosition(y + 3.5), getSizeOfCells(0.45), color);
+    /*drawCircle(getCellPosition(x + 1.5), getCellPosition(y + 1.5), getSizeOfCells(0.45), color);*/
+    /*drawCircle(getCellPosition(x + 3.5), getCellPosition(y + 1.5), getSizeOfCells(0.45), color);*/
+    /*drawCircle(getCellPosition(x + 3.5), getCellPosition(y + 3.5), getSizeOfCells(0.45), color);*/
+    /*drawCircle(getCellPosition(x + 1.5), getCellPosition(y + 3.5), getSizeOfCells(0.45), color);*/
 }
 
 void MapDrawer::drawRoads()
@@ -212,11 +219,11 @@ void MapDrawer::drawMiddle()
 void MapDrawer::drawLudoBoard()
 {
     
-    drawCells();
+    /*drawCells();*/
 
     drawMiddle();
 
-    // drawBase(0, 0, blue); // Blue
+    //drawBase(0, 0, blue); // Blue
 
     // //drawBase(0, 9, red); // Red
 
@@ -224,10 +231,19 @@ void MapDrawer::drawLudoBoard()
 
     // drawBase(9, 0, yellow); // Yellow
 
-    drawRoads();
+    /*drawRoads();*/
 
     // Test circle
     drawCircle(getCellPosition(3), getCellPosition(6), getSizeOfCells(0.45), green);
+}
+
+
+void MapDrawer::enqueueRenderTask(std::function<void()> task) {
+    {
+        std::lock_guard<std::mutex> lock(queueMutex);
+        taskQueue.push(task);
+    }
+    condition.notify_one();
 }
 
 void MapDrawer::drawMap()
@@ -249,8 +265,17 @@ void MapDrawer::drawMap()
     {
         glClear(GL_COLOR_BUFFER_BIT);
 
-        // Draw the Ludo board
         drawLudoBoard();
+        // Draw persistent items
+        {
+            std::lock_guard<std::mutex> lock(queueMutex);
+            for (const auto& item : renderableItems)
+            {
+                item->renderSelf();
+            }
+        }
+
+        // Draw the Ludo board
 
         glfwSwapBuffers(window);
         glfwPollEvents();
@@ -266,4 +291,18 @@ void MapDrawer::log() {
     cout << "Window Size: " << windowSize << "\n";
     cout << "Map Size: " << mapSize << "\n";
     cout << "Renderable Items Count: " << renderableItems.size() << "\n";
+}
+void MapDrawer::addRenderable(std::shared_ptr<Renderable> renderable) {
+    std::lock_guard<std::mutex> lock(renderablesMutex);
+    renderableItems.push_back(renderable);
+}
+
+
+void MapDrawer::removeRenderable(std::shared_ptr<Renderable> renderable) {
+    std::lock_guard<std::mutex> lock(renderablesMutex);
+    renderableItems.erase(std::remove(renderableItems.begin(), renderableItems.end(), renderable), renderableItems.end());
+}
+void MapDrawer::clearRenderables() {
+    std::lock_guard<std::mutex> lock(renderablesMutex);
+    renderableItems.clear();
 }
