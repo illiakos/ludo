@@ -1,5 +1,3 @@
-Certainly! Here’s a sample `README.md` file that outlines a general approach to your Ludo-style game’s design, including the structure, key components, and design principles. You can adjust the content to match your specific approach and details as needed.
-
 ---
 
 # Ludo Game Design
@@ -141,5 +139,67 @@ board.addSafeTile(5, 5, 2, 10, safeColor, tileSize); // Example tile addition
    ```bash
    ./PawnGame
    ```
+
+### Updated README with Formatting Section
+
+```markdown
+# PawnGame
+
+## Building the Project
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/PawnGame.git
+   cd PawnGame
+   ```
+
+2. Create a build directory:
+   ```bash
+   mkdir build
+   cd build
+   ```
+
+3. Configure and build the project:
+   ```bash
+   cmake .. -G "MinGW Makefiles" -DCMAKE_C_COMPILER=gcc -DCMAKE_CXX_COMPILER=g++
+   cmake --build .
+   ```
+
+4. Run the game:
+   ```bash
+   ./PawnGame
+   ```
+
+## Formatting the Code
+
+Before contributing, ensure the code is formatted consistently:
+
+1. Install `clang-format`:
+   - On Ubuntu:
+     ```bash
+     sudo apt install clang-format
+     ```
+   - On Windows (via Chocolatey):
+     ```bash
+     choco install llvm
+     ```
+   - On macOS:
+     ```bash
+     brew install clang-format
+     ```
+
+2. Format the code:
+   - To format all `.cpp` and `.hpp` files in the `include` and `src` directories:
+     ```bash
+     Get-ChildItem -Recurse -Path .\include,.\src -Include *.cpp,*.hpp | ForEach-Object { clang-format -i $_.FullName }
+     ```
+
+3. Verify formatting:
+   ```bash
+   git diff
+   ```
+
+This ensures code style consistency across the project.
+```
 
 ---
