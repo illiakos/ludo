@@ -5,7 +5,6 @@ class Dimensions {
 public:
   int x;
   int y;
-  
 
   int dx; // Alternatively width
   int dy; // Alternatively height
@@ -14,8 +13,7 @@ public:
   int z;
   int dz;
 
-  Dimensions(int x, int y, int dx, int dy) : x(x), y(y), dx(dx), dy(dy) {};
-
+  Dimensions (int x, int y, int dx, int dy) : x (x), y (y), dx (dx), dy (dy) {};
 };
 
 #endif // !DIMENSIONS_H

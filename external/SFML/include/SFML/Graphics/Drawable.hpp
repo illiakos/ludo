@@ -4,7 +4,8 @@
 // Copyright (C) 2007-2023 Laurent Gomila (laurent@sfml-dev.org)
 //
 // This software is provided 'as-is', without any express or implied warranty.
-// In no event will the authors be held liable for any damages arising from the use of this software.
+// In no event will the authors be held liable for any damages arising from the use of this
+// software.
 //
 // Permission is granted to anyone to use this software for any purpose,
 // including commercial applications, and to alter it and redistribute it freely,
@@ -31,9 +32,7 @@
 #include <SFML/Graphics/Export.hpp>
 #include <SFML/Graphics/RenderStates.hpp>
 
-
-namespace sf
-{
+namespace sf {
 class RenderTarget;
 
 ////////////////////////////////////////////////////////////
@@ -41,39 +40,34 @@ class RenderTarget;
 ///        to a render target
 ///
 ////////////////////////////////////////////////////////////
-class SFML_GRAPHICS_API Drawable
-{
+class SFML_GRAPHICS_API Drawable {
 public:
-
-    ////////////////////////////////////////////////////////////
-    /// \brief Virtual destructor
-    ///
-    ////////////////////////////////////////////////////////////
-    virtual ~Drawable() {}
+  ////////////////////////////////////////////////////////////
+  /// \brief Virtual destructor
+  ///
+  ////////////////////////////////////////////////////////////
+  virtual ~Drawable () {}
 
 protected:
+  friend class RenderTarget;
 
-    friend class RenderTarget;
-
-    ////////////////////////////////////////////////////////////
-    /// \brief Draw the object to a render target
-    ///
-    /// This is a pure virtual function that has to be implemented
-    /// by the derived class to define how the drawable should be
-    /// drawn.
-    ///
-    /// \param target Render target to draw to
-    /// \param states Current render states
-    ///
-    ////////////////////////////////////////////////////////////
-    virtual void draw(RenderTarget& target, RenderStates states) const = 0;
+  ////////////////////////////////////////////////////////////
+  /// \brief Draw the object to a render target
+  ///
+  /// This is a pure virtual function that has to be implemented
+  /// by the derived class to define how the drawable should be
+  /// drawn.
+  ///
+  /// \param target Render target to draw to
+  /// \param states Current render states
+  ///
+  ////////////////////////////////////////////////////////////
+  virtual void draw (RenderTarget &target, RenderStates states) const = 0;
 };
 
 } // namespace sf
 
-
 #endif // SFML_DRAWABLE_HPP
-
 
 ////////////////////////////////////////////////////////////
 /// \class sf::Drawable

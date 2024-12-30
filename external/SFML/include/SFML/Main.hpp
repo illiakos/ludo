@@ -4,7 +4,8 @@
 // Copyright (C) 2007-2023 Laurent Gomila (laurent@sfml-dev.org)
 //
 // This software is provided 'as-is', without any express or implied warranty.
-// In no event will the authors be held liable for any damages arising from the use of this software.
+// In no event will the authors be held liable for any damages arising from the use of this
+// software.
 //
 // Permission is granted to anyone to use this software for any purpose,
 // including commercial applications, and to alter it and redistribute it freely,
@@ -30,14 +31,12 @@
 ////////////////////////////////////////////////////////////
 #include <SFML/Config.hpp>
 
-
 #if defined(SFML_SYSTEM_IOS)
 
-    // On iOS, we have no choice but to have our own main,
-    // so we need to rename the user one and call it later
-    #define main sfmlMain
+// On iOS, we have no choice but to have our own main,
+// so we need to rename the user one and call it later
+#define main sfmlMain
 
 #endif
-
 
 #endif // SFML_MAIN_HPP

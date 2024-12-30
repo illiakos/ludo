@@ -4,7 +4,8 @@
 // Copyright (C) 2007-2023 Laurent Gomila (laurent@sfml-dev.org)
 //
 // This software is provided 'as-is', without any express or implied warranty.
-// In no event will the authors be held liable for any damages arising from the use of this software.
+// In no event will the authors be held liable for any damages arising from the use of this
+// software.
 //
 // Permission is granted to anyone to use this software for any purpose,
 // including commercial applications, and to alter it and redistribute it freely,
@@ -28,78 +29,73 @@
 ////////////////////////////////////////////////////////////
 // Headers
 ////////////////////////////////////////////////////////////
-#include <SFML/Window/Export.hpp>
-#include <SFML/System/Vector3.hpp>
 #include <SFML/System/Time.hpp>
+#include <SFML/System/Vector3.hpp>
+#include <SFML/Window/Export.hpp>
 
-
-namespace sf
-{
+namespace sf {
 ////////////////////////////////////////////////////////////
 /// \brief Give access to the real-time state of the sensors
 ///
 ////////////////////////////////////////////////////////////
-class SFML_WINDOW_API Sensor
-{
+class SFML_WINDOW_API Sensor {
 public:
+  ////////////////////////////////////////////////////////////
+  /// \brief Sensor type
+  ///
+  ////////////////////////////////////////////////////////////
+  enum Type {
+    Accelerometer,    //!< Measures the raw acceleration (m/s^2)
+    Gyroscope,        //!< Measures the raw rotation rates (degrees/s)
+    Magnetometer,     //!< Measures the ambient magnetic field (micro-teslas)
+    Gravity,          //!< Measures the direction and intensity of gravity, independent of device
+                      //!< acceleration (m/s^2)
+    UserAcceleration, //!< Measures the direction and intensity of device acceleration, independent
+                      //!< of the gravity (m/s^2)
+    Orientation,      //!< Measures the absolute 3D orientation (degrees)
 
-    ////////////////////////////////////////////////////////////
-    /// \brief Sensor type
-    ///
-    ////////////////////////////////////////////////////////////
-    enum Type
-    {
-        Accelerometer,    //!< Measures the raw acceleration (m/s^2)
-        Gyroscope,        //!< Measures the raw rotation rates (degrees/s)
-        Magnetometer,     //!< Measures the ambient magnetic field (micro-teslas)
-        Gravity,          //!< Measures the direction and intensity of gravity, independent of device acceleration (m/s^2)
-        UserAcceleration, //!< Measures the direction and intensity of device acceleration, independent of the gravity (m/s^2)
-        Orientation,      //!< Measures the absolute 3D orientation (degrees)
+    Count //!< Keep last -- the total number of sensor types
+  };
 
-        Count             //!< Keep last -- the total number of sensor types
-    };
+  ////////////////////////////////////////////////////////////
+  /// \brief Check if a sensor is available on the underlying platform
+  ///
+  /// \param sensor Sensor to check
+  ///
+  /// \return True if the sensor is available, false otherwise
+  ///
+  ////////////////////////////////////////////////////////////
+  static bool isAvailable (Type sensor);
 
-    ////////////////////////////////////////////////////////////
-    /// \brief Check if a sensor is available on the underlying platform
-    ///
-    /// \param sensor Sensor to check
-    ///
-    /// \return True if the sensor is available, false otherwise
-    ///
-    ////////////////////////////////////////////////////////////
-    static bool isAvailable(Type sensor);
+  ////////////////////////////////////////////////////////////
+  /// \brief Enable or disable a sensor
+  ///
+  /// All sensors are disabled by default, to avoid consuming too
+  /// much battery power. Once a sensor is enabled, it starts
+  /// sending events of the corresponding type.
+  ///
+  /// This function does nothing if the sensor is unavailable.
+  ///
+  /// \param sensor  Sensor to enable
+  /// \param enabled True to enable, false to disable
+  ///
+  ////////////////////////////////////////////////////////////
+  static void setEnabled (Type sensor, bool enabled);
 
-    ////////////////////////////////////////////////////////////
-    /// \brief Enable or disable a sensor
-    ///
-    /// All sensors are disabled by default, to avoid consuming too
-    /// much battery power. Once a sensor is enabled, it starts
-    /// sending events of the corresponding type.
-    ///
-    /// This function does nothing if the sensor is unavailable.
-    ///
-    /// \param sensor  Sensor to enable
-    /// \param enabled True to enable, false to disable
-    ///
-    ////////////////////////////////////////////////////////////
-    static void setEnabled(Type sensor, bool enabled);
-
-    ////////////////////////////////////////////////////////////
-    /// \brief Get the current sensor value
-    ///
-    /// \param sensor Sensor to read
-    ///
-    /// \return The current sensor value
-    ///
-    ////////////////////////////////////////////////////////////
-    static Vector3f getValue(Type sensor);
+  ////////////////////////////////////////////////////////////
+  /// \brief Get the current sensor value
+  ///
+  /// \param sensor Sensor to read
+  ///
+  /// \return The current sensor value
+  ///
+  ////////////////////////////////////////////////////////////
+  static Vector3f getValue (Type sensor);
 };
 
 } // namespace sf
 
-
 #endif // SFML_SENSOR_HPP
-
 
 ////////////////////////////////////////////////////////////
 /// \class sf::Sensor

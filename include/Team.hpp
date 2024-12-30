@@ -1,6 +1,6 @@
 
 
-#ifndef TEAM_H 
+#ifndef TEAM_H
 #define TEAM_H
 
 #include "Color.hpp"
@@ -9,10 +9,11 @@
 class Team {
 
 public:
-  Team(Color& color, int id) : color(color), id(id) {}
+  Team (Color &color, int id) : color (color), id (id) {}
 
   Color color;
   int id;
+
 private:
   std::vector<std::string> players;
 };

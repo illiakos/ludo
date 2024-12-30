@@ -4,7 +4,8 @@
 // Copyright (C) 2007-2023 Laurent Gomila (laurent@sfml-dev.org)
 //
 // This software is provided 'as-is', without any express or implied warranty.
-// In no event will the authors be held liable for any damages arising from the use of this software.
+// In no event will the authors be held liable for any damages arising from the use of this
+// software.
 //
 // Permission is granted to anyone to use this software for any purpose,
 // including commercial applications, and to alter it and redistribute it freely,
@@ -31,50 +32,43 @@
 #include <SFML/System/Export.hpp>
 #include <SFML/System/NonCopyable.hpp>
 
-
-namespace sf
-{
+namespace sf {
 class Mutex;
 
 ////////////////////////////////////////////////////////////
 /// \brief Automatic wrapper for locking and unlocking mutexes
 ///
 ////////////////////////////////////////////////////////////
-class SFML_SYSTEM_API Lock : NonCopyable
-{
+class SFML_SYSTEM_API Lock : NonCopyable {
 public:
+  ////////////////////////////////////////////////////////////
+  /// \brief Construct the lock with a target mutex
+  ///
+  /// The mutex passed to sf::Lock is automatically locked.
+  ///
+  /// \param mutex Mutex to lock
+  ///
+  ////////////////////////////////////////////////////////////
+  explicit Lock (Mutex &mutex);
 
-    ////////////////////////////////////////////////////////////
-    /// \brief Construct the lock with a target mutex
-    ///
-    /// The mutex passed to sf::Lock is automatically locked.
-    ///
-    /// \param mutex Mutex to lock
-    ///
-    ////////////////////////////////////////////////////////////
-    explicit Lock(Mutex& mutex);
-
-    ////////////////////////////////////////////////////////////
-    /// \brief Destructor
-    ///
-    /// The destructor of sf::Lock automatically unlocks its mutex.
-    ///
-    ////////////////////////////////////////////////////////////
-    ~Lock();
+  ////////////////////////////////////////////////////////////
+  /// \brief Destructor
+  ///
+  /// The destructor of sf::Lock automatically unlocks its mutex.
+  ///
+  ////////////////////////////////////////////////////////////
+  ~Lock ();
 
 private:
-
-    ////////////////////////////////////////////////////////////
-    // Member data
-    ////////////////////////////////////////////////////////////
-    Mutex& m_mutex; //!< Mutex to lock / unlock
+  ////////////////////////////////////////////////////////////
+  // Member data
+  ////////////////////////////////////////////////////////////
+  Mutex &m_mutex; //!< Mutex to lock / unlock
 };
 
 } // namespace sf
 
-
 #endif // SFML_LOCK_HPP
-
 
 ////////////////////////////////////////////////////////////
 /// \class sf::Lock

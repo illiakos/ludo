@@ -4,7 +4,8 @@
 // Copyright (C) 2007-2023 Laurent Gomila (laurent@sfml-dev.org)
 //
 // This software is provided 'as-is', without any express or implied warranty.
-// In no event will the authors be held liable for any damages arising from the use of this software.
+// In no event will the authors be held liable for any damages arising from the use of this
+// software.
 //
 // Permission is granted to anyone to use this software for any purpose,
 // including commercial applications, and to alter it and redistribute it freely,
@@ -30,70 +31,63 @@
 ////////////////////////////////////////////////////////////
 #include <SFML/System/Export.hpp>
 
-
-namespace sf
-{
+namespace sf {
 ////////////////////////////////////////////////////////////
 /// \brief Utility class that makes any derived
 ///        class non-copyable
 ///
 ////////////////////////////////////////////////////////////
-class SFML_SYSTEM_API NonCopyable
-{
+class SFML_SYSTEM_API NonCopyable {
 protected:
+  ////////////////////////////////////////////////////////////
+  /// \brief Default constructor
+  ///
+  /// Because this class has a copy constructor, the compiler
+  /// will not automatically generate the default constructor.
+  /// That's why we must define it explicitly.
+  ///
+  ////////////////////////////////////////////////////////////
+  NonCopyable () {}
 
-    ////////////////////////////////////////////////////////////
-    /// \brief Default constructor
-    ///
-    /// Because this class has a copy constructor, the compiler
-    /// will not automatically generate the default constructor.
-    /// That's why we must define it explicitly.
-    ///
-    ////////////////////////////////////////////////////////////
-    NonCopyable() {}
-    
-    ////////////////////////////////////////////////////////////
-    /// \brief Default destructor
-    ///
-    /// By declaring a protected destructor it's impossible to
-    /// call delete on a pointer of sf::NonCopyable, thus
-    /// preventing possible resource leaks.
-    ///
-    ////////////////////////////////////////////////////////////
-    ~NonCopyable() {}
+  ////////////////////////////////////////////////////////////
+  /// \brief Default destructor
+  ///
+  /// By declaring a protected destructor it's impossible to
+  /// call delete on a pointer of sf::NonCopyable, thus
+  /// preventing possible resource leaks.
+  ///
+  ////////////////////////////////////////////////////////////
+  ~NonCopyable () {}
 
 private:
+  ////////////////////////////////////////////////////////////
+  /// \brief Disabled copy constructor
+  ///
+  /// By making the copy constructor private, the compiler will
+  /// trigger an error if anyone outside tries to use it.
+  /// To prevent NonCopyable or friend classes from using it,
+  /// we also give no definition, so that the linker will
+  /// produce an error if the first protection was inefficient.
+  ///
+  ////////////////////////////////////////////////////////////
+  NonCopyable (const NonCopyable &);
 
-    ////////////////////////////////////////////////////////////
-    /// \brief Disabled copy constructor
-    ///
-    /// By making the copy constructor private, the compiler will
-    /// trigger an error if anyone outside tries to use it.
-    /// To prevent NonCopyable or friend classes from using it,
-    /// we also give no definition, so that the linker will
-    /// produce an error if the first protection was inefficient.
-    ///
-    ////////////////////////////////////////////////////////////
-    NonCopyable(const NonCopyable&);
-
-    ////////////////////////////////////////////////////////////
-    /// \brief Disabled assignment operator
-    ///
-    /// By making the assignment operator private, the compiler will
-    /// trigger an error if anyone outside tries to use it.
-    /// To prevent NonCopyable or friend classes from using it,
-    /// we also give no definition, so that the linker will
-    /// produce an error if the first protection was inefficient.
-    ///
-    ////////////////////////////////////////////////////////////
-    NonCopyable& operator =(const NonCopyable&);
+  ////////////////////////////////////////////////////////////
+  /// \brief Disabled assignment operator
+  ///
+  /// By making the assignment operator private, the compiler will
+  /// trigger an error if anyone outside tries to use it.
+  /// To prevent NonCopyable or friend classes from using it,
+  /// we also give no definition, so that the linker will
+  /// produce an error if the first protection was inefficient.
+  ///
+  ////////////////////////////////////////////////////////////
+  NonCopyable &operator= (const NonCopyable &);
 };
 
 } // namespace sf
 
-
 #endif // SFML_NONCOPYABLE_HPP
-
 
 ////////////////////////////////////////////////////////////
 /// \class sf::NonCopyable

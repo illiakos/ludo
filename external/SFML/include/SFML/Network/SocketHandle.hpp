@@ -4,7 +4,8 @@
 // Copyright (C) 2007-2023 Laurent Gomila (laurent@sfml-dev.org)
 //
 // This software is provided 'as-is', without any express or implied warranty.
-// In no event will the authors be held liable for any damages arising from the use of this software.
+// In no event will the authors be held liable for any damages arising from the use of this
+// software.
 //
 // Permission is granted to anyone to use this software for any purpose,
 // including commercial applications, and to alter it and redistribute it freely,
@@ -31,27 +32,24 @@
 #include <SFML/Config.hpp>
 
 #if defined(SFML_SYSTEM_WINDOWS)
-    #include <basetsd.h>
+#include <basetsd.h>
 #endif
 
-
-namespace sf
-{
+namespace sf {
 ////////////////////////////////////////////////////////////
 // Define the low-level socket handle type, specific to
 // each platform
 ////////////////////////////////////////////////////////////
 #if defined(SFML_SYSTEM_WINDOWS)
 
-    typedef UINT_PTR SocketHandle;
+typedef UINT_PTR SocketHandle;
 
 #else
 
-    typedef int SocketHandle;
+typedef int SocketHandle;
 
 #endif
 
 } // namespace sf
-
 
 #endif // SFML_SOCKETHANDLE_HPP

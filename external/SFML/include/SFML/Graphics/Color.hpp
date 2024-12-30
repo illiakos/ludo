@@ -4,7 +4,8 @@
 // Copyright (C) 2007-2023 Laurent Gomila (laurent@sfml-dev.org)
 //
 // This software is provided 'as-is', without any express or implied warranty.
-// In no event will the authors be held liable for any damages arising from the use of this software.
+// In no event will the authors be held liable for any damages arising from the use of this
+// software.
 //
 // Permission is granted to anyone to use this software for any purpose,
 // including commercial applications, and to alter it and redistribute it freely,
@@ -30,73 +31,69 @@
 ////////////////////////////////////////////////////////////
 #include <SFML/Graphics/Export.hpp>
 
-
-namespace sf
-{
+namespace sf {
 ////////////////////////////////////////////////////////////
 /// \brief Utility class for manipulating RGBA colors
 ///
 ////////////////////////////////////////////////////////////
-class SFML_GRAPHICS_API Color
-{
+class SFML_GRAPHICS_API Color {
 public:
+  ////////////////////////////////////////////////////////////
+  /// \brief Default constructor
+  ///
+  /// Constructs an opaque black color. It is equivalent to
+  /// sf::Color(0, 0, 0, 255).
+  ///
+  ////////////////////////////////////////////////////////////
+  Color ();
 
-    ////////////////////////////////////////////////////////////
-    /// \brief Default constructor
-    ///
-    /// Constructs an opaque black color. It is equivalent to
-    /// sf::Color(0, 0, 0, 255).
-    ///
-    ////////////////////////////////////////////////////////////
-    Color();
+  ////////////////////////////////////////////////////////////
+  /// \brief Construct the color from its 4 RGBA components
+  ///
+  /// \param red   Red component (in the range [0, 255])
+  /// \param green Green component (in the range [0, 255])
+  /// \param blue  Blue component (in the range [0, 255])
+  /// \param alpha Alpha (opacity) component (in the range [0, 255])
+  ///
+  ////////////////////////////////////////////////////////////
+  Color (Uint8 red, Uint8 green, Uint8 blue, Uint8 alpha = 255);
 
-    ////////////////////////////////////////////////////////////
-    /// \brief Construct the color from its 4 RGBA components
-    ///
-    /// \param red   Red component (in the range [0, 255])
-    /// \param green Green component (in the range [0, 255])
-    /// \param blue  Blue component (in the range [0, 255])
-    /// \param alpha Alpha (opacity) component (in the range [0, 255])
-    ///
-    ////////////////////////////////////////////////////////////
-    Color(Uint8 red, Uint8 green, Uint8 blue, Uint8 alpha = 255);
+  ////////////////////////////////////////////////////////////
+  /// \brief Construct the color from 32-bit unsigned integer
+  ///
+  /// \param color Number containing the RGBA components (in that order)
+  ///
+  ////////////////////////////////////////////////////////////
+  explicit Color (Uint32 color);
 
-    ////////////////////////////////////////////////////////////
-    /// \brief Construct the color from 32-bit unsigned integer
-    ///
-    /// \param color Number containing the RGBA components (in that order)
-    ///
-    ////////////////////////////////////////////////////////////
-    explicit Color(Uint32 color);
+  ////////////////////////////////////////////////////////////
+  /// \brief Retrieve the color as a 32-bit unsigned integer
+  ///
+  /// \return Color represented as a 32-bit unsigned integer
+  ///
+  ////////////////////////////////////////////////////////////
+  Uint32 toInteger () const;
 
-    ////////////////////////////////////////////////////////////
-    /// \brief Retrieve the color as a 32-bit unsigned integer
-    ///
-    /// \return Color represented as a 32-bit unsigned integer
-    ///
-    ////////////////////////////////////////////////////////////
-    Uint32 toInteger() const;
+  ////////////////////////////////////////////////////////////
+  // Static member data
+  ////////////////////////////////////////////////////////////
+  static const Color Black;       //!< Black predefined color
+  static const Color White;       //!< White predefined color
+  static const Color Red;         //!< Red predefined color
+  static const Color Green;       //!< Green predefined color
+  static const Color Blue;        //!< Blue predefined color
+  static const Color Yellow;      //!< Yellow predefined color
+  static const Color Magenta;     //!< Magenta predefined color
+  static const Color Cyan;        //!< Cyan predefined color
+  static const Color Transparent; //!< Transparent (black) predefined color
 
-    ////////////////////////////////////////////////////////////
-    // Static member data
-    ////////////////////////////////////////////////////////////
-    static const Color Black;       //!< Black predefined color
-    static const Color White;       //!< White predefined color
-    static const Color Red;         //!< Red predefined color
-    static const Color Green;       //!< Green predefined color
-    static const Color Blue;        //!< Blue predefined color
-    static const Color Yellow;      //!< Yellow predefined color
-    static const Color Magenta;     //!< Magenta predefined color
-    static const Color Cyan;        //!< Cyan predefined color
-    static const Color Transparent; //!< Transparent (black) predefined color
-
-    ////////////////////////////////////////////////////////////
-    // Member data
-    ////////////////////////////////////////////////////////////
-    Uint8 r; //!< Red component
-    Uint8 g; //!< Green component
-    Uint8 b; //!< Blue component
-    Uint8 a; //!< Alpha (opacity) component
+  ////////////////////////////////////////////////////////////
+  // Member data
+  ////////////////////////////////////////////////////////////
+  Uint8 r; //!< Red component
+  Uint8 g; //!< Green component
+  Uint8 b; //!< Blue component
+  Uint8 a; //!< Alpha (opacity) component
 };
 
 ////////////////////////////////////////////////////////////
@@ -111,7 +108,7 @@ public:
 /// \return True if colors are equal, false if they are different
 ///
 ////////////////////////////////////////////////////////////
-SFML_GRAPHICS_API bool operator ==(const Color& left, const Color& right);
+SFML_GRAPHICS_API bool operator== (const Color &left, const Color &right);
 
 ////////////////////////////////////////////////////////////
 /// \relates Color
@@ -125,7 +122,7 @@ SFML_GRAPHICS_API bool operator ==(const Color& left, const Color& right);
 /// \return True if colors are different, false if they are equal
 ///
 ////////////////////////////////////////////////////////////
-SFML_GRAPHICS_API bool operator !=(const Color& left, const Color& right);
+SFML_GRAPHICS_API bool operator!= (const Color &left, const Color &right);
 
 ////////////////////////////////////////////////////////////
 /// \relates Color
@@ -140,7 +137,7 @@ SFML_GRAPHICS_API bool operator !=(const Color& left, const Color& right);
 /// \return Result of \a left + \a right
 ///
 ////////////////////////////////////////////////////////////
-SFML_GRAPHICS_API Color operator +(const Color& left, const Color& right);
+SFML_GRAPHICS_API Color operator+ (const Color &left, const Color &right);
 
 ////////////////////////////////////////////////////////////
 /// \relates Color
@@ -155,7 +152,7 @@ SFML_GRAPHICS_API Color operator +(const Color& left, const Color& right);
 /// \return Result of \a left - \a right
 ///
 ////////////////////////////////////////////////////////////
-SFML_GRAPHICS_API Color operator -(const Color& left, const Color& right);
+SFML_GRAPHICS_API Color operator- (const Color &left, const Color &right);
 
 ////////////////////////////////////////////////////////////
 /// \relates Color
@@ -172,7 +169,7 @@ SFML_GRAPHICS_API Color operator -(const Color& left, const Color& right);
 /// \return Result of \a left * \a right
 ///
 ////////////////////////////////////////////////////////////
-SFML_GRAPHICS_API Color operator *(const Color& left, const Color& right);
+SFML_GRAPHICS_API Color operator* (const Color &left, const Color &right);
 
 ////////////////////////////////////////////////////////////
 /// \relates Color
@@ -188,7 +185,7 @@ SFML_GRAPHICS_API Color operator *(const Color& left, const Color& right);
 /// \return Reference to \a left
 ///
 ////////////////////////////////////////////////////////////
-SFML_GRAPHICS_API Color& operator +=(Color& left, const Color& right);
+SFML_GRAPHICS_API Color &operator+= (Color &left, const Color &right);
 
 ////////////////////////////////////////////////////////////
 /// \relates Color
@@ -204,7 +201,7 @@ SFML_GRAPHICS_API Color& operator +=(Color& left, const Color& right);
 /// \return Reference to \a left
 ///
 ////////////////////////////////////////////////////////////
-SFML_GRAPHICS_API Color& operator -=(Color& left, const Color& right);
+SFML_GRAPHICS_API Color &operator-= (Color &left, const Color &right);
 
 ////////////////////////////////////////////////////////////
 /// \relates Color
@@ -222,13 +219,11 @@ SFML_GRAPHICS_API Color& operator -=(Color& left, const Color& right);
 /// \return Reference to \a left
 ///
 ////////////////////////////////////////////////////////////
-SFML_GRAPHICS_API Color& operator *=(Color& left, const Color& right);
+SFML_GRAPHICS_API Color &operator*= (Color &left, const Color &right);
 
 } // namespace sf
 
-
 #endif // SFML_COLOR_HPP
-
 
 ////////////////////////////////////////////////////////////
 /// \class sf::Color

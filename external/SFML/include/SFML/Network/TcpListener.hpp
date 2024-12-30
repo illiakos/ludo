@@ -4,7 +4,8 @@
 // Copyright (C) 2007-2023 Laurent Gomila (laurent@sfml-dev.org)
 //
 // This software is provided 'as-is', without any express or implied warranty.
-// In no event will the authors be held liable for any damages arising from the use of this software.
+// In no event will the authors be held liable for any damages arising from the use of this
+// software.
 //
 // Permission is granted to anyone to use this software for any purpose,
 // including commercial applications, and to alter it and redistribute it freely,
@@ -29,98 +30,91 @@
 // Headers
 ////////////////////////////////////////////////////////////
 #include <SFML/Network/Export.hpp>
-#include <SFML/Network/Socket.hpp>
 #include <SFML/Network/IpAddress.hpp>
+#include <SFML/Network/Socket.hpp>
 
-
-namespace sf
-{
+namespace sf {
 class TcpSocket;
 
 ////////////////////////////////////////////////////////////
 /// \brief Socket that listens to new TCP connections
 ///
 ////////////////////////////////////////////////////////////
-class SFML_NETWORK_API TcpListener : public Socket
-{
+class SFML_NETWORK_API TcpListener : public Socket {
 public:
+  ////////////////////////////////////////////////////////////
+  /// \brief Default constructor
+  ///
+  ////////////////////////////////////////////////////////////
+  TcpListener ();
 
-    ////////////////////////////////////////////////////////////
-    /// \brief Default constructor
-    ///
-    ////////////////////////////////////////////////////////////
-    TcpListener();
+  ////////////////////////////////////////////////////////////
+  /// \brief Get the port to which the socket is bound locally
+  ///
+  /// If the socket is not listening to a port, this function
+  /// returns 0.
+  ///
+  /// \return Port to which the socket is bound
+  ///
+  /// \see listen
+  ///
+  ////////////////////////////////////////////////////////////
+  unsigned short getLocalPort () const;
 
-    ////////////////////////////////////////////////////////////
-    /// \brief Get the port to which the socket is bound locally
-    ///
-    /// If the socket is not listening to a port, this function
-    /// returns 0.
-    ///
-    /// \return Port to which the socket is bound
-    ///
-    /// \see listen
-    ///
-    ////////////////////////////////////////////////////////////
-    unsigned short getLocalPort() const;
+  ////////////////////////////////////////////////////////////
+  /// \brief Start listening for incoming connection attempts
+  ///
+  /// This function makes the socket start listening on the
+  /// specified port, waiting for incoming connection attempts.
+  ///
+  /// If the socket is already listening on a port when this
+  /// function is called, it will stop listening on the old
+  /// port before starting to listen on the new port.
+  ///
+  /// When providing sf::Socket::AnyPort as port, the listener
+  /// will request an available port from the system.
+  /// The chosen port can be retrieved by calling getLocalPort().
+  ///
+  /// \param port    Port to listen on for incoming connection attempts
+  /// \param address Address of the interface to listen on
+  ///
+  /// \return Status code
+  ///
+  /// \see accept, close
+  ///
+  ////////////////////////////////////////////////////////////
+  Status listen (unsigned short port, const IpAddress &address = IpAddress::Any);
 
-    ////////////////////////////////////////////////////////////
-    /// \brief Start listening for incoming connection attempts
-    ///
-    /// This function makes the socket start listening on the
-    /// specified port, waiting for incoming connection attempts.
-    ///
-    /// If the socket is already listening on a port when this
-    /// function is called, it will stop listening on the old
-    /// port before starting to listen on the new port.
-    ///
-    /// When providing sf::Socket::AnyPort as port, the listener
-    /// will request an available port from the system.
-    /// The chosen port can be retrieved by calling getLocalPort().
-    ///
-    /// \param port    Port to listen on for incoming connection attempts
-    /// \param address Address of the interface to listen on
-    ///
-    /// \return Status code
-    ///
-    /// \see accept, close
-    ///
-    ////////////////////////////////////////////////////////////
-    Status listen(unsigned short port, const IpAddress& address = IpAddress::Any);
+  ////////////////////////////////////////////////////////////
+  /// \brief Stop listening and close the socket
+  ///
+  /// This function gracefully stops the listener. If the
+  /// socket is not listening, this function has no effect.
+  ///
+  /// \see listen
+  ///
+  ////////////////////////////////////////////////////////////
+  void close ();
 
-    ////////////////////////////////////////////////////////////
-    /// \brief Stop listening and close the socket
-    ///
-    /// This function gracefully stops the listener. If the
-    /// socket is not listening, this function has no effect.
-    ///
-    /// \see listen
-    ///
-    ////////////////////////////////////////////////////////////
-    void close();
-
-    ////////////////////////////////////////////////////////////
-    /// \brief Accept a new connection
-    ///
-    /// If the socket is in blocking mode, this function will
-    /// not return until a connection is actually received.
-    ///
-    /// \param socket Socket that will hold the new connection
-    ///
-    /// \return Status code
-    ///
-    /// \see listen
-    ///
-    ////////////////////////////////////////////////////////////
-    Status accept(TcpSocket& socket);
+  ////////////////////////////////////////////////////////////
+  /// \brief Accept a new connection
+  ///
+  /// If the socket is in blocking mode, this function will
+  /// not return until a connection is actually received.
+  ///
+  /// \param socket Socket that will hold the new connection
+  ///
+  /// \return Status code
+  ///
+  /// \see listen
+  ///
+  ////////////////////////////////////////////////////////////
+  Status accept (TcpSocket &socket);
 };
-
 
 } // namespace sf
 
-
 #endif // SFML_TCPLISTENER_HPP
-
 
 ////////////////////////////////////////////////////////////
 /// \class sf::TcpListener

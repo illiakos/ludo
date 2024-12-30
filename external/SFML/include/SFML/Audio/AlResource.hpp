@@ -4,7 +4,8 @@
 // Copyright (C) 2007-2023 Laurent Gomila (laurent@sfml-dev.org)
 //
 // This software is provided 'as-is', without any express or implied warranty.
-// In no event will the authors be held liable for any damages arising from the use of this software.
+// In no event will the authors be held liable for any damages arising from the use of this
+// software.
 //
 // Permission is granted to anyone to use this software for any purpose,
 // including commercial applications, and to alter it and redistribute it freely,
@@ -30,32 +31,27 @@
 ////////////////////////////////////////////////////////////
 #include <SFML/Audio/Export.hpp>
 
-
-namespace sf
-{
+namespace sf {
 ////////////////////////////////////////////////////////////
 /// \brief Base class for classes that require an OpenAL context
 ///
 ////////////////////////////////////////////////////////////
-class SFML_AUDIO_API AlResource
-{
+class SFML_AUDIO_API AlResource {
 protected:
+  ////////////////////////////////////////////////////////////
+  /// \brief Default constructor
+  ///
+  ////////////////////////////////////////////////////////////
+  AlResource ();
 
-    ////////////////////////////////////////////////////////////
-    /// \brief Default constructor
-    ///
-    ////////////////////////////////////////////////////////////
-    AlResource();
-
-    ////////////////////////////////////////////////////////////
-    /// \brief Destructor
-    ///
-    ////////////////////////////////////////////////////////////
-    ~AlResource();
+  ////////////////////////////////////////////////////////////
+  /// \brief Destructor
+  ///
+  ////////////////////////////////////////////////////////////
+  ~AlResource ();
 };
 
 } // namespace sf
-
 
 #endif // SFML_ALRESOURCE_HPP
 

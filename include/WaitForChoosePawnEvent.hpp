@@ -5,15 +5,15 @@
 
 class WaitForChoosePawnEvent : public Event {
 public:
-    explicit WaitForChoosePawnEvent(int playerId, int diceRollResult)
-        : playerId(playerId), diceRollResult(diceRollResult) {}
+  explicit WaitForChoosePawnEvent (int playerId, int diceRollResult)
+      : playerId (playerId), diceRollResult (diceRollResult) {}
 
-    int playerId;
-    int diceRollResult;
+  int playerId;
+  int diceRollResult;
 
-    std::string getType() const {return "WaitForChoosePawnEvent";}
+  std::string getType () const { return "WaitForChoosePawnEvent"; }
 
-    void execute() {};
+  void execute () {};
 };
 
 #endif // WAIT_FOR_CHOOSE_PAWN_EVENT_H

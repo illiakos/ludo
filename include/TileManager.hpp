@@ -14,18 +14,19 @@ enum PositionType {
 class TileManager {
 
 public:
-  static TileManager &getInstance();
+  static TileManager &getInstance ();
 
-  void addTile(std::shared_ptr<Tile> tile);
-  std::shared_ptr<Tile> findTileById(int id) const;
+  void addTile (std::shared_ptr<Tile> tile);
+  std::shared_ptr<Tile> findTileById (int id) const;
 
-  void addWalkableTile(std::shared_ptr<Tile> tile);
-  void addBaseTile(std::shared_ptr<Tile> tile);
+  void addWalkableTile (std::shared_ptr<Tile> tile);
+  void addBaseTile (std::shared_ptr<Tile> tile);
 
-  const std::vector<std::shared_ptr<Tile>> &getWalkableTiles() const;
-  const std::vector<std::shared_ptr<Tile>> &getBaseTiles() const;
-  void printTiles() const;
-  std::shared_ptr<Tile> findTileByContextAndPosition(TileContext context, int position);
+  const std::vector<std::shared_ptr<Tile>> &getWalkableTiles () const;
+  const std::vector<std::shared_ptr<Tile>> &getBaseTiles () const;
+  void printTiles () const;
+  std::shared_ptr<Tile> findTileByContextAndPosition (TileContext context, int position);
+
 private:
   RenderableContainer &renderContainer;
 
@@ -36,10 +37,9 @@ private:
   std::vector<std::shared_ptr<Tile>> walkableTiles;
   std::vector<std::shared_ptr<Tile>> baseTiles;
 
-  TileManager(RenderableContainer &renderContainer)
-      : renderContainer(renderContainer) {}
-  TileManager(const TileManager &) = delete;
-  TileManager &operator=(const TileManager &) = delete;
+  TileManager (RenderableContainer &renderContainer) : renderContainer (renderContainer) {}
+  TileManager (const TileManager &) = delete;
+  TileManager &operator= (const TileManager &) = delete;
 };
 
 #endif // !TILE_MANAGER_HPP
