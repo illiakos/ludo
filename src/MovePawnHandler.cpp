@@ -8,11 +8,13 @@
 #include "TileManager.hpp"
 #include <iostream>
 #include <memory>
+#include <ostream>
 
 /*MovePawnHandler::MovePawnHandler(Board& board, PawnManager& pawnManager)*/
 /*    : EventHandler("MovePawnHandler"), board(board), pawnManager(pawnManager) {}*/
 
 void MovePawnHandler::handleEvent (const std::shared_ptr<Event> &event) {
+  std::cout << "handling event" << endl;
   auto moveEvent = std::dynamic_pointer_cast<MovePawnEvent> (event);
   if (moveEvent) {
     TileManager &tileManager = TileManager::getInstance ();
@@ -26,15 +28,23 @@ void MovePawnHandler::handleEvent (const std::shared_ptr<Event> &event) {
 
       if (steps == 6) {
         auto &bm = BaseManager::getInstance ();
-        auto base = bm.getBaseByTeamId (pawn->getTeamId ());
+        std::cout << pawn->getTeamId() << std::endl;
+        auto base = bm.getBaseByTeamId(pawn->getTeamId());
+        std::cout << base->toString() << std::endl;
         if (!base) {
-          std::cerr << "Error: Base not found for team ID " << pawn->getTeamId () << "\n";
+          std::cerr << "Error: Base not found for team ID " << pawn->getTeamId() << " \n";
           return;
         }
 
-        int startingTileId = base->getStartingTileId ();
-        auto startingTile = tileManager.findTileByContextAndPosition (
+        int startingTileId = base->getStartingTileId();
+
+        tileManager.printTiles();
+
+        auto startingTile = tileManager.findTileByContextAndPosition(
             TileContext::Walkable, startingTileId);
+
+        std::cout << startingTile->toString() << endl;
+
         if (!startingTile) {
           std::cerr << "Error: Starting tile not found for tile ID " << startingTileId << "\n";
           return;
@@ -49,7 +59,7 @@ void MovePawnHandler::handleEvent (const std::shared_ptr<Event> &event) {
             pawn->getDimensions ().dy);
         pawn->setDimensions (newDimensions);
         std::cout << "Pawn " << pawn->getId () << " moved from Base to Walkable starting tile.\n";
-
+        drawer.addRenderable(pawn);
         /*base->freeSlot();*/
       } else {
         std::cout << "Pawn " << pawn->getId () << " cannot leave base without rolling a 6.\n";

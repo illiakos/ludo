@@ -102,7 +102,7 @@ void initializeTiles () {
   int position = 2;
   for (int x = 2; x <= 5; x++) {
     auto walkableTile = std::make_shared<Tile> (
-        Dimensions (x, 8, 1, 1), position, position, Color (0.8f, 0.8f, 0.8f));
+        Dimensions (x, 8, 1, 1), position, position, Color (0.8f, 0.8f, 0.8f), TileContext::Walkable);
     tileManager.addTile (walkableTile);
     mapDrawer.addRenderable (walkableTile);
     position++;
@@ -115,7 +115,7 @@ void initializeTiles () {
       continue;
     }
     auto walkableTile = std::make_shared<Tile> (
-        Dimensions (6, y, 1, 1), position, position, Color (0.8f, 0.8f, 0.8f));
+        Dimensions (6, y, 1, 1), position, position, Color (0.8f, 0.8f, 0.8f), TileContext::Walkable);
     tileManager.addTile (walkableTile);
     mapDrawer.addRenderable (walkableTile);
     position++;
@@ -123,7 +123,7 @@ void initializeTiles () {
 
   position++; // Skip green transition position
   auto walkableTile = std::make_shared<Tile> (
-      Dimensions (8, 14, 1, 1), position, position, Color (0.8f, 0.8f, 0.8f));
+      Dimensions (8, 14, 1, 1), position, position, Color (0.8f, 0.8f, 0.8f), TileContext::Walkable);
   tileManager.addTile (walkableTile);
   mapDrawer.addRenderable (walkableTile);
   position++;
@@ -131,7 +131,7 @@ void initializeTiles () {
 
   for (int y = 12; y >= 9; y--) {
     auto walkableTile = std::make_shared<Tile> (
-        Dimensions (8, y, 1, 1), position, position, Color (0.8f, 0.8f, 0.8f));
+        Dimensions (8, y, 1, 1), position, position, Color (0.8f, 0.8f, 0.8f), TileContext::Walkable);
     tileManager.addTile (walkableTile);
     mapDrawer.addRenderable (walkableTile);
     position++;
@@ -144,7 +144,7 @@ void initializeTiles () {
       continue;
     }
     auto walkableTile = std::make_shared<Tile> (
-        Dimensions (x, 8, 1, 1), position, position, Color (0.8f, 0.8f, 0.8f));
+        Dimensions (x, 8, 1, 1), position, position, Color (0.8f, 0.8f, 0.8f), TileContext::Walkable);
     tileManager.addTile (walkableTile);
     mapDrawer.addRenderable (walkableTile);
     position++;
@@ -152,7 +152,7 @@ void initializeTiles () {
 
   position++; // Skip yellow transition position
   walkableTile = std::make_shared<Tile> (
-      Dimensions (14, 6, 1, 1), position, position, Color (0.8f, 0.8f, 0.8f));
+      Dimensions (14, 6, 1, 1), position, position, Color (0.8f, 0.8f, 0.8f), TileContext::Walkable);
   tileManager.addTile (walkableTile);
   mapDrawer.addRenderable (walkableTile);
   position++;
@@ -160,7 +160,7 @@ void initializeTiles () {
 
   for (int x = 12; x >= 9; x--) {
     auto walkableTile = std::make_shared<Tile> (
-        Dimensions (x, 6, 1, 1), position, position, Color (0.8f, 0.8f, 0.8f));
+        Dimensions (x, 6, 1, 1), position, position, Color (0.8f, 0.8f, 0.8f), TileContext::Walkable);
     tileManager.addTile (walkableTile);
     mapDrawer.addRenderable (walkableTile);
     position++;
@@ -173,7 +173,7 @@ void initializeTiles () {
       continue;
     }
     auto walkableTile = std::make_shared<Tile> (
-        Dimensions (8, y, 1, 1), position, position, Color (0.8f, 0.8f, 0.8f));
+        Dimensions (8, y, 1, 1), position, position, Color (0.8f, 0.8f, 0.8f), TileContext::Walkable);
     tileManager.addTile (walkableTile);
     mapDrawer.addRenderable (walkableTile);
     position++;
@@ -181,7 +181,7 @@ void initializeTiles () {
 
   position++; // Skip blue transition position
   walkableTile = std::make_shared<Tile> (
-      Dimensions (6, 0, 1, 1), position, position, Color (0.8f, 0.8f, 0.8f));
+      Dimensions (6, 0, 1, 1), position, position, Color (0.8f, 0.8f, 0.8f), TileContext::Walkable);
   tileManager.addTile (walkableTile);
   mapDrawer.addRenderable (walkableTile);
   position++;
@@ -358,7 +358,7 @@ int main () {
   auto &baseManager = BaseManager::getInstance ();
   auto redBase = std::make_shared<Base> (Dimensions (0, 9, 6, 6), red, 1, 10);
   mapDrawer.addRenderable (redBase);
-  baseManager.addBase (1, redBase);
+  baseManager.addBase(1, redBase);
 
   auto blueBase = std::make_shared<Base> (Dimensions (0, 0, 6, 6), blue, 3, 20);
   mapDrawer.addRenderable (blueBase);
@@ -387,10 +387,10 @@ int main () {
 
   // Create event handlers
   auto rollDiceHandler = std::make_shared<RollDiceHandler> (turnManager, eventLoop);
-  auto movePawnHandler = std::make_shared<MovePawnHandler> (board, pawnManager);
+  auto movePawnHandler = std::make_shared<MovePawnHandler>(board, pawnManager);
   auto stopGameHandler = std::make_shared<StopGameHandler> ();
   auto playerTurnHandler = std::make_shared<PlayerTurnHandler> (eventLoop, 4, turnManager);
-
+  dispatcher.subscribe("MovePawnEvent", movePawnHandler);
   auto randomAssPawn = std::make_shared<Pawn> (10,
       1,
       1,
@@ -401,6 +401,8 @@ int main () {
   mapDrawer.addRenderable (randomAssPawn);
 
   initializeTiles ();
+
+  
 
   /*int idCounter = 0;*/
   /*for (int playerId = 1; playerId <= 4; ++playerId) {*/
@@ -428,10 +430,15 @@ int main () {
   /*});*/
 
   // Process all events in the loop
-  eventLoop.processEvents ();
+  
+  eventLoop.enqueueEvent(std::make_shared<MovePawnEvent>(1, 10, 6));
+
+  std::this_thread::sleep_for (std::chrono::seconds (1));
+  eventLoop.processEvents();
+
+
 
   while (true) {
   }
-  /*eventLoop.enqueueEvent(std::make_shared<MovePawnEvent>(1, 10, 6))*/
   return 0;
 }

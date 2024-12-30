@@ -54,8 +54,6 @@ void StartingTile::renderSelf () const {
   auto &tm = TeamManager::getInstance ();
   auto currentTeam = tm.getTeamById (teamId);
   auto &drawer = MapDrawer::getInstance ();
-  std::cout << "rendering starting tile" << std::endl;
-  std::cout << currentTeam.id << std::endl;
   drawer.drawRectangle (drawer.getCellPosition (dimensions.x),
       drawer.getCellPosition (dimensions.y),
       drawer.getSizeOfCells (1),
@@ -83,8 +81,6 @@ void PrefinishingTile::renderSelf () const {
   auto currentTeam = tm.getTeamById (teamId);
   auto &drawer = MapDrawer::getInstance ();
 
-  std::cout << "rendering PrefinishingTile tile" << std::endl;
-  std::cout << currentTeam.id << std::endl;
 
   drawer.drawRectangle (drawer.getCellPosition (dimensions.x),
       drawer.getCellPosition (dimensions.y),

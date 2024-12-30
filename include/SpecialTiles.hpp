@@ -7,7 +7,7 @@
 class StartingTile : public Tile {
 public:
   StartingTile (Dimensions dimensions, int id, int position, Color &color, int teamId)
-      : Tile (dimensions, id, position, color), teamId (teamId) {};
+      : Tile (dimensions, id, position, color, TileContext::Walkable), teamId (teamId) {};
 
   void renderSelf () const override;
   ~StartingTile ();
@@ -19,7 +19,7 @@ private:
 class FinishingTile : public Tile {
 public:
   FinishingTile (Dimensions dimensions, int id, int position, Color &color, bool isFinish)
-      : Tile (dimensions, id, position, color), isFinish (isFinish) {};
+      : Tile (dimensions, id, position, color, TileContext::Finishing), isFinish (isFinish) {};
 
   bool getIsFinish ();
   void renderSelf () const override;
@@ -32,7 +32,7 @@ private:
 class PrefinishingTile : public Tile {
 public:
   PrefinishingTile (Dimensions d, int id, int position, int nextPosition, Color &color)
-      : Tile (d, id, position, color), nextPosition (nextPosition) {};
+      : Tile (d, id, position, color, TileContext::Finishing), nextPosition (nextPosition) {};
 
   int getNextPosition ();
   void setFirstFinishingTilePosition (int pos);
@@ -49,7 +49,7 @@ private:
 
 class SafeTile : public Tile {
 public:
-  SafeTile (Dimensions d, int id, int position, Color &color) : Tile (d, id, position, color) {};
+  SafeTile (Dimensions d, int id, int position, Color &color) : Tile (d, id, position, color, TileContext::Walkable) {};
   void renderSelf () const override;
   ~SafeTile ();
 };

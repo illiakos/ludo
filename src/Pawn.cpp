@@ -18,26 +18,28 @@ void Pawn::renderSelf () const {
   auto &drawer = MapDrawer::getInstance ();
   if (context == TileContext::Walkable) {
 
-    glColor3f (color.getRedf (), color.getGreenf (),
-        color.getBluef ());    // Set color
-    glBegin (GL_TRIANGLE_FAN); // Begin drawing a filled circle
-    float halfCellSize = drawer.getSizeOfCells (1) / 2;
-    // Center of the circle
-    glVertex2f (dimensions.x + halfCellSize, dimensions.y + halfCellSize);
-    auto segments = RENDER_PRECISION;
-    // Draw the circle by approximating it with triangles
-    for (int i = 0; i <= segments; i++) {
-      float angle = 2.0f * PI * i / segments; // Angle in radians
-      float x = dimensions.dx * cos (angle);
-      float y = dimensions.dx * sin (angle);
-      glVertex2f (dimensions.x + x + halfCellSize, dimensions.y + y + halfCellSize);
-    }
+    /*glColor3f (color.getRedf (), color.getGreenf (),*/
+    /*    color.getBluef ());    // Set color*/
+    /*glBegin (GL_TRIANGLE_FAN); // Begin drawing a filled circle*/
+    /*float halfCellSize = drawer.getSizeOfCells (1) / 2;*/
+    /*// Center of the circle*/
+    /*glVertex2f (dimensions.x + halfCellSize, dimensions.y + halfCellSize);*/
+    /*auto segments = RENDER_PRECISION;*/
+    /*// Draw the circle by approximating it with triangles*/
+    /*for (int i = 0; i <= segments; i++) {*/
+    /*  float angle = 2.0f * PI * i / segments; // Angle in radians*/
+    /*  float x = dimensions.dx * cos (angle);*/
+    /*  float y = dimensions.dx * sin (angle);*/
+    /*  glVertex2f (dimensions.x + x + halfCellSize, dimensions.y + y + halfCellSize);*/
+    /*}*/
+    /**/
+    /*glEnd (); // End drawing*/
 
-    glEnd (); // End drawing
+    Color red = Color (0.596f, 0.324f, 0.590f);
+    drawer.drawCircle(drawer.getCellPosition(dimensions.x),drawer.getCellPosition(dimensions.y), drawer.getSizeOfCells(0.45), red, 10000);
+
   } else if (context == TileContext::Base) {
     auto &baseManager = BaseManager::getInstance ();
-    cout << teamId << endl;
-    cout << "niggaaaaaaaaaa" << endl;
     auto currentBase = baseManager.getBaseByTeamId (teamId);
 
     Color red = Color (0.596f, 0.324f, 0.590f);
@@ -52,7 +54,6 @@ void Pawn::renderSelf () const {
         red,
         10000);
     currentBase->occupySlot (currentBase->getFirstFreeSlot ());
-    cout << "aboabaaaaa" << endl;
   }
 
   return;

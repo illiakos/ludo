@@ -40,7 +40,7 @@ protected:
   int id;       // Unique identifier for the tile
   int position; // Position in the game flow, used for sorting
   Color color;
-  TileContext context;
+  TileContext context = TileContext::Walkable;
   int teamId;
   Dimensions dimensions;
 

@@ -2,6 +2,7 @@
 #include "Event.hpp"
 #include "EventHandler.hpp"
 #include <algorithm>
+#include <iostream>
 
 void EventDispatcher::subscribe (
     const std::string &eventType, const std::shared_ptr<EventHandler> &handler) {
@@ -22,7 +23,8 @@ void EventDispatcher::unsubscribe (const std::string &eventType, const std::stri
 }
 
 void EventDispatcher::dispatch (const std::shared_ptr<Event> &event) {
-  auto it = handlers.find (event->getType ());
+  std::cout << handlers.size();
+  auto it = handlers.find(event->getType());
   if (it != handlers.end ()) {
     for (auto &handler : it->second) {
       handler->handleEvent (event);

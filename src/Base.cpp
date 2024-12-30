@@ -6,7 +6,6 @@
 void Base::renderSelf () const {
   auto &drawer = MapDrawer::getInstance ();
   drawer.log ();
-  cout << "SHTRING" << endl;
   drawer.drawBase (dimensions.x, dimensions.y, color);
   return;
 }
@@ -19,7 +18,6 @@ Base::~Base () {
 }
 
 void Base::skibidi () {
-  std::cout << "SHKIBIDI" << endl;
 }
 
 std::string Base::toString () {

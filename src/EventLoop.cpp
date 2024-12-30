@@ -17,11 +17,11 @@ void EventLoop::pushEvent (const std::shared_ptr<Event> &event) {
 }
 
 void EventLoop::processEvents () {
-  while (!events.empty ()) {
+  while (true) {
     auto event = events.front ();
-    events.pop_front ();
-    std::cout << event->getType () << std::endl;
-    dispatcher.dispatch (event);
+    events.pop_front();
+    std::cout << event->getType() << std::endl;
+    dispatcher.dispatch(event);
 
     if (event->getType () == "StopGameEvent") {
       std::cout << "Stopping the event loop.\n";
