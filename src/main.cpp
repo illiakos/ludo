@@ -126,7 +126,6 @@ void initializeTiles () {
       Dimensions (8, 14, 1, 1), position, position, Color (0.8f, 0.8f, 0.8f), TileContext::Walkable);
   tileManager.addTile (walkableTile);
   mapDrawer.addRenderable (walkableTile);
-  position++;
   position++; // Skip green start position
 
   for (int y = 12; y >= 9; y--) {
@@ -137,6 +136,7 @@ void initializeTiles () {
     position++;
   }
 
+  cout << "ABOBA" << position << endl;
   for (int x = 9; x <= 14; x++) {
     // Skip safe tile
     if (x == 12) {
@@ -216,9 +216,9 @@ void initializeTiles () {
 
   // Safe tiles
   auto redSafe = std::make_shared<SafeTile> (Dimensions (6, 12, 1, 1), 9, 9, red);
-  auto blueSafe = std::make_shared<SafeTile> (Dimensions (2, 6, 1, 1), 52, 52, blue);
-  auto greenSafe = std::make_shared<SafeTile> (Dimensions (12, 8, 1, 1), 53, 53, green);
-  auto yellowSafe = std::make_shared<SafeTile> (Dimensions (8, 2, 1, 1), 54, 54, yellow);
+  auto blueSafe = std::make_shared<SafeTile> (Dimensions (2, 6, 1, 1), 48, 48, blue);
+  auto greenSafe = std::make_shared<SafeTile> (Dimensions (12, 8, 1, 1), 22, 22, green);
+  auto yellowSafe = std::make_shared<SafeTile> (Dimensions (8, 2, 1, 1), 35, 35, yellow);
 
   tileManager.addTile (redSafe);
   tileManager.addTile (blueSafe);
@@ -450,6 +450,20 @@ int main () {
   std::this_thread::sleep_for (std::chrono::seconds (2));
   eventLoop.enqueueEvent(std::make_shared<MovePawnEvent>(1, 10, 5));
   std::this_thread::sleep_for (std::chrono::seconds (2));
+  eventLoop.enqueueEvent(std::make_shared<MovePawnEvent>(1, 10, 5));
+  std::this_thread::sleep_for (std::chrono::seconds (2));
+  eventLoop.enqueueEvent(std::make_shared<MovePawnEvent>(1, 10, 5));
+  std::this_thread::sleep_for (std::chrono::seconds (2));
+  eventLoop.enqueueEvent(std::make_shared<MovePawnEvent>(1, 10, 5));
+  std::this_thread::sleep_for (std::chrono::seconds (2));
+  eventLoop.enqueueEvent(std::make_shared<MovePawnEvent>(1, 10, 5));
+   std::this_thread::sleep_for (std::chrono::seconds (2));
+  eventLoop.enqueueEvent(std::make_shared<MovePawnEvent>(1, 10, 5));
+   std::this_thread::sleep_for (std::chrono::seconds (2));
+  eventLoop.enqueueEvent(std::make_shared<MovePawnEvent>(1, 10, 5));
+   std::this_thread::sleep_for (std::chrono::seconds (2));
+  eventLoop.enqueueEvent(std::make_shared<MovePawnEvent>(1, 10, 5));
+   std::this_thread::sleep_for (std::chrono::seconds (2));
   eventLoop.enqueueEvent(std::make_shared<MovePawnEvent>(1, 10, 5));
 
   /*eventLoop.stop();*/
