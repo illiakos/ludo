@@ -54,7 +54,7 @@ void MovePawnHandler::handleEvent(const std::shared_ptr<Event> &event) {
                       << startingTileId << "\n";
             return;
           }
-
+          std::cout << "Setting tile id to starting : " << startingTileId << endl;
           pawn->setTileId(startingTileId);
           pawn->setContext(TileContext::Walkable);
           auto tileDimensions = startingTile->getDimensions();
@@ -116,25 +116,33 @@ void MovePawnHandler::handleEvent(const std::shared_ptr<Event> &event) {
     /*}*/
 
     // Case 2: Regular movement
-    moveRegularTiles (pawn, steps);
-    drawer.addRenderable(pawn);
+    /*moveRegularTiles (pawn, steps);*/
+    /*drawer.addRenderable(pawn);*/
   }
 }
 
 void MovePawnHandler::moveRegularTiles(std::shared_ptr<Pawn> pawn, int steps) {
+  std::cout << "moving on regular tiles, steps : " << steps << endl;
   auto &tm = TileManager::getInstance();
   auto &drawer = MapDrawer::getInstance();
   int currentTileId = pawn->getTileId();
-  auto currentTile = tm.findTileById(currentTileId);
+  std::cout << "Tile id : " << pawn->getTileId() << endl;
+  auto currentTile = tm.findTileById(pawn->getTileId());
+  std::cout<< "-----------------------------" << endl;
+  std::cout << currentTile->toString() << endl;
+
+  std::cout<< "-----------------------------" << endl;
   int currentPosition = currentTile->getPosition();
   drawer.removeRenderable(pawn);
   for (int i = 0; i < steps; i++) {
+    std::cout << "cycled once, position: " << currentPosition << endl;
+
     currentPosition++;
     auto tile =
         tm.findTileByContextAndPosition(TileContext::Walkable, currentPosition);
 
     if (!tile) {
-      std::cerr << "Error: Tile not found at position " << currentTileId
+      std::cerr << "Error: Tile not found at position " << currentPosition
                 << "\n";
       return;
     }
@@ -163,17 +171,34 @@ void MovePawnHandler::moveRegularTiles(std::shared_ptr<Pawn> pawn, int steps) {
       }
     }
 
-    auto destinationTile = tm.findTileByContextAndPosition(TileContext::Walkable, currentPosition);
-
-    // Regular movement
-    pawn->setTileId(currentTileId);
-    auto newDimensions = Dimensions(destinationTile->getDimensions().x, destinationTile->getDimensions().y, pawn->getDimensions().dx, pawn->getDimensions().dy);
-    pawn->setDimensions(newDimensions);
-
-    drawer.addRenderable(pawn);
-
     // Check for eating pawns, safe tiles, etc. (existing logic)
   }
+
+  std::cout << steps << endl;
+  std::cout << "Current position :" << currentPosition << endl;
+  auto destinationTile =
+      tm.findTileByContextAndPosition(TileContext::Walkable, currentPosition);
+  std::cout << "New tile id: " << destinationTile->getId() << endl;
+  // Regular movement
+  //
+
+  std::cout << "Pawn with id : " << pawn->getId() << " , has old tile id : " << pawn->getTileId() << endl;
+
+  pawn->setTileId(destinationTile->getId());
+  auto newDimensions = Dimensions(
+      destinationTile->getDimensions().x, destinationTile->getDimensions().y,
+      pawn->getDimensions().dx, pawn->getDimensions().dy);
+  pawn->setDimensions(newDimensions);
+  pawn->setContext(TileContext::Walkable);
+  std::cout << "DTILE id  : " << destinationTile->getId() << endl;
+  std::cout << "came here" << endl;
+  std::cout << "!!!!!!!!!!!!!!!!!!!!!!!!!!" << endl;
+
+
+  std::cout << "Pawn with id : " << pawn->getId() << " , has new tile id : " << pawn->getTileId() << endl;
+
+  std::cout << "!!!!!!!!!!!!!!!!!!!!!!!!!!" << endl;
+  drawer.addRenderable(pawn);
 }
 
 void MovePawnHandler::returnPawnToBase(int pawnId) {}

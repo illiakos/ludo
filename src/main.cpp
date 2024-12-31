@@ -215,7 +215,7 @@ void initializeTiles () {
   mapDrawer.addRenderable (walkableTile);
 
   // Safe tiles
-  auto redSafe = std::make_shared<SafeTile> (Dimensions (6, 12, 1, 1), 51, 51, red);
+  auto redSafe = std::make_shared<SafeTile> (Dimensions (6, 12, 1, 1), 9, 9, red);
   auto blueSafe = std::make_shared<SafeTile> (Dimensions (2, 6, 1, 1), 52, 52, blue);
   auto greenSafe = std::make_shared<SafeTile> (Dimensions (12, 8, 1, 1), 53, 53, green);
   auto yellowSafe = std::make_shared<SafeTile> (Dimensions (8, 2, 1, 1), 54, 54, yellow);
@@ -236,7 +236,7 @@ void initializeTiles () {
   auto blueTransition = std::make_shared<TransitionTile> (
       Dimensions (7, 0, 1, 1), 38, 38, 2, 2, Color (0.8f, 0.8f, 0.8f));
   auto greenTransition = std::make_shared<TransitionTile> (
-      Dimensions (7, 14, 1, 1), 11, 11, 3, 3, Color (0.8f, 0.8f, 0.8f));
+      Dimensions (7, 14, 1, 1), 12, 12, 3, 3, Color (0.8f, 0.8f, 0.8f));
   auto yellowTransition = std::make_shared<TransitionTile> (
       Dimensions (14, 7, 1, 1), 25, 25, 4, 4, Color (0.8f, 0.8f, 0.8f));
 
@@ -440,6 +440,17 @@ int main () {
 
   std::this_thread::sleep_for (std::chrono::seconds (2));
   eventLoop.enqueueEvent(std::make_shared<MovePawnEvent>(1, 10, 3));
+
+  std::this_thread::sleep_for (std::chrono::seconds (2));
+  eventLoop.enqueueEvent(std::make_shared<MovePawnEvent>(1, 10, 5));
+  std::this_thread::sleep_for (std::chrono::seconds (2));
+  eventLoop.enqueueEvent(std::make_shared<MovePawnEvent>(1, 10, 5));
+  std::this_thread::sleep_for (std::chrono::seconds (2));
+  eventLoop.enqueueEvent(std::make_shared<MovePawnEvent>(1, 10, 5));
+  std::this_thread::sleep_for (std::chrono::seconds (2));
+  eventLoop.enqueueEvent(std::make_shared<MovePawnEvent>(1, 10, 5));
+  std::this_thread::sleep_for (std::chrono::seconds (2));
+  eventLoop.enqueueEvent(std::make_shared<MovePawnEvent>(1, 10, 5));
 
   /*eventLoop.stop();*/
   while (true) {

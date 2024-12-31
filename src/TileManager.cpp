@@ -22,9 +22,24 @@ std::shared_ptr<Tile> TileManager::findTileById (int id) const {
   return nullptr; // Tile not found
 }
 
-void TileManager::printTiles () const {
+void TileManager::printTiles() const {
+  // Create a vector to hold the tiles for sorting
+  std::vector<std::shared_ptr<Tile>> sortedTiles;
+
+  // Extract tiles from the map into the vector
   for (const auto &[id, tile] : tiles) {
-    std::cout << "Tile ID: " << id << " -> " << tile->toString () << std::endl;
+    sortedTiles.push_back(tile);
+  }
+
+  // Sort the vector based on tile IDs
+  std::sort(sortedTiles.begin(), sortedTiles.end(),
+            [](const std::shared_ptr<Tile> &a, const std::shared_ptr<Tile> &b) {
+              return a->getId() < b->getId();
+            });
+
+  // Print the sorted tiles
+  for (const auto &tile : sortedTiles) {
+    std::cout << "Tile ID: " << tile->getId() << " -> " << tile->toString() << std::endl;
   }
 }
 const std::vector<std::shared_ptr<Tile>> &TileManager::getWalkableTiles () const {

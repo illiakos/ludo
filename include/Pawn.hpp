@@ -18,7 +18,7 @@ public:
   int getTileId () { return tileId; }
   int getPlayerId () const { return playerId; }
   int getTeamId () const { return teamId; }
-  void setTileId (int tileId) { tileId = tileId; };
+  void setTileId (int t) { tileId = t; };
 
   void renderSelf () const override;
 
