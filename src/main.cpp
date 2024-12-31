@@ -356,7 +356,7 @@ int main () {
   // Base redBase(dimensions, red, 1, 10);
   //
   auto &baseManager = BaseManager::getInstance ();
-  auto redBase = std::make_shared<Base> (Dimensions (0, 9, 6, 6), red, 1, 10);
+  auto redBase = std::make_shared<Base> (Dimensions (0, 9, 6, 6), red, 1, 1);
   mapDrawer.addRenderable (redBase);
   baseManager.addBase(1, redBase);
 
@@ -431,13 +431,17 @@ int main () {
 
   // Process all events in the loop
   
-  eventLoop.enqueueEvent(std::make_shared<MovePawnEvent>(1, 10, 6));
+  /*eventLoop.processEvents();*/
+  eventLoop.start();
 
   std::this_thread::sleep_for (std::chrono::seconds (1));
-  eventLoop.processEvents();
+  eventLoop.enqueueEvent(std::make_shared<MovePawnEvent>(1, 10, 6));
 
 
+  std::this_thread::sleep_for (std::chrono::seconds (2));
+  eventLoop.enqueueEvent(std::make_shared<MovePawnEvent>(1, 10, 3));
 
+  /*eventLoop.stop();*/
   while (true) {
   }
   return 0;

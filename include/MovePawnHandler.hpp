@@ -21,7 +21,7 @@ private:
   Board &board;
   PawnManager &pawnManager;
 
-  void moveRegularTiles (Pawn &pawn, int steps);
+  void moveRegularTiles(std::shared_ptr<Pawn> pawn, int steps);
   void handleSafeTile (Pawn &pawn);
   void handlePrefinishingTile (Pawn &pawn, int steps);
   void handleFinishingTile (Pawn &pawn);

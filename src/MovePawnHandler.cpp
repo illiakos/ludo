@@ -1,4 +1,9 @@
 #include "MovePawnHandler.hpp"
+
+#include <iostream>
+#include <memory>
+#include <ostream>
+
 #include "Base.hpp"
 #include "BaseManager.hpp"
 #include "MovePawnEvent.hpp"
@@ -6,72 +11,73 @@
 #include "SpecialTiles.hpp"
 #include "TileContext.hpp"
 #include "TileManager.hpp"
-#include <iostream>
-#include <memory>
-#include <ostream>
 
 /*MovePawnHandler::MovePawnHandler(Board& board, PawnManager& pawnManager)*/
-/*    : EventHandler("MovePawnHandler"), board(board), pawnManager(pawnManager) {}*/
+/*    : EventHandler("MovePawnHandler"), board(board), pawnManager(pawnManager)
+ * {}*/
 
-void MovePawnHandler::handleEvent (const std::shared_ptr<Event> &event) {
+void MovePawnHandler::handleEvent(const std::shared_ptr<Event> &event) {
   std::cout << "handling event" << endl;
-  auto moveEvent = std::dynamic_pointer_cast<MovePawnEvent> (event);
+  auto moveEvent = std::dynamic_pointer_cast<MovePawnEvent>(event);
   if (moveEvent) {
-    TileManager &tileManager = TileManager::getInstance ();
-    auto &drawer = MapDrawer::getInstance ();
-    auto pawn = pawnManager.getPawn (moveEvent->getPawnId ());
+    TileManager &tileManager = TileManager::getInstance();
+    auto &drawer = MapDrawer::getInstance();
+    auto pawn = pawnManager.getPawn(moveEvent->getPawnId());
     int steps = moveEvent->stepsCount;
 
-    drawer.removeRenderable (pawn);
-    switch (pawn->getContext ()) {
-    case TileContext::Base:
+    drawer.removeRenderable(pawn);
+    switch (pawn->getContext()) {
+      case TileContext::Base:
 
-      if (steps == 6) {
-        auto &bm = BaseManager::getInstance ();
-        std::cout << pawn->getTeamId() << std::endl;
-        auto base = bm.getBaseByTeamId(pawn->getTeamId());
-        std::cout << base->toString() << std::endl;
-        if (!base) {
-          std::cerr << "Error: Base not found for team ID " << pawn->getTeamId() << " \n";
-          return;
+        if (steps == 6) {
+          auto &bm = BaseManager::getInstance();
+          std::cout << pawn->getTeamId() << std::endl;
+          auto base = bm.getBaseByTeamId(pawn->getTeamId());
+          std::cout << base->toString() << std::endl;
+          if (!base) {
+            std::cerr << "Error: Base not found for team ID "
+                      << pawn->getTeamId() << " \n";
+            return;
+          }
+
+          int startingTileId = base->getStartingTileId();
+
+          tileManager.printTiles();
+
+          auto startingTile = tileManager.findTileByContextAndPosition(
+              TileContext::Walkable, startingTileId);
+
+          std::cout << startingTile->toString() << endl;
+
+          if (!startingTile) {
+            std::cerr << "Error: Starting tile not found for tile ID "
+                      << startingTileId << "\n";
+            return;
+          }
+
+          pawn->setTileId(startingTileId);
+          pawn->setContext(TileContext::Walkable);
+          auto tileDimensions = startingTile->getDimensions();
+          auto newDimensions =
+              Dimensions(tileDimensions.x, tileDimensions.y,
+                         pawn->getDimensions().dx, pawn->getDimensions().dy);
+          pawn->setDimensions(newDimensions);
+          std::cout << "Pawn " << pawn->getId()
+                    << " moved from Base to Walkable starting tile.\n";
+          drawer.addRenderable(pawn);
+          /*base->freeSlot();*/
+        } else {
+          std::cout << "Pawn " << pawn->getId()
+                    << " cannot leave base without rolling a 6.\n";
         }
+        return;
+        break;
+      case TileContext::Walkable:
 
-        int startingTileId = base->getStartingTileId();
+        moveRegularTiles(pawn, steps);
+      default:
 
-        tileManager.printTiles();
-
-        auto startingTile = tileManager.findTileByContextAndPosition(
-            TileContext::Walkable, startingTileId);
-
-        std::cout << startingTile->toString() << endl;
-
-        if (!startingTile) {
-          std::cerr << "Error: Starting tile not found for tile ID " << startingTileId << "\n";
-          return;
-        }
-
-        pawn->setTileId (startingTileId);
-        pawn->setContext (TileContext::Walkable);
-        auto tileDimensions = startingTile->getDimensions ();
-        auto newDimensions = Dimensions (tileDimensions.x,
-            tileDimensions.y,
-            pawn->getDimensions ().dx,
-            pawn->getDimensions ().dy);
-        pawn->setDimensions (newDimensions);
-        std::cout << "Pawn " << pawn->getId () << " moved from Base to Walkable starting tile.\n";
-        drawer.addRenderable(pawn);
-        /*base->freeSlot();*/
-      } else {
-        std::cout << "Pawn " << pawn->getId () << " cannot leave base without rolling a 6.\n";
-      }
-      return;
-      break;
-    case TileContext::Walkable:
-
-      moveRegularTiles (*pawn, steps);
-    default:
-
-      break;
+        break;
     }
     // Case 1: Pawn is in Base
 
@@ -80,22 +86,27 @@ void MovePawnHandler::handleEvent (const std::shared_ptr<Event> &event) {
     /*    int currentTilePosition = pawn->getTileId();*/
     /*    int targetTilePosition = currentTilePosition + steps;*/
     /**/
-    /*    if (targetTilePosition > 50) { // Example threshold for finishing context*/
+    /*    if (targetTilePosition > 50) { // Example threshold for finishing
+     * context*/
     /*        int finishingTilePosition = targetTilePosition - 50;*/
     /**/
-    /*        auto tile = tileManager.findTileByContextAndPosition(TileContext::Finishing,
+    /*        auto tile =
+     * tileManager.findTileByContextAndPosition(TileContext::Finishing,
      * finishingTilePosition);*/
-    /*        PrefinishingTile* finishingTile = dynamic_cast<PrefinishingTile*>(tile.get());*/
-    /*        if (finishingTile && finishingTile->getTeamId() == pawn->getPlayerId()) {*/
+    /*        PrefinishingTile* finishingTile =
+     * dynamic_cast<PrefinishingTile*>(tile.get());*/
+    /*        if (finishingTile && finishingTile->getTeamId() ==
+     * pawn->getPlayerId()) {*/
     /*            pawn->setTileId(finishingTilePosition);*/
     /*            pawn->setContext(TileContext::Finishing);*/
     /*            pawn->setDimensions(finishingTile->getDimensions());*/
-    /*            std::cout << "Pawn " << pawn->getId() << " moved to finishing tiles.\n";*/
+    /*            std::cout << "Pawn " << pawn->getId() << " moved to finishing
+     * tiles.\n";*/
     /*            drawer.addRenderable(pawn);*/
     /*            return;*/
     /*        } else {*/
-    /*            std::cout << "Pawn " << pawn->getId() << " cannot enter the finishing tiles of
-     * another team.\n";*/
+    /*            std::cout << "Pawn " << pawn->getId() << " cannot enter the
+     * finishing tiles of another team.\n";*/
     /*            return;*/
     /*        }*/
     /*    }*/
@@ -105,84 +116,97 @@ void MovePawnHandler::handleEvent (const std::shared_ptr<Event> &event) {
     /*}*/
 
     // Case 2: Regular movement
-    moveRegularTiles (*pawn, steps);
-    drawer.addRenderable (pawn);
+    moveRegularTiles (pawn, steps);
+    drawer.addRenderable(pawn);
   }
 }
 
-void MovePawnHandler::moveRegularTiles (Pawn &pawn, int steps) {
-  auto &drawer = MapDrawer::getInstance ();
-  int currentTileId = pawn.getTileId ();
-  auto currentTile = TileManager::getInstance ().findTileById (currentTileId);
-  int currentPosition = currentTile->getPosition ();
-  drawer.removeRenderable (std::make_shared<Pawn> (pawn));
+void MovePawnHandler::moveRegularTiles(std::shared_ptr<Pawn> pawn, int steps) {
+  auto &tm = TileManager::getInstance();
+  auto &drawer = MapDrawer::getInstance();
+  int currentTileId = pawn->getTileId();
+  auto currentTile = tm.findTileById(currentTileId);
+  int currentPosition = currentTile->getPosition();
+  drawer.removeRenderable(pawn);
   for (int i = 0; i < steps; i++) {
     currentPosition++;
-
-    Tile *tile = board.getTileByPosition (currentTileId);
+    auto tile =
+        tm.findTileByContextAndPosition(TileContext::Walkable, currentPosition);
 
     if (!tile) {
-      std::cerr << "Error: Tile not found at position " << currentTileId << "\n";
+      std::cerr << "Error: Tile not found at position " << currentTileId
+                << "\n";
       return;
     }
 
     // Check if the tile is a TransitionTile
-    auto transitionTile = dynamic_cast<TransitionTile *> (tile);
-    if (transitionTile && transitionTile->getTeamId () == pawn.getPlayerId ()) {
+    auto transitionTile = dynamic_pointer_cast<TransitionTile>(tile);
+    if (transitionTile && transitionTile->getTeamId() == pawn->getPlayerId()) {
       // Move to the starting finishing tile
-      int finishingTileStartPosition = transitionTile->getFinishingTileStartPosition ();
-      auto finishingTile = TileManager::getInstance ().findTileByContextAndPosition (
-          TileContext::Finishing, finishingTileStartPosition);
+      int finishingTileStartPosition =
+          transitionTile->getFinishingTileStartPosition();
+      auto finishingTile =
+          TileManager::getInstance().findTileByContextAndPosition(
+              TileContext::Finishing, finishingTileStartPosition);
 
       if (finishingTile) {
-        pawn.setTileId (finishingTileStartPosition);
-        pawn.setContext (TileContext::Finishing);
-        pawn.setDimensions (finishingTile->getDimensions ());
-        std::cout << "Pawn " << pawn.getId () << " moved to Finishing context.\n";
+        pawn->setTileId(finishingTileStartPosition);
+        pawn->setContext(TileContext::Finishing);
+        pawn->setDimensions(finishingTile->getDimensions());
+        std::cout << "Pawn " << pawn->getId()
+                  << " moved to Finishing context.\n";
         return;
       } else {
-        std::cerr << "Error: Finishing tile not found at position " << finishingTileStartPosition
-                  << "\n";
+        std::cerr << "Error: Finishing tile not found at position "
+                  << finishingTileStartPosition << "\n";
         return;
       }
     }
 
+    auto destinationTile = tm.findTileByContextAndPosition(TileContext::Walkable, currentPosition);
+
     // Regular movement
-    pawn.setTileId (currentTileId);
+    pawn->setTileId(currentTileId);
+    auto newDimensions = Dimensions(destinationTile->getDimensions().x, destinationTile->getDimensions().y, pawn->getDimensions().dx, pawn->getDimensions().dy);
+    pawn->setDimensions(newDimensions);
+
+    drawer.addRenderable(pawn);
 
     // Check for eating pawns, safe tiles, etc. (existing logic)
   }
 }
 
-void MovePawnHandler::returnPawnToBase (int pawnId) {
-}
+void MovePawnHandler::returnPawnToBase(int pawnId) {}
 
-void MovePawnHandler::handleSafeTile (Pawn &pawn) {
-  std::cout << "Pawn " << pawn.getId () << " is safe on tile " << pawn.getTileId () << "\n";
+void MovePawnHandler::handleSafeTile(Pawn &pawn) {
+  std::cout << "Pawn " << pawn.getId() << " is safe on tile "
+            << pawn.getTileId() << "\n";
   // Additional safe tile behavior can be added here
 }
 
-void MovePawnHandler::handlePrefinishingTile (Pawn &pawn, int steps) {
-  int currentPreFinishPosition = pawn.getTileId ();
+void MovePawnHandler::handlePrefinishingTile(Pawn &pawn, int steps) {
+  int currentPreFinishPosition = pawn.getTileId();
   int firstFinishingTilePosition =
-      board.getTileByPosition (currentPreFinishPosition)->getPosition ();
+      board.getTileByPosition(currentPreFinishPosition)->getPosition();
 
-  if (canMoveToFinishingTile (currentPreFinishPosition, steps)) {
+  if (canMoveToFinishingTile(currentPreFinishPosition, steps)) {
     int newPosition = currentPreFinishPosition + steps;
     if (newPosition == firstFinishingTilePosition + 5) {
-      std::cout << "Pawn " << pawn.getId () << " reached the finishing tile!\n";
+      std::cout << "Pawn " << pawn.getId() << " reached the finishing tile!\n";
     }
-    pawn.setTileId (newPosition);
+    pawn.setTileId(newPosition);
   } else {
-    std::cout << "Pawn " << pawn.getId () << " cannot move due to insufficient steps.\n";
+    std::cout << "Pawn " << pawn.getId()
+              << " cannot move due to insufficient steps.\n";
   }
 }
 
-void MovePawnHandler::handleFinishingTile (Pawn &pawn) {
-  std::cout << "Pawn " << pawn.getId () << " has finished!\n";
+void MovePawnHandler::handleFinishingTile(Pawn &pawn) {
+  std::cout << "Pawn " << pawn.getId() << " has finished!\n";
   // Mark pawn as finished and update the game state
 }
 
-bool MovePawnHandler::canMoveToFinishingTile (int currentPreFinishPosition, int steps) {
+bool MovePawnHandler::canMoveToFinishingTile(int currentPreFinishPosition,
+                                             int steps) {
   return (currentPreFinishPosition + steps <= currentPreFinishPosition + 5);
 }
