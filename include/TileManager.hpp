@@ -2,6 +2,7 @@
 #define TILE_MANAGER_HPP
 
 #include "Renderable.hpp"
+#include "SpecialTiles.hpp"
 #include "Tile.hpp"
 #include <memory>
 #include <unordered_map>
@@ -27,6 +28,7 @@ public:
   void printTiles () const;
   std::shared_ptr<Tile> findTileByContextAndPosition (TileContext context, int position);
 
+  std::shared_ptr<PrefinishingTile> findPrefinishingTileByContextPositionAndTeam(TileContext context, int position, int teamId);
 private:
   RenderableContainer &renderContainer;
 

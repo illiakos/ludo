@@ -1,9 +1,9 @@
 
-if (NOT EXISTS "C:/Users/User/ludo/build/glfw/install_manifest.txt")
-    message(FATAL_ERROR "Cannot find install manifest: \"C:/Users/User/ludo/build/glfw/install_manifest.txt\"")
+if (NOT EXISTS "C:/Users/marrc/bul/cpp-project/alt/ludo/build/glfw/install_manifest.txt")
+    message(FATAL_ERROR "Cannot find install manifest: \"C:/Users/marrc/bul/cpp-project/alt/ludo/build/glfw/install_manifest.txt\"")
 endif()
 
-file(READ "C:/Users/User/ludo/build/glfw/install_manifest.txt" files)
+file(READ "C:/Users/marrc/bul/cpp-project/alt/ludo/build/glfw/install_manifest.txt" files)
 string(REGEX REPLACE "\n" ";" files "${files}")
 
 foreach (file ${files})

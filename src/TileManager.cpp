@@ -1,6 +1,7 @@
 #include "TileManager.hpp"
 #include "MapDrawer.hpp"
 #include "Renderable.hpp"
+#include "SpecialTiles.hpp"
 #include <iostream>
 #include <memory>
 #include <ostream>
@@ -60,3 +61,23 @@ std::shared_ptr<Tile> TileManager::findTileByContextAndPosition (
   }
   return nullptr; // Tile not found
 }
+
+
+std::shared_ptr<PrefinishingTile> TileManager::findPrefinishingTileByContextPositionAndTeam(
+    TileContext context, int position, int teamId) {
+  // Iterate through the tiles
+  for (const auto &[id, tile] : tiles) { // Use structured binding to unpack key-value pairs
+    // Check context and position
+    if (tile->getContext() == context && tile->getPosition() == position) {
+      // Attempt to downcast to PrefinishingTile
+      auto prefinishingTile = std::dynamic_pointer_cast<PrefinishingTile>(tile);
+
+      std::cout << "found similar tile : " << prefinishingTile->toString()  <<endl;
+      if (prefinishingTile && prefinishingTile->getTeamId() == teamId) {
+        return prefinishingTile; // Return the matching PrefinishingTile
+      }
+    }
+  }
+  return nullptr; // Return nullptr if no matching PrefinishingTile is found
+}
+

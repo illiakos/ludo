@@ -24,7 +24,7 @@ void Board::addStartingTile (Dimensions d, int id, int position, Color &color, i
 void Board::addPrefinishingTile (
     Dimensions d, int id, int position, int firstFinishingTilePosition, Color &color) {
   auto tile = std::make_unique<PrefinishingTile> (
-      d, id, position, firstFinishingTilePosition, color);
+      d, id, position, color, 1);
   tile->setFirstFinishingTilePosition (firstFinishingTilePosition);
   tiles.push_back (std::move (tile));
 }

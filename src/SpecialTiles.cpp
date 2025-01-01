@@ -9,9 +9,9 @@ bool FinishingTile::getIsFinish () {
   return isFinish;
 }
 
-int PrefinishingTile::getNextPosition () {
-  return nextPosition;
-}
+/*int PrefinishingTile::getNextPosition () {*/
+/*  return nextPosition;*/
+/*}*/
 
 void PrefinishingTile::setFirstFinishingTilePosition (int p) {
   firstFinishingTilePosition = p;

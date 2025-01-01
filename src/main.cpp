@@ -270,14 +270,14 @@ void initializeTiles () {
   // Finishing tiles
   for (int i = 1; i <= 5; i++) {
     // ALARM Я ТУТ НЕ РУХАВ ПОЗИШИН, ЛИШИВ ЯК Є!
-    auto redFinish = std::make_shared<FinishingTile> (
-        Dimensions (i, 7, 1, 1), 200 + i, i, red, i == 5);
-    auto blueFinish = std::make_shared<FinishingTile> (
-        Dimensions (7, i, 1, 1), 300 + i, i, blue, i == 5);
-    auto greenFinish = std::make_shared<FinishingTile> (
-        Dimensions (7, 14 - i, 1, 1), 400 + i, i, green, i == 5);
-    auto yellowFinish = std::make_shared<FinishingTile> (
-        Dimensions (14 - i, 7, 1, 1), 500 + i, i, yellow, i == 5);
+    auto redFinish = std::make_shared<PrefinishingTile> (
+        Dimensions (i, 7, 1, 1), 200 + i, i, red, 1);
+    auto blueFinish = std::make_shared<PrefinishingTile> (
+        Dimensions (7, i, 1, 1), 300 + i, i, blue, 3);
+    auto greenFinish = std::make_shared<PrefinishingTile> (
+        Dimensions (7, 14 - i, 1, 1), 400 + i, i, green,4);
+    auto yellowFinish = std::make_shared<PrefinishingTile> (
+        Dimensions (14 - i, 7, 1, 1), 500 + i, i, yellow,2);
 
     tileManager.addTile (redFinish);
     tileManager.addTile (blueFinish);
@@ -465,6 +465,9 @@ int main () {
   eventLoop.enqueueEvent(std::make_shared<MovePawnEvent>(1, 10, 5));
    std::this_thread::sleep_for (std::chrono::seconds (2));
   eventLoop.enqueueEvent(std::make_shared<MovePawnEvent>(1, 10, 5));
+
+  std::this_thread::sleep_for (std::chrono::seconds (2));
+  eventLoop.enqueueEvent(std::make_shared<MovePawnEvent>(1, 10, 2));
 
   /*eventLoop.stop();*/
   while (true) {

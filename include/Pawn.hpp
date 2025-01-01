@@ -12,7 +12,7 @@ class Pawn : public Renderable {
 
 public:
   Pawn (int id, int startingTile, int teamId, Dimensions dimensions, Color &color)
-      : id (id), tileId (startingTile), dimensions (dimensions), teamId (teamId), color (color) {}
+      : id (id), tileId (startingTile), dimensions (dimensions), teamId (teamId), color (color), active(true) {}
   const Dimensions &getDimensions () const { return dimensions; }
   int getId () const { return id; }
   int getTileId () { return tileId; }
@@ -25,6 +25,8 @@ public:
   TileContext getContext ();
   void setContext (TileContext context);
   void setDimensions (Dimensions d);
+  bool isActive();
+  void setActive(bool active);
 
 private:
   Dimensions dimensions;
@@ -34,6 +36,7 @@ private:
   Color color;
   TileContext context;
   /*Coordinates coordinates;*/
+  bool active = true;
   int tileId;
 };
 

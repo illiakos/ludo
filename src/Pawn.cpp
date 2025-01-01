@@ -13,10 +13,18 @@ const int RENDER_PRECISION = 1000;
 
 const double PI = 3.141592653589793;
 
+void Pawn::setActive(bool active) {
+  active = active;
+}
+
+bool Pawn::isActive() {
+  return active;
+}
+
 void Pawn::renderSelf () const {
 
   auto &drawer = MapDrawer::getInstance ();
-  if (context == TileContext::Walkable) {
+  if (context == TileContext::Walkable || context == TileContext::Finishing) {
 
     /*glColor3f (color.getRedf (), color.getGreenf (),*/
     /*    color.getBluef ());    // Set color*/
