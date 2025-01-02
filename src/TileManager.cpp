@@ -6,18 +6,18 @@
 #include <memory>
 #include <ostream>
 
-TileManager &TileManager::getInstance () {
-  static TileManager instance (MapDrawer::getInstance ());
+TileManager &TileManager::getInstance() {
+  static TileManager instance(MapDrawer::getInstance());
   return instance;
 }
 
-void TileManager::addTile (std::shared_ptr<Tile> tile) {
-  tiles[tile->getId ()] = tile;
+void TileManager::addTile(std::shared_ptr<Tile> tile) {
+  tiles[tile->getId()] = tile;
 }
 
-std::shared_ptr<Tile> TileManager::findTileById (int id) const {
-  auto it = tiles.find (id);
-  if (it != tiles.end ()) {
+std::shared_ptr<Tile> TileManager::findTileById(int id) const {
+  auto it = tiles.find(id);
+  if (it != tiles.end()) {
     return it->second;
   }
   return nullptr; // Tile not found
@@ -40,39 +40,45 @@ void TileManager::printTiles() const {
 
   // Print the sorted tiles
   for (const auto &tile : sortedTiles) {
-    std::cout << "Tile ID: " << tile->getId() << " -> " << tile->toString() << std::endl;
+    std::cout << "Tile ID: " << tile->getId() << " -> " << tile->toString()
+              << std::endl;
   }
 }
-const std::vector<std::shared_ptr<Tile>> &TileManager::getWalkableTiles () const {
+const std::vector<std::shared_ptr<Tile>> &
+TileManager::getWalkableTiles() const {
   return walkableTiles;
 }
 
-const std::vector<std::shared_ptr<Tile>> &TileManager::getBaseTiles () const {
+const std::vector<std::shared_ptr<Tile>> &TileManager::getBaseTiles() const {
   return baseTiles;
 }
 
-std::shared_ptr<Tile> TileManager::findTileByContextAndPosition (
-    TileContext context, int position) {
-  for (const auto &[id, tile] : tiles) { // Use structured binding to unpack key-value pairs
+std::shared_ptr<Tile>
+TileManager::findTileByContextAndPosition(TileContext context, int position) {
+  for (const auto &[id, tile] :
+       tiles) { // Use structured binding to unpack key-value pairs
 
-    if (tile->getContext () == context && tile->getPosition () == position) {
+    if (tile->getContext() == context && tile->getPosition() == position) {
       return tile;
     }
   }
   return nullptr; // Tile not found
 }
 
-
-std::shared_ptr<PrefinishingTile> TileManager::findPrefinishingTileByContextPositionAndTeam(
-    TileContext context, int position, int teamId) {
+std::shared_ptr<PrefinishingTile>
+TileManager::findPrefinishingTileByContextPositionAndTeam(TileContext context,
+                                                          int position,
+                                                          int teamId) {
   // Iterate through the tiles
-  for (const auto &[id, tile] : tiles) { // Use structured binding to unpack key-value pairs
+  for (const auto &[id, tile] :
+       tiles) { // Use structured binding to unpack key-value pairs
     // Check context and position
     if (tile->getContext() == context && tile->getPosition() == position) {
       // Attempt to downcast to PrefinishingTile
       auto prefinishingTile = std::dynamic_pointer_cast<PrefinishingTile>(tile);
 
-      std::cout << "found similar tile : " << prefinishingTile->toString()  <<endl;
+      std::cout << "found similar tile : " << prefinishingTile->toString()
+                << endl;
       if (prefinishingTile && prefinishingTile->getTeamId() == teamId) {
         return prefinishingTile; // Return the matching PrefinishingTile
       }
@@ -80,4 +86,3 @@ std::shared_ptr<PrefinishingTile> TileManager::findPrefinishingTileByContextPosi
   }
   return nullptr; // Return nullptr if no matching PrefinishingTile is found
 }
-

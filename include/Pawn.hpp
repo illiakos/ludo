@@ -11,34 +11,32 @@
 class Pawn : public Renderable {
 
 public:
-  Pawn (int id, int startingTile, int teamId, Dimensions dimensions, Color &color)
-      : id (id), tileId (startingTile), dimensions (dimensions), teamId (teamId), color (color), active(true) {
-        setZIndex(2);
-      }
-  const Dimensions& getDimensions() const override { return dimensions; }
-  int getId () const { return id; }
-  int getTileId () { return tileId; }
-  int getPlayerId () const { return playerId; }
-  int getTeamId () const { return teamId; }
-  void setTileId (int t) { tileId = t; };
+  Pawn(int id, int startingTile, int teamId, Dimensions dimensions,
+       Color &color)
+      : id(id), tileId(startingTile), dimensions(dimensions), teamId(teamId),
+        color(color), active(true) {
+    setZIndex(2);
+  }
+  const Dimensions &getDimensions() const override { return dimensions; }
+  int getId() const { return id; }
+  int getTileId() { return tileId; }
+  int getPlayerId() const { return playerId; }
+  int getTeamId() const { return teamId; }
+  void setTileId(int t) { tileId = t; };
 
-  void renderSelf () const override;
+  void renderSelf() const override;
 
-  TileContext getContext ();
-  void setContext (TileContext context);
-  void setDimensions (Dimensions d);
+  TileContext getContext();
+  void setContext(TileContext context);
+  void setDimensions(Dimensions d);
   bool isActive();
   void setActive(bool active);
 
   // Getter for z-index
-  int getZIndex() const override {
-    return zIndex;
-  };
+  int getZIndex() const override { return zIndex; };
 
   // Setter for z-index
-  void setZIndex(int z) override {
-    zIndex = z;
-  };
+  void setZIndex(int z) override { zIndex = z; };
 
 private:
   Dimensions dimensions;

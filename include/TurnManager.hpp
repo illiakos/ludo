@@ -6,20 +6,20 @@
 
 class TurnManager {
 public:
-  TurnManager (EventLoop &loop);
+  TurnManager(EventLoop &loop);
 
-  void startTurn (int startingPlayer, std::function<void ()> onGameOver);
-  void endTurn ();
+  void startTurn(int startingPlayer, std::function<void()> onGameOver);
+  void endTurn();
 
-  int getCurrentPlayerId () const;
+  int getCurrentPlayerId() const;
 
 private:
   EventLoop &eventLoop;
   int currentPlayerId;
   int totalPlayers;
-  std::function<void ()> gameOverCallback;
+  std::function<void()> gameOverCallback;
 
-  void startPlayerTurn ();
+  void startPlayerTurn();
 };
 
 #endif // TURN_MANAGER_H

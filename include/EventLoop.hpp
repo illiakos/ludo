@@ -13,11 +13,11 @@ class EventDispatcher;
 
 class EventLoop {
 public:
-  explicit EventLoop (EventDispatcher &dispatcher);
+  explicit EventLoop(EventDispatcher &dispatcher);
   ~EventLoop();
-  void enqueueEvent (const std::shared_ptr<Event> &event);
-  void pushEvent (const std::shared_ptr<Event> &event);
-  void processEvents ();
+  void enqueueEvent(const std::shared_ptr<Event> &event);
+  void pushEvent(const std::shared_ptr<Event> &event);
+  void processEvents();
 
   void start();
   void stop();

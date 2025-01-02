@@ -11,10 +11,11 @@ class TurnManager;
 
 class RollDiceHandler : public EventHandler {
 public:
-  void handleEvent (const std::shared_ptr<Event> &event) override;
+  void handleEvent(const std::shared_ptr<Event> &event) override;
 
-  RollDiceHandler (TurnManager &turnManager, EventLoop &eventLoop)
-      : EventHandler ("RollDice"), turnManager (turnManager), eventLoop (eventLoop) {};
+  RollDiceHandler(TurnManager &turnManager, EventLoop &eventLoop)
+      : EventHandler("RollDice"), turnManager(turnManager),
+        eventLoop(eventLoop) {};
 
 private:
   TurnManager &turnManager;

@@ -2,15 +2,13 @@
 #include "Team.hpp"
 #include <memory>
 
-TeamManager &TeamManager::getInstance () {
+TeamManager &TeamManager::getInstance() {
   static TeamManager instance;
   return instance;
 }
 
-void TeamManager::addTeam (Team &team) {
-  teams[team.id] = std::make_shared<Team> (team);
+void TeamManager::addTeam(Team &team) {
+  teams[team.id] = std::make_shared<Team>(team);
 }
 
-Team &TeamManager::getTeamById (int id) {
-  return *teams[id];
-}
+Team &TeamManager::getTeamById(int id) { return *teams[id]; }

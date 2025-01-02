@@ -7,9 +7,9 @@
 #include <string>
 class StopGameEvent : public Event {
 public:
-  StopGameEvent () { isBlocking = true; }
-  std::string getType () const override { return "StopGameEvent"; }
+  StopGameEvent() { isBlocking = true; }
+  std::string getType() const override { return "StopGameEvent"; }
 
-  bool isCompleted () const override { return true; }
+  bool isCompleted() const override { return true; }
 };
 #endif // !STOP_GAME_EVENT_H

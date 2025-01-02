@@ -6,11 +6,13 @@
 #include "TileContext.hpp"
 class StartingTile : public Tile {
 public:
-  StartingTile (Dimensions dimensions, int id, int position, Color &color, int teamId)
-      : Tile (dimensions, id, position, color, TileContext::Walkable), teamId (teamId) {};
+  StartingTile(Dimensions dimensions, int id, int position, Color &color,
+               int teamId)
+      : Tile(dimensions, id, position, color, TileContext::Walkable),
+        teamId(teamId) {};
 
-  void renderSelf () const override;
-  ~StartingTile ();
+  void renderSelf() const override;
+  ~StartingTile();
 
 private:
   int teamId;
@@ -18,12 +20,14 @@ private:
 
 class FinishingTile : public Tile {
 public:
-  FinishingTile (Dimensions dimensions, int id, int position, Color &color, bool isFinish)
-      : Tile (dimensions, id, position, color, TileContext::Finishing), isFinish (isFinish) {};
+  FinishingTile(Dimensions dimensions, int id, int position, Color &color,
+                bool isFinish)
+      : Tile(dimensions, id, position, color, TileContext::Finishing),
+        isFinish(isFinish) {};
 
-  bool getIsFinish ();
-  void renderSelf () const override;
-  ~FinishingTile ();
+  bool getIsFinish();
+  void renderSelf() const override;
+  ~FinishingTile();
 
 private:
   bool isFinish;
@@ -31,15 +35,15 @@ private:
 
 class PrefinishingTile : public Tile {
 public:
-  PrefinishingTile (Dimensions d, int id, int position, Color &color, int teamId)
-      : Tile (d, id, position, color, TileContext::Finishing), teamId(teamId) {};
+  PrefinishingTile(Dimensions d, int id, int position, Color &color, int teamId)
+      : Tile(d, id, position, color, TileContext::Finishing), teamId(teamId) {};
 
   /*int getNextPosition ();*/
-  void setFirstFinishingTilePosition (int pos);
-  int getFirstFinishingTilePosition ();
-  int getTeamId ();
-  void renderSelf () const override;
-  ~PrefinishingTile ();
+  void setFirstFinishingTilePosition(int pos);
+  int getFirstFinishingTilePosition();
+  int getTeamId();
+  void renderSelf() const override;
+  ~PrefinishingTile();
 
 private:
   int teamId;
@@ -49,26 +53,26 @@ private:
 
 class SafeTile : public Tile {
 public:
-  SafeTile (Dimensions d, int id, int position, Color &color) : Tile (d, id, position, color, TileContext::Walkable) {};
-  void renderSelf () const override;
-  ~SafeTile ();
+  SafeTile(Dimensions d, int id, int position, Color &color)
+      : Tile(d, id, position, color, TileContext::Walkable) {};
+  void renderSelf() const override;
+  ~SafeTile();
 };
 
 class TransitionTile : public Tile {
 public:
-  TransitionTile (Dimensions dimensions,
-      int id,
-      int position,
-      int teamId,
-      int finishingTileStartPosition,
-      Color color)
-      : Tile (dimensions, id, position, color, TileContext::Walkable), teamId (teamId),
-        finishingTileStartPosition (finishingTileStartPosition) {}
+  TransitionTile(Dimensions dimensions, int id, int position, int teamId,
+                 int finishingTileStartPosition, Color color)
+      : Tile(dimensions, id, position, color, TileContext::Walkable),
+        teamId(teamId), finishingTileStartPosition(finishingTileStartPosition) {
+  }
 
-  int getTeamId () const { return teamId; }
-  int getFinishingTileStartPosition () const { return finishingTileStartPosition; }
-  ~TransitionTile ();
-  void renderSelf () const override;
+  int getTeamId() const { return teamId; }
+  int getFinishingTileStartPosition() const {
+    return finishingTileStartPosition;
+  }
+  ~TransitionTile();
+  void renderSelf() const override;
 
 private:
   int teamId;

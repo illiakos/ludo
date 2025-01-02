@@ -9,7 +9,7 @@
 class Team {
 
 public:
-  Team (Color &color, int id) : color (color), id (id) {}
+  Team(Color &color, int id) : color(color), id(id) {}
 
   Color color;
   int id;

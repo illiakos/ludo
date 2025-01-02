@@ -3,19 +3,20 @@
 #include <iostream>
 
 class Dimensions {
- public:
+public:
   int x;
   int y;
 
-  float dx;  // Alternatively width
-  float dy;  // Alternatively height
+  float dx; // Alternatively width
+  float dy; // Alternatively height
 
   // Optional parameters
   int z;
   int dz;
 
   // Converts grid coordinates (0-15) to OpenGL coordinates
-  std::pair<float, float> gridToOpenGL(int x, int y, const Dimensions& gridDimensions);
+  std::pair<float, float> gridToOpenGL(int x, int y,
+                                       const Dimensions &gridDimensions);
 
   Dimensions(int x, int y, float dx, float dy) : x(x), y(y), dx(dx), dy(dy) {};
   friend std::ostream &operator<<(std::ostream &os, const Dimensions &d) {
@@ -26,4 +27,4 @@ class Dimensions {
   }
 };
 
-#endif  // !DIMENSIONS_H
+#endif // !DIMENSIONS_H

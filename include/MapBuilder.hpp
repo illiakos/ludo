@@ -3,7 +3,7 @@
 
 class MapBuilder {
 public:
-  void buildDefault ();
+  void buildDefault();
 };
 
 #endif // !MAP_BUILDER_HPP

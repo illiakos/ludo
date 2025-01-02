@@ -6,11 +6,10 @@
 #include "Coordinates.hpp"
 #include "Dimensions.hpp"
 
-
 void PawnManager::addPawn(const std::shared_ptr<Pawn> &pawn) {
-  auto pawnId = pawn->getId();  // Access ID through the shared pointer
+  auto pawnId = pawn->getId(); // Access ID through the shared pointer
   if (pawns.find(pawnId) == pawns.end()) {
-    pawns[pawnId] = pawn;  // Directly assign the shared pointer
+    pawns[pawnId] = pawn; // Directly assign the shared pointer
     std::cout << "Added Pawn " << pawnId
               << " at tile x: " << pawn->getDimensions().x
               << "; y: " << pawn->getDimensions().y << ".\n";
@@ -40,7 +39,7 @@ std::shared_ptr<Pawn> PawnManager::getPawn(int pawnId) const {
 
 int PawnManager::getPawnTileId(int pawnId) const {
   auto pawn = getPawn(pawnId);
-  return pawn ? pawn->getTileId() : -1;  // Return -1 if the pawn is not found
+  return pawn ? pawn->getTileId() : -1; // Return -1 if the pawn is not found
 }
 
 std::shared_ptr<Pawn> PawnManager::getPawnAtTileId(int tileId) const {
@@ -49,7 +48,7 @@ std::shared_ptr<Pawn> PawnManager::getPawnAtTileId(int tileId) const {
       return pawn;
     }
   }
-  return nullptr;  // Return nullptr if no pawn exists at the specified tile
+  return nullptr; // Return nullptr if no pawn exists at the specified tile
 }
 
 bool PawnManager::hasPawnAtTile(int tileId) const {

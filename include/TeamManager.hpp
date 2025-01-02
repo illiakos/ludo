@@ -6,16 +6,16 @@
 #include <unordered_map>
 class TeamManager {
 public:
-  static TeamManager &getInstance ();
-  void addTeam (Team &team);
-  Team &getTeamById (int id);
+  static TeamManager &getInstance();
+  void addTeam(Team &team);
+  Team &getTeamById(int id);
 
 private:
   std::unordered_map<int, std::shared_ptr<Team>> teams;
 
-  TeamManager () = default;
-  TeamManager (const TeamManager &) = delete;
-  TeamManager &operator= (const TeamManager &) = delete;
+  TeamManager() = default;
+  TeamManager(const TeamManager &) = delete;
+  TeamManager &operator=(const TeamManager &) = delete;
 };
 
 #endif // !TEAM_MANAGER_HPP

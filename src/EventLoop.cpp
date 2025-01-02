@@ -1,10 +1,10 @@
 #include "EventLoop.hpp"
 #include "Event.hpp"
 #include "EventDispatcher.hpp"
+#include <chrono>
 #include <iostream>
 #include <memory>
 #include <ostream>
-#include <chrono>
 
 EventLoop::EventLoop(EventDispatcher &dispatcher)
     : dispatcher(dispatcher), running(false) {}
@@ -37,9 +37,7 @@ void EventLoop::processEvents() {
       std::unique_lock<std::mutex> lock(eventsMutex);
 
       // Wait for events or stop signal
-      eventCondition.wait(lock, [this] {
-        return !events.empty() || !running;
-      });
+      eventCondition.wait(lock, [this] { return !events.empty() || !running; });
 
       if (!running && events.empty()) {
         break; // Exit the loop if not running and no events to process

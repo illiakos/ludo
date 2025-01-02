@@ -7,11 +7,11 @@
 
 class WaitForChoosePawnHandler : public EventHandler {
 public:
-  WaitForChoosePawnHandler (TurnManager &turnManager, EventLoop &eventLoop)
-      : EventHandler ("WaitForChoosePawnHandler"), turnManager (turnManager),
-        eventLoop (eventLoop) {}
+  WaitForChoosePawnHandler(TurnManager &turnManager, EventLoop &eventLoop)
+      : EventHandler("WaitForChoosePawnHandler"), turnManager(turnManager),
+        eventLoop(eventLoop) {}
 
-  void handleEvent (const std::shared_ptr<Event> &event) override;
+  void handleEvent(const std::shared_ptr<Event> &event) override;
 
 private:
   TurnManager &turnManager;

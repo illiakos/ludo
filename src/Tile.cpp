@@ -21,13 +21,13 @@ void Tile::renderSelf() const {
 
 std::string contextToString(TileContext context) {
   switch (context) {
-    case TileContext::Walkable:
+  case TileContext::Walkable:
 
-      return "Walkable";
-    case TileContext::Base:
-      return "Base";
-    case TileContext::Finishing:
-      return "Finishing";
+    return "Walkable";
+  case TileContext::Base:
+    return "Base";
+  case TileContext::Finishing:
+    return "Finishing";
   }
   return "";
 }
@@ -54,13 +54,13 @@ TileContext Tile::getContext() { return context; }
 // Helper to convert context to string
 std::string Tile::contextToString(TileContext context) const {
   switch (context) {
-    case TileContext::Base:
-      return "Base";
-    case TileContext::Walkable:
-      return "Walkable";
-    case TileContext::Finishing:
-      return "Finishing";
-    default:
-      return "Unknown";
+  case TileContext::Base:
+    return "Base";
+  case TileContext::Walkable:
+    return "Walkable";
+  case TileContext::Finishing:
+    return "Finishing";
+  default:
+    return "Unknown";
   }
 }

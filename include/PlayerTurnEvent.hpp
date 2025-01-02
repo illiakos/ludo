@@ -6,14 +6,14 @@
 #include "Event.hpp"
 class PlayerTurnEvent : public Event {
 public:
-  explicit PlayerTurnEvent (int playerId)
-      : playerId (playerId), Event (true), turnCompleted (false) {}
+  explicit PlayerTurnEvent(int playerId)
+      : playerId(playerId), Event(true), turnCompleted(false) {}
 
-  std::string getType () const override { return "PlayerTurnEvent"; }
+  std::string getType() const override { return "PlayerTurnEvent"; }
 
-  bool isCompleted () const override { return turnCompleted; }
+  bool isCompleted() const override { return turnCompleted; }
 
-  void completeTurn () { turnCompleted = true; }
+  void completeTurn() { turnCompleted = true; }
 
   int playerId;
 

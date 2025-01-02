@@ -27,7 +27,7 @@ const double PI = 3.141592653589793;
 /*}*/
 
 MapDrawer &MapDrawer::getInstance() {
-  static MapDrawer instance(800, 15);  // Single instance
+  static MapDrawer instance(800, 15); // Single instance
   return instance;
 }
 
@@ -43,9 +43,9 @@ float MapDrawer::getCellSize() {
   float conversionFactor = 2.0f / windowSize;
 
   float cellSizePixels =
-      static_cast<float>(windowSize) / mapSize;  // ~47.0588 pixels
+      static_cast<float>(windowSize) / mapSize; // ~47.0588 pixels
   float cellSizeOpenGL =
-      cellSizePixels * conversionFactor;  // ~0.117647 OpenGL units
+      cellSizePixels * conversionFactor; // ~0.117647 OpenGL units
   return cellSizeOpenGL;
 }
 
@@ -78,7 +78,7 @@ void MapDrawer::drawRectangle(float x, float y, float width, float height,
 
   if (mode == STROKED || mode == FILLED_WITH_STROKE) {
     // Draw rectangle border (stroke)
-    glLineWidth(borderWidth);  // Set line thickness
+    glLineWidth(borderWidth); // Set line thickness
     glColor3f(strokeColor.getRedf(), strokeColor.getGreenf(),
               strokeColor.getBluef());
     glBegin(GL_LINE_LOOP);
@@ -92,8 +92,8 @@ void MapDrawer::drawRectangle(float x, float y, float width, float height,
 
 void MapDrawer::drawCircle(float cx, float cy, float radius, const Color &color,
                            int segments = 1000) {
-  glColor3f(color.getRedf(), color.getGreenf(), color.getBluef());  // Set color
-  glBegin(GL_TRIANGLE_FAN);  // Begin drawing a filled circle
+  glColor3f(color.getRedf(), color.getGreenf(), color.getBluef()); // Set color
+  glBegin(GL_TRIANGLE_FAN); // Begin drawing a filled circle
 
   float halfCellSize = getSizeOfCells(1) / 2;
   // Center of the circle
@@ -101,23 +101,23 @@ void MapDrawer::drawCircle(float cx, float cy, float radius, const Color &color,
 
   // Draw the circle by approximating it with triangles
   for (int i = 0; i <= segments; i++) {
-    float angle = 2.0f * PI * i / segments;  // Angle in radians
+    float angle = 2.0f * PI * i / segments; // Angle in radians
     float x = radius * cos(angle);
     float y = radius * sin(angle);
     glVertex2f(cx + x + halfCellSize, cy + y + halfCellSize);
   }
 
-  glEnd();  // End drawing
+  glEnd(); // End drawing
 }
 
 void MapDrawer::drawTriangle(float x1, float y1, float x2, float y2, float x3,
                              float y3, const Color &color) {
-  glColor3f(color.getRedf(), color.getGreenf(), color.getBluef());  // Set color
-  glBegin(GL_TRIANGLES);  // Begin drawing a triangle
-  glVertex2f(x1, y1);     // First vertex
-  glVertex2f(x2, y2);     // Second vertex
-  glVertex2f(x3, y3);     // Third vertex
-  glEnd();                // End drawing
+  glColor3f(color.getRedf(), color.getGreenf(), color.getBluef()); // Set color
+  glBegin(GL_TRIANGLES); // Begin drawing a triangle
+  glVertex2f(x1, y1);    // First vertex
+  glVertex2f(x2, y2);    // Second vertex
+  glVertex2f(x3, y3);    // Third vertex
+  glEnd();               // End drawing
 }
 
 void MapDrawer::drawStar(float cx, float cy, float outerRadius,
@@ -127,13 +127,12 @@ void MapDrawer::drawStar(float cx, float cy, float outerRadius,
     return;
   }
 
-  glColor3f(color.getRedf(), color.getGreenf(), color.getBluef());  // Set color
-  glBegin(GL_TRIANGLE_FAN);  // Use a triangle fan for the star
+  glColor3f(color.getRedf(), color.getGreenf(), color.getBluef()); // Set color
+  glBegin(GL_TRIANGLE_FAN); // Use a triangle fan for the star
 
-  float angleStep = M_PI / numPoints;  // Step between outer and inner points
-                                       // (half angle between star points)
-  float angle =
-      -M_PI_2;  // Start angle (-90 degrees to orient the star upwards)
+  float angleStep = M_PI / numPoints; // Step between outer and inner points
+                                      // (half angle between star points)
+  float angle = -M_PI_2; // Start angle (-90 degrees to orient the star upwards)
 
   // Draw the center of the star
   glVertex2f(cx, cy);
@@ -152,7 +151,7 @@ void MapDrawer::drawStar(float cx, float cy, float outerRadius,
     angle += angleStep;
   }
 
-  glEnd();  // End drawing
+  glEnd(); // End drawing
 }
 
 void MapDrawer::drawArrow(float xStart, float yStart, float xEnd, float yEnd,
@@ -192,9 +191,9 @@ void MapDrawer::drawArrow(float xStart, float yStart, float xEnd, float yEnd,
 
   // Draw the arrowhead
   glBegin(GL_TRIANGLES);
-  glVertex2f(xEnd, yEnd);                // Tip of the arrowhead
-  glVertex2f(arrowLeftX, arrowLeftY);    // Left side of the arrowhead
-  glVertex2f(arrowRightX, arrowRightY);  // Right side of the arrowhead
+  glVertex2f(xEnd, yEnd);               // Tip of the arrowhead
+  glVertex2f(arrowLeftX, arrowLeftY);   // Left side of the arrowhead
+  glVertex2f(arrowRightX, arrowRightY); // Right side of the arrowhead
   glEnd();
 }
 
@@ -202,12 +201,12 @@ void MapDrawer::drawBase(float x, float y, const Color &color) {
   // Draw colored bg
   drawRectangle(getCellPosition(x), getCellPosition(y), getSizeOfCells(6),
                 getSizeOfCells(6),
-                color);  // Blue color
+                color); // Blue color
 
   // Draw white part
   drawRectangle(getCellPosition(x + 1), getCellPosition(y + 1),
                 getSizeOfCells(4), getSizeOfCells(4),
-                white);  // White color
+                white); // White color
   /*drawCircle(getCellPosition(x + 1.5), getCellPosition(y + 1.5),
    * getSizeOfCells(0.45), color);*/
   /*drawCircle(getCellPosition(x + 3.5), getCellPosition(y + 1.5),
@@ -260,50 +259,50 @@ void MapDrawer::drawMiddle() {
                 getSizeOfCells(3), gray);
 
   // Shared variables
-  float cellSize = getSizeOfCells(1);             // Single cell size
-  float halfCell = cellSize / 2;                  // Half cell size
-  float centerX = getCellPosition(7) + halfCell;  // Center X position
-  float centerY = getCellPosition(7) + halfCell;  // Center Y position
+  float cellSize = getSizeOfCells(1);            // Single cell size
+  float halfCell = cellSize / 2;                 // Half cell size
+  float centerX = getCellPosition(7) + halfCell; // Center X position
+  float centerY = getCellPosition(7) + halfCell; // Center Y position
 
   // Draw Red Triangle (bottom-left to center to top-left)
-  drawTriangle(
-      getCellPosition(6),
-      getCellPosition(6),  // Bottom-left corner
-      centerX,
-      centerY,  // Center of the square
-      getCellPosition(6),
-      getCellPosition(8) + cellSize,  // Top-left (y3 shifted up by 1 cell)
-      red);
+  drawTriangle(getCellPosition(6),
+               getCellPosition(6), // Bottom-left corner
+               centerX,
+               centerY, // Center of the square
+               getCellPosition(6),
+               getCellPosition(8) +
+                   cellSize, // Top-left (y3 shifted up by 1 cell)
+               red);
 
   // Draw Blue Triangle (bottom-left to center to bottom-right)
   drawTriangle(getCellPosition(6),
-               getCellPosition(6),  // Bottom-left corner
+               getCellPosition(6), // Bottom-left corner
                centerX,
-               centerY,  // Center of the square
+               centerY, // Center of the square
                getCellPosition(8) + cellSize,
-               getCellPosition(6),  // Bottom-right (x3 shifted right by 1 cell)
-               blue                 // Blue color
+               getCellPosition(6), // Bottom-right (x3 shifted right by 1 cell)
+               blue                // Blue color
   );
 
   // Draw Green Triangle (top-left to center to top-right)
   drawTriangle(
       getCellPosition(6),
-      getCellPosition(8) + cellSize,  // Top-left corner
+      getCellPosition(8) + cellSize, // Top-left corner
       centerX,
-      centerY,  // Center of the square
+      centerY, // Center of the square
       getCellPosition(8) + cellSize,
-      getCellPosition(8) + cellSize,  // Top-right (x3 shifted right by 1 cell)
-      green                           // Green color
+      getCellPosition(8) + cellSize, // Top-right (x3 shifted right by 1 cell)
+      green                          // Green color
   );
 
   // Draw Yellow Triangle (bottom-right to center to top-right)
   drawTriangle(getCellPosition(8) + cellSize,
-               getCellPosition(8) + cellSize,  // Bottom-right corner
+               getCellPosition(8) + cellSize, // Bottom-right corner
                centerX,
-               centerY,  // Center of the square
+               centerY, // Center of the square
                getCellPosition(8) + cellSize,
-               getCellPosition(6),  // Top-right (y3 shifted up by 1 cell)
-               yellow               // Yellow color
+               getCellPosition(6), // Top-right (y3 shifted up by 1 cell)
+               yellow              // Yellow color
   );
 }
 
@@ -402,7 +401,7 @@ bool doDimensionsOverlap(const Dimensions &dim1, const Dimensions &dim2) {
 std::shared_ptr<Renderable> MapDrawer::findByDimensionsRange(float clickX,
                                                              float clickY) {
   std::lock_guard<std::mutex> lock(
-      renderablesMutex);  // Lock renderables for thread safety
+      renderablesMutex); // Lock renderables for thread safety
 
   // Calculate cell size in OpenGL units
   float cellSizeOpenGL = getCellSize();
@@ -411,7 +410,8 @@ std::shared_ptr<Renderable> MapDrawer::findByDimensionsRange(float clickX,
   int maxZIndex = std::numeric_limits<int>::min();
 
   for (const auto &renderable : renderableItems) {
-    if (!renderable) continue;  // Skip if the pointer is null
+    if (!renderable)
+      continue; // Skip if the pointer is null
 
     // Get the renderable's dimensions in cell indices
     Dimensions renderableDim = renderable->getDimensions();
@@ -441,7 +441,7 @@ std::shared_ptr<Renderable> MapDrawer::findByDimensionsRange(float clickX,
     float minY = renderableYOpenGL;
     float maxY = renderableYOpenGL + renderableDYOpenGL;
 
-    if (renderable->getZIndex() == 2) {  // Assuming this implies a circle
+    if (renderable->getZIndex() == 2) { // Assuming this implies a circle
       float radius = cellSizeOpenGL * 0.45f;
 
       // Center of the circle
@@ -475,5 +475,5 @@ std::shared_ptr<Renderable> MapDrawer::findByDimensionsRange(float clickX,
     }
   }
 
-  return highestZIndexRenderable;  // Return the renderable with the highest
+  return highestZIndexRenderable; // Return the renderable with the highest
 }

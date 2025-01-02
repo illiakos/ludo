@@ -11,9 +11,10 @@
 
 class PlayerTurnHandler : public EventHandler {
 public:
-  PlayerTurnHandler (EventLoop &loop, int totalPlayers, TurnManager &turnManager);
+  PlayerTurnHandler(EventLoop &loop, int totalPlayers,
+                    TurnManager &turnManager);
 
-  void handleEvent (const std::shared_ptr<Event> &event) override;
+  void handleEvent(const std::shared_ptr<Event> &event) override;
 
 private:
   EventLoop &eventLoop;
