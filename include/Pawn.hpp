@@ -12,8 +12,10 @@ class Pawn : public Renderable {
 
 public:
   Pawn (int id, int startingTile, int teamId, Dimensions dimensions, Color &color)
-      : id (id), tileId (startingTile), dimensions (dimensions), teamId (teamId), color (color), active(true) {}
-  const Dimensions &getDimensions () const { return dimensions; }
+      : id (id), tileId (startingTile), dimensions (dimensions), teamId (teamId), color (color), active(true) {
+        setZIndex(2);
+      }
+  const Dimensions& getDimensions() const override { return dimensions; }
   int getId () const { return id; }
   int getTileId () { return tileId; }
   int getPlayerId () const { return playerId; }
@@ -28,11 +30,22 @@ public:
   bool isActive();
   void setActive(bool active);
 
+  // Getter for z-index
+  int getZIndex() const override {
+    return zIndex;
+  };
+
+  // Setter for z-index
+  void setZIndex(int z) override {
+    zIndex = z;
+  };
+
 private:
   Dimensions dimensions;
   int teamId;
   int id;
   int playerId;
+  int zIndex = 2;
   Color color;
   TileContext context;
   /*Coordinates coordinates;*/

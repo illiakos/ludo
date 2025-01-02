@@ -4,14 +4,21 @@
 #define RENDERABLE_H
 
 #include <memory>
+#include "Dimensions.hpp"
 class MapDrawer;
 
 class Renderable {
 public:
-  virtual void renderSelf () const = 0;
-  virtual ~Renderable () = default;
-};
+  virtual void renderSelf() const = 0;
+  virtual ~Renderable() = default;
+  virtual const Dimensions& getDimensions() const = 0;
 
+  // Getter for z-index
+  virtual int getZIndex() const = 0;
+
+  // Setter for z-index
+  virtual void setZIndex(int z) = 0;
+};
 class RenderableContainer {
 public:
   virtual void addRenderable (const std::shared_ptr<Renderable> r) = 0;

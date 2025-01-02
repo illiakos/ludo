@@ -45,8 +45,6 @@ std::string Tile::toString() {
   return oss.str();
 }
 
-Dimensions Tile::getDimensions() { return dimensions; }
-
 int Tile::getPosition() const { return position; }
 
 int Tile::getId() const { return id; }

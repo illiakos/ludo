@@ -64,6 +64,7 @@
         "typeinfo": "cpp",
         "variant": "cpp",
         "mutex": "cpp",
-        "condition_variable": "cpp"
+        "condition_variable": "cpp",
+        "queue": "cpp"
     }
 }

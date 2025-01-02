@@ -21,7 +21,7 @@ bool Pawn::isActive() {
   return active;
 }
 
-void Pawn::renderSelf () const {
+void Pawn:: renderSelf () const {
 
   auto &drawer = MapDrawer::getInstance ();
   if (context == TileContext::Walkable || context == TileContext::Finishing) {

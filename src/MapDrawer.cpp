@@ -341,7 +341,7 @@ void MapDrawer::drawMap() {
     return;
   }
 
-  GLFWwindow *window =
+  window =
       glfwCreateWindow(windowSize, windowSize, "GLFW Test Window", NULL, NULL);
 
   // Make the window's context current
@@ -371,8 +371,7 @@ void MapDrawer::drawMap() {
   glfwTerminate();
 }
 
-void MapDrawer::log() {
-}
+void MapDrawer::log() {}
 void MapDrawer::addRenderable(std::shared_ptr<Renderable> renderable) {
   std::lock_guard<std::mutex> lock(renderablesMutex);
   renderableItems.push_back(renderable);
@@ -387,4 +386,94 @@ void MapDrawer::removeRenderable(std::shared_ptr<Renderable> renderable) {
 void MapDrawer::clearRenderables() {
   std::lock_guard<std::mutex> lock(renderablesMutex);
   renderableItems.clear();
+}
+
+// Helper function to check if two ranges overlap
+bool doDimensionsOverlap(const Dimensions &dim1, const Dimensions &dim2) {
+  // Check for overlap in the x-dimension
+  bool xOverlap = !(dim1.x + dim1.dx <= dim2.x || dim2.x + dim2.dx <= dim1.x);
+
+  // Check for overlap in the y-dimension
+  bool yOverlap = !(dim1.y + dim1.dy <= dim2.y || dim2.y + dim2.dy <= dim1.y);
+
+  return xOverlap && yOverlap;
+}
+
+std::shared_ptr<Renderable> MapDrawer::findByDimensionsRange(float clickX,
+                                                             float clickY) {
+  std::lock_guard<std::mutex> lock(
+      renderablesMutex);  // Lock renderables for thread safety
+
+  // Calculate cell size in OpenGL units
+  float cellSizeOpenGL = getCellSize();
+
+  std::shared_ptr<Renderable> highestZIndexRenderable = nullptr;
+  int maxZIndex = std::numeric_limits<int>::min();
+
+  for (const auto &renderable : renderableItems) {
+    if (!renderable) continue;  // Skip if the pointer is null
+
+    // Get the renderable's dimensions in cell indices
+    Dimensions renderableDim = renderable->getDimensions();
+
+    // Convert renderable cell indices to OpenGL coordinates
+    float renderableXOpenGL = getCellPosition(renderableDim.x);
+    float renderableYOpenGL = getCellPosition(renderableDim.y);
+    float renderableDXOpenGL = getSizeOfCells(renderableDim.dx);
+    float renderableDYOpenGL = getSizeOfCells(renderableDim.dy);
+
+    if (renderable->getZIndex() == 2) {
+      cout << "PAWN!!!! renderableDim" << " " << renderableXOpenGL << " "
+           << renderableYOpenGL << " " << renderableDXOpenGL << " "
+           << renderableDYOpenGL << " " << renderable->getDimensions() << endl;
+      // cout << "PAWN!!!! gridDimension" << " " << gridDimension.x << " " <<
+      // gridDimension.y << " "  << gridDimension.dx << " " << gridDimension.dy
+      // << endl;
+    } else {
+      cout << "Tile!!!! renderableDim" << " " << renderableXOpenGL << " "
+           << renderableYOpenGL << " " << renderableDXOpenGL << " "
+           << renderableDYOpenGL << " " << renderable->getDimensions() << endl;
+    }
+
+    // Calculate the OpenGL boundaries of the renderable
+    float minX = renderableXOpenGL;
+    float maxX = renderableXOpenGL + renderableDXOpenGL;
+    float minY = renderableYOpenGL;
+    float maxY = renderableYOpenGL + renderableDYOpenGL;
+
+    if (renderable->getZIndex() == 2) {  // Assuming this implies a circle
+      float radius = cellSizeOpenGL * 0.45f;
+
+      // Center of the circle
+      float centerX = renderableXOpenGL + cellSizeOpenGL / 2;
+      float centerY = renderableYOpenGL + cellSizeOpenGL / 2;
+
+      // Debugging
+      std::cout << "Circle Center: (" << centerX << ", " << centerY << ")\n";
+      std::cout << "Click Position: (" << clickX << ", " << clickY << ")\n";
+
+      // Check if the click is within the circle
+      float distanceSquared = (clickX - centerX) * (clickX - centerX) +
+                              (clickY - centerY) * (clickY - centerY);
+      if (distanceSquared <= radius * radius) {
+        std::cout << "Click is on the circle.\n";
+        int zIndex = renderable->getZIndex();
+        if (!highestZIndexRenderable || zIndex > maxZIndex) {
+          highestZIndexRenderable = renderable;
+          maxZIndex = zIndex;
+        }
+      }
+    } else if (renderable->getZIndex() == 1) {
+      if (clickX >= minX && clickX <= maxX && clickY >= minY &&
+          clickY <= maxY) {
+        int zIndex = renderable->getZIndex();
+        if (!highestZIndexRenderable || zIndex > maxZIndex) {
+          highestZIndexRenderable = renderable;
+          maxZIndex = zIndex;
+        }
+      }
+    }
+  }
+
+  return highestZIndexRenderable;  // Return the renderable with the highest
 }

@@ -18,6 +18,8 @@
 #include "TileContext.hpp"
 #include "TileManager.hpp"
 #include "TurnManager.hpp"
+#include "ClickHandler.hpp"
+#include "WindowManager.hpp"
 #include <GLFW/glfw3.h>
 #include <ft2build.h>
 #include <iostream>
@@ -291,6 +293,31 @@ void initializeTiles () {
   }
 }
 
+void leftClickHandler(double x, double y) {
+    auto &mapDrawer = MapDrawer::getInstance();
+    
+    // Get the window size
+    auto windowSize = WindowManager::getInstance().getWindowSize();
+    int windowWidth = windowSize.first;
+    int windowHeight = windowSize.second;
+
+    // Convert from window coordinates to OpenGL coordinates
+    float normalizedX = static_cast<float>(x) / 800 * 2.0f - 1.0f;
+    float normalizedY = 1.0f - static_cast<float>(y) / 800 * 2.0f;
+
+    // Find the renderable at the normalized coordinates
+    auto renderable = mapDrawer.findByDimensionsRange(normalizedX, normalizedY);
+
+    std::cout << "Left click at window coordinates (" << x << ", " << y << ")\n";
+    std::cout << "Converted to OpenGL coordinates (" << normalizedX << ", " << normalizedY << ")\n";
+    if (renderable) {
+        std::cout << "Renderable found: " << renderable << " " << renderable->getZIndex() << " " << renderable->getDimensions() << std::endl;
+    } else {
+        std::cout << "No renderable found at the clicked position." << std::endl;
+    }
+}
+
+
 int main () {
   std::cout << "Testing libraries..." << std::endl;
 
@@ -394,11 +421,16 @@ int main () {
   auto randomAssPawn = std::make_shared<Pawn> (10,
       1,
       1,
-      Dimensions (0, 9, mapDrawer.getSizeOfCells (0.45), mapDrawer.getSizeOfCells (0.45)),
+      Dimensions (0, 9, 0.45, 0.45),
       red);
   pawnManager.addPawn (randomAssPawn);
   randomAssPawn->setContext (TileContext::Base);
   mapDrawer.addRenderable (randomAssPawn);
+
+  glfwMakeContextCurrent(mapDrawer.window);
+
+  ClickHandler clickHandler(mapDrawer.window);
+  clickHandler.registerClickCallback(GLFW_MOUSE_BUTTON_LEFT, leftClickHandler);
 
   initializeTiles ();
 
@@ -441,33 +473,33 @@ int main () {
   std::this_thread::sleep_for (std::chrono::seconds (2));
   eventLoop.enqueueEvent(std::make_shared<MovePawnEvent>(1, 10, 3));
 
-  std::this_thread::sleep_for (std::chrono::seconds (2));
-  eventLoop.enqueueEvent(std::make_shared<MovePawnEvent>(1, 10, 5));
-  std::this_thread::sleep_for (std::chrono::seconds (2));
-  eventLoop.enqueueEvent(std::make_shared<MovePawnEvent>(1, 10, 5));
-  std::this_thread::sleep_for (std::chrono::seconds (2));
-  eventLoop.enqueueEvent(std::make_shared<MovePawnEvent>(1, 10, 5));
-  std::this_thread::sleep_for (std::chrono::seconds (2));
-  eventLoop.enqueueEvent(std::make_shared<MovePawnEvent>(1, 10, 5));
-  std::this_thread::sleep_for (std::chrono::seconds (2));
-  eventLoop.enqueueEvent(std::make_shared<MovePawnEvent>(1, 10, 5));
-  std::this_thread::sleep_for (std::chrono::seconds (2));
-  eventLoop.enqueueEvent(std::make_shared<MovePawnEvent>(1, 10, 5));
-  std::this_thread::sleep_for (std::chrono::seconds (2));
-  eventLoop.enqueueEvent(std::make_shared<MovePawnEvent>(1, 10, 5));
-  std::this_thread::sleep_for (std::chrono::seconds (2));
-  eventLoop.enqueueEvent(std::make_shared<MovePawnEvent>(1, 10, 5));
-   std::this_thread::sleep_for (std::chrono::seconds (2));
-  eventLoop.enqueueEvent(std::make_shared<MovePawnEvent>(1, 10, 5));
-   std::this_thread::sleep_for (std::chrono::seconds (2));
-  eventLoop.enqueueEvent(std::make_shared<MovePawnEvent>(1, 10, 5));
-   std::this_thread::sleep_for (std::chrono::seconds (2));
-  eventLoop.enqueueEvent(std::make_shared<MovePawnEvent>(1, 10, 5));
-   std::this_thread::sleep_for (std::chrono::seconds (2));
-  eventLoop.enqueueEvent(std::make_shared<MovePawnEvent>(1, 10, 5));
+  // std::this_thread::sleep_for (std::chrono::seconds (2));
+  // eventLoop.enqueueEvent(std::make_shared<MovePawnEvent>(1, 10, 5));
+  // std::this_thread::sleep_for (std::chrono::seconds (2));
+  // eventLoop.enqueueEvent(std::make_shared<MovePawnEvent>(1, 10, 5));
+  // std::this_thread::sleep_for (std::chrono::seconds (2));
+  // eventLoop.enqueueEvent(std::make_shared<MovePawnEvent>(1, 10, 5));
+  // std::this_thread::sleep_for (std::chrono::seconds (2));
+  // eventLoop.enqueueEvent(std::make_shared<MovePawnEvent>(1, 10, 5));
+  // std::this_thread::sleep_for (std::chrono::seconds (2));
+  // eventLoop.enqueueEvent(std::make_shared<MovePawnEvent>(1, 10, 5));
+  // std::this_thread::sleep_for (std::chrono::seconds (2));
+  // eventLoop.enqueueEvent(std::make_shared<MovePawnEvent>(1, 10, 5));
+  // std::this_thread::sleep_for (std::chrono::seconds (2));
+  // eventLoop.enqueueEvent(std::make_shared<MovePawnEvent>(1, 10, 5));
+  // std::this_thread::sleep_for (std::chrono::seconds (2));
+  // eventLoop.enqueueEvent(std::make_shared<MovePawnEvent>(1, 10, 5));
+  //  std::this_thread::sleep_for (std::chrono::seconds (2));
+  // eventLoop.enqueueEvent(std::make_shared<MovePawnEvent>(1, 10, 5));
+  //  std::this_thread::sleep_for (std::chrono::seconds (2));
+  // eventLoop.enqueueEvent(std::make_shared<MovePawnEvent>(1, 10, 5));
+  //  std::this_thread::sleep_for (std::chrono::seconds (2));
+  // eventLoop.enqueueEvent(std::make_shared<MovePawnEvent>(1, 10, 5));
+  //  std::this_thread::sleep_for (std::chrono::seconds (2));
+  // eventLoop.enqueueEvent(std::make_shared<MovePawnEvent>(1, 10, 5));
 
-  std::this_thread::sleep_for (std::chrono::seconds (2));
-  eventLoop.enqueueEvent(std::make_shared<MovePawnEvent>(1, 10, 2));
+  // std::this_thread::sleep_for (std::chrono::seconds (2));
+  // eventLoop.enqueueEvent(std::make_shared<MovePawnEvent>(1, 10, 2));
 
   /*eventLoop.stop();*/
   while (true) {

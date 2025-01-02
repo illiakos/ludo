@@ -15,6 +15,7 @@ public:
       : dimensions (dimensions), color (color), teamId (teamId), startingTileId (startingTileId) {
 
     spawnPoints.fill (false);
+    setZIndex(1);
     initializeSlotCoordinates ();
   };
   virtual void renderSelf () const override;
@@ -22,7 +23,7 @@ public:
   void skibidi ();
   std::string toString ();
   int getStartingTileId ();
-  Dimensions getDimensions () { return dimensions; };
+  const Dimensions& getDimensions() const override { return dimensions; }
   int getTeamId () { return teamId; }
 
   bool occupySlot (int slotIndex);
@@ -31,12 +32,23 @@ public:
   int getFirstFreeSlot () const; // Method to get the first free slot
   std::pair<float, float> getSlotCoordinates (int slotIndex) const;
 
+  // Getter for z-index
+  int getZIndex() const override {
+    return zIndex;
+  };
+
+  // Setter for z-index
+  void setZIndex(int z) override {
+    zIndex = z;
+  };
+
 private:
   void initializeSlotCoordinates ();
   std::vector<Tile *> slots;
   Dimensions dimensions;
   Color color;
   int teamId;
+  int zIndex;
   int startingTileId;
   std::array<bool, 4> spawnPoints;
 

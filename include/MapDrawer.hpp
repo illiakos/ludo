@@ -2,7 +2,9 @@
 #define MAP_DRAWER_H
 #include "Color.hpp"
 #include "Renderable.hpp"
+#include "Dimensions.hpp"
 #include <condition_variable>
+#include <GLFW/glfw3.h>
 #include <functional>
 #include <memory>
 #include <mutex>
@@ -20,6 +22,7 @@ enum RectangleMode {
 class MapDrawer : public RenderableContainer {
 
 public:
+  GLFWwindow* window;
   void drawMap ();
   void enqueueRenderTask (std::function<void ()> task);
   float getCellPosition (float cellIndex);
@@ -58,6 +61,7 @@ public:
   void addRenderable (std::shared_ptr<Renderable> renderable) override;
   void removeRenderable (std::shared_ptr<Renderable> renderable);
   void clearRenderables ();
+  std::shared_ptr<Renderable> findByDimensionsRange(float clickX, float clickY);
 
 private:
   queue<std::function<void ()>> taskQueue;
