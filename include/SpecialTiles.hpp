@@ -6,7 +6,7 @@
 #include "TileContext.hpp"
 class StartingTile : public Tile {
 public:
-  StartingTile(Dimensions dimensions, int id, int position, Color &color,
+  StartingTile(Dimensions dimensions, int id, int position, Color color,
                int teamId)
       : Tile(dimensions, id, position, color, TileContext::Walkable),
         teamId(teamId) {};
@@ -20,7 +20,7 @@ private:
 
 class FinishingTile : public Tile {
 public:
-  FinishingTile(Dimensions dimensions, int id, int position, Color &color,
+  FinishingTile(Dimensions dimensions, int id, int position, Color color,
                 bool isFinish)
       : Tile(dimensions, id, position, color, TileContext::Finishing),
         isFinish(isFinish) {};
@@ -35,7 +35,7 @@ private:
 
 class PrefinishingTile : public Tile {
 public:
-  PrefinishingTile(Dimensions d, int id, int position, Color &color, int teamId)
+  PrefinishingTile(Dimensions d, int id, int position, Color color, int teamId)
       : Tile(d, id, position, color, TileContext::Finishing), teamId(teamId) {};
 
   /*int getNextPosition ();*/
@@ -53,7 +53,7 @@ private:
 
 class SafeTile : public Tile {
 public:
-  SafeTile(Dimensions d, int id, int position, Color &color)
+  SafeTile(Dimensions d, int id, int position, Color color)
       : Tile(d, id, position, color, TileContext::Walkable) {};
   void renderSelf() const override;
   ~SafeTile();

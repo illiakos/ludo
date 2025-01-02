@@ -186,6 +186,15 @@ CMakeFiles/PawnGame.dir/src/main.cpp.obj: C:\Users\User\ludo\src\main.cpp \
  C:/msys64/ucrt64/include/c++/13.1.0/bits/node_handle.h \
  C:/msys64/ucrt64/include/c++/13.1.0/bits/erase_if.h \
  C:/Users/User/ludo/include/Board.hpp \
+ C:/Users/User/ludo/include/ClickHandler.hpp \
+ C:/Users/User/ludo/glfw/include/GLFW/glfw3.h \
+ C:/msys64/ucrt64/include/GL/gl.h \
+ C:/msys64/ucrt64/include/c++/13.1.0/functional \
+ C:/msys64/ucrt64/include/c++/13.1.0/bits/std_function.h \
+ C:/msys64/ucrt64/include/c++/13.1.0/bits/stl_algo.h \
+ C:/msys64/ucrt64/include/c++/13.1.0/bits/algorithmfwd.h \
+ C:/msys64/ucrt64/include/c++/13.1.0/bits/stl_heap.h \
+ C:/msys64/ucrt64/include/c++/13.1.0/bits/uniform_int_dist.h \
  C:/Users/User/ludo/include/Color.hpp \
  C:/Users/User/ludo/include/EventDispatcher.hpp \
  C:/msys64/ucrt64/include/c++/13.1.0/map \
@@ -217,14 +226,6 @@ CMakeFiles/PawnGame.dir/src/main.cpp.obj: C:\Users\User\ludo\src\main.cpp \
  C:/Users/User/ludo/include/MovePawnEvent.hpp \
  C:/Users/User/ludo/include/PawnManager.hpp \
  C:/Users/User/ludo/include/MapDrawer.hpp \
- C:/Users/User/ludo/glfw/include/GLFW/glfw3.h \
- C:/msys64/ucrt64/include/GL/gl.h \
- C:/msys64/ucrt64/include/c++/13.1.0/functional \
- C:/msys64/ucrt64/include/c++/13.1.0/bits/std_function.h \
- C:/msys64/ucrt64/include/c++/13.1.0/bits/stl_algo.h \
- C:/msys64/ucrt64/include/c++/13.1.0/bits/algorithmfwd.h \
- C:/msys64/ucrt64/include/c++/13.1.0/bits/stl_heap.h \
- C:/msys64/ucrt64/include/c++/13.1.0/bits/uniform_int_dist.h \
  C:/msys64/ucrt64/include/c++/13.1.0/queue \
  C:/msys64/ucrt64/include/c++/13.1.0/deque \
  C:/msys64/ucrt64/include/c++/13.1.0/bits/stl_deque.h \
@@ -247,7 +248,7 @@ CMakeFiles/PawnGame.dir/src/main.cpp.obj: C:\Users\User\ludo\src\main.cpp \
  C:/Users/User/ludo/include/TileManager.hpp \
  C:/Users/User/ludo/include/SpecialTiles.hpp \
  C:/Users/User/ludo/include/TurnManager.hpp \
- C:/Users/User/ludo/include/ClickHandler.hpp \
+ C:/Users/User/ludo/include/ColorConstants.hpp \
  C:/Users/User/ludo/include/WindowManager.hpp \
  C:/msys64/ucrt64/include/c++/13.1.0/utility \
  C:/msys64/ucrt64/include/c++/13.1.0/bits/stl_relops.h \
