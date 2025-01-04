@@ -12,7 +12,7 @@ public:
   int getPawnId() { return pawnId; };
 
   explicit MovePawnEvent(int playerId, int pawnId, int stepsCount)
-      : playerId(playerId), pawnId(pawnId), stepsCount(stepsCount) {}
+      : playerId(playerId), pawnId(pawnId), stepsCount(stepsCount) {isBlocking =false; isImmediate =true;}
   std::string getType() const override { return "MovePawnEvent"; }
 };
 

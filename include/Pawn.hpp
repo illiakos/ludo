@@ -31,6 +31,7 @@ public:
   void setDimensions(Dimensions d);
   bool isActive();
   void setActive(bool active);
+  void onClick() override;
 
   // Getter for z-index
   int getZIndex() const override { return zIndex; };

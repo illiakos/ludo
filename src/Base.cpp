@@ -5,7 +5,7 @@
 
 void Base::renderSelf() const {
   auto &drawer = MapDrawer::getInstance();
-  drawer.log();
+  /*drawer.log();*/
   drawer.drawBase(dimensions.x, dimensions.y, color);
   return;
 }
@@ -23,11 +23,11 @@ std::string Base::toString() {
 
 bool Base::occupySlot(int slotIndex) {
   if (slotIndex < 0 || slotIndex >= slots.size()) {
-    std::cerr << "Invalid slot index: " << slotIndex << "\n";
+    /*std::cerr << "Invalid slot index: " << slotIndex << "\n";*/
     return false;
   }
   if (slots[slotIndex]) {
-    std::cerr << "Slot " << slotIndex << " is already occupied!\n";
+    /*std::cerr << "Slot " << slotIndex << " is already occupied!\n";*/
     return false;
   }
   spawnPoints[slotIndex] = true;
@@ -37,11 +37,9 @@ bool Base::occupySlot(int slotIndex) {
 // Free a slot in the base
 bool Base::freeSlot(int slotIndex) {
   if (slotIndex < 0 || slotIndex >= slots.size()) {
-    std::cerr << "Invalid slot index: " << slotIndex << "\n";
     return false;
   }
   if (!slots[slotIndex]) {
-    std::cerr << "Slot " << slotIndex << " is already free!\n";
     return false;
   }
   spawnPoints[slotIndex] = false;
@@ -51,7 +49,6 @@ bool Base::freeSlot(int slotIndex) {
 // Check if a slot is occupied
 bool Base::isSlotOccupied(int slotIndex) const {
   if (slotIndex < 0 || slotIndex >= slots.size()) {
-    std::cerr << "Invalid slot index: " << slotIndex << "\n";
     return false;
   }
   return slots[slotIndex];

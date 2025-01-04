@@ -18,6 +18,9 @@ public:
 
   // Setter for z-index
   virtual void setZIndex(int z) = 0;
+
+  virtual void onClick() = 0;
+
 };
 class RenderableContainer {
 public:

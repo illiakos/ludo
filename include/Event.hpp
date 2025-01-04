@@ -10,6 +10,7 @@ public:
   explicit Event(bool blocking = true) : isBlocking(blocking) {}
 
   bool isBlocking;
+  bool isImmediate;
   virtual bool isCompleted() const { return true; }
 };
 

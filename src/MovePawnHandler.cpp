@@ -6,6 +6,8 @@
 
 #include "Base.hpp"
 #include "BaseManager.hpp"
+#include "EndTurnEvent.hpp"
+#include "EventLoop.hpp"
 #include "MovePawnEvent.hpp"
 #include "PawnManager.hpp"
 #include "SpecialTiles.hpp"
@@ -82,46 +84,10 @@ void MovePawnHandler::handleEvent(const std::shared_ptr<Event> &event) {
 
       break;
     }
-    // Case 1: Pawn is in Base
-
-    // Case 3: Pawn is in Walkable context and might move to Finishing context
-    /*if (pawn->getContext() == TileContext::Walkable) {*/
-    /*    int currentTilePosition = pawn->getTileId();*/
-    /*    int targetTilePosition = currentTilePosition + steps;*/
-    /**/
-    /*    if (targetTilePosition > 50) { // Example threshold for finishing
-     * context*/
-    /*        int finishingTilePosition = targetTilePosition - 50;*/
-    /**/
-    /*        auto tile =
-     * tileManager.findTileByContextAndPosition(TileContext::Finishing,
-     * finishingTilePosition);*/
-    /*        PrefinishingTile* finishingTile =
-     * dynamic_cast<PrefinishingTile*>(tile.get());*/
-    /*        if (finishingTile && finishingTile->getTeamId() ==
-     * pawn->getPlayerId()) {*/
-    /*            pawn->setTileId(finishingTilePosition);*/
-    /*            pawn->setContext(TileContext::Finishing);*/
-    /*            pawn->setDimensions(finishingTile->getDimensions());*/
-    /*            std::cout << "Pawn " << pawn->getId() << " moved to finishing
-     * tiles.\n";*/
-    /*            drawer.addRenderable(pawn);*/
-    /*            return;*/
-    /*        } else {*/
-    /*            std::cout << "Pawn " << pawn->getId() << " cannot enter the
-     * finishing tiles of another team.\n";*/
-    /*            return;*/
-    /*        }*/
-    /*    }*/
-    /**/
-    /*    drawer.addRenderable(pawn);*/
-    /*    return;*/
-    /*}*/
-
-    // Case 2: Regular movement
-    /*moveRegularTiles (pawn, steps);*/
-    /*drawer.addRenderable(pawn);*/
   }
+  auto& eventLoop = EventLoop::getInstance();
+  eventLoop.enqueueEvent(std::make_shared<EndTurnEvent>());
+
 }
 
 void MovePawnHandler::moveAtFinishing(std::shared_ptr<Pawn> pawn, int steps) {
@@ -183,6 +149,10 @@ void MovePawnHandler::moveAtFinishing(std::shared_ptr<Pawn> pawn, int steps) {
   drawer.addRenderable(pawn); // Add the pawn back to the renderable list
 }
 void MovePawnHandler::moveRegularTiles(std::shared_ptr<Pawn> pawn, int steps) {
+
+  // TODO: Check beforehand whether final destination is the transition tile and
+  // render pawn there
+
   std::cout << "moving on regular tiles, steps : " << steps << endl;
   auto &tm = TileManager::getInstance();
   auto &drawer = MapDrawer::getInstance();
@@ -210,21 +180,19 @@ void MovePawnHandler::moveRegularTiles(std::shared_ptr<Pawn> pawn, int steps) {
 
     // Check if the tile is a TransitionTile
     auto transitionTile = dynamic_pointer_cast<TransitionTile>(tile);
-    if (transitionTile) {
-
-      std::cout << "Tile team : " << transitionTile->getTeamId()
-                << " , pawn team : " << pawn->getTeamId() << endl;
-      bool equal = transitionTile->getTeamId() == pawn->getTeamId();
-      std::cout << "Are equal ? : " << equal << endl;
-    }
     if (transitionTile && transitionTile->getTeamId() == pawn->getTeamId()) {
+
       // Move to the starting finishing tile
       int finishingTileStartPosition =
           transitionTile->getFinishingTileStartPosition();
+
+      int moduled = (steps - i) % 5;
+
+      std::cout << "Steps nigger : " << steps << std::endl;
       auto finishingTile =
           TileManager::getInstance()
               .findPrefinishingTileByContextPositionAndTeam(
-                  TileContext::Finishing, steps - i, pawn->getTeamId());
+                  TileContext::Finishing, moduled, pawn->getTeamId());
 
       if (finishingTile) {
         pawn->setTileId(finishingTileStartPosition);
@@ -239,6 +207,8 @@ void MovePawnHandler::moveRegularTiles(std::shared_ptr<Pawn> pawn, int steps) {
       } else {
         std::cerr << "Error: Finishing tile not found at position "
                   << finishingTileStartPosition << "\n";
+
+        drawer.addRenderable(pawn);
         return;
       }
     }

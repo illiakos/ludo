@@ -460,8 +460,8 @@ std::shared_ptr<Renderable> MapDrawer::findByDimensionsRange(float clickX,
     float renderableDYOpenGL = getSizeOfCells(renderableDim.dy);
 
     // Debugging information
-    logRenderableInfo(renderable, renderableXOpenGL, renderableYOpenGL,
-                      renderableDXOpenGL, renderableDYOpenGL);
+    /*logRenderableInfo(renderable, renderableXOpenGL, renderableYOpenGL,*/
+    /*                  renderableDXOpenGL, renderableDYOpenGL);*/
 
     // Handle renderable type
     if (renderable->getZIndex() == 2) { // Circle

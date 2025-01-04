@@ -3,21 +3,26 @@
 #ifndef PLAYER_TURN_HANDLER_H
 #define PLAYER_TURN_HANDLER_H
 
+#include "Event.hpp"
 #include "EventHandler.hpp"
 #include "EventLoop.hpp"
+#include "PlayerTurnEvent.hpp"
 #include "TurnManager.hpp"
+#include <memory>
 
 /*class EventLoop;*/
 
 class PlayerTurnHandler : public EventHandler {
 public:
-  PlayerTurnHandler(EventLoop &loop, int totalPlayers,
-                    TurnManager &turnManager);
+  PlayerTurnHandler(std::shared_ptr<EventLoop> loop, int totalPlayers,
+                    TurnManager &turnManager) : eventLoop(loop), totalPlayers(totalPlayers), turnManager(turnManager), EventHandler("PlayerTurnHandler") {};
 
-  void handleEvent(const std::shared_ptr<Event> &event) override;
+  void handleEvent(const std::shared_ptr<Event>& event) override;
+
+  std::shared_ptr<PlayerTurnEvent> currentPlayerTurnEvent;
 
 private:
-  EventLoop &eventLoop;
+  std::shared_ptr<EventLoop> eventLoop;
   int totalPlayers;
   TurnManager &turnManager;
 };

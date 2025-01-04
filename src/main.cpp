@@ -4,6 +4,8 @@
 #include "ClickHandler.hpp"
 #include "Color.hpp"
 #include "ColorConstants.hpp"
+#include "Dice.hpp"
+#include "Dimensions.hpp"
 #include "EventDispatcher.hpp"
 #include "EventLoop.hpp"
 #include "MovePawnEvent.hpp"
@@ -22,6 +24,9 @@
 #include "TurnManager.hpp"
 #include "WindowManager.hpp"
 #include <GLFW/glfw3.h>
+#include <chrono>
+#include <cstdlib>
+#include <ctime>
 #include <ft2build.h>
 #include <iostream>
 #include <memory>
@@ -131,10 +136,10 @@ void addStartingTile(TileManager &tileManager, MapDrawer &mapDrawer, int x,
 }
 
 void addFinishingTile(TileManager &tileManager, MapDrawer &mapDrawer, int x,
-                      int y, int position, int internalPosition,
-                      const Color &color, int team) {
+                      int y, int id, int position, const Color &color,
+                      int team) {
   auto finishingTile = std::make_shared<PrefinishingTile>(
-      Dimensions(x, y, 1, 1), position, internalPosition, color, team);
+      Dimensions(x, y, 1, 1), id, position, color, team);
   tileManager.addTile(finishingTile);
   mapDrawer.addRenderable(finishingTile);
 }
@@ -150,7 +155,7 @@ void createWalkableTiles(TileManager &tileManager, MapDrawer &mapDrawer) {
   }
 
   // Walkable tiles for vertical path (y = 9 to 15, skipping y = 12)
-  for (int y = 9; y <= 15; y++) {
+  for (int y = 9; y <= 14; y++) {
     if (y == 12) {
       skipPosition(position); // Skip safe tile
       continue;
@@ -162,9 +167,12 @@ void createWalkableTiles(TileManager &tileManager, MapDrawer &mapDrawer) {
   skipPosition(position, 1);
   addWalkableTile(tileManager, mapDrawer, 8, 14, position);
 
+  skipPosition(position, 1);
+
   // Walkable tiles for descending vertical path (y = 12 to 9)
   for (int y = 12; y >= 9; y--) {
     addWalkableTile(tileManager, mapDrawer, 8, y, position);
+
   }
 
   // Walkable tiles for horizontal path (x = 9 to 14, skipping x = 12)
@@ -210,12 +218,18 @@ void createWalkableTiles(TileManager &tileManager, MapDrawer &mapDrawer) {
   // Walkable tiles for horizontal path (x = 5 to 0, skipping x = 2)
   for (int x = 5; x >= 0; x--) {
     if (x == 2) {
-      skipPosition(position); // Skip safe tile
+      
+      skipPosition(position, 1); // Skip safe tile
       continue;
     }
+    
     addWalkableTile(tileManager, mapDrawer, x, 6, position);
+    
   }
+  std::cout << "+++++++++++++++++++" << std::endl;
+  std::cout << "Position " << position << std::endl;
 
+  std::cout << "+++++++++++++++++++" << std::endl;
   // Red transition position
   skipPosition(position);
   addWalkableTile(tileManager, mapDrawer, 0, 8, position);
@@ -241,9 +255,9 @@ void createTransitionTiles(TileManager &tileManager, MapDrawer &mapDrawer) {
 
 void createStartingTiles(TileManager &tileManager, MapDrawer &mapDrawer) {
   addStartingTile(tileManager, mapDrawer, 1, 8, 1, red, 1); // Red Starting Tile
-  addStartingTile(tileManager, mapDrawer, 6, 1, 13, blue,
+  addStartingTile(tileManager, mapDrawer, 6, 1, 40, blue,
                   3); // Blue Starting Tile
-  addStartingTile(tileManager, mapDrawer, 8, 13, 40, green,
+  addStartingTile(tileManager, mapDrawer, 8, 13, 14, green,
                   4); // Green Starting Tile
   addStartingTile(tileManager, mapDrawer, 13, 6, 27, yellow,
                   2); // Yellow Starting Tile
@@ -278,6 +292,9 @@ void initializeTiles() {
   createStartingTiles(tileManager, mapDrawer);
 
   createFinishingTiles(tileManager, mapDrawer);
+
+  auto dice = std::make_shared<Dice>(Dimensions(7, 7, 1, 1));
+  mapDrawer.addRenderable(dice);
 }
 
 void leftClickHandler(double x, double y) {
@@ -302,12 +319,14 @@ void leftClickHandler(double x, double y) {
     std::cout << "Renderable found: " << renderable << " "
               << renderable->getZIndex() << " " << renderable->getDimensions()
               << std::endl;
+    renderable->onClick();
   } else {
     std::cout << "No renderable found at the clicked position." << std::endl;
   }
 }
 
 int main() {
+
   std::cout << "Testing libraries..." << std::endl;
 
   // Test GLFW
@@ -345,7 +364,9 @@ int main() {
   EventDispatcher dispatcher;
 
   // Create the event loop and pass the dispatcher to it
-  EventLoop eventLoop(dispatcher);
+  auto eventLoop = std::make_shared<EventLoop>(dispatcher);
+  eventLoop->setInstance(*eventLoop);
+  /*EventLoop eventLoop(dispatcher);*/
   Board board;
 
   // Create default colors
@@ -400,6 +421,9 @@ int main() {
 
   // Create TurnManager
   TurnManager turnManager(eventLoop);
+
+  TurnManager::setInstance(turnManager);
+
   PawnManager pawnManager;
 
   // Create event handlers
@@ -409,6 +433,9 @@ int main() {
   auto stopGameHandler = std::make_shared<StopGameHandler>();
   auto playerTurnHandler =
       std::make_shared<PlayerTurnHandler>(eventLoop, 4, turnManager);
+
+  dispatcher.subscribe("PlayerTurnEvent", playerTurnHandler);
+  dispatcher.subscribe("EndTurnEvent", playerTurnHandler);
   dispatcher.subscribe("MovePawnEvent", movePawnHandler);
   auto randomAssPawn =
       std::make_shared<Pawn>(10, 1, 1, Dimensions(0, 9, 0.45, 0.45), red);
@@ -441,7 +468,6 @@ int main() {
   /*dispatcher.subscribe("MovePawnEvent", movePawnHandler);*/
   /*dispatcher.subscribe("StopGameEvent", stopGameHandler);*/
   /*dispatcher.subscribe("PlayerTurnEvent", playerTurnHandler);*/
-
   // Start the first player's turn using TurnManager
   /*turnManager.startTurn(1, [&eventLoop]() {*/
   /*  std::cout << "All turns finished. Enqueueing StopGameEvent...\n";*/
@@ -451,20 +477,28 @@ int main() {
   // Process all events in the loop
 
   /*eventLoop.processEvents();*/
-  eventLoop.start();
+  eventLoop->start();
+  /**/
+  /*std::this_thread::sleep_for(std::chrono::seconds(1));*/
+  /*eventLoop->enqueueEvent(std::make_shared<MovePawnEvent>(1, 10, 6));*/
+  /**/
+  /*std::this_thread::sleep_for(std::chrono::seconds(2));*/
+  /*eventLoop->enqueueEvent(std::make_shared<MovePawnEvent>(1, 10, 3));*/
+  /**/
 
-  std::this_thread::sleep_for(std::chrono::seconds(1));
-  eventLoop.enqueueEvent(std::make_shared<MovePawnEvent>(1, 10, 6));
-
+  /**/
   std::this_thread::sleep_for(std::chrono::seconds(2));
-  eventLoop.enqueueEvent(std::make_shared<MovePawnEvent>(1, 10, 3));
+  eventLoop->enqueueEvent(std::make_shared<MovePawnEvent>(1, 10, 6));
+  /*std::this_thread::sleep_for(std::chrono::seconds(4));*/
+  std::cout << "Enqueued player turn" << std::endl;
+  eventLoop->enqueueEvent(std::make_shared<PlayerTurnEvent>(1)); 
 
-  // std::this_thread::sleep_for (std::chrono::seconds (2));
-  // eventLoop.enqueueEvent(std::make_shared<MovePawnEvent>(1, 10, 5));
-  // std::this_thread::sleep_for (std::chrono::seconds (2));
-  // eventLoop.enqueueEvent(std::make_shared<MovePawnEvent>(1, 10, 5));
-  // std::this_thread::sleep_for (std::chrono::seconds (2));
-  // eventLoop.enqueueEvent(std::make_shared<MovePawnEvent>(1, 10, 5));
+  /*for (int i = 0; i < 51; i++) {*/
+  /**/
+  /*  std::this_thread::sleep_for(std::chrono::milliseconds(500));*/
+  /*  eventLoop->enqueueEvent(std::make_shared<MovePawnEvent>(1, 10, 1));*/
+  /*}*/
+
   // std::this_thread::sleep_for (std::chrono::seconds (2));
   // eventLoop.enqueueEvent(std::make_shared<MovePawnEvent>(1, 10, 5));
   // std::this_thread::sleep_for (std::chrono::seconds (2));

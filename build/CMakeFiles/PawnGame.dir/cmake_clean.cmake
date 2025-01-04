@@ -9,6 +9,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/PawnGame.dir/src/ClickHandler.cpp.obj.d"
   "CMakeFiles/PawnGame.dir/src/ColorConstants.cpp.obj"
   "CMakeFiles/PawnGame.dir/src/ColorConstants.cpp.obj.d"
+  "CMakeFiles/PawnGame.dir/src/Dice.cpp.obj"
+  "CMakeFiles/PawnGame.dir/src/Dice.cpp.obj.d"
   "CMakeFiles/PawnGame.dir/src/Dimensions.cpp.obj"
   "CMakeFiles/PawnGame.dir/src/Dimensions.cpp.obj.d"
   "CMakeFiles/PawnGame.dir/src/EventDispatcher.cpp.obj"

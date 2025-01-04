@@ -5,6 +5,8 @@
 #include <iostream>
 #include <memory>
 #include <thread>
+
+
 void RollDiceHandler::handleEvent(const std::shared_ptr<Event> &event) {
   auto rollEvent = std::dynamic_pointer_cast<RollDiceEvent>(event);
   if (rollEvent) {
@@ -18,7 +20,7 @@ void RollDiceHandler::handleEvent(const std::shared_ptr<Event> &event) {
               << "!\n";
 
     // Enqueue WaitForChoosePawnEvent
-    eventLoop.enqueueEvent(std::make_shared<WaitForChoosePawnEvent>(
-        rollEvent->playerId, rollResult));
+    /*eventLoop->enqueueEvent(std::make_shared<WaitForChoosePawnEvent>(*/
+    /*    rollEvent->playerId, rollResult));*/
   }
 }

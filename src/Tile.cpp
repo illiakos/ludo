@@ -38,7 +38,7 @@ std::string Tile::toString() {
   oss << "Tile [ID: " << id << ", Position: " << position << ", Color: ("
       << color.getRed() << ", " << color.getGreen() << ", " << color.getBlue()
       << ")"
-      << ", Dimensions: (Width: " << dimensions.dx << "| "
+      << ", Dimensions: ( " << "X: " << dimensions.x << " , Y : " << dimensions.y << " ," <<  " Width: " << dimensions.dx << "| "
       << contextToString(context) << " | " << ", Height: " << dimensions.dy
       << ", Depth: " << dimensions.dz << ")]";
 

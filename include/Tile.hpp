@@ -44,6 +44,8 @@ public:
   // Setter for z-index
   void setZIndex(int z) override { zIndex = z; };
 
+  void onClick() override {};
+
 protected:
   int id;       // Unique identifier for the tile
   int position; // Position in the game flow, used for sorting

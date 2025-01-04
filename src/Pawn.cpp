@@ -1,10 +1,15 @@
 #include "Pawn.hpp"
 #include "BaseManager.hpp"
+#include "EventLoop.hpp"
 #include "MapDrawer.hpp"
+#include "MovePawnEvent.hpp"
+#include "TeamManager.hpp"
 #include "TileContext.hpp"
+#include "TurnManager.hpp"
 #include <GLFW/glfw3.h>
 #include <cmath>
 #include <iostream>
+#include <memory>
 #include <ostream>
 
 using namespace std;
@@ -16,6 +21,33 @@ const double PI = 3.141592653589793;
 void Pawn::setActive(bool active) { active = active; }
 
 bool Pawn::isActive() { return active; }
+
+void Pawn::onClick() {
+
+
+  auto& loop = EventLoop::getInstance();  
+  auto& teamManager = TeamManager::getInstance();
+
+
+  /*if (true) {*/
+  /*  return;*/
+  /*}*/
+
+
+  auto& tm = TurnManager::getInstance();
+  std::cout << "current player id : " << tm.getCurrentPlayerId() << " and team id is : " << teamId << std::endl;
+  std::cout << "current dice value : " << tm.getCurrentRolledValue() << std::endl ;
+  if (teamId != tm.getCurrentPlayerId() || tm.getCurrentRolledValue() == 0) {
+    // If dolboyob decides to move someone else's pawn - he goes do pizdy
+    return;
+  }
+  int value = tm.getCurrentRolledValue();
+  tm.clearRoll(); 
+  std::cout << "moving with this value : " << value << std::endl;
+  loop.enqueueEvent(std::make_shared<MovePawnEvent>(tm.getCurrentPlayerId(), id, value));
+  
+
+}
 
 void Pawn::renderSelf() const {
 
@@ -53,7 +85,6 @@ void Pawn::renderSelf() const {
 
     auto inBaseCoords =
         currentBase->getSlotCoordinates(currentBase->getFirstFreeSlot());
-    std::cout << inBaseCoords.first << "|" << inBaseCoords.second << endl;
     cout << drawer.getSizeOfCells(2) << endl;
     drawer.drawCircle(
         drawer.getCellPosition(currentBase->getDimensions().x +

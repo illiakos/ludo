@@ -69,13 +69,22 @@ std::shared_ptr<PrefinishingTile>
 TileManager::findPrefinishingTileByContextPositionAndTeam(TileContext context,
                                                           int position,
                                                           int teamId) {
+
+  std::cout << "Searching position : " << position << std::endl; 
+
   // Iterate through the tiles
   for (const auto &[id, tile] :
        tiles) { // Use structured binding to unpack key-value pairs
     // Check context and position
+    
+    auto prefinishingTile = std::dynamic_pointer_cast<PrefinishingTile>(tile);
+
+    if (prefinishingTile) {
+      std::cout << prefinishingTile->toString() << std::endl;
+    }
+
     if (tile->getContext() == context && tile->getPosition() == position) {
       // Attempt to downcast to PrefinishingTile
-      auto prefinishingTile = std::dynamic_pointer_cast<PrefinishingTile>(tile);
 
       std::cout << "found similar tile : " << prefinishingTile->toString()
                 << endl;

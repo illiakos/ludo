@@ -39,13 +39,15 @@ public:
   // Setter for z-index
   void setZIndex(int z) override { zIndex = z; };
 
+  void onClick() override {};
+
 private:
   void initializeSlotCoordinates();
   std::vector<Tile *> slots;
   Dimensions dimensions;
   Color color;
   int teamId;
-  int zIndex;
+  int zIndex=1;
   int startingTileId;
   std::array<bool, 4> spawnPoints;
 
