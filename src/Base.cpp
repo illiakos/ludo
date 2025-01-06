@@ -1,12 +1,15 @@
 #include "Base.hpp"
 #include "MapDrawer.hpp"
+#include "Pawn.hpp"
 #include <iostream>
+#include <memory>
 #include <string>
 
 void Base::renderSelf() const {
   auto &drawer = MapDrawer::getInstance();
   /*drawer.log();*/
   drawer.drawBase(dimensions.x, dimensions.y, color);
+
   return;
 }
 
@@ -21,42 +24,45 @@ std::string Base::toString() {
          ", Starting Tile ID: " + std::to_string(startingTileId) + "]";
 }
 
-bool Base::occupySlot(int slotIndex) {
-  if (slotIndex < 0 || slotIndex >= slots.size()) {
+bool Base::occupySlot(int slotIndex,const Pawn* pawn) {
+  if (slotIndex < 0 || slotIndex >= spawnPoints.size()) {
     /*std::cerr << "Invalid slot index: " << slotIndex << "\n";*/
+    std::cout << "can't occupy , because aboba" << endl;
     return false;
   }
-  if (slots[slotIndex]) {
-    /*std::cerr << "Slot " << slotIndex << " is already occupied!\n";*/
-    return false;
+  if (spawnPoints[slotIndex]==pawn) {
+    return true;
   }
-  spawnPoints[slotIndex] = true;
+  /*if (slots[slotIndex]) {*/
+  /*  return false;*/
+  /*}*/
+  spawnPoints[slotIndex] = const_cast<Pawn*>(pawn);
   return true;
 }
 
 // Free a slot in the base
 bool Base::freeSlot(int slotIndex) {
-  if (slotIndex < 0 || slotIndex >= slots.size()) {
+  if (slotIndex < 0 || slotIndex >= spawnPoints.size()) {
     return false;
   }
-  if (!slots[slotIndex]) {
-    return false;
-  }
-  spawnPoints[slotIndex] = false;
+  /*if (!slots[slotIndex]) {*/
+  /*  return false;*/
+  /*}*/
+  spawnPoints[slotIndex] = nullptr;
   return true;
 }
 
 // Check if a slot is occupied
 bool Base::isSlotOccupied(int slotIndex) const {
-  if (slotIndex < 0 || slotIndex >= slots.size()) {
+  if (slotIndex < 0 || slotIndex >= spawnPoints.size()) {
     return false;
   }
-  return slots[slotIndex];
+  return spawnPoints[slotIndex] != nullptr;
 }
 
-int Base::getFirstFreeSlot() const {
+int Base::getFirstFreeSlot(const Pawn* pawn) const {
   for (int i = 0; i < spawnPoints.size(); ++i) {
-    if (!spawnPoints[i]) {
+    if (spawnPoints[i] == pawn || !spawnPoints[i]) {
       return i; // Return the index of the first free slot
     }
   }
@@ -74,3 +80,8 @@ std::pair<float, float> Base::getSlotCoordinates(int slotIndex) const {
   }
   return slotCoordinates[slotIndex];
 }
+
+void Base::onClick() {
+  std::cout << "...................................." << endl;
+}
+

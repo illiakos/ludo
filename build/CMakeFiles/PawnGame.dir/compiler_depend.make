@@ -210,6 +210,7 @@ CMakeFiles/PawnGame.dir/src/Base.cpp.obj: C:/Users/marrc/bul/cpp-project/alt/lud
   C:/Users/marrc/bul/cpp-project/alt/ludo/include/Color.hpp \
   C:/Users/marrc/bul/cpp-project/alt/ludo/include/Dimensions.hpp \
   C:/Users/marrc/bul/cpp-project/alt/ludo/include/MapDrawer.hpp \
+  C:/Users/marrc/bul/cpp-project/alt/ludo/include/Pawn.hpp \
   C:/Users/marrc/bul/cpp-project/alt/ludo/include/Renderable.hpp \
   C:/Users/marrc/bul/cpp-project/alt/ludo/include/Tile.hpp \
   C:/Users/marrc/bul/cpp-project/alt/ludo/include/TileContext.hpp
@@ -402,6 +403,7 @@ CMakeFiles/PawnGame.dir/src/BaseManager.cpp.obj: C:/Users/marrc/bul/cpp-project/
   C:/Users/marrc/bul/cpp-project/alt/ludo/include/BaseManager.hpp \
   C:/Users/marrc/bul/cpp-project/alt/ludo/include/Color.hpp \
   C:/Users/marrc/bul/cpp-project/alt/ludo/include/Dimensions.hpp \
+  C:/Users/marrc/bul/cpp-project/alt/ludo/include/Pawn.hpp \
   C:/Users/marrc/bul/cpp-project/alt/ludo/include/Renderable.hpp \
   C:/Users/marrc/bul/cpp-project/alt/ludo/include/Tile.hpp \
   C:/Users/marrc/bul/cpp-project/alt/ludo/include/TileContext.hpp
@@ -5617,6 +5619,10 @@ C:/Users/marrc/bul/cpp-project/alt/ludo/include/Color.hpp:
 
 C:/Users/marrc/bul/cpp-project/alt/ludo/include/Dimensions.hpp:
 
+C:/Users/marrc/bul/cpp-project/alt/ludo/libs/ft2133/freetype-2.13.3/include/freetype/ftsystem.h:
+
+C:/Users/marrc/bul/cpp-project/alt/ludo/include/Pawn.hpp:
+
 C:/Users/marrc/bul/cpp-project/alt/ludo/include/Renderable.hpp:
 
 C:/Users/marrc/bul/cpp-project/alt/ludo/include/Tile.hpp:
@@ -5714,10 +5720,6 @@ C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-min
 C:/Users/marrc/bul/cpp-project/alt/ludo/include/WindowManager.hpp:
 
 C:/Users/marrc/bul/cpp-project/alt/ludo/include/EndTurnEvent.hpp:
-
-C:/Users/marrc/bul/cpp-project/alt/ludo/libs/ft2133/freetype-2.13.3/include/freetype/ftsystem.h:
-
-C:/Users/marrc/bul/cpp-project/alt/ludo/include/Pawn.hpp:
 
 C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/x86_64-w64-mingw32/include/assert.h:
 

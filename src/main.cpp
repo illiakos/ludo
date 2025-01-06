@@ -462,6 +462,16 @@ int main() {
   /*    idCounter++;*/
   /*  }*/
   /*}*/
+  
+  int idCounter = 1;
+  for (int j=1;j<=3;j++) {
+  
+    auto newPawn = std::make_shared<Pawn>(idCounter, 1,3, Dimensions(9,9,0.45,0.45),teamManager.getTeamById(3).color);
+    pawnManager.addPawn(newPawn);
+    newPawn->setContext(TileContext::Base);
+    mapDrawer.addRenderable(newPawn);
+    idCounter++;
+  }
 
   // Subscribe handlers to specific events
   /*dispatcher.subscribe("RollDiceEvent", rollDiceHandler);*/
@@ -487,8 +497,8 @@ int main() {
   /**/
 
   /**/
-  std::this_thread::sleep_for(std::chrono::seconds(2));
-  eventLoop->enqueueEvent(std::make_shared<MovePawnEvent>(1, 10, 6));
+  /*std::this_thread::sleep_for(std::chrono::seconds(2));*/
+  /*eventLoop->enqueueEvent(std::make_shared<MovePawnEvent>(1, 10, 6));*/
   /*std::this_thread::sleep_for(std::chrono::seconds(4));*/
   std::cout << "Enqueued player turn" << std::endl;
   eventLoop->enqueueEvent(std::make_shared<PlayerTurnEvent>(1)); 

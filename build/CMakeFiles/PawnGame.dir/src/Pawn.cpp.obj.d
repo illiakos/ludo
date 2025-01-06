@@ -177,6 +177,7 @@ CMakeFiles/PawnGame.dir/src/Pawn.cpp.obj: \
  C:/Users/marrc/bul/cpp-project/alt/ludo/include/TileContext.hpp \
  C:/Users/marrc/bul/cpp-project/alt/ludo/include/BaseManager.hpp \
  C:/Users/marrc/bul/cpp-project/alt/ludo/include/Base.hpp \
+ C:/Users/marrc/bul/cpp-project/alt/ludo/include/Pawn.hpp \
  C:/Users/marrc/bul/cpp-project/alt/ludo/include/Tile.hpp \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/array \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/compare \

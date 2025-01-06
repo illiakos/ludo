@@ -28,7 +28,7 @@ public:
 
   TileContext getContext();
   void setContext(TileContext context);
-  void setDimensions(Dimensions d);
+  void setDimensions(Dimensions d) const ;
   bool isActive();
   void setActive(bool active);
   void onClick() override;
@@ -40,7 +40,7 @@ public:
   void setZIndex(int z) override { zIndex = z; };
 
 private:
-  Dimensions dimensions;
+  mutable Dimensions dimensions;
   int teamId;
   int id;
   int playerId;

@@ -211,6 +211,7 @@ CMakeFiles/PawnGame.dir/src/Base.cpp.obj
  C:/Users/marrc/bul/cpp-project/alt/ludo/include/Color.hpp
  C:/Users/marrc/bul/cpp-project/alt/ludo/include/Dimensions.hpp
  C:/Users/marrc/bul/cpp-project/alt/ludo/include/MapDrawer.hpp
+ C:/Users/marrc/bul/cpp-project/alt/ludo/include/Pawn.hpp
  C:/Users/marrc/bul/cpp-project/alt/ludo/include/Renderable.hpp
  C:/Users/marrc/bul/cpp-project/alt/ludo/include/Tile.hpp
  C:/Users/marrc/bul/cpp-project/alt/ludo/include/TileContext.hpp
@@ -404,6 +405,7 @@ CMakeFiles/PawnGame.dir/src/BaseManager.cpp.obj
  C:/Users/marrc/bul/cpp-project/alt/ludo/include/BaseManager.hpp
  C:/Users/marrc/bul/cpp-project/alt/ludo/include/Color.hpp
  C:/Users/marrc/bul/cpp-project/alt/ludo/include/Dimensions.hpp
+ C:/Users/marrc/bul/cpp-project/alt/ludo/include/Pawn.hpp
  C:/Users/marrc/bul/cpp-project/alt/ludo/include/Renderable.hpp
  C:/Users/marrc/bul/cpp-project/alt/ludo/include/Tile.hpp
  C:/Users/marrc/bul/cpp-project/alt/ludo/include/TileContext.hpp

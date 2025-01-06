@@ -397,11 +397,11 @@ bool doDimensionsOverlap(const Dimensions &dim1, const Dimensions &dim2) {
 void logRenderableInfo(const std::shared_ptr<Renderable> &renderable, float x,
                        float y, float dx, float dy) {
   if (renderable->getZIndex() == 2) {
-    std::cout << "PAWN!!!! renderableDim: (" << x << ", " << y << ", " << dx
-              << ", " << dy << ")\n";
+    /*std::cout << "PAWN!!!! renderableDim: (" << x << ", " << y << ", " << dx*/
+    /*          << ", " << dy << ")\n";*/
   } else {
-    std::cout << "Tile!!!! renderableDim: (" << x << ", " << y << ", " << dx
-              << ", " << dy << ")\n";
+    /*std::cout << "Tile!!!! renderableDim: (" << x << ", " << y << ", " << dx*/
+    /*          << ", " << dy << ")\n";*/
   }
 }
 
