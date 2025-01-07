@@ -48,6 +48,7 @@ public:
   void drawBase(float x, float y, const Color &color);
   void drawMiddle();
   void drawPawn();
+  void drawImageFromData(unsigned char *data, int width, int height, int channels, float x, float y, float drawWidth, float drawHeight);
   /*void addRenderable(std::shared_ptr<Renderable> r) override;*/
   void log();
   void addRenderable(std::shared_ptr<Renderable> renderable) override;

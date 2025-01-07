@@ -12,6 +12,7 @@
 #include "ColorConstants.hpp"
 #include "Renderable.hpp"
 #include "WindowManager.hpp"
+#include <GL/glcorearb.h>
 
 using namespace std;
 
@@ -299,6 +300,42 @@ void MapDrawer::drawMiddle() {
                getCellPosition(6), // Top-right (y3 shifted up by 1 cell)
                yellow              // Yellow color
   );
+}
+
+void MapDrawer::drawImageFromData(unsigned char *data, int width, int height, int channels,
+                                  float x, float y, float drawWidth, float drawHeight) {
+                                    
+    drawRectangle(x, y, drawWidth, drawHeight, white);
+    // Generate and bind a texture
+    GLuint textureID;
+    glGenTextures(1, &textureID);
+    glBindTexture(GL_TEXTURE_2D, textureID);
+
+    // Determine the correct format based on channels
+    GLenum format = (channels == 4) ? GL_RGBA : GL_RGB;
+    glTexImage2D(GL_TEXTURE_2D, 0, format, width, height, 0, format, GL_UNSIGNED_BYTE, data);
+
+    // Set texture parameters
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+
+    // Enable 2D textures and draw the textured quad
+    glEnable(GL_TEXTURE_2D);
+    glBindTexture(GL_TEXTURE_2D, textureID);
+
+    glBegin(GL_QUADS);
+        glTexCoord2f(0.0f, 0.0f); glVertex2f(x, y);
+        glTexCoord2f(1.0f, 0.0f); glVertex2f(x + drawWidth, y);
+        glTexCoord2f(1.0f, 1.0f); glVertex2f(x + drawWidth, y + drawHeight);
+        glTexCoord2f(0.0f, 1.0f); glVertex2f(x, y + drawHeight);
+    glEnd();
+
+    glDisable(GL_TEXTURE_2D);
+
+    // Cleanup: Delete the texture to avoid memory leaks
+    glDeleteTextures(1, &textureID);
 }
 
 void MapDrawer::drawLudoBoard() {

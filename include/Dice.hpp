@@ -19,6 +19,14 @@ public:
 private:
   Dimensions dimensions;
   int zIndex=2;
+  std::string diceImages[6] = {
+    "../src/assets/images/one.png",
+    "../src/assets/images/two.png",
+    "../src/assets/images/three.png",
+    "../src/assets/images/four.png",
+    "../src/assets/images/five.png",
+    "../src/assets/images/six.png"
+  };
 
 };
 

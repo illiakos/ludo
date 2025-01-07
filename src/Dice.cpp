@@ -3,28 +3,48 @@
 #include "Dimensions.hpp"
 #include "MapDrawer.hpp"
 #include "TurnManager.hpp"
+#include "stb_image.h"
 #include <iostream>
 
-/*Dice::Dice(Dimensions d) : dimensions(d) {}*/
-
 void Dice::renderSelf() const {
-  // TODO: Implement dice rendering mechanic. Probably gonna have to use images,
-  // or
-  //  you can use large switch/case where for each value (1-6) you would have to
-  //  create custom rendering
-  auto &drawer = MapDrawer::getInstance();
-  auto &turnManager = TurnManager::getInstance();
-  auto randomColor = Color(0.18594f, 0.45182f, 0.92725f);
-  if (turnManager.getCurrentRolledValue() > 3) {
-    randomColor = Color(0.97525f, 0.124f, 0.5672f);
-  }
-  
-  std::cout << "Current turn holder : " << turnManager.getCurrentPlayerId() << std::endl;
+    auto &drawer = MapDrawer::getInstance();
+    auto &turnManager = TurnManager::getInstance();
+    int diceValue = turnManager.getCurrentRolledValue();
 
-  drawer.drawRectangle(drawer.getCellPosition(dimensions.x),
-                       drawer.getCellPosition(dimensions.y),
-                       drawer.getSizeOfCells(1), drawer.getSizeOfCells(1),
-                       randomColor);
+    if (diceValue == 0) {
+      diceValue = 6;
+    }
+
+    // Validate dice value
+    if (diceValue < 1|| diceValue > 6) {
+        std::cerr << "Error: Invalid dice value (" << diceValue << ")." << std::endl;
+        return;
+    }
+
+    // Get the corresponding image path or fallback to test image
+    const std::string &imagePath = diceImages[diceValue - 1];
+
+    int width, height, channels;
+
+    // Load image using stb_image
+    unsigned char *imageData =
+        stbi_load(imagePath.c_str(), &width, &height, &channels, 4);
+    if (!imageData) {
+        std::cerr << "Failed to load image: " << imagePath << std::endl;
+        return;
+    }
+
+    // Render the image
+    drawer.drawImageFromData(imageData, width, height, channels,
+                             drawer.getCellPosition(dimensions.x),
+                             drawer.getCellPosition(dimensions.y),
+                             drawer.getSizeOfCells(1), drawer.getSizeOfCells(1));
+
+    // Free the image memory
+    stbi_image_free(imageData);
+
+    std::cout << "Current turn holder: " << turnManager.getCurrentPlayerId()
+              << std::endl;
 }
 
 // TODO: Do some huynia so that it adds some fancy spinning animation and later
