@@ -464,7 +464,7 @@ int main() {
   /*}*/
   
   int idCounter = 1;
-  for (int j=1;j<=3;j++) {
+  for (int j=1;j<=4;j++) {
   
     auto newPawn = std::make_shared<Pawn>(idCounter, 1,3, Dimensions(9,9,0.45,0.45),teamManager.getTeamById(3).color);
     pawnManager.addPawn(newPawn);

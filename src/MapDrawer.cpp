@@ -150,47 +150,50 @@ void MapDrawer::drawStar(float cx, float cy, float outerRadius,
   glEnd(); // End drawing
 }
 
-void MapDrawer::drawArrow(float xStart, float yStart, float xEnd, float yEnd,
-                          float headLength, float headWidth,
-                          const Color &color) {
-  // Set the arrow color
-  glColor3f(color.getRedf(), color.getGreenf(), color.getBluef());
+void MapDrawer::drawArrow(unsigned char *data, int width, int height, int channels,
+                          float x, float y, float drawWidth, float drawHeight, float rotation) {
+    // Draw a white rectangle as the background
+    drawRectangle(x, y, drawWidth, drawHeight, white); // White background
 
-  // Calculate the direction vector of the arrow
-  float dx = xEnd - xStart;
-  float dy = yEnd - yStart;
-  float length = sqrt(dx * dx + dy * dy);
+    // Generate and bind a texture
+    GLuint textureID;
+    glGenTextures(1, &textureID);
+    glBindTexture(GL_TEXTURE_2D, textureID);
 
-  // Normalize the direction vector
-  float dirX = dx / length;
-  float dirY = dy / length;
+    // Determine the correct format based on channels
+    GLenum format = (channels == 4) ? GL_RGBA : GL_RGB;
+    glTexImage2D(GL_TEXTURE_2D, 0, format, width, height, 0, format, GL_UNSIGNED_BYTE, data);
 
-  // Perpendicular vector for arrowhead
-  float perpX = -dirY;
-  float perpY = dirX;
+    // Set texture parameters
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
 
-  // Calculate the arrowhead points
-  float arrowBaseX = xEnd - headLength * dirX;
-  float arrowBaseY = yEnd - headLength * dirY;
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
 
-  float arrowLeftX = arrowBaseX + headWidth * perpX / 2.0f;
-  float arrowLeftY = arrowBaseY + headWidth * perpY / 2.0f;
+    // Enable 2D textures
+    glEnable(GL_TEXTURE_2D);
+    glBindTexture(GL_TEXTURE_2D, textureID);
 
-  float arrowRightX = arrowBaseX - headWidth * perpX / 2.0f;
-  float arrowRightY = arrowBaseY - headWidth * perpY / 2.0f;
+    // Apply transformations for position and rotation
+    glPushMatrix(); // Save the current transformation matrix
+    glTranslatef(x + drawWidth / 2.0f, y + drawHeight / 2.0f, 0.0f); // Move to the arrow center
+    glRotatef(rotation, 0.0f, 0.0f, 1.0f);                         // Apply rotation
+    glTranslatef(-drawWidth / 2.0f, -drawHeight / 2.0f, 0.0f);     // Adjust to top-left corner
 
-  // Draw the arrow shaft
-  glBegin(GL_LINES);
-  glVertex2f(xStart, yStart);
-  glVertex2f(arrowBaseX, arrowBaseY);
-  glEnd();
+    // Draw the textured quad
+    glBegin(GL_QUADS);
+        glTexCoord2f(0.0f, 0.0f); glVertex2f(0.0f, 0.0f);
+        glTexCoord2f(1.0f, 0.0f); glVertex2f(drawWidth, 0.0f);
+        glTexCoord2f(1.0f, 1.0f); glVertex2f(drawWidth, drawHeight);
+        glTexCoord2f(0.0f, 1.0f); glVertex2f(0.0f, drawHeight);
+    glEnd();
 
-  // Draw the arrowhead
-  glBegin(GL_TRIANGLES);
-  glVertex2f(xEnd, yEnd);               // Tip of the arrowhead
-  glVertex2f(arrowLeftX, arrowLeftY);   // Left side of the arrowhead
-  glVertex2f(arrowRightX, arrowRightY); // Right side of the arrowhead
-  glEnd();
+    glPopMatrix(); // Restore the previous transformation matrix
+
+    // Disable 2D textures and clean up
+    glDisable(GL_TEXTURE_2D);
+    glDeleteTextures(1, &textureID);
 }
 
 void MapDrawer::drawBase(float x, float y, const Color &color) {
@@ -332,7 +335,7 @@ void MapDrawer::drawImageFromData(unsigned char *data, int width, int height, in
         glTexCoord2f(0.0f, 1.0f); glVertex2f(x, y + drawHeight);
     glEnd();
 
-    glDisable(GL_TEXTURE_2D);
+    glDisable(GL_TEXTURE_2D); 
 
     // Cleanup: Delete the texture to avoid memory leaks
     glDeleteTextures(1, &textureID);

@@ -209,4 +209,5 @@ CMakeFiles/PawnGame.dir/src/SpecialTiles.cpp.obj: \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/deque.tcc \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/stl_queue.h \
  C:/Users/illia/ludo/include/TeamManager.hpp \
- C:/Users/illia/ludo/include/Team.hpp
+ C:/Users/illia/ludo/include/Team.hpp \
+ C:/Users/illia/ludo/libs/stb/stb_image.h

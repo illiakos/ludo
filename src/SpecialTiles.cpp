@@ -2,6 +2,7 @@
 #include "ColorConstants.hpp"
 #include "MapDrawer.hpp"
 #include "TeamManager.hpp"
+#include "stb_image.h"
 #include <iostream>
 #include <ostream>
 
@@ -75,17 +76,34 @@ SafeTile::~SafeTile() {}
 TransitionTile::~TransitionTile() {}
 
 void TransitionTile::renderSelf() const {
-  auto &drawer = MapDrawer::getInstance();
-  const float cellSize = drawer.getCellSize();
-  const float headLength = cellSize / 2;
-  const float headWidth = cellSize / 2;
+    auto &drawer = MapDrawer::getInstance();
+    const float cellSize = drawer.getSizeOfCells(1);
+    int arrowWidth, arrowHeight, arrowChannels;
+    unsigned char *arrowData =
+        stbi_load("../src/assets/images/arrow.png", &arrowWidth, &arrowHeight,
+                  &arrowChannels, 4);
 
-  drawer.drawRectangle(drawer.getCellPosition(dimensions.x),
-                       drawer.getCellPosition(dimensions.y), cellSize, cellSize,
-                       white, FILLED_WITH_STROKE, gray, 2.0);
-  drawer.drawArrow(drawer.getCellPosition(dimensions.x),
-                   drawer.getCellPosition(dimensions.y),
-                   drawer.getCellPosition(dimensions.x) + cellSize,
-                   drawer.getCellPosition(dimensions.y) + cellSize, headLength,
-                   headWidth, color);
+    if (!arrowData) {
+        std::cerr << "Failed to load arrow image!" << std::endl;
+    } else {
+        // Determine rotation based on team ID
+        cout << teamId << endl;
+        float rotation = 0.0f;
+        switch (teamId) {
+            case 1: rotation = 270.0f; break;   // Red
+            case 2: rotation = 0.0f; break; // Blue
+            case 3: rotation = 180.0f; break; // Green
+            case 4: rotation = 90.0f; break; // Yellow
+            default: break; // Default is up
+        }
+
+        // Draw the arrow
+        drawer.drawArrow(arrowData, arrowWidth, arrowHeight, arrowChannels,
+                         drawer.getCellPosition(dimensions.x),
+                         drawer.getCellPosition(dimensions.y), cellSize, cellSize,
+                         rotation);
+
+        // Free the arrow image data
+        stbi_image_free(arrowData);
+    }
 }

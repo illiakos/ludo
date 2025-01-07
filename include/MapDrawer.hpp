@@ -40,8 +40,8 @@ public:
                   int segments);
   void drawStar(float cx, float cy, float outerRadius, float innerRadius,
                 int numPoints, const Color color);
-  void drawArrow(float xStart, float yStart, float xEnd, float yEnd,
-                 float headLength, float headWidth, const Color &color);
+  void drawArrow(unsigned char *data, int width, int height, int channels,
+                          float x, float y, float drawWidth, float drawHeight, float rotation);
   void drawLudoBoard();
   void drawRoads();
   void drawCells();
