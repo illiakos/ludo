@@ -58,7 +58,6 @@ void Pawn::renderSelf() const {
   if (context == TileContext::Walkable || context == TileContext::Finishing) {
 
     Color red = Color(0.596f, 0.324f, 0.590f);
-    cout << dimensions.x << dimensions.y << endl;
     drawer.drawCircle(drawer.getCellPosition(dimensions.x),
                       drawer.getCellPosition(dimensions.y),
                       drawer.getSizeOfCells(0.45), red, 10000);
@@ -74,7 +73,6 @@ void Pawn::renderSelf() const {
 
     auto inBaseCoords =
         currentBase->getSlotCoordinates(firstfreeSlot);
-    cout << drawer.getSizeOfCells(2) << endl;
     auto newX = currentBase->getDimensions().x + inBaseCoords.first;
     auto newY = currentBase->getDimensions().y + inBaseCoords.second;
     drawer.drawCircle(
@@ -82,9 +80,6 @@ void Pawn::renderSelf() const {
         drawer.getCellPosition(newY),
         drawer.getSizeOfCells(0.45), color, 10000);
     setDimensions(Dimensions(newX, newY , drawer.getSizeOfCells(0.45), drawer.getSizeOfCells(0.45)));
-  }
-  if (teamId == 1) {
-    std::cout << "Red pawn coordinates: x = " << dimensions.x << " ; y = " << dimensions.y << " ;" << endl; 
   }
   return;
 }

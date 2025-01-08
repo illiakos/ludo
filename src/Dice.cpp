@@ -9,10 +9,13 @@
 void Dice::renderSelf() const {
     auto &drawer = MapDrawer::getInstance();
     auto &turnManager = TurnManager::getInstance();
+    int prevDiceValue = turnManager.getPrevRolledValue();
     int diceValue = turnManager.getCurrentRolledValue();
 
-    if (diceValue == 0) {
+    if (prevDiceValue == 0 && diceValue == 0) {
       diceValue = 6;
+    } else if (diceValue == 0) {
+        diceValue = prevDiceValue;
     }
 
     // Validate dice value
@@ -42,9 +45,6 @@ void Dice::renderSelf() const {
 
     // Free the image memory
     stbi_image_free(imageData);
-
-    std::cout << "Current turn holder: " << turnManager.getCurrentPlayerId()
-              << std::endl;
 }
 
 // TODO: Do some huynia so that it adds some fancy spinning animation and later
@@ -52,9 +52,9 @@ void Dice::renderSelf() const {
 //  auto& tm = TurnManager::getInstace();
 //  tm.setCurrentRolledValue = some_huynia;
 void Dice::onClick() {
+  srand(time(nullptr));
   auto &turnManager = TurnManager::getInstance();
-  int random_number =
-      std::rand() % 6 + 1; // Generate a random number between 1 and 6
+  int random_number = std::rand() % 6 + 1; // Generate a random number between 1 and 6
   std::cout << "Random number: " << random_number << std::endl;
   std::cout << "Clicking on dice" << std::endl;
   turnManager.setCurrentRolledValue(random_number);

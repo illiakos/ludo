@@ -87,7 +87,6 @@ void TransitionTile::renderSelf() const {
         std::cerr << "Failed to load arrow image!" << std::endl;
     } else {
         // Determine rotation based on team ID
-        cout << teamId << endl;
         float rotation = 0.0f;
         switch (teamId) {
             case 1: rotation = 270.0f; break;   // Red

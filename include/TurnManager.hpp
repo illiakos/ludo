@@ -25,11 +25,17 @@ public:
   TurnManager(std::shared_ptr<EventLoop> loop);
 
   int getCurrentRolledValue() {return currentRolledValue;}
+  int getPrevRolledValue() {return prevRolledValue;}
   void clearRoll() {currentRolledValue = 0;}
 
 private:
   // Constructor remains public for manual creation
-  void setCurrentRolledValue(int v) {currentRolledValue = v;}
+  void setCurrentRolledValue(int v) {
+    if (currentRolledValue != 0) {
+      prevRolledValue = currentRolledValue;
+    }
+    currentRolledValue = v;
+  }
   std::shared_ptr<EventLoop> eventLoop;
   int currentPlayerId;
   int totalPlayers;
@@ -38,6 +44,7 @@ private:
   friend class Dice;
 
   int currentRolledValue = 0;
+  int prevRolledValue = 0;
 
   void startPlayerTurn();
 
