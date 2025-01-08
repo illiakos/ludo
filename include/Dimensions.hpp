@@ -4,8 +4,8 @@
 
 class Dimensions {
 public:
-  int x;
-  int y;
+  float x;
+  float y;
 
   int dx; // Alternatively width
   int dy; // Alternatively height
@@ -18,7 +18,7 @@ public:
   std::pair<float, float> gridToOpenGL(int x, int y,
                                        const Dimensions &gridDimensions);
 
-  Dimensions(int x, int y, int dx, int dy) : x(x), y(y), dx(dx), dy(dy) {};
+  Dimensions(float x, float y, int dx, int dy) : x(x), y(y), dx(dx), dy(dy) {};
   friend std::ostream &operator<<(std::ostream &os, const Dimensions &d) {
     os << "Dimensions: { x: " << d.x << ", y: " << d.y
        << ", dx (width): " << d.dx << ", dy (height): " << d.dy

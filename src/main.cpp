@@ -437,11 +437,11 @@ int main() {
   dispatcher.subscribe("PlayerTurnEvent", playerTurnHandler);
   dispatcher.subscribe("EndTurnEvent", playerTurnHandler);
   dispatcher.subscribe("MovePawnEvent", movePawnHandler);
-  auto randomAssPawn =
-      std::make_shared<Pawn>(10, 1, 1, Dimensions(0, 9, 0.45, 0.45), red);
-  pawnManager.addPawn(randomAssPawn);
-  randomAssPawn->setContext(TileContext::Base);
-  mapDrawer.addRenderable(randomAssPawn);
+  // auto randomAssPawn =
+  //     std::make_shared<Pawn>(10, 1, 1, Dimensions(1.5, 12.5, 0.45, 0.45), red);
+  // pawnManager.addPawn(randomAssPawn);
+  // randomAssPawn->setContext(TileContext::Base);
+  // mapDrawer.addRenderable(randomAssPawn);
 
   glfwMakeContextCurrent(mapDrawer.window);
 
@@ -466,7 +466,34 @@ int main() {
   int idCounter = 1;
   for (int j=1;j<=4;j++) {
   
-    auto newPawn = std::make_shared<Pawn>(idCounter, 1,3, Dimensions(9,9,0.45,0.45),teamManager.getTeamById(3).color);
+    auto newPawn = std::make_shared<Pawn>(idCounter, 1, 1, Dimensions(0,9,0.45,0.45),teamManager.getTeamById(1).color);
+    pawnManager.addPawn(newPawn);
+    newPawn->setContext(TileContext::Base);
+    mapDrawer.addRenderable(newPawn);
+    idCounter++;
+  }
+
+  for (int j=1;j<=4;j++) {
+  
+    auto newPawn = std::make_shared<Pawn>(idCounter, 1, 2, Dimensions(9,0,0.45,0.45),teamManager.getTeamById(2).color);
+    pawnManager.addPawn(newPawn);
+    newPawn->setContext(TileContext::Base);
+    mapDrawer.addRenderable(newPawn);
+    idCounter++;
+  }
+
+  for (int j=1;j<=4;j++) {
+  
+    auto newPawn = std::make_shared<Pawn>(idCounter, 1, 3, Dimensions(0,0,0.45,0.45),teamManager.getTeamById(3).color);
+    pawnManager.addPawn(newPawn);
+    newPawn->setContext(TileContext::Base);
+    mapDrawer.addRenderable(newPawn);
+    idCounter++;
+  }
+
+  for (int j=1;j<=4;j++) {
+  
+    auto newPawn = std::make_shared<Pawn>(idCounter, 1, 4, Dimensions(9,9,0.45,0.45),teamManager.getTeamById(4).color);
     pawnManager.addPawn(newPawn);
     newPawn->setContext(TileContext::Base);
     mapDrawer.addRenderable(newPawn);
@@ -503,11 +530,10 @@ int main() {
   std::cout << "Enqueued player turn" << std::endl;
   eventLoop->enqueueEvent(std::make_shared<PlayerTurnEvent>(1)); 
 
-  /*for (int i = 0; i < 51; i++) {*/
-  /**/
-  /*  std::this_thread::sleep_for(std::chrono::milliseconds(500));*/
-  /*  eventLoop->enqueueEvent(std::make_shared<MovePawnEvent>(1, 10, 1));*/
-  /*}*/
+  for (int i = 0; i < 51; i++) {
+  std::this_thread::sleep_for(std::chrono::milliseconds(500));
+  eventLoop->enqueueEvent(std::make_shared<MovePawnEvent>(1, 10, 1));
+  }
 
   // std::this_thread::sleep_for (std::chrono::seconds (2));
   // eventLoop.enqueueEvent(std::make_shared<MovePawnEvent>(1, 10, 5));

@@ -42,6 +42,9 @@ void Pawn::onClick() {
     return;
   }
   int value = tm.getCurrentRolledValue();
+  cout << "ROLLED VALUE" << value << endl;
+  cout << "Plyaer id  VALUE" << tm.getCurrentPlayerId() << endl;
+  cout << "ID VALUE" << id << endl;
   tm.clearRoll(); 
   std::cout << "moving with this value : " << value << std::endl;
   loop.enqueueEvent(std::make_shared<MovePawnEvent>(tm.getCurrentPlayerId(), id, value));
@@ -55,6 +58,7 @@ void Pawn::renderSelf() const {
   if (context == TileContext::Walkable || context == TileContext::Finishing) {
 
     Color red = Color(0.596f, 0.324f, 0.590f);
+    cout << dimensions.x << dimensions.y << endl;
     drawer.drawCircle(drawer.getCellPosition(dimensions.x),
                       drawer.getCellPosition(dimensions.y),
                       drawer.getSizeOfCells(0.45), red, 10000);
