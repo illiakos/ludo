@@ -60,13 +60,12 @@ void Pawn::renderSelf() const {
     Color red = Color(0.596f, 0.324f, 0.590f);
     drawer.drawCircle(drawer.getCellPosition(dimensions.x),
                       drawer.getCellPosition(dimensions.y),
-                      drawer.getSizeOfCells(0.45), red, 10000);
+                      drawer.getSizeOfCells(0.45), color, 10000);
 
   } else if (context == TileContext::Base) {
     auto &baseManager = BaseManager::getInstance();
     auto currentBase = baseManager.getBaseByTeamId(teamId);
 
-    Color red = Color(0.596f, 0.324f, 0.590f);
     auto firstfreeSlot = currentBase->getFirstFreeSlot(this);
 
     bool res = currentBase->occupySlot(firstfreeSlot, this);

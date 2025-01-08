@@ -29,6 +29,7 @@ EventLoop &EventLoop::getInstance() {
 }
 
 void EventLoop::enqueueEvent(const std::shared_ptr<Event> &event) {
+  std::cout << "abobusik" << std::endl;
   {
     std::lock_guard<std::mutex> lock(eventsMutex);
     events.push_back(event);
@@ -88,6 +89,8 @@ void EventLoop::processEvents() {
             std::cout << "Stopping the event loop.\n";
             break;
         }
+
+           std::cout << event->getType() << std::endl;
 
         if (event->isBlocking) {
             while (!event->isCompleted()) {

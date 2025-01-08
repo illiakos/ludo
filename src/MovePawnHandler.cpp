@@ -26,7 +26,7 @@ void MovePawnHandler::handleEvent(const std::shared_ptr<Event> &event) {
     auto &drawer = MapDrawer::getInstance();
     auto pawn = pawnManager.getPawn(moveEvent->getPawnId());
     int steps = moveEvent->stepsCount;
-
+    std::cout << "HANDLE EVENT" << std::endl;
     drawer.removeRenderable(pawn);
     switch (pawn->getContext()) {
     case TileContext::Finishing:
@@ -35,6 +35,7 @@ void MovePawnHandler::handleEvent(const std::shared_ptr<Event> &event) {
     case TileContext::Base:
 
       if (steps == 6) {
+         std::cout << "HANDLE EVENT IF" << std::endl;
         auto &bm = BaseManager::getInstance();
         std::cout << pawn->getTeamId() << std::endl;
         auto base = bm.getBaseByTeamId(pawn->getTeamId());

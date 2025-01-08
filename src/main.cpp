@@ -515,10 +515,8 @@ int main() {
 
   /*eventLoop.processEvents();*/
   eventLoop->start();
-  /**/
-  /*std::this_thread::sleep_for(std::chrono::seconds(1));*/
-  /*eventLoop->enqueueEvent(std::make_shared<MovePawnEvent>(1, 10, 6));*/
-  /**/
+  std::this_thread::sleep_for(std::chrono::seconds(1));
+  eventLoop->enqueueEvent(std::make_shared<MovePawnEvent>(1, 10, 6));
   /*std::this_thread::sleep_for(std::chrono::seconds(2));*/
   /*eventLoop->enqueueEvent(std::make_shared<MovePawnEvent>(1, 10, 3));*/
   /**/
@@ -529,11 +527,6 @@ int main() {
   /*std::this_thread::sleep_for(std::chrono::seconds(4));*/
   std::cout << "Enqueued player turn" << std::endl;
   eventLoop->enqueueEvent(std::make_shared<PlayerTurnEvent>(1)); 
-
-  for (int i = 0; i < 51; i++) {
-  std::this_thread::sleep_for(std::chrono::milliseconds(500));
-  eventLoop->enqueueEvent(std::make_shared<MovePawnEvent>(1, 10, 1));
-  }
 
   // std::this_thread::sleep_for (std::chrono::seconds (2));
   // eventLoop.enqueueEvent(std::make_shared<MovePawnEvent>(1, 10, 5));
