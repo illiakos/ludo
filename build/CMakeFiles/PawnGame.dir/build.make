@@ -296,26 +296,11 @@ CMakeFiles/PawnGame.dir/src/PlayerTurnHandler.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/PawnGame.dir/src/PlayerTurnHandler.cpp.s"
 	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\illia\ludo\src\PlayerTurnHandler.cpp -o CMakeFiles\PawnGame.dir\src\PlayerTurnHandler.cpp.s
 
-CMakeFiles/PawnGame.dir/src/Renderable.cpp.obj: CMakeFiles/PawnGame.dir/flags.make
-CMakeFiles/PawnGame.dir/src/Renderable.cpp.obj: CMakeFiles/PawnGame.dir/includes_CXX.rsp
-CMakeFiles/PawnGame.dir/src/Renderable.cpp.obj: C:/Users/illia/ludo/src/Renderable.cpp
-CMakeFiles/PawnGame.dir/src/Renderable.cpp.obj: CMakeFiles/PawnGame.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\illia\ludo\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/PawnGame.dir/src/Renderable.cpp.obj"
-	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/PawnGame.dir/src/Renderable.cpp.obj -MF CMakeFiles\PawnGame.dir\src\Renderable.cpp.obj.d -o CMakeFiles\PawnGame.dir\src\Renderable.cpp.obj -c C:\Users\illia\ludo\src\Renderable.cpp
-
-CMakeFiles/PawnGame.dir/src/Renderable.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/PawnGame.dir/src/Renderable.cpp.i"
-	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\illia\ludo\src\Renderable.cpp > CMakeFiles\PawnGame.dir\src\Renderable.cpp.i
-
-CMakeFiles/PawnGame.dir/src/Renderable.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/PawnGame.dir/src/Renderable.cpp.s"
-	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\illia\ludo\src\Renderable.cpp -o CMakeFiles\PawnGame.dir\src\Renderable.cpp.s
-
 CMakeFiles/PawnGame.dir/src/RollDiceHandler.cpp.obj: CMakeFiles/PawnGame.dir/flags.make
 CMakeFiles/PawnGame.dir/src/RollDiceHandler.cpp.obj: CMakeFiles/PawnGame.dir/includes_CXX.rsp
 CMakeFiles/PawnGame.dir/src/RollDiceHandler.cpp.obj: C:/Users/illia/ludo/src/RollDiceHandler.cpp
 CMakeFiles/PawnGame.dir/src/RollDiceHandler.cpp.obj: CMakeFiles/PawnGame.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\illia\ludo\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/PawnGame.dir/src/RollDiceHandler.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\illia\ludo\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/PawnGame.dir/src/RollDiceHandler.cpp.obj"
 	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/PawnGame.dir/src/RollDiceHandler.cpp.obj -MF CMakeFiles\PawnGame.dir\src\RollDiceHandler.cpp.obj.d -o CMakeFiles\PawnGame.dir\src\RollDiceHandler.cpp.obj -c C:\Users\illia\ludo\src\RollDiceHandler.cpp
 
 CMakeFiles/PawnGame.dir/src/RollDiceHandler.cpp.i: cmake_force
@@ -330,7 +315,7 @@ CMakeFiles/PawnGame.dir/src/SpecialTiles.cpp.obj: CMakeFiles/PawnGame.dir/flags.
 CMakeFiles/PawnGame.dir/src/SpecialTiles.cpp.obj: CMakeFiles/PawnGame.dir/includes_CXX.rsp
 CMakeFiles/PawnGame.dir/src/SpecialTiles.cpp.obj: C:/Users/illia/ludo/src/SpecialTiles.cpp
 CMakeFiles/PawnGame.dir/src/SpecialTiles.cpp.obj: CMakeFiles/PawnGame.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\illia\ludo\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/PawnGame.dir/src/SpecialTiles.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\illia\ludo\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/PawnGame.dir/src/SpecialTiles.cpp.obj"
 	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/PawnGame.dir/src/SpecialTiles.cpp.obj -MF CMakeFiles\PawnGame.dir\src\SpecialTiles.cpp.obj.d -o CMakeFiles\PawnGame.dir\src\SpecialTiles.cpp.obj -c C:\Users\illia\ludo\src\SpecialTiles.cpp
 
 CMakeFiles/PawnGame.dir/src/SpecialTiles.cpp.i: cmake_force
@@ -345,7 +330,7 @@ CMakeFiles/PawnGame.dir/src/StopGameHandler.cpp.obj: CMakeFiles/PawnGame.dir/fla
 CMakeFiles/PawnGame.dir/src/StopGameHandler.cpp.obj: CMakeFiles/PawnGame.dir/includes_CXX.rsp
 CMakeFiles/PawnGame.dir/src/StopGameHandler.cpp.obj: C:/Users/illia/ludo/src/StopGameHandler.cpp
 CMakeFiles/PawnGame.dir/src/StopGameHandler.cpp.obj: CMakeFiles/PawnGame.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\illia\ludo\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/PawnGame.dir/src/StopGameHandler.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\illia\ludo\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/PawnGame.dir/src/StopGameHandler.cpp.obj"
 	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/PawnGame.dir/src/StopGameHandler.cpp.obj -MF CMakeFiles\PawnGame.dir\src\StopGameHandler.cpp.obj.d -o CMakeFiles\PawnGame.dir\src\StopGameHandler.cpp.obj -c C:\Users\illia\ludo\src\StopGameHandler.cpp
 
 CMakeFiles/PawnGame.dir/src/StopGameHandler.cpp.i: cmake_force
@@ -360,7 +345,7 @@ CMakeFiles/PawnGame.dir/src/TeamManager.cpp.obj: CMakeFiles/PawnGame.dir/flags.m
 CMakeFiles/PawnGame.dir/src/TeamManager.cpp.obj: CMakeFiles/PawnGame.dir/includes_CXX.rsp
 CMakeFiles/PawnGame.dir/src/TeamManager.cpp.obj: C:/Users/illia/ludo/src/TeamManager.cpp
 CMakeFiles/PawnGame.dir/src/TeamManager.cpp.obj: CMakeFiles/PawnGame.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\illia\ludo\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/PawnGame.dir/src/TeamManager.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\illia\ludo\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/PawnGame.dir/src/TeamManager.cpp.obj"
 	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/PawnGame.dir/src/TeamManager.cpp.obj -MF CMakeFiles\PawnGame.dir\src\TeamManager.cpp.obj.d -o CMakeFiles\PawnGame.dir\src\TeamManager.cpp.obj -c C:\Users\illia\ludo\src\TeamManager.cpp
 
 CMakeFiles/PawnGame.dir/src/TeamManager.cpp.i: cmake_force
@@ -375,7 +360,7 @@ CMakeFiles/PawnGame.dir/src/Tile.cpp.obj: CMakeFiles/PawnGame.dir/flags.make
 CMakeFiles/PawnGame.dir/src/Tile.cpp.obj: CMakeFiles/PawnGame.dir/includes_CXX.rsp
 CMakeFiles/PawnGame.dir/src/Tile.cpp.obj: C:/Users/illia/ludo/src/Tile.cpp
 CMakeFiles/PawnGame.dir/src/Tile.cpp.obj: CMakeFiles/PawnGame.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\illia\ludo\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/PawnGame.dir/src/Tile.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\illia\ludo\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/PawnGame.dir/src/Tile.cpp.obj"
 	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/PawnGame.dir/src/Tile.cpp.obj -MF CMakeFiles\PawnGame.dir\src\Tile.cpp.obj.d -o CMakeFiles\PawnGame.dir\src\Tile.cpp.obj -c C:\Users\illia\ludo\src\Tile.cpp
 
 CMakeFiles/PawnGame.dir/src/Tile.cpp.i: cmake_force
@@ -390,7 +375,7 @@ CMakeFiles/PawnGame.dir/src/TileManager.cpp.obj: CMakeFiles/PawnGame.dir/flags.m
 CMakeFiles/PawnGame.dir/src/TileManager.cpp.obj: CMakeFiles/PawnGame.dir/includes_CXX.rsp
 CMakeFiles/PawnGame.dir/src/TileManager.cpp.obj: C:/Users/illia/ludo/src/TileManager.cpp
 CMakeFiles/PawnGame.dir/src/TileManager.cpp.obj: CMakeFiles/PawnGame.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\illia\ludo\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/PawnGame.dir/src/TileManager.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\illia\ludo\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/PawnGame.dir/src/TileManager.cpp.obj"
 	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/PawnGame.dir/src/TileManager.cpp.obj -MF CMakeFiles\PawnGame.dir\src\TileManager.cpp.obj.d -o CMakeFiles\PawnGame.dir\src\TileManager.cpp.obj -c C:\Users\illia\ludo\src\TileManager.cpp
 
 CMakeFiles/PawnGame.dir/src/TileManager.cpp.i: cmake_force
@@ -405,7 +390,7 @@ CMakeFiles/PawnGame.dir/src/TurnManager.cpp.obj: CMakeFiles/PawnGame.dir/flags.m
 CMakeFiles/PawnGame.dir/src/TurnManager.cpp.obj: CMakeFiles/PawnGame.dir/includes_CXX.rsp
 CMakeFiles/PawnGame.dir/src/TurnManager.cpp.obj: C:/Users/illia/ludo/src/TurnManager.cpp
 CMakeFiles/PawnGame.dir/src/TurnManager.cpp.obj: CMakeFiles/PawnGame.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\illia\ludo\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/PawnGame.dir/src/TurnManager.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\illia\ludo\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/PawnGame.dir/src/TurnManager.cpp.obj"
 	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/PawnGame.dir/src/TurnManager.cpp.obj -MF CMakeFiles\PawnGame.dir\src\TurnManager.cpp.obj.d -o CMakeFiles\PawnGame.dir\src\TurnManager.cpp.obj -c C:\Users\illia\ludo\src\TurnManager.cpp
 
 CMakeFiles/PawnGame.dir/src/TurnManager.cpp.i: cmake_force
@@ -420,7 +405,7 @@ CMakeFiles/PawnGame.dir/src/WaitForChoosePawnEvent.cpp.obj: CMakeFiles/PawnGame.
 CMakeFiles/PawnGame.dir/src/WaitForChoosePawnEvent.cpp.obj: CMakeFiles/PawnGame.dir/includes_CXX.rsp
 CMakeFiles/PawnGame.dir/src/WaitForChoosePawnEvent.cpp.obj: C:/Users/illia/ludo/src/WaitForChoosePawnEvent.cpp
 CMakeFiles/PawnGame.dir/src/WaitForChoosePawnEvent.cpp.obj: CMakeFiles/PawnGame.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\illia\ludo\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/PawnGame.dir/src/WaitForChoosePawnEvent.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\illia\ludo\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/PawnGame.dir/src/WaitForChoosePawnEvent.cpp.obj"
 	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/PawnGame.dir/src/WaitForChoosePawnEvent.cpp.obj -MF CMakeFiles\PawnGame.dir\src\WaitForChoosePawnEvent.cpp.obj.d -o CMakeFiles\PawnGame.dir\src\WaitForChoosePawnEvent.cpp.obj -c C:\Users\illia\ludo\src\WaitForChoosePawnEvent.cpp
 
 CMakeFiles/PawnGame.dir/src/WaitForChoosePawnEvent.cpp.i: cmake_force
@@ -435,7 +420,7 @@ CMakeFiles/PawnGame.dir/src/WindowManager.cpp.obj: CMakeFiles/PawnGame.dir/flags
 CMakeFiles/PawnGame.dir/src/WindowManager.cpp.obj: CMakeFiles/PawnGame.dir/includes_CXX.rsp
 CMakeFiles/PawnGame.dir/src/WindowManager.cpp.obj: C:/Users/illia/ludo/src/WindowManager.cpp
 CMakeFiles/PawnGame.dir/src/WindowManager.cpp.obj: CMakeFiles/PawnGame.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\illia\ludo\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/PawnGame.dir/src/WindowManager.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\illia\ludo\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/PawnGame.dir/src/WindowManager.cpp.obj"
 	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/PawnGame.dir/src/WindowManager.cpp.obj -MF CMakeFiles\PawnGame.dir\src\WindowManager.cpp.obj.d -o CMakeFiles\PawnGame.dir\src\WindowManager.cpp.obj -c C:\Users\illia\ludo\src\WindowManager.cpp
 
 CMakeFiles/PawnGame.dir/src/WindowManager.cpp.i: cmake_force
@@ -450,7 +435,7 @@ CMakeFiles/PawnGame.dir/src/main.cpp.obj: CMakeFiles/PawnGame.dir/flags.make
 CMakeFiles/PawnGame.dir/src/main.cpp.obj: CMakeFiles/PawnGame.dir/includes_CXX.rsp
 CMakeFiles/PawnGame.dir/src/main.cpp.obj: C:/Users/illia/ludo/src/main.cpp
 CMakeFiles/PawnGame.dir/src/main.cpp.obj: CMakeFiles/PawnGame.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\illia\ludo\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/PawnGame.dir/src/main.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\illia\ludo\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/PawnGame.dir/src/main.cpp.obj"
 	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/PawnGame.dir/src/main.cpp.obj -MF CMakeFiles\PawnGame.dir\src\main.cpp.obj.d -o CMakeFiles\PawnGame.dir\src\main.cpp.obj -c C:\Users\illia\ludo\src\main.cpp
 
 CMakeFiles/PawnGame.dir/src/main.cpp.i: cmake_force
@@ -478,7 +463,6 @@ PawnGame_OBJECTS = \
 "CMakeFiles/PawnGame.dir/src/Pawn.cpp.obj" \
 "CMakeFiles/PawnGame.dir/src/PawnManager.cpp.obj" \
 "CMakeFiles/PawnGame.dir/src/PlayerTurnHandler.cpp.obj" \
-"CMakeFiles/PawnGame.dir/src/Renderable.cpp.obj" \
 "CMakeFiles/PawnGame.dir/src/RollDiceHandler.cpp.obj" \
 "CMakeFiles/PawnGame.dir/src/SpecialTiles.cpp.obj" \
 "CMakeFiles/PawnGame.dir/src/StopGameHandler.cpp.obj" \
@@ -508,7 +492,6 @@ PawnGame.exe: CMakeFiles/PawnGame.dir/src/MovePawnHandler.cpp.obj
 PawnGame.exe: CMakeFiles/PawnGame.dir/src/Pawn.cpp.obj
 PawnGame.exe: CMakeFiles/PawnGame.dir/src/PawnManager.cpp.obj
 PawnGame.exe: CMakeFiles/PawnGame.dir/src/PlayerTurnHandler.cpp.obj
-PawnGame.exe: CMakeFiles/PawnGame.dir/src/Renderable.cpp.obj
 PawnGame.exe: CMakeFiles/PawnGame.dir/src/RollDiceHandler.cpp.obj
 PawnGame.exe: CMakeFiles/PawnGame.dir/src/SpecialTiles.cpp.obj
 PawnGame.exe: CMakeFiles/PawnGame.dir/src/StopGameHandler.cpp.obj
@@ -525,7 +508,7 @@ PawnGame.exe: C:/Users/illia/ludo/libs/ft2133/freetype-2.13.3/build/libfreetype.
 PawnGame.exe: CMakeFiles/PawnGame.dir/linkLibs.rsp
 PawnGame.exe: CMakeFiles/PawnGame.dir/objects1.rsp
 PawnGame.exe: CMakeFiles/PawnGame.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\illia\ludo\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Linking CXX executable PawnGame.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\illia\ludo\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Linking CXX executable PawnGame.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\PawnGame.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

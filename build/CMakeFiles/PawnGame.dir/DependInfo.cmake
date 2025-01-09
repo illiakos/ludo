@@ -23,7 +23,6 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/Users/illia/ludo/src/Pawn.cpp" "CMakeFiles/PawnGame.dir/src/Pawn.cpp.obj" "gcc" "CMakeFiles/PawnGame.dir/src/Pawn.cpp.obj.d"
   "C:/Users/illia/ludo/src/PawnManager.cpp" "CMakeFiles/PawnGame.dir/src/PawnManager.cpp.obj" "gcc" "CMakeFiles/PawnGame.dir/src/PawnManager.cpp.obj.d"
   "C:/Users/illia/ludo/src/PlayerTurnHandler.cpp" "CMakeFiles/PawnGame.dir/src/PlayerTurnHandler.cpp.obj" "gcc" "CMakeFiles/PawnGame.dir/src/PlayerTurnHandler.cpp.obj.d"
-  "C:/Users/illia/ludo/src/Renderable.cpp" "CMakeFiles/PawnGame.dir/src/Renderable.cpp.obj" "gcc" "CMakeFiles/PawnGame.dir/src/Renderable.cpp.obj.d"
   "C:/Users/illia/ludo/src/RollDiceHandler.cpp" "CMakeFiles/PawnGame.dir/src/RollDiceHandler.cpp.obj" "gcc" "CMakeFiles/PawnGame.dir/src/RollDiceHandler.cpp.obj.d"
   "C:/Users/illia/ludo/src/SpecialTiles.cpp" "CMakeFiles/PawnGame.dir/src/SpecialTiles.cpp.obj" "gcc" "CMakeFiles/PawnGame.dir/src/SpecialTiles.cpp.obj.d"
   "C:/Users/illia/ludo/src/StopGameHandler.cpp" "CMakeFiles/PawnGame.dir/src/StopGameHandler.cpp.obj" "gcc" "CMakeFiles/PawnGame.dir/src/StopGameHandler.cpp.obj.d"

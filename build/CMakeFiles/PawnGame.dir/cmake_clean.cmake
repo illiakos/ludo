@@ -29,8 +29,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/PawnGame.dir/src/PawnManager.cpp.obj.d"
   "CMakeFiles/PawnGame.dir/src/PlayerTurnHandler.cpp.obj"
   "CMakeFiles/PawnGame.dir/src/PlayerTurnHandler.cpp.obj.d"
-  "CMakeFiles/PawnGame.dir/src/Renderable.cpp.obj"
-  "CMakeFiles/PawnGame.dir/src/Renderable.cpp.obj.d"
   "CMakeFiles/PawnGame.dir/src/RollDiceHandler.cpp.obj"
   "CMakeFiles/PawnGame.dir/src/RollDiceHandler.cpp.obj.d"
   "CMakeFiles/PawnGame.dir/src/SpecialTiles.cpp.obj"

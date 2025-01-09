@@ -7,11 +7,6 @@
 #include <memory>
 #include <ostream>
 
-/*EventLoop& EventLoop::getInstance() {*/
-/*  static EventLoop instance;*/
-/*  return instance;*/
-/*}*/
-
 EventLoop *EventLoop::instance = nullptr;
 
 void EventLoop::setInstance(EventLoop &newInstance) {
@@ -29,7 +24,6 @@ EventLoop &EventLoop::getInstance() {
 }
 
 void EventLoop::enqueueEvent(const std::shared_ptr<Event> &event) {
-  std::cout << "abobusik" << std::endl;
   {
     std::lock_guard<std::mutex> lock(eventsMutex);
     events.push_back(event);

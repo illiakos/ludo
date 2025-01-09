@@ -14,10 +14,6 @@
 #include "TileContext.hpp"
 #include "TileManager.hpp"
 
-/*MovePawnHandler::MovePawnHandler(Board& board, PawnManager& pawnManager)*/
-/*    : EventHandler("MovePawnHandler"), board(board), pawnManager(pawnManager)
- * {}*/
-
 void MovePawnHandler::handleEvent(const std::shared_ptr<Event> &event) {
   std::cout << "handling event" << endl;
   auto moveEvent = std::dynamic_pointer_cast<MovePawnEvent>(event);
@@ -71,7 +67,6 @@ void MovePawnHandler::handleEvent(const std::shared_ptr<Event> &event) {
         std::cout << "Pawn " << pawn->getId()
                   << " moved from Base to Walkable starting tile.\n";
         drawer.addRenderable(pawn);
-        /*base->freeSlot();*/
       } else {
         std::cout << "Pawn " << pawn->getId()
                   << " cannot leave base without rolling a 6.\n";

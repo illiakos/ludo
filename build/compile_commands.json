@@ -91,12 +91,6 @@
 },
 {
   "directory": "C:/Users/illia/ludo/build",
-  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles/PawnGame.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\PawnGame.dir\\src\\Renderable.cpp.obj -c C:\\Users\\illia\\ludo\\src\\Renderable.cpp",
-  "file": "C:/Users/illia/ludo/src/Renderable.cpp",
-  "output": "CMakeFiles/PawnGame.dir/src/Renderable.cpp.obj"
-},
-{
-  "directory": "C:/Users/illia/ludo/build",
   "command": "C:\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles/PawnGame.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\PawnGame.dir\\src\\RollDiceHandler.cpp.obj -c C:\\Users\\illia\\ludo\\src\\RollDiceHandler.cpp",
   "file": "C:/Users/illia/ludo/src/RollDiceHandler.cpp",
   "output": "CMakeFiles/PawnGame.dir/src/RollDiceHandler.cpp.obj"

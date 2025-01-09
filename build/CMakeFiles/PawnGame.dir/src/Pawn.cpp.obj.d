@@ -225,6 +225,7 @@ CMakeFiles/PawnGame.dir/src/Pawn.cpp.obj: \
  C:/Users/illia/ludo/include/TileContext.hpp \
  C:/Users/illia/ludo/include/TurnManager.hpp \
  C:/Users/illia/ludo/include/EventLoop.hpp \
+ C:/Users/illia/ludo/include/ColorConstants.hpp \
  C:/msys64/ucrt64/include/c++/13.2.0/cmath \
  C:/msys64/ucrt64/include/math.h \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/specfun.h \

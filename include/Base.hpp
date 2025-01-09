@@ -23,7 +23,6 @@ public:
   };
   virtual void renderSelf() const override;
   ~Base();
-  void skibidi();
   std::string toString();
   int getStartingTileId();
   const Dimensions &getDimensions() const override { return dimensions; }

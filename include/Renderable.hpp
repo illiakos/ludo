@@ -25,6 +25,6 @@ public:
 class RenderableContainer {
 public:
   virtual void addRenderable(const std::shared_ptr<Renderable> r) = 0;
-  ~RenderableContainer();
+  virtual ~RenderableContainer() = default;
 };
 #endif // !RENDERABLE_H

@@ -18,10 +18,6 @@ using namespace std;
 
 const double PI = 3.141592653589793;
 
-/*void MapDrawer::addRenderable(std::shared_ptr<Renderable> r) {*/
-/*  renderableItems.push_back(r);*/
-/*}*/
-
 MapDrawer &MapDrawer::getInstance() {
   static MapDrawer instance(800, 15); // Single instance
   return instance;
@@ -39,9 +35,9 @@ float MapDrawer::getCellSize() {
   float conversionFactor = 2.0f / windowSize;
 
   float cellSizePixels =
-      static_cast<float>(windowSize) / mapSize; // ~47.0588 pixels
+      static_cast<float>(windowSize) / mapSize; // px
   float cellSizeOpenGL =
-      cellSizePixels * conversionFactor; // ~0.117647 OpenGL units
+      cellSizePixels * conversionFactor; // OpenGL units
   return cellSizeOpenGL;
 }
 
@@ -200,20 +196,12 @@ void MapDrawer::drawBase(float x, float y, const Color &color) {
   // Draw colored bg
   drawRectangle(getCellPosition(x), getCellPosition(y), getSizeOfCells(6),
                 getSizeOfCells(6),
-                color); // Blue color
+                color);
 
   // Draw white part
   drawRectangle(getCellPosition(x + 1), getCellPosition(y + 1),
                 getSizeOfCells(4), getSizeOfCells(4),
-                white); // White color
-  /*drawCircle(getCellPosition(x + 1.5), getCellPosition(y + 1.5),
-   * getSizeOfCells(0.45), color);*/
-  /*drawCircle(getCellPosition(x + 3.5), getCellPosition(y + 1.5),
-   * getSizeOfCells(0.45), color);*/
-  /*drawCircle(getCellPosition(x + 3.5), getCellPosition(y + 3.5),
-   * getSizeOfCells(0.45), color);*/
-  /*drawCircle(getCellPosition(x + 1.5), getCellPosition(y + 3.5),
-   * getSizeOfCells(0.45), color);*/
+                white);
 }
 
 void MapDrawer::drawRoads() {
@@ -342,23 +330,7 @@ void MapDrawer::drawImageFromData(unsigned char *data, int width, int height, in
 }
 
 void MapDrawer::drawLudoBoard() {
-  /*drawCells();*/
-
   drawMiddle();
-
-  // drawBase(0, 0, blue); // Blue
-
-  // //drawBase(0, 9, red); // Red
-
-  // drawBase(9, 9, green); // Green
-
-  // drawBase(9, 0, yellow); // Yellow
-
-  /*drawRoads();*/
-
-  // Test circle
-  drawCircle(getCellPosition(3), getCellPosition(6), getSizeOfCells(0.45),
-             green);
 }
 
 void MapDrawer::enqueueRenderTask(std::function<void()> task) {
@@ -376,7 +348,7 @@ void MapDrawer::drawMap() {
   }
 
   window =
-      glfwCreateWindow(windowSize, windowSize, "GLFW Test Window", NULL, NULL);
+      glfwCreateWindow(windowSize, windowSize, "Ludo game", NULL, NULL);
 
   // Make the window's context current
   glfwMakeContextCurrent(window);
@@ -394,8 +366,6 @@ void MapDrawer::drawMap() {
       }
     }
 
-    // Draw the Ludo board
-
     glfwSwapBuffers(window);
     glfwPollEvents();
   }
@@ -405,7 +375,6 @@ void MapDrawer::drawMap() {
   glfwTerminate();
 }
 
-void MapDrawer::log() {}
 void MapDrawer::addRenderable(std::shared_ptr<Renderable> renderable) {
   std::lock_guard<std::mutex> lock(renderablesMutex);
   renderableItems.push_back(renderable);
@@ -431,18 +400,6 @@ bool doDimensionsOverlap(const Dimensions &dim1, const Dimensions &dim2) {
   bool yOverlap = !(dim1.y + dim1.dy <= dim2.y || dim2.y + dim2.dy <= dim1.y);
 
   return xOverlap && yOverlap;
-}
-
-// Helper function to log renderable information
-void logRenderableInfo(const std::shared_ptr<Renderable> &renderable, float x,
-                       float y, float dx, float dy) {
-  if (renderable->getZIndex() == 2) {
-    /*std::cout << "PAWN!!!! renderableDim: (" << x << ", " << y << ", " << dx*/
-    /*          << ", " << dy << ")\n";*/
-  } else {
-    /*std::cout << "Tile!!!! renderableDim: (" << x << ", " << y << ", " << dx*/
-    /*          << ", " << dy << ")\n";*/
-  }
 }
 
 // Helper function to check if a click is on a circle
@@ -498,10 +455,6 @@ std::shared_ptr<Renderable> MapDrawer::findByDimensionsRange(float clickX,
     float renderableYOpenGL = getCellPosition(renderableDim.y);
     float renderableDXOpenGL = getSizeOfCells(renderableDim.dx);
     float renderableDYOpenGL = getSizeOfCells(renderableDim.dy);
-
-    // Debugging information
-    /*logRenderableInfo(renderable, renderableXOpenGL, renderableYOpenGL,*/
-    /*                  renderableDXOpenGL, renderableDYOpenGL);*/
 
     // Handle renderable type
     if (renderable->getZIndex() == 2) { // Circle

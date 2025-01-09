@@ -572,30 +572,6 @@ src/PlayerTurnHandler.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\PawnGame.dir\build.make CMakeFiles/PawnGame.dir/src/PlayerTurnHandler.cpp.s
 .PHONY : src/PlayerTurnHandler.cpp.s
 
-src/Renderable.obj: src/Renderable.cpp.obj
-.PHONY : src/Renderable.obj
-
-# target to build an object file
-src/Renderable.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\PawnGame.dir\build.make CMakeFiles/PawnGame.dir/src/Renderable.cpp.obj
-.PHONY : src/Renderable.cpp.obj
-
-src/Renderable.i: src/Renderable.cpp.i
-.PHONY : src/Renderable.i
-
-# target to preprocess a source file
-src/Renderable.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\PawnGame.dir\build.make CMakeFiles/PawnGame.dir/src/Renderable.cpp.i
-.PHONY : src/Renderable.cpp.i
-
-src/Renderable.s: src/Renderable.cpp.s
-.PHONY : src/Renderable.s
-
-# target to generate assembly for a file
-src/Renderable.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\PawnGame.dir\build.make CMakeFiles/PawnGame.dir/src/Renderable.cpp.s
-.PHONY : src/Renderable.cpp.s
-
 src/RollDiceHandler.obj: src/RollDiceHandler.cpp.obj
 .PHONY : src/RollDiceHandler.obj
 
@@ -897,9 +873,6 @@ help:
 	@echo ... src/PlayerTurnHandler.obj
 	@echo ... src/PlayerTurnHandler.i
 	@echo ... src/PlayerTurnHandler.s
-	@echo ... src/Renderable.obj
-	@echo ... src/Renderable.i
-	@echo ... src/Renderable.s
 	@echo ... src/RollDiceHandler.obj
 	@echo ... src/RollDiceHandler.i
 	@echo ... src/RollDiceHandler.s

@@ -7,7 +7,6 @@
 
 void Base::renderSelf() const {
   auto &drawer = MapDrawer::getInstance();
-  /*drawer.log();*/
   drawer.drawBase(dimensions.x, dimensions.y, color);
 
   return;
@@ -16,8 +15,6 @@ void Base::renderSelf() const {
 int Base::getStartingTileId() { return startingTileId; }
 
 Base::~Base() {}
-
-void Base::skibidi() {}
 
 std::string Base::toString() {
   return "Base [Team ID: " + std::to_string(teamId) +

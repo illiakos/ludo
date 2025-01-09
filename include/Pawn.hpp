@@ -47,7 +47,6 @@ private:
   int zIndex = 2;
   Color color;
   TileContext context;
-  /*Coordinates coordinates;*/
   bool active = true;
   int tileId;
 };

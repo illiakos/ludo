@@ -397,16 +397,16 @@ int main() {
   mapDrawer.addRenderable(redBase);
   baseManager.addBase(1, redBase);
 
-  auto blueBase = std::make_shared<Base>(Dimensions(0, 0, 6, 6), blue, 3, 20);
+  auto blueBase = std::make_shared<Base>(Dimensions(0, 0, 6, 6), blue, 3, 40);
   mapDrawer.addRenderable(blueBase);
   baseManager.addBase(blueBase->getTeamId(), blueBase);
 
-  auto greenBase = std::make_shared<Base>(Dimensions(9, 9, 6, 6), green, 4, 30);
+  auto greenBase = std::make_shared<Base>(Dimensions(9, 9, 6, 6), green, 4, 14);
   mapDrawer.addRenderable(greenBase);
   baseManager.addBase(greenBase->getTeamId(), greenBase);
 
   auto yellowBase =
-      std::make_shared<Base>(Dimensions(9, 0, 6, 6), yellow, 2, 40);
+      std::make_shared<Base>(Dimensions(9, 0, 6, 6), yellow, 2, 27);
   mapDrawer.addRenderable(yellowBase);
 
   baseManager.addBase(yellowBase->getTeamId(), yellowBase);
@@ -515,8 +515,8 @@ int main() {
 
   /*eventLoop.processEvents();*/
   eventLoop->start();
-  std::this_thread::sleep_for(std::chrono::seconds(1));
-  eventLoop->enqueueEvent(std::make_shared<MovePawnEvent>(1, 10, 6));
+  // std::this_thread::sleep_for(std::chrono::seconds(1));
+  // eventLoop->enqueueEvent(std::make_shared<MovePawnEvent>(1, 10, 6));
   /*std::this_thread::sleep_for(std::chrono::seconds(2));*/
   /*eventLoop->enqueueEvent(std::make_shared<MovePawnEvent>(1, 10, 3));*/
   /**/
@@ -526,7 +526,7 @@ int main() {
   /*eventLoop->enqueueEvent(std::make_shared<MovePawnEvent>(1, 10, 6));*/
   /*std::this_thread::sleep_for(std::chrono::seconds(4));*/
   std::cout << "Enqueued player turn" << std::endl;
-  eventLoop->enqueueEvent(std::make_shared<PlayerTurnEvent>(1)); 
+  eventLoop->enqueueEvent(std::make_shared<PlayerTurnEvent>(2)); 
 
   // std::this_thread::sleep_for (std::chrono::seconds (2));
   // eventLoop.enqueueEvent(std::make_shared<MovePawnEvent>(1, 10, 5));

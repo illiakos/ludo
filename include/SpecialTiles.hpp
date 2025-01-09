@@ -38,7 +38,6 @@ public:
   PrefinishingTile(Dimensions d, int id, int position, Color color, int teamId)
       : Tile(d, id, position, color, TileContext::Finishing), teamId(teamId) {};
 
-  /*int getNextPosition ();*/
   void setFirstFinishingTilePosition(int pos);
   int getFirstFinishingTilePosition();
   int getTeamId();
@@ -47,7 +46,6 @@ public:
 
 private:
   int teamId;
-  /*int nextPosition; // Position of the next tile in the prefinishing path*/
   int firstFinishingTilePosition;
 };
 

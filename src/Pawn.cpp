@@ -6,6 +6,7 @@
 #include "TeamManager.hpp"
 #include "TileContext.hpp"
 #include "TurnManager.hpp"
+#include "ColorConstants.hpp"
 #include <GLFW/glfw3.h>
 #include <cmath>
 #include <iostream>
@@ -23,22 +24,14 @@ void Pawn::setActive(bool active) { active = active; }
 bool Pawn::isActive() { return active; }
 
 void Pawn::onClick() {
-  std::cout << "pawn click ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;" << endl;
-
   auto& loop = EventLoop::getInstance();  
   auto& teamManager = TeamManager::getInstance();
-
-
-  /*if (true) {*/
-  /*  return;*/
-  /*}*/
-
 
   auto& tm = TurnManager::getInstance();
   std::cout << "current player id : " << tm.getCurrentPlayerId() << " and team id is : " << teamId << std::endl;
   std::cout << "current dice value : " << tm.getCurrentRolledValue() << std::endl ;
   if (teamId != tm.getCurrentPlayerId() || tm.getCurrentRolledValue() == 0) {
-    // If dolboyob decides to move someone else's pawn - he goes do pizdy
+    // If someone decides to move someone else's pawn - he won't be able to do that.
     return;
   }
   int value = tm.getCurrentRolledValue();
@@ -48,8 +41,6 @@ void Pawn::onClick() {
   tm.clearRoll(); 
   std::cout << "moving with this value : " << value << std::endl;
   loop.enqueueEvent(std::make_shared<MovePawnEvent>(tm.getCurrentPlayerId(), id, value));
-  
-  
 }
 
 void Pawn::renderSelf() const {
