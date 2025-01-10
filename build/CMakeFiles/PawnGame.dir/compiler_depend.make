@@ -940,8 +940,10 @@ CMakeFiles/PawnGame.dir/src/Dice.cpp.obj: C:/Users/illia/ludo/src/Dice.cpp \
   C:/Users/illia/ludo/include/Color.hpp \
   C:/Users/illia/ludo/include/Dice.hpp \
   C:/Users/illia/ludo/include/Dimensions.hpp \
+  C:/Users/illia/ludo/include/Event.hpp \
   C:/Users/illia/ludo/include/EventLoop.hpp \
   C:/Users/illia/ludo/include/MapDrawer.hpp \
+  C:/Users/illia/ludo/include/PlayerTurnEvent.hpp \
   C:/Users/illia/ludo/include/Renderable.hpp \
   C:/Users/illia/ludo/include/TurnManager.hpp \
   C:/Users/illia/ludo/libs/stb/stb_image.h \
@@ -1560,6 +1562,7 @@ CMakeFiles/PawnGame.dir/src/EventLoop.cpp.obj: C:/Users/illia/ludo/src/EventLoop
   C:/Users/illia/ludo/include/Event.hpp \
   C:/Users/illia/ludo/include/EventDispatcher.hpp \
   C:/Users/illia/ludo/include/EventLoop.hpp \
+  C:/Users/illia/ludo/include/PlayerTurnEvent.hpp \
   C:/Users/illia/ludo/include/TurnManager.hpp \
   C:/msys64/ucrt64/include/_mingw.h \
   C:/msys64/ucrt64/include/_mingw_mac.h \
@@ -2468,6 +2471,7 @@ CMakeFiles/PawnGame.dir/src/Pawn.cpp.obj: C:/Users/illia/ludo/src/Pawn.cpp \
   C:/Users/illia/ludo/include/MapDrawer.hpp \
   C:/Users/illia/ludo/include/MovePawnEvent.hpp \
   C:/Users/illia/ludo/include/Pawn.hpp \
+  C:/Users/illia/ludo/include/PlayerTurnEvent.hpp \
   C:/Users/illia/ludo/include/Renderable.hpp \
   C:/Users/illia/ludo/include/Team.hpp \
   C:/Users/illia/ludo/include/TeamManager.hpp \
@@ -4338,6 +4342,7 @@ CMakeFiles/PawnGame.dir/src/TileManager.cpp.obj: C:/Users/illia/ludo/src/TileMan
 CMakeFiles/PawnGame.dir/src/TurnManager.cpp.obj: C:/Users/illia/ludo/src/TurnManager.cpp \
   C:/Users/illia/ludo/include/Event.hpp \
   C:/Users/illia/ludo/include/EventLoop.hpp \
+  C:/Users/illia/ludo/include/PlayerTurnEvent.hpp \
   C:/Users/illia/ludo/include/RollDiceEvent.hpp \
   C:/Users/illia/ludo/include/TurnManager.hpp \
   C:/msys64/ucrt64/include/_mingw.h \
@@ -4546,6 +4551,7 @@ CMakeFiles/PawnGame.dir/src/WaitForChoosePawnEvent.cpp.obj: C:/Users/illia/ludo/
   C:/Users/illia/ludo/include/EventHandler.hpp \
   C:/Users/illia/ludo/include/EventLoop.hpp \
   C:/Users/illia/ludo/include/MovePawnEvent.hpp \
+  C:/Users/illia/ludo/include/PlayerTurnEvent.hpp \
   C:/Users/illia/ludo/include/TurnManager.hpp \
   C:/Users/illia/ludo/include/WaitForChoosePawnEvent.hpp \
   C:/Users/illia/ludo/include/WaitForChoosePawnHandler.hpp \

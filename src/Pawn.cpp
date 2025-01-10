@@ -24,7 +24,7 @@ void Pawn::setActive(bool active) { active = active; }
 bool Pawn::isActive() { return active; }
 
 void Pawn::onClick() {
-  auto& loop = EventLoop::getInstance();  
+  auto loop = EventLoop::getInstance();  
   auto& teamManager = TeamManager::getInstance();
 
   auto& tm = TurnManager::getInstance();
@@ -37,10 +37,13 @@ void Pawn::onClick() {
   int value = tm.getCurrentRolledValue();
   cout << "ROLLED VALUE" << value << endl;
   cout << "Plyaer id  VALUE" << tm.getCurrentPlayerId() << endl;
-  cout << "ID VALUE" << id << endl;
-  tm.clearRoll(); 
+  cout << "ID VALUE " << id << endl;
+  tm.clearRoll();
+  auto event = tm.getCurrentPlayerTurnEvent();
+  std::cout  << event << std::endl;
+  event->completeTurn();
   std::cout << "moving with this value : " << value << std::endl;
-  loop.enqueueEvent(std::make_shared<MovePawnEvent>(tm.getCurrentPlayerId(), id, value));
+  loop->pushEvent(std::make_shared<MovePawnEvent>(tm.getCurrentPlayerId(), id, value));
 }
 
 void Pawn::renderSelf() const {

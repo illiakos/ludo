@@ -157,9 +157,9 @@ CMakeFiles/PawnGame.dir/src/TurnManager.cpp.obj: \
  C:/msys64/ucrt64/include/malloc.h \
  C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/mm_malloc.h \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/std_abs.h \
- C:/Users/illia/ludo/include/RollDiceEvent.hpp \
- C:/Users/illia/ludo/include/Event.hpp \
- C:/msys64/ucrt64/include/c++/13.2.0/string \
+ C:/msys64/ucrt64/include/c++/13.2.0/iostream \
+ C:/msys64/ucrt64/include/c++/13.2.0/ostream \
+ C:/msys64/ucrt64/include/c++/13.2.0/ios \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/char_traits.h \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/localefwd.h \
  C:/msys64/ucrt64/include/c++/13.2.0/x86_64-w64-mingw32/bits/c++locale.h \
@@ -168,6 +168,9 @@ CMakeFiles/PawnGame.dir/src/TurnManager.cpp.obj: \
  C:/msys64/ucrt64/include/sec_api/stdio_s.h \
  C:/msys64/ucrt64/include/c++/13.2.0/cctype \
  C:/msys64/ucrt64/include/ctype.h \
+ C:/msys64/ucrt64/include/c++/13.2.0/bits/ios_base.h \
+ C:/msys64/ucrt64/include/c++/13.2.0/bits/locale_classes.h \
+ C:/msys64/ucrt64/include/c++/13.2.0/string \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/ostream_insert.h \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/basic_string.h \
  C:/msys64/ucrt64/include/c++/13.2.0/string_view \
@@ -176,11 +179,6 @@ CMakeFiles/PawnGame.dir/src/TurnManager.cpp.obj: \
  C:/msys64/ucrt64/include/c++/13.2.0/cstdio \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/charconv.h \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/basic_string.tcc \
- C:/msys64/ucrt64/include/c++/13.2.0/iostream \
- C:/msys64/ucrt64/include/c++/13.2.0/ostream \
- C:/msys64/ucrt64/include/c++/13.2.0/ios \
- C:/msys64/ucrt64/include/c++/13.2.0/bits/ios_base.h \
- C:/msys64/ucrt64/include/c++/13.2.0/bits/locale_classes.h \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/locale_classes.tcc \
  C:/msys64/ucrt64/include/c++/13.2.0/system_error \
  C:/msys64/ucrt64/include/c++/13.2.0/stdexcept \
@@ -197,4 +195,7 @@ CMakeFiles/PawnGame.dir/src/TurnManager.cpp.obj: \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/basic_ios.tcc \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/ostream.tcc \
  C:/msys64/ucrt64/include/c++/13.2.0/istream \
- C:/msys64/ucrt64/include/c++/13.2.0/bits/istream.tcc
+ C:/msys64/ucrt64/include/c++/13.2.0/bits/istream.tcc \
+ C:/Users/illia/ludo/include/PlayerTurnEvent.hpp \
+ C:/Users/illia/ludo/include/Event.hpp \
+ C:/Users/illia/ludo/include/RollDiceEvent.hpp

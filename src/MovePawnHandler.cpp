@@ -81,8 +81,8 @@ void MovePawnHandler::handleEvent(const std::shared_ptr<Event> &event) {
       break;
     }
   }
-  auto& eventLoop = EventLoop::getInstance();
-  eventLoop.enqueueEvent(std::make_shared<EndTurnEvent>());
+  auto eventLoop = EventLoop::getInstance();
+  eventLoop->enqueueEvent(std::make_shared<EndTurnEvent>());
 
 }
 
@@ -139,8 +139,6 @@ void MovePawnHandler::moveAtFinishing(std::shared_ptr<Pawn> pawn, int steps) {
               ->getDimensions()); // Update dimensions to match the target tile
     }
   }
-  /*pawn->setDimensions(Dimensions(6, finalY, pawn->getDimensions().dx,
-   * pawn->getDimensions().dy)); // Move pawn to the arrow tile*/
   std::cout << "new dims : " << pawn->getDimensions() << endl;
   drawer.addRenderable(pawn); // Add the pawn back to the renderable list
 }

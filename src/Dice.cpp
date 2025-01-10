@@ -13,7 +13,7 @@ void Dice::renderSelf() const {
     int diceValue = turnManager.getCurrentRolledValue();
 
     if (prevDiceValue == 0 && diceValue == 0) {
-      diceValue = 6;
+        diceValue = 6;
     } else if (diceValue == 0) {
         diceValue = prevDiceValue;
     }

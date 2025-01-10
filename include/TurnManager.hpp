@@ -3,7 +3,9 @@
 
 #include "EventLoop.hpp"
 #include <functional>
+#include <iostream>
 #include <memory>
+#include "PlayerTurnEvent.hpp"
 
 class TurnManager {
 public:
@@ -27,15 +29,26 @@ public:
   int getCurrentRolledValue() {return currentRolledValue;}
   int getPrevRolledValue() {return prevRolledValue;}
   void clearRoll() {currentRolledValue = 0;}
+  void setCurrentPlayerTurnEvent(std::shared_ptr<PlayerTurnEvent> event) {
+    std::cout << "Setting current player turn event : " << event << std::endl;
+    this->event=event;
+  };
+
+  std::shared_ptr<PlayerTurnEvent> getCurrentPlayerTurnEvent() {return event;}
 
 private:
   // Constructor remains public for manual creation
+
+  std::shared_ptr<PlayerTurnEvent> event;
+
   void setCurrentRolledValue(int v) {
     if (currentRolledValue != 0) {
       prevRolledValue = currentRolledValue;
     }
     currentRolledValue = v;
+    std::cout << getCurrentRolledValue() << " " << getPrevRolledValue() << std::endl;
   }
+
   std::shared_ptr<EventLoop> eventLoop;
   int currentPlayerId;
   int totalPlayers;

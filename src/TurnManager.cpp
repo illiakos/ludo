@@ -2,11 +2,6 @@
 #include "RollDiceEvent.hpp"
 #include <iostream>
 
-/*TurnManager& TurnManager::getInstance() {*/
-/*  static TurnManager instance();*/
-/**/
-/*}*/
-
 TurnManager *TurnManager::instance = nullptr;
 
 TurnManager::TurnManager(std::shared_ptr<EventLoop> loop)

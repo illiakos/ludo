@@ -215,4 +215,6 @@ CMakeFiles/PawnGame.dir/src/Dice.cpp.obj: \
  C:/msys64/ucrt64/include/c++/13.2.0/thread \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/std_thread.h \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/this_thread_sleep.h \
+ C:/Users/illia/ludo/include/PlayerTurnEvent.hpp \
+ C:/Users/illia/ludo/include/Event.hpp \
  C:/Users/illia/ludo/libs/stb/stb_image.h

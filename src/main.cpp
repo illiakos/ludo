@@ -246,21 +246,21 @@ void createTransitionTiles(TileManager &tileManager, MapDrawer &mapDrawer) {
   addTransitionTile(tileManager, mapDrawer, 0, 7, 51, 1, 1,
                     Color(0.8f, 0.8f, 0.8f)); // Red Transition Tile
   addTransitionTile(tileManager, mapDrawer, 7, 0, 38, 2, 2,
-                    Color(0.8f, 0.8f, 0.8f)); // Blue Transition Tile
-  addTransitionTile(tileManager, mapDrawer, 7, 14, 12, 3, 3,
-                    Color(0.8f, 0.8f, 0.8f)); // Green Transition Tile
-  addTransitionTile(tileManager, mapDrawer, 14, 7, 25, 4, 4,
                     Color(0.8f, 0.8f, 0.8f)); // Yellow Transition Tile
+  addTransitionTile(tileManager, mapDrawer, 7, 14, 12, 3, 3,
+                    Color(0.8f, 0.8f, 0.8f)); // Blue Transition Tile
+  addTransitionTile(tileManager, mapDrawer, 14, 7, 25, 4, 4,
+                    Color(0.8f, 0.8f, 0.8f)); // Green Transition Tile
 }
 
 void createStartingTiles(TileManager &tileManager, MapDrawer &mapDrawer) {
   addStartingTile(tileManager, mapDrawer, 1, 8, 1, red, 1); // Red Starting Tile
   addStartingTile(tileManager, mapDrawer, 6, 1, 40, blue,
-                  3); // Blue Starting Tile
+                  4); // Blue Starting Tile
   addStartingTile(tileManager, mapDrawer, 8, 13, 14, green,
-                  4); // Green Starting Tile
+                  2); // Green Starting Tile
   addStartingTile(tileManager, mapDrawer, 13, 6, 27, yellow,
-                  2); // Yellow Starting Tile
+                  3); // Yellow Starting Tile
 }
 
 void createFinishingTiles(TileManager &tileManager, MapDrawer &mapDrawer) {
@@ -269,13 +269,13 @@ void createFinishingTiles(TileManager &tileManager, MapDrawer &mapDrawer) {
     addFinishingTile(tileManager, mapDrawer, i, 7, 200 + i, i, red, 1);
 
     // Blue Finishing Tile
-    addFinishingTile(tileManager, mapDrawer, 7, i, 300 + i, i, blue, 3);
+    addFinishingTile(tileManager, mapDrawer, 7, i, 300 + i, i, blue, 4);
 
     // Green Finishing Tile
-    addFinishingTile(tileManager, mapDrawer, 7, 14 - i, 400 + i, i, green, 4);
+    addFinishingTile(tileManager, mapDrawer, 7, 14 - i, 400 + i, i, green, 2);
 
     // Yellow Finishing Tile
-    addFinishingTile(tileManager, mapDrawer, 14 - i, 7, 500 + i, i, yellow, 2);
+    addFinishingTile(tileManager, mapDrawer, 14 - i, 7, 500 + i, i, yellow, 3);
   }
 }
 
@@ -365,7 +365,7 @@ int main() {
 
   // Create the event loop and pass the dispatcher to it
   auto eventLoop = std::make_shared<EventLoop>(dispatcher);
-  eventLoop->setInstance(*eventLoop);
+  eventLoop->setInstance(eventLoop);
   /*EventLoop eventLoop(dispatcher);*/
   Board board;
 
@@ -377,9 +377,9 @@ int main() {
 
   // Create default teams
   Team teamRed(red, 1);
-  Team teamYellow(yellow, 2);
-  Team teamBlue(blue, 3);
-  Team teamGreen(green, 4);
+  Team teamYellow(yellow, 3);
+  Team teamBlue(blue, 4);
+  Team teamGreen(green, 2);
   auto &teamManager = TeamManager::getInstance();
   teamManager.addTeam(teamRed);
   teamManager.addTeam(teamGreen);
@@ -397,16 +397,16 @@ int main() {
   mapDrawer.addRenderable(redBase);
   baseManager.addBase(1, redBase);
 
-  auto blueBase = std::make_shared<Base>(Dimensions(0, 0, 6, 6), blue, 3, 40);
+  auto blueBase = std::make_shared<Base>(Dimensions(0, 0, 6, 6), blue, 4, 40);
   mapDrawer.addRenderable(blueBase);
   baseManager.addBase(blueBase->getTeamId(), blueBase);
 
-  auto greenBase = std::make_shared<Base>(Dimensions(9, 9, 6, 6), green, 4, 14);
+  auto greenBase = std::make_shared<Base>(Dimensions(9, 9, 6, 6), green, 2, 14);
   mapDrawer.addRenderable(greenBase);
   baseManager.addBase(greenBase->getTeamId(), greenBase);
 
   auto yellowBase =
-      std::make_shared<Base>(Dimensions(9, 0, 6, 6), yellow, 2, 27);
+      std::make_shared<Base>(Dimensions(9, 0, 6, 6), yellow, 3, 27);
   mapDrawer.addRenderable(yellowBase);
 
   baseManager.addBase(yellowBase->getTeamId(), yellowBase);
@@ -415,9 +415,9 @@ int main() {
 
   // Create default players
   Player redPlayer(1, 1);
-  Player yellowPlayer(2, 2);
-  Player bluePlayer(3, 3);
-  Player greenPlayer(4, 4);
+  Player yellowPlayer(3, 3);
+  Player bluePlayer(4, 4);
+  Player greenPlayer(2, 2);
 
   // Create TurnManager
   TurnManager turnManager(eventLoop);
@@ -475,7 +475,16 @@ int main() {
 
   for (int j=1;j<=4;j++) {
   
-    auto newPawn = std::make_shared<Pawn>(idCounter, 1, 2, Dimensions(9,0,0.45,0.45),teamManager.getTeamById(2).color);
+    auto newPawn = std::make_shared<Pawn>(idCounter, 1, 2, Dimensions(9,9,0.45,0.45),teamManager.getTeamById(2).color);
+    pawnManager.addPawn(newPawn);
+    newPawn->setContext(TileContext::Base);
+    mapDrawer.addRenderable(newPawn);
+    idCounter++;
+  }
+
+    for (int j=1;j<=4;j++) {
+  
+    auto newPawn = std::make_shared<Pawn>(idCounter, 1, 3, Dimensions(9,0,0.45,0.45),teamManager.getTeamById(3).color);
     pawnManager.addPawn(newPawn);
     newPawn->setContext(TileContext::Base);
     mapDrawer.addRenderable(newPawn);
@@ -484,16 +493,7 @@ int main() {
 
   for (int j=1;j<=4;j++) {
   
-    auto newPawn = std::make_shared<Pawn>(idCounter, 1, 3, Dimensions(0,0,0.45,0.45),teamManager.getTeamById(3).color);
-    pawnManager.addPawn(newPawn);
-    newPawn->setContext(TileContext::Base);
-    mapDrawer.addRenderable(newPawn);
-    idCounter++;
-  }
-
-  for (int j=1;j<=4;j++) {
-  
-    auto newPawn = std::make_shared<Pawn>(idCounter, 1, 4, Dimensions(9,9,0.45,0.45),teamManager.getTeamById(4).color);
+    auto newPawn = std::make_shared<Pawn>(idCounter, 1, 4, Dimensions(0,0,0.45,0.45),teamManager.getTeamById(4).color);
     pawnManager.addPawn(newPawn);
     newPawn->setContext(TileContext::Base);
     mapDrawer.addRenderable(newPawn);
@@ -513,7 +513,6 @@ int main() {
 
   // Process all events in the loop
 
-  /*eventLoop.processEvents();*/
   eventLoop->start();
   // std::this_thread::sleep_for(std::chrono::seconds(1));
   // eventLoop->enqueueEvent(std::make_shared<MovePawnEvent>(1, 10, 6));
@@ -525,11 +524,20 @@ int main() {
   /*std::this_thread::sleep_for(std::chrono::seconds(2));*/
   /*eventLoop->enqueueEvent(std::make_shared<MovePawnEvent>(1, 10, 6));*/
   /*std::this_thread::sleep_for(std::chrono::seconds(4));*/
+  
+  // std::this_thread::sleep_for (std::chrono::seconds (3));
+  // eventLoop->enqueueEvent(std::make_shared<MovePawnEvent>(1, 3, 6));
   std::cout << "Enqueued player turn" << std::endl;
-  eventLoop->enqueueEvent(std::make_shared<PlayerTurnEvent>(2)); 
+  eventLoop->enqueueEvent(std::make_shared<PlayerTurnEvent>(1)); 
 
-  // std::this_thread::sleep_for (std::chrono::seconds (2));
-  // eventLoop.enqueueEvent(std::make_shared<MovePawnEvent>(1, 10, 5));
+  //  std::this_thread::sleep_for (std::chrono::seconds (3));
+  // eventLoop->enqueueEvent(std::make_shared<MovePawnEvent>(2, 5, 6));
+  //  std::this_thread::sleep_for (std::chrono::seconds (3));
+  // eventLoop->enqueueEvent(std::make_shared<MovePawnEvent>(1, 1, 6));
+  //  std::this_thread::sleep_for (std::chrono::seconds (3));
+  // eventLoop->enqueueEvent(std::make_shared<MovePawnEvent>(1, 1, 6));
+  //  std::this_thread::sleep_for (std::chrono::seconds (3));
+  // eventLoop->enqueueEvent(std::make_shared<MovePawnEvent>(1, 1, 6));
   // std::this_thread::sleep_for (std::chrono::seconds (2));
   // eventLoop.enqueueEvent(std::make_shared<MovePawnEvent>(1, 10, 5));
   // std::this_thread::sleep_for (std::chrono::seconds (2));

@@ -19,8 +19,8 @@ public:
 
   ~EventLoop() { stop(); }
 
-  static void setInstance(EventLoop &instance);
-  static EventLoop &getInstance();
+  static void setInstance(std::shared_ptr<EventLoop> instance);
+  static std::shared_ptr<EventLoop> getInstance();
 
   void enqueueEvent(const std::shared_ptr<Event> &event);
   void pushEvent(const std::shared_ptr<Event> &event);
@@ -42,7 +42,7 @@ private:
   std::deque<std::shared_ptr<Event>> immediateEvents;
   std::shared_ptr<Event> currentPlayerTurnEvent;
 
-  static EventLoop *instance; // Singleton-like instance
+  static std::shared_ptr<EventLoop> instance; // Singleton-like instance
 };
 
 #endif

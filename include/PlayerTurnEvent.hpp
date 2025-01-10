@@ -4,6 +4,7 @@
 #define PLAYER_TURN_EVENT_H
 
 #include "Event.hpp"
+#include <iostream>
 class PlayerTurnEvent : public Event {
 public:
   explicit PlayerTurnEvent(int playerId)
@@ -13,7 +14,10 @@ public:
 
   bool isCompleted() const override { return turnCompleted; }
 
-  void completeTurn() { turnCompleted = true; }
+  void completeTurn() { 
+    std::cout << "Turn completed" << std::endl;
+    turnCompleted = true; 
+  }
 
   int playerId;
 

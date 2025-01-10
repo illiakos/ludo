@@ -21,7 +21,7 @@ void PlayerTurnHandler::handleEvent(const std::shared_ptr<Event> &event) {
 
         // Set current player turn
         currentPlayerTurnEvent = turnEvent;
-
+        turnManager.setCurrentPlayerTurnEvent(turnEvent);
         // Start turn
         turnManager.startTurn(playerId, [this, playerId]() {
             // Next player's turn will only be enqueued after the current turn ends
