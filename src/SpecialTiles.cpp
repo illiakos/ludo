@@ -86,9 +86,9 @@ void TransitionTile::renderSelf() const {
         float rotation = 0.0f;
         switch (teamId) {
             case 1: rotation = 270.0f; break;   // Red
-            case 2: rotation = 0.0f; break; // Blue
-            case 3: rotation = 180.0f; break; // Green
-            case 4: rotation = 90.0f; break; // Yellow
+            case 2: rotation = 180.0f; break; // Green 
+            case 3: rotation = 90.0f; break; // Yellow
+            case 4: rotation = 0.0f; break; // Blue
             default: break; // Default is up
         }
 

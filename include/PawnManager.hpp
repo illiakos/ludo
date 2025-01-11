@@ -17,7 +17,16 @@ public:
   bool hasPawnAtTile(int tileId) const;
   std::shared_ptr<Pawn>
   getPawnAtTileId(int tileId) const; // Get the pawn at a specific tile
+  std::vector<std::shared_ptr<Pawn>> getPawnsByTeamID(int teamId) const;
+
+  // Get instance method
+  static PawnManager& getInstance() {
+    static PawnManager instance;
+    return instance;
+  }
 private:
+  // Private constructor for singleton pattern
+  PawnManager() = default;
   // Map pawn ID to the corresponding Pawn object
   std::unordered_map<int, std::shared_ptr<Pawn>> pawns;
 };

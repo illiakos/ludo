@@ -89,11 +89,8 @@ void EventLoop::processEvents() {
             break;
         }
 
-           std::cout << event->getType() << std::endl;
-
         if (event->isBlocking) {
             while (!event->isCompleted()) {
-                std::cout << event->getType() << std::endl;
                 std::this_thread::sleep_for(std::chrono::milliseconds(10));
             }
         }

@@ -1,1 +1,1 @@
--IC:/Users/illia/ludo/include -IC:/Users/illia/ludo/libs/stb -I"C:/Users/illia/ludo/libs/ft2133/freetype-2.13.3/include" -IC:/Users/illia/ludo/glfw/include -IC:/Users/illia/ludo/glfw/src -IC:/Users/illia/ludo/build/glfw/src
+-IC:/Users/User/ludo/include -IC:/Users/User/ludo/libs/stb -I"C:/Users/User/ludo/libs/ft2133/freetype-2.13.3/include" -IC:/Users/User/ludo/glfw/include -IC:/Users/User/ludo/glfw/src -IC:/Users/User/ludo/build/glfw/src

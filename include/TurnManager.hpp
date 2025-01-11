@@ -28,7 +28,10 @@ public:
 
   int getCurrentRolledValue() {return currentRolledValue;}
   int getPrevRolledValue() {return prevRolledValue;}
-  void clearRoll() {currentRolledValue = 0;}
+  void clearRoll() {
+    prevRolledValue = currentRolledValue;
+    currentRolledValue = 0;
+  }
   void setCurrentPlayerTurnEvent(std::shared_ptr<PlayerTurnEvent> event) {
     std::cout << "Setting current player turn event : " << event << std::endl;
     this->event=event;

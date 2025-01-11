@@ -31,7 +31,6 @@ void MovePawnHandler::handleEvent(const std::shared_ptr<Event> &event) {
     case TileContext::Base:
 
       if (steps == 6) {
-         std::cout << "HANDLE EVENT IF" << std::endl;
         auto &bm = BaseManager::getInstance();
         std::cout << pawn->getTeamId() << std::endl;
         auto base = bm.getBaseByTeamId(pawn->getTeamId());
@@ -58,6 +57,7 @@ void MovePawnHandler::handleEvent(const std::shared_ptr<Event> &event) {
         }
         std::cout << "Setting tile id to starting : " << startingTileId << endl;
         pawn->setTileId(startingTileId);
+        pawn->setActive(true);
         pawn->setContext(TileContext::Walkable);
         auto tileDimensions = startingTile->getDimensions();
         auto newDimensions =
@@ -66,11 +66,11 @@ void MovePawnHandler::handleEvent(const std::shared_ptr<Event> &event) {
         pawn->setDimensions(newDimensions);
         std::cout << "Pawn " << pawn->getId()
                   << " moved from Base to Walkable starting tile.\n";
-        drawer.addRenderable(pawn);
       } else {
         std::cout << "Pawn " << pawn->getId()
                   << " cannot leave base without rolling a 6.\n";
       }
+      drawer.addRenderable(pawn);
       return;
       break;
     case TileContext::Walkable:
@@ -83,19 +83,19 @@ void MovePawnHandler::handleEvent(const std::shared_ptr<Event> &event) {
   }
   auto eventLoop = EventLoop::getInstance();
   eventLoop->enqueueEvent(std::make_shared<EndTurnEvent>());
-
 }
 
 void MovePawnHandler::moveAtFinishing(std::shared_ptr<Pawn> pawn, int steps) {
   auto &tm = TileManager::getInstance();
   auto &drawer = MapDrawer::getInstance();
   int currentTileId = pawn->getTileId();
-
+  cout << currentTileId << "KURDE" << endl;
   auto currentTile = tm.findTileById(currentTileId);
   drawer.removeRenderable(pawn);
 
   int nextPos = currentTile->getPosition() + steps;
-
+  cout << currentTile->getPosition() << steps << "ABNOGBCVBVBVBVBBVVBVB"
+       << endl;
   if (nextPos > 6) {
     // If the pawn moves beyond the finishing tiles, it can't move further.
     drawer.addRenderable(pawn);
@@ -122,7 +122,7 @@ void MovePawnHandler::moveAtFinishing(std::shared_ptr<Pawn> pawn, int steps) {
       pawn->setTileId(-1);    // Mark pawn as finished
       pawn->setActive(false); // Mark pawn as inactive
       pawn->setDimensions(
-          Dimensions(6, finalY, pawn->getDimensions().dx,
+          Dimensions(finalX, finalY, pawn->getDimensions().dx,
                      pawn->getDimensions().dy)); // Move pawn to the arrow tile
 
       drawer.addRenderable(pawn); // Add the pawn back to the renderable list
@@ -163,6 +163,9 @@ void MovePawnHandler::moveRegularTiles(std::shared_ptr<Pawn> pawn, int steps) {
     std::cout << "cycled once, position: " << currentPosition << endl;
 
     currentPosition++;
+    if (currentPosition > 51) {
+      currentPosition = 1;
+    }
     auto tile =
         tm.findTileByContextAndPosition(TileContext::Walkable, currentPosition);
 
@@ -177,19 +180,20 @@ void MovePawnHandler::moveRegularTiles(std::shared_ptr<Pawn> pawn, int steps) {
     if (transitionTile && transitionTile->getTeamId() == pawn->getTeamId()) {
 
       // Move to the starting finishing tile
-      int finishingTileStartPosition =
-          transitionTile->getFinishingTileStartPosition();
+      int finishingTileStartPosition = transitionTile->getFinishingTileStartPosition();
 
-      int moduled = (steps - i) % 5;
-
-      std::cout << "Steps nigger : " << steps << std::endl;
+      std::cout << "Steps: " << steps << std::endl;
       auto finishingTile =
           TileManager::getInstance()
               .findPrefinishingTileByContextPositionAndTeam(
-                  TileContext::Finishing, moduled, pawn->getTeamId());
+                  TileContext::Finishing, steps - i - 1, pawn->getTeamId());
 
       if (finishingTile) {
-        pawn->setTileId(finishingTileStartPosition);
+        auto newFinishingTile =
+            TileManager::getInstance()
+                .findPrefinishingTileByContextPositionAndTeam(
+                    TileContext::Finishing, 1, pawn->getTeamId());
+        pawn->setTileId(finishingTile->getId());
         pawn->setContext(TileContext::Finishing);
         pawn->setDimensions(Dimensions(
             finishingTile->getDimensions().x, finishingTile->getDimensions().y,
@@ -250,7 +254,7 @@ void MovePawnHandler::handlePrefinishingTile(Pawn &pawn, int steps) {
   int currentPreFinishPosition = pawn.getTileId();
   int firstFinishingTilePosition =
       board.getTileByPosition(currentPreFinishPosition)->getPosition();
-
+  cout << currentPreFinishPosition << "ASHSHSHSHS" << endl;
   if (canMoveToFinishingTile(currentPreFinishPosition, steps)) {
     int newPosition = currentPreFinishPosition + steps;
     if (newPosition == firstFinishingTilePosition + 5) {

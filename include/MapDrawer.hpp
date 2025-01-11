@@ -37,7 +37,7 @@ public:
   void drawTriangle(float x1, float y1, float x2, float y2, float x3, float y3,
                     const Color &color);
   void drawCircle(float cx, float cy, float radius, const Color &color,
-                  int segments);
+                           int segments, const Color &outlineColor, float outlineThickness);
   void drawStar(float cx, float cy, float outerRadius, float innerRadius,
                 int numPoints, const Color color);
   void drawArrow(unsigned char *data, int width, int height, int channels,

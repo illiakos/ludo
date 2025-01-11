@@ -52,10 +52,10 @@ RM = "C:\Program Files\CMake\bin\cmake.exe" -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\illia\ludo
+CMAKE_SOURCE_DIR = C:\Users\User\ludo
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\illia\ludo\build
+CMAKE_BINARY_DIR = C:\Users\User\ludo\build
 
 # Utility rule file for uninstall.
 
@@ -66,7 +66,7 @@ include glfw/CMakeFiles/uninstall.dir/compiler_depend.make
 include glfw/CMakeFiles/uninstall.dir/progress.make
 
 glfw/CMakeFiles/uninstall:
-	cd /d C:\Users\illia\ludo\build\glfw && "C:\Program Files\CMake\bin\cmake.exe" -P C:/Users/illia/ludo/build/glfw/cmake_uninstall.cmake
+	cd /d C:\Users\User\ludo\build\glfw && "C:\Program Files\CMake\bin\cmake.exe" -P C:/Users/User/ludo/build/glfw/cmake_uninstall.cmake
 
 glfw/CMakeFiles/uninstall.dir/codegen:
 .PHONY : glfw/CMakeFiles/uninstall.dir/codegen
@@ -80,10 +80,10 @@ glfw/CMakeFiles/uninstall.dir/build: uninstall
 .PHONY : glfw/CMakeFiles/uninstall.dir/build
 
 glfw/CMakeFiles/uninstall.dir/clean:
-	cd /d C:\Users\illia\ludo\build\glfw && $(CMAKE_COMMAND) -P CMakeFiles\uninstall.dir\cmake_clean.cmake
+	cd /d C:\Users\User\ludo\build\glfw && $(CMAKE_COMMAND) -P CMakeFiles\uninstall.dir\cmake_clean.cmake
 .PHONY : glfw/CMakeFiles/uninstall.dir/clean
 
 glfw/CMakeFiles/uninstall.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\illia\ludo C:\Users\illia\ludo\glfw C:\Users\illia\ludo\build C:\Users\illia\ludo\build\glfw C:\Users\illia\ludo\build\glfw\CMakeFiles\uninstall.dir\DependInfo.cmake "--color=$(COLOR)"
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\User\ludo C:\Users\User\ludo\glfw C:\Users\User\ludo\build C:\Users\User\ludo\build\glfw C:\Users\User\ludo\build\glfw\CMakeFiles\uninstall.dir\DependInfo.cmake "--color=$(COLOR)"
 .PHONY : glfw/CMakeFiles/uninstall.dir/depend
 

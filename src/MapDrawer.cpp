@@ -82,16 +82,18 @@ void MapDrawer::drawRectangle(float x, float y, float width, float height,
   }
 }
 
+
 void MapDrawer::drawCircle(float cx, float cy, float radius, const Color &color,
-                           int segments = 1000) {
-  glColor3f(color.getRedf(), color.getGreenf(), color.getBluef()); // Set color
+                           int segments, const Color &outlineColor, float outlineRadius) {
+  // Draw the filled circle
+  glColor3f(outlineColor.getRedf(), outlineColor.getGreenf(), outlineColor.getBluef()); // Set fill color
   glBegin(GL_TRIANGLE_FAN); // Begin drawing a filled circle
 
   float halfCellSize = getSizeOfCells(1) / 2;
   // Center of the circle
   glVertex2f(cx + halfCellSize, cy + halfCellSize);
 
-  // Draw the circle by approximating it with triangles
+  // Draw the filled circle
   for (int i = 0; i <= segments; i++) {
     float angle = 2.0f * PI * i / segments; // Angle in radians
     float x = radius * cos(angle);
@@ -99,8 +101,26 @@ void MapDrawer::drawCircle(float cx, float cy, float radius, const Color &color,
     glVertex2f(cx + x + halfCellSize, cy + y + halfCellSize);
   }
 
-  glEnd(); // End drawing
+  glEnd(); // End drawing the filled circle
+
+  // Draw the filled circle
+  glColor3f(color.getRedf(), color.getGreenf(), color.getBluef()); // Set fill color
+  glBegin(GL_TRIANGLE_FAN); // Begin drawing a filled circle
+
+  // Center of the circle
+  glVertex2f(cx + halfCellSize, cy + halfCellSize);
+
+  // Draw the filled circle
+  for (int i = 0; i <= segments; i++) {
+    float angle = 2.0f * PI * i / segments; // Angle in radians
+    float x = (radius - outlineRadius) * cos(angle);
+    float y = (radius - outlineRadius) * sin(angle);
+    glVertex2f(cx + x + halfCellSize, cy + y + halfCellSize);
+  }
+
+  glEnd(); // End drawing the filled circle
 }
+
 
 void MapDrawer::drawTriangle(float x1, float y1, float x2, float y2, float x3,
                              float y3, const Color &color) {

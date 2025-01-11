@@ -245,12 +245,12 @@ void createSafeTiles(TileManager &tileManager, MapDrawer &mapDrawer) {
 void createTransitionTiles(TileManager &tileManager, MapDrawer &mapDrawer) {
   addTransitionTile(tileManager, mapDrawer, 0, 7, 51, 1, 1,
                     Color(0.8f, 0.8f, 0.8f)); // Red Transition Tile
-  addTransitionTile(tileManager, mapDrawer, 7, 0, 38, 2, 2,
-                    Color(0.8f, 0.8f, 0.8f)); // Yellow Transition Tile
-  addTransitionTile(tileManager, mapDrawer, 7, 14, 12, 3, 3,
-                    Color(0.8f, 0.8f, 0.8f)); // Blue Transition Tile
-  addTransitionTile(tileManager, mapDrawer, 14, 7, 25, 4, 4,
+  addTransitionTile(tileManager, mapDrawer, 7, 14, 12, 2, 2,
                     Color(0.8f, 0.8f, 0.8f)); // Green Transition Tile
+  addTransitionTile(tileManager, mapDrawer, 14, 7, 25, 3, 3,
+                    Color(0.8f, 0.8f, 0.8f)); // Yellow Transition Tile
+  addTransitionTile(tileManager, mapDrawer, 7, 0, 38, 4, 4,
+                    Color(0.8f, 0.8f, 0.8f)); // Blue Transition Tile
 }
 
 void createStartingTiles(TileManager &tileManager, MapDrawer &mapDrawer) {
@@ -424,7 +424,7 @@ int main() {
 
   TurnManager::setInstance(turnManager);
 
-  PawnManager pawnManager;
+  auto &pawnManager = PawnManager::getInstance();
 
   // Create event handlers
   auto rollDiceHandler =
@@ -527,6 +527,43 @@ int main() {
   
   // std::this_thread::sleep_for (std::chrono::seconds (3));
   // eventLoop->enqueueEvent(std::make_shared<MovePawnEvent>(1, 3, 6));
+  // eventLoop->enqueueEvent(std::make_shared<MovePawnEvent>(2, 5, 6));
+  // for (int i = 1; i < 51; i++) {
+  //   std::this_thread::sleep_for (std::chrono::milliseconds(500));
+  //   eventLoop->enqueueEvent(std::make_shared<MovePawnEvent>(2, 5, 1));
+  // }
+  eventLoop->enqueueEvent(std::make_shared<MovePawnEvent>(1, 1, 6));
+  eventLoop->enqueueEvent(std::make_shared<MovePawnEvent>(2, 5, 6));
+  eventLoop->enqueueEvent(std::make_shared<MovePawnEvent>(3, 9, 6));
+  eventLoop->enqueueEvent(std::make_shared<MovePawnEvent>(4, 13, 6));
+  eventLoop->enqueueEvent(std::make_shared<MovePawnEvent>(1, 1, 6));
+  eventLoop->enqueueEvent(std::make_shared<MovePawnEvent>(2, 5, 6));
+  eventLoop->enqueueEvent(std::make_shared<MovePawnEvent>(3, 9, 6));
+  eventLoop->enqueueEvent(std::make_shared<MovePawnEvent>(4, 13, 6));
+  eventLoop->enqueueEvent(std::make_shared<MovePawnEvent>(1, 1, 6));
+  eventLoop->enqueueEvent(std::make_shared<MovePawnEvent>(2, 5, 6));
+  eventLoop->enqueueEvent(std::make_shared<MovePawnEvent>(3, 9, 6));
+  eventLoop->enqueueEvent(std::make_shared<MovePawnEvent>(4, 13, 6));
+  eventLoop->enqueueEvent(std::make_shared<MovePawnEvent>(1, 1, 6));
+  eventLoop->enqueueEvent(std::make_shared<MovePawnEvent>(2, 5, 6));
+  eventLoop->enqueueEvent(std::make_shared<MovePawnEvent>(3, 9, 6));
+  eventLoop->enqueueEvent(std::make_shared<MovePawnEvent>(4, 13, 6));
+  eventLoop->enqueueEvent(std::make_shared<MovePawnEvent>(1, 1, 6));
+  eventLoop->enqueueEvent(std::make_shared<MovePawnEvent>(2, 5, 6));
+  eventLoop->enqueueEvent(std::make_shared<MovePawnEvent>(3, 9, 6));
+  eventLoop->enqueueEvent(std::make_shared<MovePawnEvent>(4, 13, 6));
+  eventLoop->enqueueEvent(std::make_shared<MovePawnEvent>(1, 1, 6));
+  eventLoop->enqueueEvent(std::make_shared<MovePawnEvent>(2, 5, 6));
+  eventLoop->enqueueEvent(std::make_shared<MovePawnEvent>(3, 9, 6));
+  eventLoop->enqueueEvent(std::make_shared<MovePawnEvent>(4, 13, 6));
+  eventLoop->enqueueEvent(std::make_shared<MovePawnEvent>(1, 1, 6));
+  eventLoop->enqueueEvent(std::make_shared<MovePawnEvent>(2, 5, 6));
+  eventLoop->enqueueEvent(std::make_shared<MovePawnEvent>(3, 9, 6));
+  eventLoop->enqueueEvent(std::make_shared<MovePawnEvent>(4, 13, 6));
+  eventLoop->enqueueEvent(std::make_shared<MovePawnEvent>(1, 1, 6));
+  eventLoop->enqueueEvent(std::make_shared<MovePawnEvent>(2, 5, 6));
+  eventLoop->enqueueEvent(std::make_shared<MovePawnEvent>(3, 9, 6));
+  eventLoop->enqueueEvent(std::make_shared<MovePawnEvent>(4, 13, 6));
   std::cout << "Enqueued player turn" << std::endl;
   eventLoop->enqueueEvent(std::make_shared<PlayerTurnEvent>(1)); 
 

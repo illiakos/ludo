@@ -47,7 +47,7 @@ private:
   int zIndex = 2;
   Color color;
   TileContext context;
-  bool active = true;
+  bool active = false;
   int tileId;
 };
 

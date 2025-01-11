@@ -10,6 +10,7 @@ extern Color blue;
 extern Color red;
 extern Color green;
 extern Color yellow;
+extern Color black;
 // Declare other color variables similarly
 
 #endif // COLORCONSTANTS_HPP

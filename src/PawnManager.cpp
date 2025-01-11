@@ -37,6 +37,17 @@ std::shared_ptr<Pawn> PawnManager::getPawn(int pawnId) const {
   return nullptr;
 }
 
+std::vector<std::shared_ptr<Pawn>> PawnManager::getPawnsByTeamID(int teamId) const {
+    std::vector<std::shared_ptr<Pawn>> teamPawns;
+    for (const auto &[pawnId, pawn] : pawns) {
+        if (pawn->getTeamId() == teamId) {
+            teamPawns.push_back(pawn);
+        }
+    }
+
+    return teamPawns;
+}
+
 int PawnManager::getPawnTileId(int pawnId) const {
   auto pawn = getPawn(pawnId);
   return pawn ? pawn->getTileId() : -1; // Return -1 if the pawn is not found

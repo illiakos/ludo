@@ -33,7 +33,7 @@ void TurnManager::setInstance(TurnManager &newInstance) {
 
 void TurnManager::endTurn() {
   // Move to the next player
-  currentPlayerId = (currentPlayerId + 1) % totalPlayers;
+  currentPlayerId = currentPlayerId % totalPlayers + 1;
 
   if (currentPlayerId == 0 && gameOverCallback) {
     std::cout << "All turns completed. Ending game.\n";

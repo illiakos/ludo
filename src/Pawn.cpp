@@ -1,12 +1,13 @@
 #include "Pawn.hpp"
 #include "BaseManager.hpp"
+#include "ColorConstants.hpp"
 #include "EventLoop.hpp"
 #include "MapDrawer.hpp"
 #include "MovePawnEvent.hpp"
 #include "TeamManager.hpp"
 #include "TileContext.hpp"
 #include "TurnManager.hpp"
-#include "ColorConstants.hpp"
+#include "TileManager.hpp"
 #include <GLFW/glfw3.h>
 #include <cmath>
 #include <iostream>
@@ -24,14 +25,21 @@ void Pawn::setActive(bool active) { active = active; }
 bool Pawn::isActive() { return active; }
 
 void Pawn::onClick() {
-  auto loop = EventLoop::getInstance();  
-  auto& teamManager = TeamManager::getInstance();
+  auto loop = EventLoop::getInstance();
+  auto &teamManager = TeamManager::getInstance();
 
-  auto& tm = TurnManager::getInstance();
-  std::cout << "current player id : " << tm.getCurrentPlayerId() << " and team id is : " << teamId << std::endl;
-  std::cout << "current dice value : " << tm.getCurrentRolledValue() << std::endl ;
+  auto &tm = TurnManager::getInstance();
+
+  if (!active && context == TileContext::Finishing) {
+    return;
+  }
+  std::cout << "current player id : " << tm.getCurrentPlayerId()
+            << " and team id is : " << teamId << std::endl;
+  std::cout << "current dice value : " << tm.getCurrentRolledValue()
+            << std::endl;
   if (teamId != tm.getCurrentPlayerId() || tm.getCurrentRolledValue() == 0) {
-    // If someone decides to move someone else's pawn - he won't be able to do that.
+    // If someone decides to move someone else's pawn - he won't be able to do
+    // that.
     return;
   }
   int value = tm.getCurrentRolledValue();
@@ -40,21 +48,65 @@ void Pawn::onClick() {
   cout << "ID VALUE " << id << endl;
   tm.clearRoll();
   auto event = tm.getCurrentPlayerTurnEvent();
-  std::cout  << event << std::endl;
+  std::cout << event << std::endl;
   event->completeTurn();
   std::cout << "moving with this value : " << value << std::endl;
-  loop->pushEvent(std::make_shared<MovePawnEvent>(tm.getCurrentPlayerId(), id, value));
+  loop->pushEvent(
+      std::make_shared<MovePawnEvent>(tm.getCurrentPlayerId(), id, value));
+}
+
+Color getDarkerShade(const Color &color, float factor = 0.9f) {
+  // Clamp the factor between 0 and 1
+  factor = std::max(0.0f, std::min(1.0f, factor));
+
+  // Scale down each color component
+  float red = color.getRedf() * factor;
+  float green = color.getGreenf() * factor;
+  float blue = color.getBluef() * factor;
+
+  // Return the darker color
+  return Color(red, green, blue);
+}
+
+Color getLighterShade(const Color &color, float factor = 1.1f) {
+  // Ensure the factor is greater than 1 to lighten the color
+  factor = std::max(1.0f, factor);
+
+  // Scale up each color component, but clamp the values to a maximum of 1.0
+  float red = std::min(1.0f, color.getRedf() * factor);
+  float green = std::min(1.0f, color.getGreenf() * factor);
+  float blue = std::min(1.0f, color.getBluef() * factor);
+
+  // Return the lighter color
+  return Color(red, green, blue);
 }
 
 void Pawn::renderSelf() const {
-
+  auto &turnManager = TurnManager::getInstance();
   auto &drawer = MapDrawer::getInstance();
+  const float cellSize = drawer.getCellSize();
+  const float outerRadius = cellSize / 8;
+  const float innerRadius = cellSize / 4;
   if (context == TileContext::Walkable || context == TileContext::Finishing) {
 
     Color red = Color(0.596f, 0.324f, 0.590f);
     drawer.drawCircle(drawer.getCellPosition(dimensions.x),
                       drawer.getCellPosition(dimensions.y),
-                      drawer.getSizeOfCells(0.45), color, 10000);
+                      drawer.getSizeOfCells(0.45f), color, 1000, black,
+                      drawer.getSizeOfCells(0.05));
+    if (turnManager.getCurrentPlayerId() == teamId && active && turnManager.getCurrentRolledValue() != 0) {
+      auto &tm = TileManager::getInstance();
+      auto currentTile = tm.findTileById(tileId);
+      if (context == TileContext::Finishing && turnManager.getCurrentRolledValue() <= 6 - currentTile->getPosition()) {
+        drawer.drawStar(drawer.getCellPosition(dimensions.x) + cellSize / 2,
+                        drawer.getCellPosition(dimensions.y) + cellSize / 2,
+                        outerRadius, innerRadius, 5, white);
+      } else if (context == TileContext::Walkable) {
+        drawer.drawStar(drawer.getCellPosition(dimensions.x) + cellSize / 2,
+                        drawer.getCellPosition(dimensions.y) + cellSize / 2,
+                        outerRadius, innerRadius, 5, white);
+      }
+    }
 
   } else if (context == TileContext::Base) {
     auto &baseManager = BaseManager::getInstance();
@@ -64,15 +116,21 @@ void Pawn::renderSelf() const {
 
     bool res = currentBase->occupySlot(firstfreeSlot, this);
 
-    auto inBaseCoords =
-        currentBase->getSlotCoordinates(firstfreeSlot);
+    auto inBaseCoords = currentBase->getSlotCoordinates(firstfreeSlot);
     auto newX = currentBase->getDimensions().x + inBaseCoords.first;
     auto newY = currentBase->getDimensions().y + inBaseCoords.second;
-    drawer.drawCircle(
-        drawer.getCellPosition(newX),
-        drawer.getCellPosition(newY),
-        drawer.getSizeOfCells(0.45), color, 10000);
-    setDimensions(Dimensions(newX, newY , drawer.getSizeOfCells(0.45), drawer.getSizeOfCells(0.45)));
+    drawer.drawCircle(drawer.getCellPosition(newX),
+                      drawer.getCellPosition(newY),
+                      drawer.getSizeOfCells(0.45f), color, 1000, black,
+                      drawer.getSizeOfCells(0.05));
+    setDimensions(Dimensions(newX, newY, drawer.getSizeOfCells(0.45),
+                             drawer.getSizeOfCells(0.45)));
+    if (turnManager.getCurrentPlayerId() == teamId &&
+        turnManager.getCurrentRolledValue() == 6) {
+      drawer.drawStar(drawer.getCellPosition(dimensions.x) + cellSize / 2,
+                      drawer.getCellPosition(dimensions.y) + cellSize / 2,
+                      outerRadius, innerRadius, 5, white);
+    }
   }
   return;
 }
