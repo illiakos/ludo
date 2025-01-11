@@ -11,6 +11,7 @@
 #include "MovePawnEvent.hpp"
 #include "PawnManager.hpp"
 #include "SpecialTiles.hpp"
+#include "TeamManager.hpp"
 #include "TileContext.hpp"
 #include "TileManager.hpp"
 
@@ -64,6 +65,7 @@ void MovePawnHandler::handleEvent(const std::shared_ptr<Event> &event) {
             Dimensions(tileDimensions.x, tileDimensions.y,
                        pawn->getDimensions().dx, pawn->getDimensions().dy);
         pawn->setDimensions(newDimensions);
+        pawn->setActive(true);
         std::cout << "Pawn " << pawn->getId()
                   << " moved from Base to Walkable starting tile.\n";
       } else {
@@ -124,7 +126,9 @@ void MovePawnHandler::moveAtFinishing(std::shared_ptr<Pawn> pawn, int steps) {
       pawn->setDimensions(
           Dimensions(finalX, finalY, pawn->getDimensions().dx,
                      pawn->getDimensions().dy)); // Move pawn to the arrow tile
-
+      pawn->setActive(false);
+      auto& teamManager = TeamManager::getInstance();
+      teamManager.addPointsToTeam(pawn->getTeamId(), 1);
       drawer.addRenderable(pawn); // Add the pawn back to the renderable list
       return;
     }

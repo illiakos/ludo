@@ -14,7 +14,7 @@ public:
   Pawn(int id, int startingTile, int teamId, Dimensions dimensions,
        Color &color)
       : id(id), tileId(startingTile), dimensions(dimensions), teamId(teamId),
-        color(color), active(true) {
+        color(color), active(false) {
     setZIndex(2);
   }
   const Dimensions &getDimensions() const override { return dimensions; }
