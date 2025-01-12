@@ -1,5 +1,0 @@
-Points Table:
-Team ID: 4, Points: 0
-Team ID: 3, Points: 0
-Team ID: 2, Points: 0
-Team ID: 1, Points: 1

@@ -532,38 +532,6 @@ int main() {
   //   std::this_thread::sleep_for (std::chrono::milliseconds(500));
   //   eventLoop->enqueueEvent(std::make_shared<MovePawnEvent>(2, 5, 1));
   // }
-  eventLoop->enqueueEvent(std::make_shared<MovePawnEvent>(1, 1, 6));
-  eventLoop->enqueueEvent(std::make_shared<MovePawnEvent>(2, 5, 6));
-  eventLoop->enqueueEvent(std::make_shared<MovePawnEvent>(3, 9, 6));
-  eventLoop->enqueueEvent(std::make_shared<MovePawnEvent>(4, 13, 6));
-  eventLoop->enqueueEvent(std::make_shared<MovePawnEvent>(1, 1, 6));
-  eventLoop->enqueueEvent(std::make_shared<MovePawnEvent>(2, 5, 6));
-  eventLoop->enqueueEvent(std::make_shared<MovePawnEvent>(3, 9, 6));
-  eventLoop->enqueueEvent(std::make_shared<MovePawnEvent>(4, 13, 6));
-  eventLoop->enqueueEvent(std::make_shared<MovePawnEvent>(1, 1, 6));
-  eventLoop->enqueueEvent(std::make_shared<MovePawnEvent>(2, 5, 6));
-  eventLoop->enqueueEvent(std::make_shared<MovePawnEvent>(3, 9, 6));
-  eventLoop->enqueueEvent(std::make_shared<MovePawnEvent>(4, 13, 6));
-  eventLoop->enqueueEvent(std::make_shared<MovePawnEvent>(1, 1, 6));
-  eventLoop->enqueueEvent(std::make_shared<MovePawnEvent>(2, 5, 6));
-  eventLoop->enqueueEvent(std::make_shared<MovePawnEvent>(3, 9, 6));
-  eventLoop->enqueueEvent(std::make_shared<MovePawnEvent>(4, 13, 6));
-  eventLoop->enqueueEvent(std::make_shared<MovePawnEvent>(1, 1, 6));
-  eventLoop->enqueueEvent(std::make_shared<MovePawnEvent>(2, 5, 6));
-  eventLoop->enqueueEvent(std::make_shared<MovePawnEvent>(3, 9, 6));
-  eventLoop->enqueueEvent(std::make_shared<MovePawnEvent>(4, 13, 6));
-  eventLoop->enqueueEvent(std::make_shared<MovePawnEvent>(1, 1, 6));
-  eventLoop->enqueueEvent(std::make_shared<MovePawnEvent>(2, 5, 6));
-  eventLoop->enqueueEvent(std::make_shared<MovePawnEvent>(3, 9, 6));
-  eventLoop->enqueueEvent(std::make_shared<MovePawnEvent>(4, 13, 6));
-  eventLoop->enqueueEvent(std::make_shared<MovePawnEvent>(1, 1, 6));
-  eventLoop->enqueueEvent(std::make_shared<MovePawnEvent>(2, 5, 6));
-  eventLoop->enqueueEvent(std::make_shared<MovePawnEvent>(3, 9, 6));
-  eventLoop->enqueueEvent(std::make_shared<MovePawnEvent>(4, 13, 6));
-  eventLoop->enqueueEvent(std::make_shared<MovePawnEvent>(1, 1, 6));
-  eventLoop->enqueueEvent(std::make_shared<MovePawnEvent>(2, 5, 6));
-  eventLoop->enqueueEvent(std::make_shared<MovePawnEvent>(3, 9, 6));
-  eventLoop->enqueueEvent(std::make_shared<MovePawnEvent>(4, 13, 6));
   std::cout << "Enqueued player turn" << std::endl;
   eventLoop->enqueueEvent(std::make_shared<PlayerTurnEvent>(1)); 
 

@@ -313,10 +313,9 @@ void MapDrawer::drawMiddle() {
   );
 }
 
-void MapDrawer::drawImageFromData(unsigned char *data, int width, int height, int channels,
-                                  float x, float y, float drawWidth, float drawHeight) {
+void MapDrawer::drawImageFromData(unsigned char *data, int width, int height, int channels, float x, float y, float drawWidth, float drawHeight, const Color &bgColor) {
                                     
-    drawRectangle(x, y, drawWidth, drawHeight, white);
+    drawRectangle(x, y, drawWidth, drawHeight, bgColor);
     // Generate and bind a texture
     GLuint textureID;
     glGenTextures(1, &textureID);

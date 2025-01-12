@@ -37,7 +37,7 @@ public:
   void drawTriangle(float x1, float y1, float x2, float y2, float x3, float y3,
                     const Color &color);
   void drawCircle(float cx, float cy, float radius, const Color &color,
-                           int segments, const Color &outlineColor, float outlineThickness);
+                           int segments, const Color &outlineColor, float outlineRadius);
   void drawStar(float cx, float cy, float outerRadius, float innerRadius,
                 int numPoints, const Color color);
   void drawArrow(unsigned char *data, int width, int height, int channels,
@@ -48,9 +48,7 @@ public:
   void drawBase(float x, float y, const Color &color);
   void drawMiddle();
   void drawPawn();
-  void drawImageFromData(unsigned char *data, int width, int height, int channels, float x, float y, float drawWidth, float drawHeight);
-  /*void addRenderable(std::shared_ptr<Renderable> r) override;*/
-  void log();
+  void drawImageFromData(unsigned char *data, int width, int height, int channels, float x, float y, float drawWidth, float drawHeight, const Color &bgColor);
   void addRenderable(std::shared_ptr<Renderable> renderable) override;
   void removeRenderable(std::shared_ptr<Renderable> renderable);
   void clearRenderables();

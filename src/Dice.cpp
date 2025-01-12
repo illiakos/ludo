@@ -1,5 +1,6 @@
 #include "Dice.hpp"
 #include "Color.hpp"
+#include "ColorConstants.hpp"
 #include "Dimensions.hpp"
 #include "EndTurnEvent.hpp"
 #include "MapDrawer.hpp"
@@ -42,11 +43,51 @@ void Dice::renderSelf() const {
     return;
   }
 
+  Color bgColor = white;
+
+  // if (turnManager.getCurrentRolledValue() != 0) {
+  //   switch (turnManager.getCurrentPlayerId()) {
+  //   case 1:
+  //     bgColor = red;
+  //     break;
+  //   case 2:
+  //     bgColor = green;
+  //     break;
+  //   case 3:
+  //     bgColor = yellow;
+  //     break;
+  //   case 4:
+  //     bgColor = blue;
+  //     break;
+  //   default:
+  //     bgColor = white;
+  //     break;
+  //   }
+  // }
+
+  switch (turnManager.getCurrentPlayerId()) {
+    case 1:
+      bgColor = red;
+      break;
+    case 2:
+      bgColor = green;
+      break;
+    case 3:
+      bgColor = yellow;
+      break;
+    case 4:
+      bgColor = blue;
+      break;
+    default:
+      bgColor = white;
+      break;
+    }
+
   // Render the image
-  drawer.drawImageFromData(imageData, width, height, channels,
-                           drawer.getCellPosition(dimensions.x),
-                           drawer.getCellPosition(dimensions.y),
-                           drawer.getSizeOfCells(1), drawer.getSizeOfCells(1));
+  drawer.drawImageFromData(
+      imageData, width, height, channels, drawer.getCellPosition(dimensions.x),
+      drawer.getCellPosition(dimensions.y), drawer.getSizeOfCells(1),
+      drawer.getSizeOfCells(1), bgColor);
 
   // Free the image memory
   stbi_image_free(imageData);
@@ -76,7 +117,7 @@ void Dice::onClick() {
     auto pawn = pawns[i];
 
     if (pawn->getContext() == TileContext::Walkable ||
-        (pawn->getContext() == TileContext::Finishing && pawn->isActive()))  {
+        (pawn->getContext() == TileContext::Finishing && pawn->isActive())) {
 
       std::cout << "aaaaaaaaaaaaaaaaaaaaaa111111111111111" << std::endl;
       endTurn = false;
