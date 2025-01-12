@@ -20,7 +20,7 @@ const int RENDER_PRECISION = 1000;
 
 const double PI = 3.141592653589793;
 
-void Pawn::setActive(bool active) { active = active; }
+void Pawn::setActive(bool active) { this->active = active; }
 
 bool Pawn::isActive() { return active; }
 
@@ -29,8 +29,13 @@ void Pawn::onClick() {
   auto &teamManager = TeamManager::getInstance();
 
   auto &tm = TurnManager::getInstance();
-
+  
+  std::cout << "adsafasfdsfa  " << active << std::endl;
+  if (context==TileContext::Finishing) {
+    std::cout << "Finishing context" << std::endl;
+  }
   if (!active && context == TileContext::Finishing) {
+    std::cout << "adsafasfdsfa" << std::endl;
     return;
   }
   std::cout << "current player id : " << tm.getCurrentPlayerId()
@@ -97,7 +102,7 @@ void Pawn::renderSelf() const {
     if (turnManager.getCurrentPlayerId() == teamId && active && turnManager.getCurrentRolledValue() != 0) {
       auto &tm = TileManager::getInstance();
       auto currentTile = tm.findTileById(tileId);
-      if (context == TileContext::Finishing && turnManager.getCurrentRolledValue() <= 6 - currentTile->getPosition()) {
+      if (context == TileContext::Finishing && active) {
         drawer.drawStar(drawer.getCellPosition(dimensions.x) + cellSize / 2,
                         drawer.getCellPosition(dimensions.y) + cellSize / 2,
                         outerRadius, innerRadius, 5, white);
@@ -131,6 +136,7 @@ void Pawn::renderSelf() const {
                       drawer.getCellPosition(dimensions.y) + cellSize / 2,
                       outerRadius, innerRadius, 5, white);
     }
+
   }
   return;
 }

@@ -14,7 +14,7 @@ public:
 private:
   std::unordered_map<int, std::shared_ptr<Team>> teams;
   std::unordered_map<int, int> pointsTable;
-  TeamManager() = default;
+  TeamManager();
   TeamManager(const TeamManager &) = delete;
   TeamManager &operator=(const TeamManager &) = delete;
 

@@ -49,5 +49,5 @@ void TurnManager::startPlayerTurn() {
   std::cout << "Player " << currentPlayerId << "'s turn starts.\n";
 
   // Enqueue a RollDiceEvent to start the player's turn
-  eventLoop->enqueueEvent(std::make_shared<RollDiceEvent>(currentPlayerId));
+  /*eventLoop->enqueueEvent(std::make_shared<RollDiceEvent>(currentPlayerId));*/
 }

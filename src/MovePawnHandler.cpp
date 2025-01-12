@@ -58,7 +58,6 @@ void MovePawnHandler::handleEvent(const std::shared_ptr<Event> &event) {
         }
         std::cout << "Setting tile id to starting : " << startingTileId << endl;
         pawn->setTileId(startingTileId);
-        pawn->setActive(true);
         pawn->setContext(TileContext::Walkable);
         auto tileDimensions = startingTile->getDimensions();
         auto newDimensions =
@@ -98,11 +97,11 @@ void MovePawnHandler::moveAtFinishing(std::shared_ptr<Pawn> pawn, int steps) {
   int nextPos = currentTile->getPosition() + steps;
   cout << currentTile->getPosition() << steps << "ABNOGBCVBVBVBVBBVVBVB"
        << endl;
-  if (nextPos > 6) {
+  if (nextPos >= 6) {
     // If the pawn moves beyond the finishing tiles, it can't move further.
-    drawer.addRenderable(pawn);
-    return;
-  } else if (nextPos == 6) {
+    //
+    //
+
     // Retrieve the prelast and last tiles
     auto prelastFinishingTile = tm.findPrefinishingTileByContextPositionAndTeam(
         TileContext::Finishing, 4, pawn->getTeamId());
@@ -127,7 +126,9 @@ void MovePawnHandler::moveAtFinishing(std::shared_ptr<Pawn> pawn, int steps) {
           Dimensions(finalX, finalY, pawn->getDimensions().dx,
                      pawn->getDimensions().dy)); // Move pawn to the arrow tile
       pawn->setActive(false);
-      auto& teamManager = TeamManager::getInstance();
+      pawn->setContext(TileContext::Finishing);
+      auto &teamManager = TeamManager::getInstance();
+
       teamManager.addPointsToTeam(pawn->getTeamId(), 1);
       drawer.addRenderable(pawn); // Add the pawn back to the renderable list
       return;
@@ -151,23 +152,108 @@ void MovePawnHandler::moveRegularTiles(std::shared_ptr<Pawn> pawn, int steps) {
   // TODO: Check beforehand whether final destination is the transition tile and
   // render pawn there
 
-  std::cout << "moving on regular tiles, steps : " << steps << endl;
   auto &tm = TileManager::getInstance();
   auto &drawer = MapDrawer::getInstance();
   int currentTileId = pawn->getTileId();
-  std::cout << "Tile id : " << pawn->getTileId() << endl;
   auto currentTile = tm.findTileById(pawn->getTileId());
-  std::cout << "-----------------------------" << endl;
-  std::cout << currentTile->toString() << endl;
 
-  std::cout << "-----------------------------" << endl;
   int currentPosition = currentTile->getPosition();
   drawer.removeRenderable(pawn);
+
+  // check whether destination tile is transition
+  if (currentPosition + steps < 53) {
+
+    auto finalDest = tm.findTileByContextAndPosition(TileContext::Walkable,
+                                                     currentPosition + steps);
+    auto transition = dynamic_pointer_cast<TransitionTile>(finalDest);
+    if (transition && transition->getTeamId() == pawn->getTeamId()) {
+
+      pawn->setTileId(finalDest->getId());
+      auto newDimensions =
+          Dimensions(finalDest->getDimensions().x, finalDest->getDimensions().y,
+                     pawn->getDimensions().dx, pawn->getDimensions().dy);
+      pawn->setDimensions(newDimensions);
+      pawn->setContext(TileContext::Walkable);
+      drawer.addRenderable(pawn);
+      return;
+    }
+  }
+
+  // check whether current tile is the transition tile
+  auto possiblyTransition = dynamic_pointer_cast<TransitionTile>(currentTile);
+  if (possiblyTransition && possiblyTransition->getTeamId() == pawn->getTeamId()) {
+    if (steps == 6) {
+
+      auto prelastFinishingTile =
+          tm.findPrefinishingTileByContextPositionAndTeam(
+              TileContext::Finishing, 4, pawn->getTeamId());
+      auto lastFinishingTile = tm.findPrefinishingTileByContextPositionAndTeam(
+          TileContext::Finishing, 5, pawn->getTeamId());
+
+      if (prelastFinishingTile && lastFinishingTile) {
+        // Determine the direction of the arrow based on the relative positions
+        // of the last and prelast tiles
+        int dx = lastFinishingTile->getDimensions().x -
+                 prelastFinishingTile->getDimensions().x;
+        int dy = lastFinishingTile->getDimensions().y -
+                 prelastFinishingTile->getDimensions().y;
+
+        // Move the pawn one step further in the direction of the arrow
+        float finalX = lastFinishingTile->getDimensions().x + dx;
+        float finalY = lastFinishingTile->getDimensions().y + dy;
+
+        pawn->setTileId(-1);    // Mark pawn as finished
+        pawn->setActive(false); // Mark pawn as inactive
+        pawn->setDimensions(Dimensions(
+            finalX, finalY, pawn->getDimensions().dx,
+            pawn->getDimensions().dy)); // Move pawn to the arrow tile
+        pawn->setActive(false);
+        auto &teamManager = TeamManager::getInstance();
+        teamManager.addPointsToTeam(pawn->getTeamId(), 1);
+        drawer.addRenderable(pawn); // Add the pawn back to the renderable list
+        return;
+      }
+    }
+    int finishingTileStartPosition =
+        possiblyTransition->getFinishingTileStartPosition();
+
+    std::cout << "Steps: " << steps << std::endl;
+    auto finishingTile =
+        TileManager::getInstance().findPrefinishingTileByContextPositionAndTeam(
+            TileContext::Finishing, steps, pawn->getTeamId());
+
+    if (finishingTile) {
+      auto newFinishingTile =
+          TileManager::getInstance()
+              .findPrefinishingTileByContextPositionAndTeam(
+                  TileContext::Finishing, 1, pawn->getTeamId());
+      pawn->setTileId(finishingTile->getId());
+      pawn->setContext(TileContext::Finishing);
+      pawn->setDimensions(Dimensions(
+          finishingTile->getDimensions().x, finishingTile->getDimensions().y,
+          pawn->getDimensions().dx, pawn->getDimensions().dy));
+      std::cout << "Pawn " << pawn->getDimensions()
+                << " moved to Finishing context.\n";
+      if (finishingTile->getContext() == TileContext::Finishing ||
+          finishingTile->getContext() == TileContext::Walkable) {
+        pawn->setActive(true);
+      }
+      drawer.addRenderable(pawn);
+      return;
+    } else {
+      std::cerr << "Error: Finishing tile not found at position "
+                << finishingTileStartPosition << "\n";
+
+      drawer.addRenderable(pawn);
+      return;
+    }
+  }
+
   for (int i = 0; i < steps; i++) {
     std::cout << "cycled once, position: " << currentPosition << endl;
 
     currentPosition++;
-    if (currentPosition > 51) {
+    if (currentPosition > 52) {
       currentPosition = 1;
     }
     auto tile =
@@ -184,7 +270,8 @@ void MovePawnHandler::moveRegularTiles(std::shared_ptr<Pawn> pawn, int steps) {
     if (transitionTile && transitionTile->getTeamId() == pawn->getTeamId()) {
 
       // Move to the starting finishing tile
-      int finishingTileStartPosition = transitionTile->getFinishingTileStartPosition();
+      int finishingTileStartPosition =
+          transitionTile->getFinishingTileStartPosition();
 
       std::cout << "Steps: " << steps << std::endl;
       auto finishingTile =
@@ -204,6 +291,10 @@ void MovePawnHandler::moveRegularTiles(std::shared_ptr<Pawn> pawn, int steps) {
             pawn->getDimensions().dx, pawn->getDimensions().dy));
         std::cout << "Pawn " << pawn->getDimensions()
                   << " moved to Finishing context.\n";
+        if (finishingTile->getContext() == TileContext::Finishing ||
+            finishingTile->getContext() == TileContext::Walkable) {
+          pawn->setActive(true);
+        }
         drawer.addRenderable(pawn);
         return;
       } else {

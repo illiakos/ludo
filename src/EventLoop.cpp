@@ -91,8 +91,10 @@ void EventLoop::processEvents() {
 
         if (event->isBlocking) {
             while (!event->isCompleted()) {
+                
                 std::this_thread::sleep_for(std::chrono::milliseconds(10));
             }
+            std::cout << "huynia completed!!" << std::endl;
         }
 
         std::cout << "Finished processing zalupa" << std::endl;

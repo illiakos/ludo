@@ -175,6 +175,8 @@ CMakeFiles/PawnGame.dir/src/Dice.cpp.obj: \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/sstream \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/sstream.tcc \
  C:/Users/marrc/bul/cpp-project/alt/ludo/include/Dimensions.hpp \
+ C:/Users/marrc/bul/cpp-project/alt/ludo/include/EndTurnEvent.hpp \
+ C:/Users/marrc/bul/cpp-project/alt/ludo/include/Event.hpp \
  C:/Users/marrc/bul/cpp-project/alt/ludo/include/MapDrawer.hpp \
  C:/Users/marrc/bul/cpp-project/alt/ludo/include/Color.hpp \
  C:/Users/marrc/bul/cpp-project/alt/ludo/glfw/include/GLFW/glfw3.h \
@@ -211,9 +213,11 @@ CMakeFiles/PawnGame.dir/src/Dice.cpp.obj: \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/stl_deque.h \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/deque.tcc \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/stl_queue.h \
+ C:/Users/marrc/bul/cpp-project/alt/ludo/include/MovePawnEvent.hpp \
  C:/Users/marrc/bul/cpp-project/alt/ludo/include/PawnManager.hpp \
  C:/Users/marrc/bul/cpp-project/alt/ludo/include/MapDrawer.hpp \
  C:/Users/marrc/bul/cpp-project/alt/ludo/include/Pawn.hpp \
+ C:/Users/marrc/bul/cpp-project/alt/ludo/include/TileContext.hpp \
  C:/Users/marrc/bul/cpp-project/alt/ludo/include/TileContext.hpp \
  C:/Users/marrc/bul/cpp-project/alt/ludo/include/TurnManager.hpp \
  C:/Users/marrc/bul/cpp-project/alt/ludo/include/EventLoop.hpp \
@@ -225,5 +229,4 @@ CMakeFiles/PawnGame.dir/src/Dice.cpp.obj: \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/std_thread.h \
  C:/ProgramData/chocolatey/lib/mingw/tools/install/mingw64/lib/gcc/x86_64-w64-mingw32/12.2.0/include/c++/bits/this_thread_sleep.h \
  C:/Users/marrc/bul/cpp-project/alt/ludo/include/PlayerTurnEvent.hpp \
- C:/Users/marrc/bul/cpp-project/alt/ludo/include/Event.hpp \
  C:/Users/marrc/bul/cpp-project/alt/ludo/libs/stb/stb_image.h

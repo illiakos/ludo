@@ -1,12 +1,14 @@
 #include "Dice.hpp"
 #include "Color.hpp"
 #include "Dimensions.hpp"
+#include "EndTurnEvent.hpp"
 #include "MapDrawer.hpp"
+#include "MovePawnEvent.hpp"
 #include "PawnManager.hpp"
+#include "TileContext.hpp"
 #include "TurnManager.hpp"
 #include "stb_image.h"
 #include <iostream>
-
 
 void Dice::renderSelf() const {
   auto &drawer = MapDrawer::getInstance();
@@ -56,10 +58,11 @@ void Dice::renderSelf() const {
 //  tm.setCurrentRolledValue = some_huynia;
 void Dice::onClick() {
   srand(time(nullptr));
-  auto &turnManager = TurnManager::getInstance();
   auto &pawnManager = PawnManager::getInstance();
   int random_number =
       std::rand() % 6 + 1; // Generate a random number between 1 and 6
+                           //
+  auto &turnManager = TurnManager::getInstance();
   if (turnManager.getCurrentRolledValue() != 0) {
     return;
   }
@@ -72,15 +75,28 @@ void Dice::onClick() {
     // Access the pawn
     auto pawn = pawns[i];
 
-    if (pawn->isActive()) {
-        endTurn = false;
-    } else if (pawn->getContext() == TileContext::Base && turnManager.getCurrentRolledValue() == 6) {
-        endTurn = false;
+    if (pawn->getContext() == TileContext::Walkable ||
+        (pawn->getContext() == TileContext::Finishing && pawn->isActive()))  {
+
+      std::cout << "aaaaaaaaaaaaaaaaaaaaaa111111111111111" << std::endl;
+      endTurn = false;
+      break;
+    } else if (pawn->getContext() == TileContext::Base &&
+               turnManager.getCurrentRolledValue() == 6) {
+
+      std::cout << "aaaaaaaaaaaaaaaaaaaaaa22222222222222222" << std::endl;
+      endTurn = false;
+      break;
     }
   }
   if (endTurn) {
-    auto event = turnManager.getCurrentPlayerTurnEvent();
-    event->completeTurn();
-  }
 
+    auto event = turnManager.getCurrentPlayerTurnEvent();
+    turnManager.clearRoll();
+    std::cout << "aaaaaaaaaaaaaaaaaaaaaa" << std::endl;
+    event->completeTurn();
+
+    auto eventLoop = EventLoop::getInstance();
+    eventLoop->enqueueEvent(std::make_shared<EndTurnEvent>());
+  }
 }
