@@ -21,6 +21,10 @@ public:
 
   virtual void onClick() = 0;
 
+  virtual int getTeamId() const {
+    return -1;
+  };
+
 };
 class RenderableContainer {
 public:

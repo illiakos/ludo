@@ -2007,8 +2007,12 @@ CMakeFiles/PawnGame.dir/src/MapDrawer.cpp.obj
  C:/Users/illia/ludo/include/Color.hpp
  C:/Users/illia/ludo/include/ColorConstants.hpp
  C:/Users/illia/ludo/include/Dimensions.hpp
+ C:/Users/illia/ludo/include/Event.hpp
+ C:/Users/illia/ludo/include/EventLoop.hpp
  C:/Users/illia/ludo/include/MapDrawer.hpp
+ C:/Users/illia/ludo/include/PlayerTurnEvent.hpp
  C:/Users/illia/ludo/include/Renderable.hpp
+ C:/Users/illia/ludo/include/TurnManager.hpp
  C:/Users/illia/ludo/include/WindowManager.hpp
  C:/msys64/ucrt64/include/GL/gl.h
  C:/msys64/ucrt64/include/GL/glcorearb.h
@@ -2020,6 +2024,7 @@ CMakeFiles/PawnGame.dir/src/MapDrawer.cpp.obj
  C:/msys64/ucrt64/include/_mingw_stat64.h
  C:/msys64/ucrt64/include/_timeval.h
  C:/msys64/ucrt64/include/c++/13.2.0/array
+ C:/msys64/ucrt64/include/c++/13.2.0/atomic
  C:/msys64/ucrt64/include/c++/13.2.0/backward/auto_ptr.h
  C:/msys64/ucrt64/include/c++/13.2.0/backward/binders.h
  C:/msys64/ucrt64/include/c++/13.2.0/bit
@@ -2056,6 +2061,7 @@ CMakeFiles/PawnGame.dir/src/MapDrawer.cpp.obj
  C:/msys64/ucrt64/include/c++/13.2.0/bits/invoke.h
  C:/msys64/ucrt64/include/c++/13.2.0/bits/ios_base.h
  C:/msys64/ucrt64/include/c++/13.2.0/bits/istream.tcc
+ C:/msys64/ucrt64/include/c++/13.2.0/bits/list.tcc
  C:/msys64/ucrt64/include/c++/13.2.0/bits/locale_classes.h
  C:/msys64/ucrt64/include/c++/13.2.0/bits/locale_classes.tcc
  C:/msys64/ucrt64/include/c++/13.2.0/bits/locale_conv.h
@@ -2099,6 +2105,7 @@ CMakeFiles/PawnGame.dir/src/MapDrawer.cpp.obj
  C:/msys64/ucrt64/include/c++/13.2.0/bits/stl_iterator.h
  C:/msys64/ucrt64/include/c++/13.2.0/bits/stl_iterator_base_funcs.h
  C:/msys64/ucrt64/include/c++/13.2.0/bits/stl_iterator_base_types.h
+ C:/msys64/ucrt64/include/c++/13.2.0/bits/stl_list.h
  C:/msys64/ucrt64/include/c++/13.2.0/bits/stl_pair.h
  C:/msys64/ucrt64/include/c++/13.2.0/bits/stl_queue.h
  C:/msys64/ucrt64/include/c++/13.2.0/bits/stl_raw_storage_iter.h
@@ -2151,6 +2158,7 @@ CMakeFiles/PawnGame.dir/src/MapDrawer.cpp.obj
  C:/msys64/ucrt64/include/c++/13.2.0/iostream
  C:/msys64/ucrt64/include/c++/13.2.0/istream
  C:/msys64/ucrt64/include/c++/13.2.0/limits
+ C:/msys64/ucrt64/include/c++/13.2.0/list
  C:/msys64/ucrt64/include/c++/13.2.0/locale
  C:/msys64/ucrt64/include/c++/13.2.0/memory
  C:/msys64/ucrt64/include/c++/13.2.0/mutex

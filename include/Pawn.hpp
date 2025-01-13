@@ -21,7 +21,7 @@ public:
   int getId() const { return id; }
   int getTileId() { return tileId; }
   int getPlayerId() const { return playerId; }
-  int getTeamId() const { return teamId; }
+  int getTeamId() const override { return teamId; }
   void setTileId(int t) { tileId = t; };
 
   void renderSelf() const override;
@@ -35,7 +35,7 @@ public:
 
   // Getter for z-index
   int getZIndex() const override { return zIndex; };
-
+  
   // Setter for z-index
   void setZIndex(int z) override { zIndex = z; };
 

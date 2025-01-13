@@ -73,6 +73,13 @@ void EventLoop::processEvents() {
         }
         std::cout << "00000000000000000000000" << std::endl;
         std::cout << "Processing event: " << event->getType() << std::endl;
+
+        if (event->getType() == "StopGameEvent") {
+            std::cout << "Stopping the event loop.\n";
+            stop();
+            break;
+        }
+
         // Process immediate events directly
         if (event->isImmediate) {
             std::cout << "Processing immediate event: " << event->getType() << std::endl;
@@ -84,17 +91,11 @@ void EventLoop::processEvents() {
         
         dispatcher.dispatch(event);
 
-        if (event->getType() == "StopGameEvent") {
-            std::cout << "Stopping the event loop.\n";
-            break;
-        }
-
         if (event->isBlocking) {
             while (!event->isCompleted()) {
                 
                 std::this_thread::sleep_for(std::chrono::milliseconds(10));
             }
-            std::cout << "huynia completed!!" << std::endl;
         }
 
         std::cout << "Finished processing zalupa" << std::endl;

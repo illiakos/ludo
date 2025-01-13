@@ -11,6 +11,7 @@
 #include "Color.hpp"
 #include "ColorConstants.hpp"
 #include "Renderable.hpp"
+#include "TurnManager.hpp"
 #include "WindowManager.hpp"
 #include <GL/glcorearb.h>
 
@@ -461,6 +462,8 @@ std::shared_ptr<Renderable> MapDrawer::findByDimensionsRange(float clickX,
   // Calculate cell size in OpenGL units
   float cellSizeOpenGL = getCellSize();
 
+  auto &turnManager = TurnManager::getInstance();
+
   std::shared_ptr<Renderable> highestZIndexRenderable = nullptr;
   int maxZIndex = std::numeric_limits<int>::min();
 
@@ -479,10 +482,19 @@ std::shared_ptr<Renderable> MapDrawer::findByDimensionsRange(float clickX,
     if (renderable->getZIndex() == 2) { // Circle
       if (isClickOnCircle(clickX, clickY, renderableXOpenGL, renderableYOpenGL,
                           cellSizeOpenGL)) {
+        if (turnManager.getCurrentPlayerId() == renderable->getTeamId()) {
+           highestZIndexRenderable = updateHighestZIndexRenderable(
+            renderable, highestZIndexRenderable, maxZIndex);
+        }
+      }
+    } else if (renderable->getZIndex() == 1) { // Rectangle
+      if (isClickOnRectangle(clickX, clickY, renderableXOpenGL,
+                             renderableYOpenGL, renderableDXOpenGL,
+                             renderableDYOpenGL)) {
         highestZIndexRenderable = updateHighestZIndexRenderable(
             renderable, highestZIndexRenderable, maxZIndex);
       }
-    } else if (renderable->getZIndex() == 1) { // Rectangle
+    } else if (renderable->getZIndex() == 3) { // Dice
       if (isClickOnRectangle(clickX, clickY, renderableXOpenGL,
                              renderableYOpenGL, renderableDXOpenGL,
                              renderableDYOpenGL)) {

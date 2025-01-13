@@ -226,6 +226,14 @@ CMakeFiles/PawnGame.dir/src/MapDrawer.cpp.obj: \
  C:/Users/illia/ludo/include/Color.hpp \
  C:/Users/illia/ludo/include/ColorConstants.hpp \
  C:/Users/illia/ludo/include/Renderable.hpp \
+ C:/Users/illia/ludo/include/TurnManager.hpp \
+ C:/Users/illia/ludo/include/EventLoop.hpp \
+ C:/msys64/ucrt64/include/c++/13.2.0/atomic \
+ C:/msys64/ucrt64/include/c++/13.2.0/list \
+ C:/msys64/ucrt64/include/c++/13.2.0/bits/stl_list.h \
+ C:/msys64/ucrt64/include/c++/13.2.0/bits/list.tcc \
+ C:/Users/illia/ludo/include/PlayerTurnEvent.hpp \
+ C:/Users/illia/ludo/include/Event.hpp \
  C:/Users/illia/ludo/include/WindowManager.hpp \
  C:/msys64/ucrt64/include/c++/13.2.0/utility \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/stl_relops.h \
